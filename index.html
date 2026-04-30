@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="vi" data-lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmonie Beauté – Spa & Beauty · Tân Định, Ho Chi Minh City</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+:root{
+  --moss:#3D5A47;
+  --moss-light:#6B8F71;
+  --moss-pale:#D4E4D0;
+  --cream:#F7F0E4;
+  --sand:#DDD4C0;
+  --sand-dark:#C8BFB0;
+  --charcoal:#1E2F25;
+  --white:#FDFAF4;
+  --shadow:rgba(61,90,71,0.10);
+  --shadow-md:rgba(61,90,71,0.18);
+  --terra:#B5673B;
+  --gold:#C9A96E;
+  --earth:#8B6F5C;
+  --dark:#1E2F25;
+}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.65}
+a{text-decoration:none;color:inherit}
+
+/* ── LANG ── */
+[data-lang="vi"] .en{display:none}
+[data-lang="en"] .vi{display:none}
+.lang-toggle{display:flex;border:1px solid var(--sand-dark);border-radius:50px;overflow:hidden;flex-shrink:0}
+.lang-btn{padding:0.28rem 0.85rem;font-size:0.68rem;font-weight:600;letter-spacing:0.1em;cursor:pointer;background:none;border:none;color:var(--moss-light);font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s}
+.lang-btn.active{background:var(--moss);color:#fff}
+
+/* ── NAVBAR ── */
+.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(235,221,206,0.6);display:flex;justify-content:space-between;align-items:center;padding:0 3.5rem;height:68px;gap:1.5rem}
+.logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:500;color:var(--moss);letter-spacing:0.02em;flex-shrink:0}
+.logo em{font-style:italic;color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.72rem;color:#6B6B6B;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--moss)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.btn-nav{background:var(--moss);color:#fff;padding:0.55rem 1.5rem;border:none;border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;box-shadow:0 2px 12px var(--shadow);transition:all 0.25s}
+.btn-nav:hover{background:#3A4D3E;box-shadow:0 4px 20px var(--shadow-md)}
+
+/* ── HERO ── */
+.hero{background:var(--dark);min-height:90vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;position:relative}
+.hero-left{padding:5rem 4rem 5rem 6rem;position:relative;z-index:1}
+.hero-eyebrow{font-size:0.63rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;font-weight:400;opacity:0.85}
+.hero-title{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:400;line-height:1.1;color:#F2EBD9;margin-bottom:1.2rem}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-desc{font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.9;max-width:380px;margin-bottom:2.2rem;font-weight:300}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:#fff;color:var(--moss);border:none;padding:0.9rem 2.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.25s}
+.btn-primary:hover{background:var(--cream);box-shadow:0 6px 28px rgba(0,0,0,0.25)}
+.btn-ghost{background:transparent;color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.25);padding:0.9rem 1.8rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:400;transition:all 0.25s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.6);color:#fff}
+.hero-stats{display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);font-weight:400;display:block}
+.stat-label{font-size:0.6rem;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.18em;margin-top:3px;font-weight:400}
+.hero-right{height:100%;min-height:90vh;background:linear-gradient(150deg,#2D4A3A,#1A2F22);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-deco{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,#6B8F71 0,#6B8F71 1px,transparent 0,transparent 50%);background-size:14px 14px}
+.hero-monogram{position:relative;z-index:1;text-align:center;padding:3rem}
+.hero-monogram-text{font-family:'Playfair Display',serif;font-size:7rem;color:rgba(46,78,58,0.12);font-style:italic;line-height:1;display:block}
+.hero-monogram-sub{font-size:0.58rem;color:rgba(46,78,58,0.3);text-transform:uppercase;letter-spacing:0.45em;margin-top:0.6rem;display:block}
+.hero-private-badge{display:inline-flex;flex-direction:column;align-items:center;gap:1.5rem;position:relative;z-index:1}
+.hero-oval{width:180px;height:240px;border-radius:50%;border:1px solid rgba(201,169,110,0.25);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.05);backdrop-filter:blur(4px)}
+.hero-oval-inner{text-align:center}
+.hero-oval-text{font-family:'Playfair Display',serif;font-size:1.1rem;color:rgba(235,221,206,0.8);font-style:italic;display:block;line-height:1.4}
+.hero-oval-sub{font-size:0.55rem;color:rgba(201,169,110,0.5);text-transform:uppercase;letter-spacing:0.25em;display:block;margin-top:0.5rem}
+.hero-tags{display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;max-width:260px}
+.hero-tag{font-size:0.6rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:50px;letter-spacing:0.08em;text-transform:uppercase;font-weight:400}
+
+/* ── SECTIONS ── */
+.section{padding:5.5rem 6rem}
+.section-tag{font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--moss-light);font-weight:600;margin-bottom:0.6rem}
+.section-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:0.7rem}
+.section-title em{color:var(--moss);font-style:italic}
+.section-line{width:40px;height:1px;background:var(--sand-dark);margin-bottom:2.8rem}
+
+/* ── SERVICES ── */
+.services-section{background:var(--white)}
+.tab-bar{display:flex;gap:0.4rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.tab-btn{padding:0.55rem 1.3rem;background:var(--cream);border:1px solid var(--sand-dark);border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:#6B6B6B;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}
+.tab-btn.active{background:var(--moss);border-color:var(--moss);color:#fff;box-shadow:0 2px 12px var(--shadow)}
+.tab-btn:not(.active):hover{border-color:var(--moss-light);color:var(--moss)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.sub-cat-title{display:inline-flex;align-items:center;gap:0.4rem;background:var(--moss-pale);color:var(--moss);padding:0.35rem 1rem;border-radius:50px;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:1.2rem}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.svc-card{background:var(--cream);border-radius:16px;padding:1.5rem;box-shadow:0 1px 6px var(--shadow)}
+.svc-row{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;border-bottom:1px solid rgba(235,221,206,0.8)}
+.svc-row:last-child{border-bottom:none}
+.svc-left{display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
+.svc-name{font-size:0.9rem;color:var(--charcoal);font-weight:400}
+.best-badge{font-size:0.56rem;background:#FEF9E7;color:#8B6914;padding:2px 9px;border-radius:50px;letter-spacing:0.04em;font-weight:600;border:1px solid #F0E0A0}
+.svc-right{display:flex;align-items:center;gap:0.8rem;flex-shrink:0}
+.svc-price{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:400;color:var(--moss);white-space:nowrap}
+.svc-book-btn{font-size:0.66rem;color:var(--moss);border:1px solid var(--moss-pale);background:var(--moss-pale);padding:4px 12px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;white-space:nowrap;font-weight:500;transition:all 0.2s}
+.svc-book-btn:hover{background:var(--moss);color:#fff;border-color:var(--moss)}
+
+/* ── ADDRESS ── */
+.address-section{background:var(--dark);padding:5.5rem 6rem;color:#fff}
+.address-section .section-tag{color:rgba(235,221,206,0.6)}
+.address-section .section-title{color:#fff}
+.address-section .section-line{background:rgba(235,221,206,0.3)}
+.address-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem}
+.map-box{background:rgba(255,255,255,0.04);border-radius:20px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(235,221,206,0.12);gap:0.8rem;position:relative;overflow:hidden}
+.map-bg{position:absolute;inset:0;opacity:0.03;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:24px 24px}
+.map-label{font-family:'Playfair Display',serif;font-size:1.1rem;color:rgba(235,221,206,0.4);font-style:italic;position:relative;z-index:1}
+.map-sub{font-size:0.62rem;color:rgba(235,221,206,0.25);text-transform:uppercase;letter-spacing:0.2em;position:relative;z-index:1}
+.addr-rows{display:flex;flex-direction:column;gap:1.8rem}
+.addr-item{display:flex;gap:1rem;align-items:flex-start}
+.addr-icon{width:38px;height:38px;border-radius:50%;background:rgba(235,221,206,0.08);border:1px solid rgba(235,221,206,0.12);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
+.addr-block h4{font-size:0.62rem;text-transform:uppercase;letter-spacing:0.18em;color:rgba(235,221,206,0.5);font-weight:500;margin-bottom:0.3rem}
+.addr-block p{font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.65}
+.social-row{display:flex;gap:0.7rem;margin-top:2rem;flex-wrap:wrap}
+.s-btn{padding:0.55rem 1.3rem;border:1px solid rgba(235,221,206,0.2);border-radius:50px;font-size:0.7rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;font-family:'Be Vietnam Pro',sans-serif;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;transition:all 0.2s}
+.s-btn:hover{border-color:rgba(235,221,206,0.5);color:#fff}
+.s-btn.phone{background:var(--moss);border-color:var(--moss);color:#fff;box-shadow:0 2px 12px rgba(74,93,78,0.4)}
+
+/* ── BLOG ── */
+.blog-section{background:var(--cream)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.blog-card{background:var(--white);border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.25s;display:block;box-shadow:0 2px 12px var(--shadow)}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px var(--shadow-md)}
+.blog-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.8rem}
+.blog-thumb.t1{background:#E8D5C4}.blog-thumb.t2{background:#D4E4D0}.blog-thumb.t3{background:#E4D8C8}
+.blog-body{padding:1.2rem 1.3rem}
+.blog-pill{display:inline-block;font-size:0.58rem;background:var(--moss-pale);color:var(--moss);padding:3px 10px;border-radius:50px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem;font-weight:600}
+.blog-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;color:var(--charcoal);line-height:1.4;margin-bottom:0.4rem}
+.blog-excerpt{font-size:0.76rem;color:#777;line-height:1.55;font-weight:300}
+.blog-meta{font-size:0.63rem;color:#AAA;margin-top:0.6rem;font-weight:400}
+
+/* ── CTA ── */
+.cta-strip{background:var(--terra);padding:3rem 6rem;display:flex;justify-content:space-between;align-items:center}
+.cta-strip h3{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:#fff;margin-bottom:0.2rem}
+.cta-strip p{font-size:0.82rem;color:rgba(255,255,255,0.65);font-weight:300}
+.cta-btns{display:flex;gap:0.8rem}
+.cta-btn-w{background:#fff;color:var(--terra);border:none;padding:0.75rem 1.8rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,0.15)}
+.cta-btn-o{background:transparent;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.35);padding:0.75rem 1.8rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:400;transition:all 0.2s}
+.cta-btn-o:hover{border-color:rgba(255,255,255,0.7);color:#fff}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);padding:2rem 6rem;display:flex;justify-content:space-between;align-items:center}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--moss-light);font-style:italic}
+footer p{font-size:0.68rem;color:#555}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:0.66rem;color:#555;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
+.footer-links a:hover{color:var(--moss-light)}
+
+/* ── CALENDLY ── */
+#booking{background:var(--white)}
+#booking .calendly-inline-widget{border-radius:0}
+
+/* ── BOOKING INTRO ── */
+.booking-intro{background:var(--white)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .navbar{padding:0 1.5rem;height:60px}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .hero-left{padding:3.5rem 1.5rem}
+  .hero-title{font-size:2.6rem}
+  .section{padding:3.5rem 1.5rem}
+  .two-col,.address-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr 1fr}
+  .cta-strip{flex-direction:column;gap:1.5rem;text-align:center;padding:2.5rem 1.5rem}
+  footer{flex-direction:column;gap:0.8rem;text-align:center;padding:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Harmonie <em>beauté</em></div>
+  <ul class="nav-links">
+    <li><a href="#services"><span class="vi">Dịch vụ</span><span class="en">Services</span></a></li>
+    <li><a href="#calendar"><span class="vi">Đặt lịch</span><span class="en">Book</span></a></li>
+    <li><a href="#address"><span class="vi">Địa chỉ</span><span class="en">Location</span></a></li>
+    <li><a href="#blog">Blog</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('vi')">VI</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="btn-nav" onclick="document.getElementById('calendar').scrollIntoView({behavior:'smooth'})">
+      <span class="vi">Đặt lịch</span><span class="en">Book now</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">✦ Private Spa · 30 Đặng Tất, Tân Định, TP. HCM</p>
+    <h1 class="hero-title">
+      <span class="vi">Chăm sóc chuyên sâu.<br><em>Không gian riêng tư.</em></span>
+      <span class="en">Expert care.<br><em>Your private space.</em></span>
+    </h1>
+    <p class="hero-desc">
+      <span class="vi">Harmonie Beauté — không gian riêng tư, yên tĩnh tuyệt đối, nơi bạn được chăm sóc trọn vẹn và tận tâm.</span>
+      <span class="en">Harmonie Beauté — a private sanctuary of silence, where every treatment is delivered with full attention and care.</span>
+    </p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('calendar').scrollIntoView({behavior:'smooth'})">
+        <span class="vi">Đặt lịch ngay</span><span class="en">Book now</span>
+      </button>
+      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+        <span class="vi">Xem dịch vụ</span><span class="en">View services</span>
+      </button>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat-num">500+</span><span class="stat-label vi">Khách hàng</span><span class="stat-label en">Clients</span></div>
+      <div><span class="stat-num">4</span><span class="stat-label vi">Nhóm liệu trình</span><span class="stat-label en">Treatment types</span></div>
+      <div><span class="stat-num">5★</span><span class="stat-label vi">Đánh giá</span><span class="stat-label en">Reviews</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-deco"></div>
+    <div class="hero-private-badge">
+      <div class="hero-oval">
+        <div class="hero-oval-inner">
+          <span class="hero-oval-text">Harmonie<br>beauté</span>
+          <span class="hero-oval-sub">Private Spa</span>
+        </div>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag vi">Chuyên sâu</span>
+        <span class="hero-tag en">Expert care</span>
+        <span class="hero-tag vi">Riêng tư</span>
+        <span class="hero-tag en">Private</span>
+        <span class="hero-tag vi">Tận tâm</span>
+        <span class="hero-tag en">Dedicated</span>
+        <span class="hero-tag vi">Yên tĩnh</span>
+        <span class="hero-tag en">Serene</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section section" id="services">
+  <p class="section-tag">✦ <span class="vi">Bảng dịch vụ</span><span class="en">Our services</span></p>
+  <h2 class="section-title"><span class="vi">Liệu trình <em>chuyên sâu</em></span><span class="en">Signature <em>treatments</em></span></h2>
+  <div class="section-line"></div>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab(this,'acne')"><span class="vi">Điều trị mụn</span><span class="en">Acne Treatment</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'facial')"><span class="vi">Chăm sóc mặt</span><span class="en">Facial Treatment</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'peel')">Chemical Peel</button>
+  </div>
+
+  <!-- ACNE -->
+  <div class="tab-content active" id="tab-acne">
+    <div class="two-col">
+      <div>
+        <div class="sub-cat-title">Facial</div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mụn chuyên sâu</span><span class="en">Deep acne</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">300,000đ</span><button class="svc-book-btn" onclick="fillBook('Mụn chuyên sâu / Deep acne')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Phục hồi da mụn</span><span class="en">Acne skin recovery</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><button class="svc-book-btn" onclick="fillBook('Phục hồi da mụn / Acne skin recovery')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thải độc CO2</span><span class="en">CO2 detox</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">450,000đ</span><button class="svc-book-btn" onclick="fillBook('Thải độc CO2 / CO2 detox')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="sub-cat-title">Body</div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn ngực</span><span class="en">Chest acne extraction</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn ngực / Chest acne extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn ½ lưng</span><span class="en">Half-back extraction</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn ½ lưng / Half-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn full lưng</span><span class="en">Full-back extraction</span></span></div><div class="svc-right"><span class="svc-price">500,000đ</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn full lưng / Full-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACIAL -->
+  <div class="tab-content" id="tab-facial">
+    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn vội vàng</span><span class="en">Quick relax</span></span></div><div class="svc-right"><span class="svc-price">250,000đ</span><button class="svc-book-btn" onclick="fillBook('Thư giãn vội vàng / Quick relax')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn thành thơi</span><span class="en">Leisurely relax</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><button class="svc-book-btn" onclick="fillBook('Thư giãn thành thơi / Leisurely relax')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn & làm sạch sâu</span><span class="en">Relax & deep cleanse</span></span></div><div class="svc-right"><span class="svc-price">400,000đ</span><button class="svc-book-btn" onclick="fillBook('Thư giãn & làm sạch sâu / Relax & deep cleanse')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn & sáng da</span><span class="en">Relax & brightening</span></span></div><div class="svc-right"><span class="svc-price">450,000đ</span><button class="svc-book-btn" onclick="fillBook('Thư giãn & sáng da / Relax & brightening')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+  </div>
+
+  <!-- CHEMICAL PEEL -->
+  <div class="tab-content" id="tab-peel">
+    <div class="two-col">
+      <div>
+        <div class="sub-cat-title">Facial</div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị mụn</span><span class="en">Acne peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">500,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị mụn / Acne peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm, căng bóng</span><span class="en">Dark spot & glow peel</span></span></div><div class="svc-right"><span class="svc-price">600,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm, căng bóng / Dark spot & glow peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel sần sùi, trẻ hóa</span><span class="en">Textured skin & anti-aging peel</span></span></div><div class="svc-right"><span class="svc-price">650,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel sần sùi, trẻ hóa / Anti-aging peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel tảo Decaar cao cấp</span><span class="en">Decaar algae premium peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">950,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel tảo Decaar cao cấp / Decaar premium peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel phục hồi cao cấp</span><span class="en">Premium recovery peel</span></span></div><div class="svc-right"><span class="svc-price">1,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel phục hồi cao cấp / Premium recovery peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="sub-cat-title">Body</div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn ngực</span><span class="en">Chest dark spot peel</span></span></div><div class="svc-right"><span class="svc-price">1,350,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ngực / Chest dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn ½ lưng</span><span class="en">Half-back dark spot peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">1,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ½ lưng / Half-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn full lưng</span><span class="en">Full-back dark spot peel</span></span></div><div class="svc-right"><span class="svc-price">1,950,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn full lưng / Full-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm nách</span><span class="en">Underarm dark spot peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">650,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm nách / Underarm dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm ½ lưng</span><span class="en">Half-back body peel</span></span></div><div class="svc-right"><span class="svc-price">1,200,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm ½ lưng / Half-back body peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm full lưng</span><span class="en">Full-back body peel</span></span></div><div class="svc-right"><span class="svc-price">1,600,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm full lưng / Full-back body peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mông, bẹn</span><span class="en">Buttocks & inner thigh peel</span></span></div><div class="svc-right"><span class="svc-price">1,600,000đ</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mông, bẹn / Buttocks & inner thigh peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="calendar" style="background:var(--white);padding-bottom:0">
+  <p class="section-tag">✦ <span class="vi">Đặt lịch hẹn</span><span class="en">Book appointment</span></p>
+  <h2 class="section-title"><span class="vi">Chọn giờ <em>của bạn</em></span><span class="en">Choose your <em>time</em></span></h2>
+  <div class="section-line"></div>
+  <p style="font-size:0.87rem;color:var(--earth);margin-bottom:2rem;line-height:1.75">
+    <span class="vi">Chọn dịch vụ, ngày và giờ phù hợp — xác nhận tự động qua email. Mỗi session 2 tiếng (điều trị 1h45 + 15 phút nghỉ).</span>
+    <span class="en">Pick your service, date & time — instant confirmation by email. Each session is 2 hours (1h45 treatment + 15 min break).</span>
+  </p>
+</section>
+
+<!-- CALENDLY INLINE -->
+<div id="booking" style="background:var(--white)">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <div class="calendly-inline-widget"
+    data-url="https://calendly.com/harmoniebeautevn/reservation?hide_gdpr_banner=1&primary_color=2E4E3A"
+    style="min-width:320px;height:700px">
+  </div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</div>
+
+<!-- ADDRESS -->
+<section class="address-section" id="address">
+  <p class="section-tag">✦ <span class="vi">Tìm chúng tôi</span><span class="en">Find us</span></p>
+  <h2 class="section-title"><span class="vi">Địa chỉ & <em>liên hệ</em></span><span class="en">Location & <em>contact</em></span></h2>
+  <div class="section-line"></div>
+  <div class="address-grid">
+    <div class="map-box">
+      <div class="map-bg"></div>
+      <div style="font-size:2rem;position:relative;z-index:1">📍</div>
+      <div class="map-label">Google Maps</div>
+      <div class="map-sub">30 Đặng Tất · Tân Định</div>
+    </div>
+    <div>
+      <div class="addr-rows">
+        <div class="addr-item">
+          <div class="addr-icon">📍</div>
+          <div class="addr-block">
+            <h4><span class="vi">Địa chỉ</span><span class="en">Address</span></h4>
+            <p>30 Đặng Tất,<br>Phường Tân Định, TP. Hồ Chí Minh</p>
+          </div>
+        </div>
+        <div class="addr-item">
+          <div class="addr-icon">📞</div>
+          <div class="addr-block">
+            <h4>Hotline / Zalo / WhatsApp</h4>
+            <p>089 909 0762</p>
+          </div>
+        </div>
+        <div class="addr-item">
+          <div class="addr-icon">🕐</div>
+          <div class="addr-block">
+            <h4><span class="vi">Giờ mở cửa</span><span class="en">Opening hours</span></h4>
+            <p><span class="vi">Thứ 2 – Thứ 7: 10:00 – 20:00</span><span class="en">Mon – Sat: 10:00 AM – 8:00 PM</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="social-row">
+        <button class="s-btn phone">📞 <span class="vi">Gọi ngay</span><span class="en">Call now</span></button>
+        <button class="s-btn">Zalo</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-section section" id="blog">
+  <p class="section-tag">✦ Blog</p>
+  <h2 class="section-title"><span class="vi">Bí quyết <em>chăm sóc da</em></span><span class="en">Beauty <em>tips & care</em></span></h2>
+  <div class="section-line"></div>
+  <div class="blog-grid">
+    <a class="blog-card" href="#">
+      <div class="blog-thumb t1">🌿</div>
+      <div class="blog-body">
+        <div class="blog-pill"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></div>
+        <div class="blog-title"><span class="vi">Tại sao Chemical Peel hiệu quả với da mụn?</span><span class="en">Why Chemical Peels work wonders for acne-prone skin</span></div>
+        <div class="blog-excerpt"><span class="vi">Tìm hiểu cơ chế hoạt động của peel hóa học và liệu trình phù hợp cho từng loại da...</span><span class="en">A clear breakdown of how peels work and which one suits your skin type...</span></div>
+        <div class="blog-meta">15 Apr 2026</div>
+      </div>
+    </a>
+    <a class="blog-card" href="#">
+      <div class="blog-thumb t2">🪻</div>
+      <div class="blog-body">
+        <div class="blog-pill"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></div>
+        <div class="blog-title"><span class="vi">Peel da an toàn — những điều cần biết trước khi làm</span><span class="en">Safe chemical peels — what you need to know first</span></div>
+        <div class="blog-excerpt"><span class="vi">Hướng dẫn chuẩn bị da trước và chăm sóc sau khi peel để đạt kết quả tốt nhất...</span><span class="en">How to prep your skin before a peel and care for it after for best results...</span></div>
+        <div class="blog-meta">8 Apr 2026</div>
+      </div>
+    </a>
+    <a class="blog-card" href="#">
+      <div class="blog-thumb t3">✨</div>
+      <div class="blog-body">
+        <div class="blog-pill"><span class="vi">Lifestyle</span><span class="en">Lifestyle</span></div>
+        <div class="blog-title"><span class="vi">5 thói quen tối giúp da đẹp hơn mỗi ngày</span><span class="en">5 evening habits for visibly better skin</span></div>
+        <div class="blog-excerpt"><span class="vi">Những bước đơn giản trước khi ngủ mang lại làn da rạng rỡ sáng hôm sau...</span><span class="en">Simple nighttime rituals that make a noticeable difference by morning...</span></div>
+        <div class="blog-meta">1 Apr 2026</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip" id="contact">
+  <div>
+    <h3><span class="vi">Sẵn sàng trải nghiệm?</span><span class="en">Ready to begin?</span></h3>
+    <p><span class="vi">Tư vấn miễn phí · Harmonie Beauté luôn lắng nghe</span><span class="en">Free consultation · We're here for you</span></p>
+  </div>
+  <div class="cta-btns">
+    <button class="cta-btn-w">📞 089 909 0762</button>
+    <button class="cta-btn-o">Zalo / WhatsApp</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Harmonie Beauté</div>
+  <p>© 2024 Harmonie Beauté · 30 Đặng Tất, Tân Định, TP. HCM</p>
+  <div class="footer-links">
+    <a href="#"><span class="vi">Chính sách</span><span class="en">Policy</span></a>
+    <a href="#"><span class="vi">Bảo mật</span><span class="en">Privacy</span></a>
+  </div>
+</footer>
+
+<script>
+// ── LANGUAGE ──
+function setLang(l){
+  document.documentElement.setAttribute('data-lang', l);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if(b.getAttribute('onclick') === "setLang('"+l+"')") b.classList.add('active');
+  });
+}
+
+// ── SERVICE TABS ──
+function switchTab(btn, id){
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active');
+}
+
+// ── BOOK SHORTCUT ──
+function fillBook(name){
+  document.getElementById('calendar').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
