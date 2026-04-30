@@ -110,7 +110,22 @@ a{text-decoration:none;color:inherit}
 
 
 
-/* ── BLOG ── */
+/* ── REVIEWS ── */
+.reviews-section{background:var(--white)}
+.reviews-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:1rem}
+.reviews-grid::-webkit-scrollbar{height:4px}
+.reviews-grid::-webkit-scrollbar-track{background:var(--sand);border-radius:2px}
+.reviews-grid::-webkit-scrollbar-thumb{background:var(--moss-pale);border-radius:2px}
+.review-card{background:var(--cream);border-radius:16px;padding:1.5rem;flex:0 0 280px;scroll-snap-align:start;box-shadow:0 2px 12px var(--shadow);display:flex;flex-direction:column;gap:0.8rem}
+.review-stars{color:var(--gold);font-size:0.85rem;letter-spacing:2px}
+.review-text{font-size:0.85rem;color:var(--charcoal);line-height:1.7;font-style:italic;flex:1}
+.review-author{display:flex;align-items:center;gap:0.6rem;margin-top:0.4rem}
+.review-avatar{width:32px;height:32px;border-radius:50%;background:var(--moss-pale);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:600;color:var(--moss);flex-shrink:0}
+.review-name{font-size:0.78rem;font-weight:600;color:var(--charcoal)}
+.review-date{font-size:0.65rem;color:var(--earth);margin-top:1px}
+.review-source{display:flex;align-items:center;gap:0.4rem;font-size:0.62rem;color:var(--earth);margin-top:0.2rem}
+.review-badge{display:inline-flex;align-items:center;gap:0.3rem;background:var(--moss-pale);color:var(--moss);padding:0.25rem 0.7rem;border-radius:50px;font-size:0.62rem;font-weight:600;letter-spacing:0.06em}
+@media(max-width:480px){.review-card{flex:0 0 240px}}
 .blog-section{background:var(--white)}
 .blog-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:1rem;cursor:grab}
 .blog-card{background:var(--cream);border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);display:block;box-shadow:0 2px 16px var(--shadow);flex:0 0 280px;scroll-snap-align:start}
@@ -222,8 +237,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <div class="logo">Harmonie <em>beauté</em></div>
   <ul class="nav-links">
     <li><a href="#services"><span class="vi">Dịch vụ</span><span class="en">Services</span></a></li>
-    <li><a href="#calendar"><span class="vi">Đặt lịch</span><span class="en">Book</span></a></li>
-    <li><a href="#address"><span class="vi">Địa chỉ</span><span class="en">Location</span></a></li>
     <li><a href="#blog">Blog</a></li>
   </ul>
   <div class="nav-right">
@@ -381,6 +394,142 @@ footer p{font-size:0.68rem;color:var(--earth)}
       <button class="c-btn-call" onclick="document.getElementById('calendar').scrollIntoView({behavior:'smooth'})"><span class="vi">Đặt lịch ngay</span><span class="en">Book now</span></button>
       <button class="c-btn-zalo">Zalo / WhatsApp</button>
     </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section section" id="reviews">
+  <p class="section-tag">✦ <span class="vi">Khách hàng nói gì</span><span class="en">What clients say</span></p>
+  <h2 class="section-title"><span class="vi">Đánh giá <em>thực tế</em></span><span class="en">Real <em>reviews</em></span></h2>
+  <div class="section-line"></div>
+  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+    <div style="display:flex;gap:2px;color:var(--gold);font-size:1.1rem">★★★★★</div>
+    <span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--charcoal);font-weight:400">5.0</span>
+    <span style="font-size:0.78rem;color:var(--earth)"><span class="vi">· 20 đánh giá trên Google</span><span class="en">· 20 reviews on Google</span></span>
+    <span class="review-badge">✓ Google</span>
+  </div>
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Gấp gáp tìm tiệm mà không hy vọng nhiều — ai ngờ gặp được chỗ nhẹ nhàng, riêng tư, sạch sẽ đến từng chi tiết. Lúc đắp mặt nạ còn được massage đầu luôn! Chưa tới 300k mà được nuông chiều quá trời. Iuuuu tiệm quó!"</span>
+        <span class="en">"Rushed here with low expectations — then found somewhere so gentle, private and spotless. She even gave me a head massage while the mask was on. Under 300k for all that? Absolutely unreal."</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">K</div>
+        <div>
+          <div class="review-name">Khoa Nguyễn</div>
+          <div class="review-date"><span class="vi">1 tháng trước</span><span class="en">1 month ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Mới đi về là phải đánh giá liền — chị nặn mát tay, không bị sần đỏ như mấy chỗ trước. Giá okila lắm mà ít người biết tới tiệm. Chắc chắn sẽ quay lại!"</span>
+        <span class="en">"Got home and had to review right away — so gentle, no redness like other places. Great price but not enough people know this gem yet. Definitely coming back!"</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">N</div>
+        <div>
+          <div class="review-name">Bạn Nga</div>
+          <div class="review-date"><span class="vi">10 tháng trước</span><span class="en">10 months ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Mình ở SG từ hồi đại học mà toàn về quê nặn mụn vì sợ SG không uy tín. Từ khi tìm được Harmonie — trộm vía không thất vọng. Uy tín, hiệu quả, giá phải chăng — xứng đáng được biết đến nhiều hơn!"</span>
+        <span class="en">"I used to travel all the way home just for acne treatment — too scared of Saigon spas. Since finding Harmonie, I never have to do that again. Trusted, effective, affordable — deserves to be way more well-known."</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">H</div>
+        <div>
+          <div class="review-name">Hường Nguyễn</div>
+          <div class="review-date"><span class="vi">10 tháng trước</span><span class="en">10 months ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Chị chủ siêu thân thiện, cửa hàng sạch sẽ. Nặn có tâm ghê, siêu kỹ — nằm từ 9 giờ sáng tới 12 giờ trưa mới xong. Giá hơn 200k xíu mà chất lượng tuyệt vời!"</span>
+        <span class="en">"Super friendly owner, spotless shop. The extraction is so thorough — we went from 9am all the way to noon. Just over 200k for that level of care? Outstanding."</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">D</div>
+        <div>
+          <div class="review-name">Dương Hoàng</div>
+          <div class="review-date"><span class="vi">5 tháng trước</span><span class="en">5 months ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Tiệm nhỏ mà hiệu quả rẻ nhất quả đất — chị chủ dễ thương, đặc biệt nặn xong ít sưng, ít thâm lắm."</span>
+        <span class="en">"Small shop but incredibly effective and best value around. Lovely owner — extractions leave minimal swelling and bruising. That's what matters most."</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">L</div>
+        <div>
+          <div class="review-name">Lộc Lâm</div>
+          <div class="review-date"><span class="vi">11 tháng trước</span><span class="en">11 months ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Trước mình sợ spa nhỏ lắm — từ khi đến đây có suy nghĩ khác rồi. Chị nặn mát tay, không sưng thâm, tối nặn sáng hôm sau đã xẹp hết. Giá bình dân mà hiệu quả thật sự."</span>
+        <span class="en">"Used to be scared of small spas — this place changed my mind entirely. No swelling, no bruising; by next morning everything had calmed down. Affordable and genuinely effective."</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">L</div>
+        <div>
+          <div class="review-name">Lan Nhi</div>
+          <div class="review-date"><span class="vi">1 năm trước</span><span class="en">1 year ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Không gian nhỏ, xinh, dễ thương. Kỹ thuật viên mát tay, nói chuyện nhẹ nhàng. Sản phẩm tốt — da sau nặn siêu trộm vía!"</span>
+        <span class="en">"Small, pretty and charming space. The technician is gentle and soft-spoken. Great products — my skin looked amazing after the treatment."</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">M</div>
+        <div>
+          <div class="review-name">Mọc Văn Kim</div>
+          <div class="review-date"><span class="vi">9 tháng trước</span><span class="en">9 months ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        <span class="vi">"Đã quay lại nhiều lần vì chất lượng ổn định — và không bị tư vấn thêm gì cả."</span>
+        <span class="en">"Kept coming back for consistently great quality — and never any pushy upselling. That trust means everything."</span>
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">Đ</div>
+        <div>
+          <div class="review-name">Đậu Đậu</div>
+          <div class="review-date"><span class="vi">11 tháng trước</span><span class="en">11 months ago</span> · Google</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
