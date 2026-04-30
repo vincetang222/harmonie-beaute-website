@@ -25,7 +25,7 @@
   --earth:#8B6F5C;
   --dark:#1E2F25;
 }
-body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.65}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.7;font-size:16px}
 a{text-decoration:none;color:inherit}
 
 /* ── LANG ── */
@@ -36,23 +36,23 @@ a{text-decoration:none;color:inherit}
 .lang-btn.active{background:var(--moss);color:#fff}
 
 /* ── NAVBAR ── */
-.navbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(235,221,206,0.6);display:flex;justify-content:space-between;align-items:center;padding:0 3.5rem;height:68px;gap:1.5rem}
+.navbar{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--sand);display:flex;justify-content:space-between;align-items:center;padding:0 3.5rem;height:68px;gap:1.5rem}
 .logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:500;color:var(--moss);letter-spacing:0.02em;flex-shrink:0}
 .logo em{font-style:italic;color:var(--gold)}
 .nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:0.72rem;color:#6B6B6B;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
+.nav-links a{font-size:0.78rem;color:var(--earth);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--moss)}
 .nav-right{display:flex;align-items:center;gap:1rem}
 .btn-nav{background:var(--moss);color:#fff;padding:0.55rem 1.5rem;border:none;border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;box-shadow:0 2px 12px var(--shadow);transition:all 0.25s}
 .btn-nav:hover{background:#3A4D3E;box-shadow:0 4px 20px var(--shadow-md)}
 
 /* ── HERO ── */
-.hero{background:var(--dark);min-height:90vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;position:relative}
-.hero-left{padding:5rem 4rem 5rem 6rem;position:relative;z-index:1}
+.hero{background:var(--dark);min-height:85vh;display:grid;grid-template-columns:1fr;align-items:center;overflow:hidden;position:relative}
+.hero-left{padding:5rem 6rem;position:relative;z-index:1;max-width:700px}
 .hero-eyebrow{font-size:0.63rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;font-weight:400;opacity:0.85}
-.hero-title{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:400;line-height:1.1;color:#F2EBD9;margin-bottom:1.2rem}
+.hero-title{font-family:'Playfair Display',serif;font-size:4.2rem;font-weight:400;line-height:1.08;color:#F2EBD9;margin-bottom:1.4rem}
 .hero-title em{font-style:italic;color:var(--gold)}
-.hero-desc{font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.9;max-width:380px;margin-bottom:2.2rem;font-weight:300}
+.hero-desc{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.85;max-width:460px;margin-bottom:2.2rem;font-weight:300}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
 .btn-primary{background:#fff;color:var(--moss);border:none;padding:0.9rem 2.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.25s}
 .btn-primary:hover{background:var(--cream);box-shadow:0 6px 28px rgba(0,0,0,0.25)}
@@ -61,30 +61,18 @@ a{text-decoration:none;color:inherit}
 .hero-stats{display:flex;gap:3rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08)}
 .stat-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);font-weight:400;display:block}
 .stat-label{font-size:0.6rem;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.18em;margin-top:3px;font-weight:400}
-.hero-right{height:100%;min-height:90vh;background:linear-gradient(150deg,#2D4A3A,#1A2F22);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.hero-deco{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,#6B8F71 0,#6B8F71 1px,transparent 0,transparent 50%);background-size:14px 14px}
-.hero-monogram{position:relative;z-index:1;text-align:center;padding:3rem}
-.hero-monogram-text{font-family:'Playfair Display',serif;font-size:7rem;color:rgba(46,78,58,0.12);font-style:italic;line-height:1;display:block}
-.hero-monogram-sub{font-size:0.58rem;color:rgba(46,78,58,0.3);text-transform:uppercase;letter-spacing:0.45em;margin-top:0.6rem;display:block}
-.hero-private-badge{display:inline-flex;flex-direction:column;align-items:center;gap:1.5rem;position:relative;z-index:1}
-.hero-oval{width:180px;height:240px;border-radius:50%;border:1px solid rgba(201,169,110,0.25);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.05);backdrop-filter:blur(4px)}
-.hero-oval-inner{text-align:center}
-.hero-oval-text{font-family:'Playfair Display',serif;font-size:1.1rem;color:rgba(235,221,206,0.8);font-style:italic;display:block;line-height:1.4}
-.hero-oval-sub{font-size:0.55rem;color:rgba(201,169,110,0.5);text-transform:uppercase;letter-spacing:0.25em;display:block;margin-top:0.5rem}
-.hero-tags{display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;max-width:260px}
-.hero-tag{font-size:0.6rem;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);padding:5px 12px;border-radius:50px;letter-spacing:0.08em;text-transform:uppercase;font-weight:400}
 
 /* ── SECTIONS ── */
-.section{padding:5.5rem 6rem}
-.section-tag{font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--moss-light);font-weight:600;margin-bottom:0.6rem}
-.section-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:0.7rem}
+.section{padding:5rem 6rem}
+.section-tag{font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--moss-light);font-weight:600;margin-bottom:0.7rem}
+.section-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:0.8rem}
 .section-title em{color:var(--moss);font-style:italic}
 .section-line{width:40px;height:1px;background:var(--sand-dark);margin-bottom:2.8rem}
 
 /* ── SERVICES ── */
 .services-section{background:var(--white)}
 .tab-bar{display:flex;gap:0.4rem;margin-bottom:2.5rem;flex-wrap:wrap}
-.tab-btn{padding:0.55rem 1.3rem;background:var(--cream);border:1px solid var(--sand-dark);border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:#6B6B6B;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}
+.tab-btn{padding:0.6rem 1.4rem;background:var(--cream);border:1px solid var(--sand-dark);border-radius:50px;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;color:#6B6B6B;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}
 .tab-btn.active{background:var(--moss);border-color:var(--moss);color:#fff;box-shadow:0 2px 12px var(--shadow)}
 .tab-btn:not(.active):hover{border-color:var(--moss-light);color:var(--moss)}
 .tab-content{display:none}
@@ -95,10 +83,10 @@ a{text-decoration:none;color:inherit}
 .svc-row{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;border-bottom:1px solid rgba(235,221,206,0.8)}
 .svc-row:last-child{border-bottom:none}
 .svc-left{display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap}
-.svc-name{font-size:0.9rem;color:var(--charcoal);font-weight:400}
+.svc-name{font-size:0.95rem;color:var(--charcoal);font-weight:400}
 .best-badge{font-size:0.56rem;background:#FEF9E7;color:#8B6914;padding:2px 9px;border-radius:50px;letter-spacing:0.04em;font-weight:600;border:1px solid #F0E0A0}
 .svc-right{display:flex;align-items:center;gap:0.8rem;flex-shrink:0}
-.svc-price{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:400;color:var(--moss);white-space:nowrap}
+.svc-price{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--moss);white-space:nowrap}
 .svc-book-btn{font-size:0.66rem;color:var(--moss);border:1px solid var(--moss-pale);background:var(--moss-pale);padding:4px 12px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;white-space:nowrap;font-weight:500;transition:all 0.2s}
 .svc-book-btn:hover{background:var(--moss);color:#fff;border-color:var(--moss)}
 
@@ -116,7 +104,7 @@ a{text-decoration:none;color:inherit}
 .addr-item{display:flex;gap:1rem;align-items:flex-start}
 .addr-icon{width:38px;height:38px;border-radius:50%;background:rgba(235,221,206,0.08);border:1px solid rgba(235,221,206,0.12);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
 .addr-block h4{font-size:0.62rem;text-transform:uppercase;letter-spacing:0.18em;color:rgba(235,221,206,0.5);font-weight:500;margin-bottom:0.3rem}
-.addr-block p{font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.65}
+.addr-block p{font-size:0.95rem;color:rgba(255,255,255,0.75);line-height:1.65}
 .social-row{display:flex;gap:0.7rem;margin-top:2rem;flex-wrap:wrap}
 .s-btn{padding:0.55rem 1.3rem;border:1px solid rgba(235,221,206,0.2);border-radius:50px;font-size:0.7rem;color:rgba(255,255,255,0.6);cursor:pointer;background:none;font-family:'Be Vietnam Pro',sans-serif;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;transition:all 0.2s}
 .s-btn:hover{border-color:rgba(235,221,206,0.5);color:#fff}
@@ -124,32 +112,32 @@ a{text-decoration:none;color:inherit}
 
 /* ── BLOG ── */
 .blog-section{background:var(--cream)}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .blog-card{background:var(--white);border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.25s;display:block;box-shadow:0 2px 12px var(--shadow)}
 .blog-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px var(--shadow-md)}
-.blog-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.8rem}
+.blog-thumb{height:90px;display:flex;align-items:center;justify-content:center;font-size:2rem}
 .blog-thumb.t1{background:#E8D5C4}.blog-thumb.t2{background:#D4E4D0}.blog-thumb.t3{background:#E4D8C8}
-.blog-body{padding:1.2rem 1.3rem}
+.blog-body{padding:0.85rem 1rem}
 .blog-pill{display:inline-block;font-size:0.58rem;background:var(--moss-pale);color:var(--moss);padding:3px 10px;border-radius:50px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem;font-weight:600}
-.blog-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;color:var(--charcoal);line-height:1.4;margin-bottom:0.4rem}
-.blog-excerpt{font-size:0.76rem;color:#777;line-height:1.55;font-weight:300}
+.blog-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:500;color:var(--charcoal);line-height:1.35;margin-bottom:0.3rem}
+.blog-excerpt{font-size:0.72rem;color:#888;line-height:1.5;font-weight:300}
 .blog-meta{font-size:0.63rem;color:#AAA;margin-top:0.6rem;font-weight:400}
 
 /* ── CTA ── */
-.cta-strip{background:var(--terra);padding:3rem 6rem;display:flex;justify-content:space-between;align-items:center}
-.cta-strip h3{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:#fff;margin-bottom:0.2rem}
-.cta-strip p{font-size:0.82rem;color:rgba(255,255,255,0.65);font-weight:300}
+.cta-strip{background:#1A2820;padding:3rem 6rem;display:flex;justify-content:space-between;align-items:center}
+.cta-strip h3{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:var(--cream);margin-bottom:0.2rem}
+.cta-strip p{font-size:0.92rem;color:rgba(255,255,255,0.6);font-weight:300}
 .cta-btns{display:flex;gap:0.8rem}
-.cta-btn-w{background:#fff;color:var(--terra);border:none;padding:0.75rem 1.8rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,0.15)}
+.cta-btn-w{background:var(--cream);color:#1A2820;border:none;padding:0.75rem 1.8rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,0.15)}
 .cta-btn-o{background:transparent;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.35);padding:0.75rem 1.8rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:400;transition:all 0.2s}
 .cta-btn-o:hover{border-color:rgba(255,255,255,0.7);color:#fff}
 
 /* ── FOOTER ── */
-footer{background:var(--dark);padding:2rem 6rem;display:flex;justify-content:space-between;align-items:center}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--moss-light);font-style:italic}
-footer p{font-size:0.68rem;color:#555}
+footer{background:var(--cream);padding:1.8rem 6rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--sand);}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--moss);font-style:italic}
+footer p{font-size:0.68rem;color:var(--earth)}
 .footer-links{display:flex;gap:1.5rem}
-.footer-links a{font-size:0.66rem;color:#555;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
+.footer-links a{font-size:0.66rem;color:var(--earth);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
 .footer-links a:hover{color:var(--moss-light)}
 
 /* ── CALENDLY ── */
@@ -164,7 +152,7 @@ footer p{font-size:0.68rem;color:#555}
   .navbar{padding:0 1.5rem;height:60px}
   .nav-links{display:none}
   .hero{grid-template-columns:1fr}
-  .hero-right{display:none}
+  
   .hero-left{padding:3.5rem 1.5rem}
   .hero-title{font-size:2.6rem}
   .section{padding:3.5rem 1.5rem}
@@ -221,27 +209,6 @@ footer p{font-size:0.68rem;color:#555}
       <div><span class="stat-num">500+</span><span class="stat-label vi">Khách hàng</span><span class="stat-label en">Clients</span></div>
       <div><span class="stat-num">4</span><span class="stat-label vi">Nhóm liệu trình</span><span class="stat-label en">Treatment types</span></div>
       <div><span class="stat-num">5★</span><span class="stat-label vi">Đánh giá</span><span class="stat-label en">Reviews</span></div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-deco"></div>
-    <div class="hero-private-badge">
-      <div class="hero-oval">
-        <div class="hero-oval-inner">
-          <span class="hero-oval-text">Harmonie<br>beauté</span>
-          <span class="hero-oval-sub">Private Spa</span>
-        </div>
-      </div>
-      <div class="hero-tags">
-        <span class="hero-tag vi">Chuyên sâu</span>
-        <span class="hero-tag en">Expert care</span>
-        <span class="hero-tag vi">Riêng tư</span>
-        <span class="hero-tag en">Private</span>
-        <span class="hero-tag vi">Tận tâm</span>
-        <span class="hero-tag en">Dedicated</span>
-        <span class="hero-tag vi">Yên tĩnh</span>
-        <span class="hero-tag en">Serene</span>
-      </div>
     </div>
   </div>
 </section>
@@ -324,8 +291,8 @@ footer p{font-size:0.68rem;color:#555}
   <h2 class="section-title"><span class="vi">Chọn giờ <em>của bạn</em></span><span class="en">Choose your <em>time</em></span></h2>
   <div class="section-line"></div>
   <p style="font-size:0.87rem;color:var(--earth);margin-bottom:2rem;line-height:1.75">
-    <span class="vi">Chọn dịch vụ, ngày và giờ phù hợp — xác nhận tự động qua email. Mỗi session 2 tiếng (điều trị 1h45 + 15 phút nghỉ).</span>
-    <span class="en">Pick your service, date & time — instant confirmation by email. Each session is 2 hours (1h45 treatment + 15 min break).</span>
+    <span class="vi">Chọn dịch vụ, ngày và giờ phù hợp. Mỗi session 2 tiếng (điều trị 1h45 + 15 phút nghỉ).</span>
+    <span class="en">Pick your service, date & time. Each session is 2 hours (1h45 treatment + 15 min break).</span>
   </p>
 </section>
 
@@ -371,7 +338,7 @@ footer p{font-size:0.68rem;color:#555}
           <div class="addr-icon">🕐</div>
           <div class="addr-block">
             <h4><span class="vi">Giờ mở cửa</span><span class="en">Opening hours</span></h4>
-            <p><span class="vi">Thứ 2 – Thứ 7: 10:00 – 20:00</span><span class="en">Mon – Sat: 10:00 AM – 8:00 PM</span></p>
+            <p><span class="vi">Thứ 2 – Chủ nhật: 10:00 – 20:00</span><span class="en">Mon – Sun: 10:00 AM – 8:00 PM</span></p>
           </div>
         </div>
       </div>
