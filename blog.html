@@ -53,14 +53,11 @@ a{text-decoration:none;color:inherit}
 
 /* ── FEATURED ARTICLE ── */
 .featured-wrap{padding:1.5rem 6rem 0}
-.featured-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 4px 24px var(--shadow);display:grid;grid-template-columns:1fr 1fr;transition:transform 0.3s,box-shadow 0.3s}
+.featured-card{background:var(--white);border-radius:16px;box-shadow:0 4px 24px var(--shadow);transition:transform 0.3s,box-shadow 0.3s;border-left:4px solid var(--moss)}
 .featured-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px var(--shadow-md)}
-.featured-thumb{background:linear-gradient(135deg,#2D4A3A,#1E3028);min-height:320px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.featured-thumb-deco{position:absolute;inset:0;opacity:0.06;background-image:repeating-linear-gradient(45deg,#6B8F71 0,#6B8F71 1px,transparent 0,transparent 50%);background-size:14px 14px}
-.featured-thumb-emoji{font-size:5rem;position:relative;z-index:1}
-.featured-new{position:absolute;top:1.2rem;left:1.2rem;background:var(--terra);color:#fff;font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:50px;z-index:2}
-.featured-body{padding:2.5rem}
-.art-category{display:inline-block;font-size:0.62rem;background:var(--moss-pale);color:var(--moss);padding:3px 10px;border-radius:50px;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;margin-bottom:0.8rem}
+.featured-new{display:inline-block;background:var(--terra);color:#fff;font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:50px;margin-bottom:1rem}
+.featured-body{padding:2.2rem 2.5rem}
+.art-category{display:inline-block;font-size:0.58rem;background:var(--moss-pale);color:var(--moss);padding:2px 8px;border-radius:50px;text-transform:uppercase;letter-spacing:0.07em;font-weight:600;margin-bottom:0.5rem}
 .featured-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:500;color:var(--charcoal);line-height:1.3;margin-bottom:0.8rem}
 .featured-excerpt{font-size:0.88rem;color:var(--earth);line-height:1.75;margin-bottom:1.5rem;font-weight:300}
 .art-meta{display:flex;align-items:center;gap:1rem;font-size:0.68rem;color:var(--earth);margin-bottom:1.5rem}
@@ -72,18 +69,13 @@ a{text-decoration:none;color:inherit}
 
 /* ── ARTICLE GRID ── */
 .articles-wrap{padding:2rem 6rem 4rem}
-.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.art-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px var(--shadow);transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);cursor:pointer}
-.art-card:hover{transform:translateY(-5px);box-shadow:0 10px 32px var(--shadow-md)}
-.art-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;position:relative}
-.art-thumb.c1{background:linear-gradient(135deg,#E8D5C4,#D4C4B0)}
-.art-thumb.c2{background:linear-gradient(135deg,#D4E4D0,#C0D4BC)}
-.art-thumb.c3{background:linear-gradient(135deg,#E4D8C8,#D4C8B4)}
-.art-thumb.c4{background:linear-gradient(135deg,#D8E4E8,#C4D4D8)}
-.art-thumb.c5{background:linear-gradient(135deg,#E8DCD4,#D8CCC4)}
-.art-body{padding:1.3rem 1.4rem}
-.art-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;color:var(--charcoal);line-height:1.4;margin-bottom:0.5rem}
-.art-excerpt{font-size:0.78rem;color:var(--earth);line-height:1.6;font-weight:300;margin-bottom:0.8rem}
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.7rem}
+.art-card{background:var(--white);border-radius:10px;box-shadow:0 1px 6px var(--shadow);transition:all 0.2s;cursor:pointer;border-left:3px solid transparent}
+.art-card:hover{transform:translateX(4px);box-shadow:0 4px 20px var(--shadow-md);border-left-color:var(--moss)}
+
+.art-body{padding:1rem 1.1rem}
+.art-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:500;color:var(--charcoal);line-height:1.35;margin-bottom:0.35rem}
+.art-excerpt{font-size:0.75rem;color:var(--earth);line-height:1.55;font-weight:300;margin-bottom:0.6rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .art-footer{display:flex;justify-content:space-between;align-items:center}
 .art-date{font-size:0.63rem;color:#AAA}
 .art-arrow{font-size:0.8rem;color:var(--moss-light);transition:transform 0.2s}
@@ -117,8 +109,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
   .blog-hero-title{font-size:2rem}
   .filter-wrap{padding:1.5rem 1.2rem 0.5rem}
   .featured-wrap{padding:1rem 1.2rem 0}
-  .featured-card{grid-template-columns:1fr}
-  .featured-thumb{min-height:200px}
   .featured-body{padding:1.5rem}
   .featured-title{font-size:1.3rem}
   .articles-wrap{padding:1.5rem 1.2rem 3rem}
@@ -127,7 +117,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   footer{flex-direction:column;gap:0.6rem;text-align:center;padding:1.2rem}
 }
 @media(max-width:480px){
-  .articles-grid{grid-template-columns:1fr}
+  .articles-grid{grid-template-columns:1fr 1fr}
   .blog-hero-title{font-size:1.7rem}
 }
 </style>
@@ -179,12 +169,8 @@ footer p{font-size:0.68rem;color:var(--earth)}
 <!-- FEATURED -->
 <div class="featured-wrap">
   <div class="featured-card">
-    <div class="featured-thumb">
-      <div class="featured-thumb-deco"></div>
-      <div class="featured-new"><span class="vi">Mới nhất</span><span class="en">Latest</span></div>
-      <span class="featured-thumb-emoji">🌿</span>
-    </div>
     <div class="featured-body">
+      <div class="featured-new"><span class="vi">Mới nhất</span><span class="en">Latest</span></div>
       <span class="art-category"><span class="vi">Điều trị mụn</span><span class="en">Acne treatment</span></span>
       <h2 class="featured-title">
         <span class="vi">Nặn mụn đúng cách: Vì sao kỹ thuật quan trọng hơn bạn nghĩ?</span>
@@ -212,7 +198,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
     <!-- Article 1 -->
     <div class="art-card">
-      <div class="art-thumb c2">🧪</div>
       <div class="art-body">
         <span class="art-category">Chemical Peel</span>
         <h3 class="art-title">
@@ -232,7 +217,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
     <!-- Article 2 -->
     <div class="art-card">
-      <div class="art-thumb c3">💧</div>
       <div class="art-body">
         <span class="art-category"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></span>
         <h3 class="art-title">
@@ -252,7 +236,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
     <!-- Article 3 -->
     <div class="art-card">
-      <div class="art-thumb c4">🌙</div>
       <div class="art-body">
         <span class="art-category">Lifestyle</span>
         <h3 class="art-title">
@@ -272,7 +255,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
     <!-- Article 4 -->
     <div class="art-card">
-      <div class="art-thumb c1">☀️</div>
       <div class="art-body">
         <span class="art-category"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></span>
         <h3 class="art-title">
@@ -292,7 +274,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
     <!-- Article 5 -->
     <div class="art-card">
-      <div class="art-thumb c5">🔬</div>
       <div class="art-body">
         <span class="art-category">Chemical Peel</span>
         <h3 class="art-title">
