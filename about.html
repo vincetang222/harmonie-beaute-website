@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi" data-lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gặp gỡ Hana – Kỹ thuật viên chính · Harmonie Beauté</title>
+<meta name="description" content="Hana — kỹ thuật viên chính với 7 năm kinh nghiệm điều trị mụn và Chemical Peel tại Harmonie Beauté, Tân Định, TP. HCM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+:root{
+  --moss:#3D5A47;--moss-light:#6B8F71;--moss-pale:#D4E4D0;
+  --cream:#F7F0E4;--sand:#DDD4C0;--sand-dark:#C8BFB0;
+  --charcoal:#1E2F25;--white:#FDFAF4;--dark:#1E2F25;
+  --terra:#B5673B;--gold:#C9A96E;--earth:#8B6F5C;
+  --shadow:rgba(61,90,71,0.10);--shadow-md:rgba(61,90,71,0.18);
+}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.7;font-size:16px}
+a{text-decoration:none;color:inherit}
+
+/* ── LANG ── */
+[data-lang="vi"] .en{display:none}
+[data-lang="en"] .vi{display:none}
+.lang-toggle{display:flex;border:1px solid var(--sand-dark);border-radius:50px;overflow:hidden;flex-shrink:0}
+.lang-btn{padding:0.28rem 0.85rem;font-size:0.68rem;font-weight:600;letter-spacing:0.1em;cursor:pointer;background:none;border:none;color:var(--moss-light);font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s}
+.lang-btn.active{background:var(--moss);color:#fff}
+
+/* ── NAVBAR ── */
+.navbar{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--sand);box-shadow:0 2px 16px rgba(61,90,71,0.07);display:flex;justify-content:space-between;align-items:center;padding:0 3.5rem;height:68px;gap:1.5rem}
+.logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:500;color:var(--moss);letter-spacing:0.02em;flex-shrink:0}
+.logo em{font-style:italic;color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:0.78rem;color:var(--earth);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--moss)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.btn-nav{background:var(--moss);color:#fff;padding:0.55rem 1.5rem;border:none;border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;transition:all 0.25s}
+.btn-nav:hover{background:#2A3D2E}
+
+/* ── HERO ── */
+.about-hero{background:linear-gradient(160deg,#1E3028 0%,#162620 50%,#0F1F18 100%);padding:5rem 6rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;min-height:85vh;position:relative;overflow:hidden}
+.about-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(107,143,113,0.08) 0%,transparent 60%)}
+.about-hero-left{position:relative;z-index:1}
+.hero-overline{font-size:0.63rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;opacity:0.85}
+.about-hero-name{font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:400;color:#F2EBD9;line-height:1.05;margin-bottom:0.5rem}
+.about-hero-name em{font-style:italic;color:var(--gold)}
+.about-hero-role{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.2em;color:rgba(255,255,255,0.4);margin-bottom:2rem;font-weight:400}
+.about-hero-tagline{font-family:'Playfair Display',serif;font-size:1.25rem;color:rgba(255,255,255,0.75);font-style:italic;font-weight:400;line-height:1.6;max-width:420px;margin-bottom:2.5rem;border-left:2px solid var(--gold);padding-left:1.2rem}
+.hero-stats-row{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid rgba(201,169,110,0.2)}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold);font-weight:400;display:block;line-height:1}
+.hero-stat-label{font-size:0.6rem;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.18em;margin-top:4px;display:block}
+
+/* Avatar placeholder */
+.about-hero-right{position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
+.avatar-wrap{position:relative}
+.avatar-ring{width:320px;height:400px;border-radius:160px 160px 120px 120px;background:rgba(255,255,255,0.04);border:1px solid rgba(201,169,110,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
+.avatar-ring::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(201,169,110,0.06) 0%,transparent 70%)}
+.avatar-initial{font-family:'Playfair Display',serif;font-size:6rem;color:rgba(201,169,110,0.2);font-style:italic;position:relative;z-index:1}
+.avatar-label{font-size:0.6rem;color:rgba(201,169,110,0.3);text-transform:uppercase;letter-spacing:0.35em;position:relative;z-index:1}
+.avatar-badge{position:absolute;bottom:-1rem;right:-1rem;background:var(--moss);border:3px solid #162620;border-radius:50px;padding:0.5rem 1rem;display:flex;align-items:center;gap:0.4rem}
+.avatar-badge-text{font-size:0.68rem;color:#fff;font-weight:500;letter-spacing:0.05em}
+.avatar-badge-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+/* ── STORY SECTION ── */
+.story-section{background:var(--white);padding:5rem 6rem}
+.story-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.story-sidebar{position:sticky;top:5rem}
+.story-sidebar-tag{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:0.5rem}
+.story-sidebar-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--charcoal);line-height:1.2;margin-bottom:1.2rem}
+.story-sidebar-title em{color:var(--moss);font-style:italic}
+.story-divider{width:36px;height:1.5px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:1.5rem;opacity:0.8}
+.story-sidebar-quote{font-family:'Playfair Display',serif;font-size:0.95rem;color:var(--earth);font-style:italic;line-height:1.75;border-left:2px solid var(--gold);padding-left:1rem;opacity:0.85}
+
+.story-content{display:flex;flex-direction:column;gap:2.5rem}
+.story-chapter{display:flex;flex-direction:column;gap:0.8rem}
+.chapter-label{font-size:0.6rem;text-transform:uppercase;letter-spacing:0.22em;color:var(--gold);font-weight:600;opacity:0.8}
+.chapter-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:500;color:var(--charcoal);line-height:1.3}
+.chapter-body{font-size:0.95rem;color:var(--earth);line-height:1.9;font-weight:300}
+.chapter-body p+p{margin-top:1rem}
+.chapter-highlight{background:var(--cream);border-radius:12px;padding:1.2rem 1.5rem;border-left:3px solid var(--moss);margin-top:0.5rem}
+.chapter-highlight p{font-size:0.9rem;color:var(--charcoal);line-height:1.75;font-style:italic}
+
+/* ── VALUES ── */
+.values-section{background:var(--cream);padding:5rem 6rem}
+.values-header{text-align:center;margin-bottom:3.5rem}
+.section-tag{font-size:0.64rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--moss-light);font-weight:600;margin-bottom:0.6rem}
+.section-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:400;color:var(--charcoal);line-height:1.15}
+.section-title em{color:var(--moss);font-style:italic}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.value-card{background:var(--white);border-radius:16px;padding:2rem;box-shadow:0 2px 12px var(--shadow);display:flex;flex-direction:column;gap:0.8rem;transition:transform 0.25s,box-shadow 0.25s}
+.value-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px var(--shadow-md)}
+.value-icon{font-size:1.8rem}
+.value-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:500;color:var(--charcoal)}
+.value-desc{font-size:0.85rem;color:var(--earth);line-height:1.75;font-weight:300}
+
+/* ── EXPERTISE ── */
+.expertise-section{background:var(--white);padding:5rem 6rem}
+.expertise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2.5rem}
+.exp-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem;background:var(--cream);border-radius:12px}
+.exp-icon{width:42px;height:42px;border-radius:50%;background:var(--moss-pale);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.exp-text h4{font-size:0.88rem;font-weight:600;color:var(--charcoal);margin-bottom:0.3rem}
+.exp-text p{font-size:0.8rem;color:var(--earth);line-height:1.6;font-weight:300}
+
+/* ── PROMISE ── */
+.promise-section{background:linear-gradient(160deg,#1E3028,#111E16);padding:5rem 6rem;text-align:center}
+.promise-quote{font-family:'Playfair Display',serif;font-size:2rem;color:#F2EBD9;font-style:italic;font-weight:400;max-width:680px;margin:0 auto 1.5rem;line-height:1.5}
+.promise-quote em{color:var(--gold);font-style:normal}
+.promise-author{font-size:0.75rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.2em}
+
+/* ── CTA ── */
+.cta-strip{background:#1A2820;padding:2.5rem 6rem;display:flex;justify-content:space-between;align-items:center}
+.cta-strip h3{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--cream);margin-bottom:0.2rem}
+.cta-strip p{font-size:0.88rem;color:rgba(255,255,255,0.55);font-weight:300}
+.cta-btns{display:flex;gap:0.8rem}
+.cta-btn-w{background:var(--cream);color:#1A2820;border:none;padding:0.7rem 1.8rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600}
+.cta-btn-o{background:transparent;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.25);padding:0.7rem 1.8rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif}
+
+/* ── FOOTER ── */
+footer{background:var(--cream);padding:1.8rem 6rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--sand)}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--moss);font-style:italic}
+footer p{font-size:0.68rem;color:var(--earth)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:0.66rem;color:var(--earth);letter-spacing:0.1em;text-transform:uppercase}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .navbar{padding:0 1.2rem;height:56px}
+  .nav-links{display:none}
+  .about-hero{grid-template-columns:1fr;padding:3.5rem 1.2rem;min-height:auto;gap:2.5rem}
+  .about-hero-right{order:-1}
+  .avatar-ring{width:220px;height:280px}
+  .about-hero-name{font-size:3rem}
+  .story-section,.values-section,.expertise-section,.promise-section{padding:3.5rem 1.2rem}
+  .story-grid{grid-template-columns:1fr;gap:2.5rem}
+  .story-sidebar{position:static}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .expertise-grid{grid-template-columns:1fr}
+  .promise-quote{font-size:1.4rem}
+  .cta-strip{flex-direction:column;gap:1.2rem;text-align:center;padding:2rem 1.2rem}
+  footer{flex-direction:column;gap:0.6rem;text-align:center;padding:1.2rem}
+}
+@media(max-width:480px){
+  .values-grid{grid-template-columns:1fr}
+  .about-hero-name{font-size:2.5rem}
+  .hero-stats-row{gap:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="logo" href="index.html">Harmonie <em>beauté</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html#services"><span class="vi">Dịch vụ</span><span class="en">Services</span></a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('vi')">VI</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="btn-nav" onclick="window.location.href='index.html#calendar'">
+      <span class="vi">Đặt lịch</span><span class="en">Book now</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="about-hero-left">
+    <p class="hero-overline">✦ <span class="vi">Kỹ thuật viên chính · Harmonie Beauté</span><span class="en">Lead Therapist · Harmonie Beauté</span></p>
+    <h1 class="about-hero-name">Hana<em>.</em></h1>
+    <p class="about-hero-role"><span class="vi">Chuyên gia điều trị da · 7 năm kinh nghiệm</span><span class="en">Skin Treatment Specialist · 7 years experience</span></p>
+    <p class="about-hero-tagline">
+      <span class="vi">"Mỗi làn da đều có câu chuyện riêng. Việc của tôi là lắng nghe — và giúp nó kể một câu chuyện đẹp hơn."</span>
+      <span class="en">"Every skin has its own story. My job is to listen — and help it tell a more beautiful one."</span>
+    </p>
+    <div class="hero-stats-row">
+      <div class="hero-stat">
+        <span class="hero-stat-num">7</span>
+        <span class="hero-stat-label"><span class="vi">Năm kinh nghiệm</span><span class="en">Years experience</span></span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">500+</span>
+        <span class="hero-stat-label"><span class="vi">Khách hàng</span><span class="en">Clients</span></span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">5★</span>
+        <span class="hero-stat-label">Google</span>
+      </div>
+    </div>
+  </div>
+  <div class="about-hero-right">
+    <div class="avatar-wrap">
+      <div class="avatar-ring">
+        <span class="avatar-initial">H</span>
+        <span class="avatar-label">Hana · Harmonie Beauté</span>
+      </div>
+      <div class="avatar-badge">
+        <div class="avatar-badge-dot"></div>
+        <span class="avatar-badge-text"><span class="vi">Đang nhận lịch</span><span class="en">Accepting bookings</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story-section">
+  <div class="story-grid">
+    <div class="story-sidebar">
+      <p class="story-sidebar-tag">✦ <span class="vi">Hành trình</span><span class="en">The journey</span></p>
+      <h2 class="story-sidebar-title"><span class="vi">Từ đam mê đến <em>chuyên môn</em></span><span class="en">From passion to <em>craft</em></span></h2>
+      <div class="story-divider"></div>
+      <p class="story-sidebar-quote">
+        <span class="vi">"Tôi không chỉ làm đẹp — tôi đồng hành cùng từng khách hàng trên hành trình lấy lại sự tự tin với làn da của mình."</span>
+        <span class="en">"I don't just do beauty treatments — I walk alongside each client on their journey to feeling confident in their own skin again."</span>
+      </p>
+    </div>
+
+    <div class="story-content">
+
+      <div class="story-chapter">
+        <span class="chapter-label vi">Chương 1 · Khởi đầu</span>
+        <span class="chapter-label en">Chapter 1 · The beginning</span>
+        <h3 class="chapter-title">
+          <span class="vi">Khi tình yêu với làn da trở thành sứ mệnh</span>
+          <span class="en">When love for skin became a calling</span>
+        </h3>
+        <div class="chapter-body">
+          <p>
+            <span class="vi">7 năm trước, Hana bước vào ngành làm đẹp không phải vì áp lực hay ngẫu nhiên — mà vì một niềm tin giản dị nhưng sâu sắc: một làn da khỏe mạnh có thể thay đổi cách một người nhìn về bản thân. Đó không chỉ là vấn đề thẩm mỹ. Đó là sự tự tin. Là buổi sáng nhìn vào gương và thấy mình ổn.</span>
+            <span class="en">Seven years ago, Hana entered the beauty industry not by accident or obligation — but driven by a simple yet profound belief: that healthy skin can change the way a person sees themselves. It's not just aesthetics. It's confidence. It's waking up, looking in the mirror, and feeling okay.</span>
+          </p>
+          <p>
+            <span class="vi">Những ngày đầu không hề dễ dàng. Hana dành hàng giờ nghiên cứu, thực hành, học từ từng ca khó, từng làn da không chịu hợp tác. Mỗi lần khách ra về với làn da dịu lại, mỗi nốt mụn được xử lý sạch mà không để lại vết — đó là phần thưởng lớn hơn bất kỳ bằng khen nào.</span>
+            <span class="en">The early days weren't easy. Hana spent countless hours studying, practicing, learning from every difficult case and every stubborn skin condition. Each time a client left with calmer skin, each extraction done cleanly without leaving a mark — that felt like a greater reward than any certificate.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="story-chapter">
+        <span class="chapter-label vi">Chương 2 · Trưởng thành</span>
+        <span class="chapter-label en">Chapter 2 · Growing</span>
+        <h3 class="chapter-title">
+          <span class="vi">7 năm — và vẫn còn học mỗi ngày</span>
+          <span class="en">7 years — and still learning every day</span>
+        </h3>
+        <div class="chapter-body">
+          <p>
+            <span class="vi">Với 7 năm gắn bó với nghề, Hana đã đi qua hàng trăm ca điều trị — từ mụn cơ bản đến những trường hợp mụn nang sâu dai dẳng nhiều năm, từ peel nhẹ nhàng đến các liệu trình phục hồi chuyên sâu. Nhưng điều Hana trân trọng nhất không phải là số lượng — mà là sự thay đổi trên khuôn mặt khách hàng sau mỗi buổi điều trị.</span>
+            <span class="en">Over 7 years, Hana has worked through hundreds of treatment sessions — from basic acne to stubborn cystic cases that persisted for years, from gentle peels to intensive recovery protocols. But what Hana values most isn't the numbers — it's the visible change on a client's face after each session.</span>
+          </p>
+          <p>
+            <span class="vi">Không phải ngẫu nhiên mà nhiều khách hàng của Hana gắn bó nhiều năm, quay lại không phải vì bắt buộc — mà vì tin tưởng. Niềm tin đó được xây dựng từ sự kiên nhẫn, từ những buổi ngồi làm kỹ từng nốt mụn dù mất 3 tiếng, từ việc không bao giờ tư vấn dịch vụ không cần thiết.</span>
+            <span class="en">It's no coincidence that many of Hana's clients have stayed for years, returning not out of obligation — but out of trust. That trust is built through patience, through sessions that take three hours because every single pore deserves attention, through never recommending a service that isn't needed.</span>
+          </p>
+        </div>
+        <div class="chapter-highlight">
+          <p>
+            <span class="vi">"Có những ca mình ngồi làm 3–4 tiếng vì da khách cần như vậy. Không ai nhắc tôi nhìn đồng hồ cả — khi đã bắt đầu thì phải làm cho xong, làm cho đúng."</span>
+            <span class="en">"Some sessions I sit for 3–4 hours because the skin needs it. No one reminds me to watch the clock — once I start, I finish it properly, or not at all."</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="story-chapter">
+        <span class="chapter-label vi">Chương 3 · Harmonie Beauté</span>
+        <span class="chapter-label en">Chapter 3 · Harmonie Beauté</span>
+        <h3 class="chapter-title">
+          <span class="vi">Tại sao một không gian riêng tư?</span>
+          <span class="en">Why a private space?</span>
+        </h3>
+        <div class="chapter-body">
+          <p>
+            <span class="vi">Harmonie Beauté được sinh ra từ một lựa chọn có chủ đích: thay vì mở rộng quy mô, Hana chọn đi sâu hơn vào chất lượng. Một không gian nhỏ, riêng tư, yên tĩnh — nơi mỗi khách hàng được chăm sóc như người duy nhất trong ngày, không xếp hàng, không vội vàng, không bị phân tâm.</span>
+            <span class="en">Harmonie Beauté was born from a deliberate choice: instead of scaling up, Hana chose to go deeper into quality. A small, private, quiet space — where each client is treated as if they're the only person that day. No queues, no rushing, no distractions.</span>
+          </p>
+          <p>
+            <span class="vi">Tên "Harmonie" không phải ngẫu nhiên — đó là triết lý. Hài hòa giữa kỹ thuật và cảm xúc. Giữa hiệu quả và sự nhẹ nhàng. Giữa kết quả thấy được và trải nghiệm được cảm nhận. Đó là những gì Hana mang đến trong mỗi ca làm việc — và cũng là điều khách hàng cảm nhận được ngay từ lần đầu tiên.</span>
+            <span class="en">The name "Harmonie" wasn't chosen at random — it's a philosophy. Harmony between technique and emotion. Between effectiveness and gentleness. Between visible results and felt experience. That's what Hana brings to every session — and what clients feel from the very first visit.</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="values-header">
+    <p class="section-tag">✦ <span class="vi">Triết lý làm nghề</span><span class="en">Philosophy</span></p>
+    <h2 class="section-title"><span class="vi">Những điều Hana <em>tin tưởng</em></span><span class="en">What Hana <em>believes in</em></span></h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🎯</div>
+      <h3 class="value-title"><span class="vi">Kết quả trên mọi thứ</span><span class="en">Results above all</span></h3>
+      <p class="value-desc">
+        <span class="vi">Mỗi ca điều trị phải mang lại sự thay đổi thật sự — dù nhỏ hay lớn. Hana không chấp nhận "tạm được". Kết quả là thước đo duy nhất của sự tận tâm.</span>
+        <span class="en">Every treatment session must bring real change — big or small. Hana doesn't accept "good enough." Results are the only true measure of dedication.</span>
+      </p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🤍</div>
+      <h3 class="value-title"><span class="vi">Không tư vấn thừa</span><span class="en">No unnecessary upselling</span></h3>
+      <p class="value-desc">
+        <span class="vi">Khách hàng đến với Hana để được chăm sóc — không phải để bị thuyết phục mua thêm. Hana chỉ đề xuất những gì da thật sự cần, không hơn không kém.</span>
+        <span class="en">Clients come to Hana for care — not to be sold to. Hana only recommends what the skin truly needs, nothing more and nothing less.</span>
+      </p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">⏳</div>
+      <h3 class="value-title"><span class="vi">Kiên nhẫn là kỹ năng</span><span class="en">Patience is a skill</span></h3>
+      <p class="value-desc">
+        <span class="vi">Làm đẹp không có con đường tắt. Hana sẵn sàng dành 3–4 tiếng cho một ca khó — vì da đẹp bền không đến từ sự vội vàng.</span>
+        <span class="en">Beauty has no shortcuts. Hana is willing to spend 3–4 hours on a difficult case — because lasting, healthy skin doesn't come from rushing.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise-section">
+  <p class="section-tag">✦ <span class="vi">Chuyên môn</span><span class="en">Expertise</span></p>
+  <h2 class="section-title"><span class="vi">Hana <em>giỏi nhất</em> ở điều gì?</span><span class="en">Where Hana <em>excels</em></span></h2>
+  <div class="expertise-grid">
+    <div class="exp-item">
+      <div class="exp-icon">💎</div>
+      <div class="exp-text">
+        <h4><span class="vi">Nặn mụn chuyên sâu</span><span class="en">Advanced acne extraction</span></h4>
+        <p><span class="vi">Kỹ thuật nặn đúng góc độ, đúng áp lực — không gây sưng, không để lại thâm, không tổn thương mô da xung quanh. Đây là điều khách hàng nhắc đến nhiều nhất.</span><span class="en">The right angle, the right pressure — no swelling, no bruising, no damage to surrounding tissue. This is what clients mention most in their reviews.</span></p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-icon">🧪</div>
+      <div class="exp-text">
+        <h4>Chemical Peel</h4>
+        <p><span class="vi">Từ peel nhẹ trị mụn đến peel chuyên sâu phục hồi da — Hana đánh giá tình trạng da kỹ trước khi chọn phác đồ, đảm bảo phù hợp với từng người.</span><span class="en">From light acne peels to deep restorative treatments — Hana carefully assesses skin condition before selecting a protocol, ensuring it fits each individual.</span></p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-icon">🌿</div>
+      <div class="exp-text">
+        <h4><span class="vi">Điều trị mụn tổng hợp</span><span class="en">Comprehensive acne treatment</span></h4>
+        <p><span class="vi">Kết hợp nặn mụn, chăm sóc da mặt và peel trong cùng một lộ trình điều trị — tiếp cận toàn diện thay vì xử lý từng triệu chứng riêng lẻ.</span><span class="en">Combining extraction, facial care and peels in one treatment plan — a holistic approach rather than treating each symptom separately.</span></p>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-icon">💬</div>
+      <div class="exp-text">
+        <h4><span class="vi">Tư vấn lộ trình cá nhân hóa</span><span class="en">Personalised treatment planning</span></h4>
+        <p><span class="vi">Không có hai làn da giống nhau. Hana dành thời gian lắng nghe lịch sử da, thói quen sinh hoạt và mục tiêu của từng khách để đưa ra lộ trình phù hợp nhất.</span><span class="en">No two skins are alike. Hana takes time to understand each client's skin history, lifestyle habits and goals before recommending a path forward.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE QUOTE -->
+<section class="promise-section">
+  <p class="promise-quote">
+    <span class="vi">"Dù ca dễ hay ca khó, dù mụn ít hay nhiều — mỗi khách đều xứng đáng được chăm sóc <em>tận tâm như nhau</em>. Đó là điều tôi cam kết mỗi ngày."</span>
+    <span class="en">"Whether it's an easy or difficult case, a few pimples or many — every client deserves the <em>same level of care</em>. That is my daily commitment."</span>
+  </p>
+  <p class="promise-author">— Hana, Harmonie Beauté</p>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div>
+    <h3><span class="vi">Đặt lịch với Hana</span><span class="en">Book a session with Hana</span></h3>
+    <p><span class="vi">Harmonie Beauté · 30 Đặng Tất, Phường Tân Định, TP. HCM</span><span class="en">Harmonie Beauté · 30 Đặng Tất, Tân Định, Ho Chi Minh City</span></p>
+  </div>
+  <div class="cta-btns">
+    <button class="cta-btn-w" onclick="window.location.href='index.html#calendar'">
+      <span class="vi">Đặt lịch ngay</span><span class="en">Book now</span>
+    </button>
+    <button class="cta-btn-o" onclick="window.location.href='index.html#services'">
+      <span class="vi">Xem dịch vụ</span><span class="en">View services</span>
+    </button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Harmonie Beauté</div>
+  <p>© 2024 Harmonie Beauté · Tân Định, TP. HCM</p>
+  <div class="footer-links">
+    <a href="index.html"><span class="vi">Trang chủ</span><span class="en">Home</span></a>
+    <a href="blog.html">Blog</a>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.documentElement.setAttribute('data-lang', l);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if(b.getAttribute('onclick') === "setLang('"+l+"')") b.classList.add('active');
+  });
+}
+</script>
+</body>
+</html>
