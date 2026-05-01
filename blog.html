@@ -201,16 +201,16 @@ footer p{font-size:0.68rem;color:var(--earth)}
 <div class="filter-wrap">
   <span class="filter-label vi">Chủ đề</span>
   <span class="filter-label en">Topics</span>
-  <button class="filter-btn active"><span class="vi">Tất cả</span><span class="en">All</span></button>
-  <button class="filter-btn"><span class="vi">Điều trị mụn</span><span class="en">Acne</span></button>
-  <button class="filter-btn">Chemical Peel</button>
-  <button class="filter-btn"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></button>
-  <button class="filter-btn">Lifestyle</button>
+  <button class="filter-btn active" data-filter="all"><span class="vi">Tất cả</span><span class="en">All</span></button>
+  <button class="filter-btn" data-filter="acne"><span class="vi">Điều trị mụn</span><span class="en">Acne</span></button>
+  <button class="filter-btn" data-filter="peel">Chemical Peel</button>
+  <button class="filter-btn" data-filter="skincare"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></button>
+  <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
 </div>
 
 <!-- FEATURED -->
 <div class="featured-wrap">
-  <div class="featured-card">
+  <a class="featured-card" href="nan-mun-tan-dinh.html" style="display:grid;text-decoration:none;color:inherit">
     <div class="featured-body">
       <div class="featured-new"><span class="vi">Mới nhất</span><span class="en">Latest</span></div>
       <span class="art-category"><span class="vi">Điều trị mụn</span><span class="en">Acne treatment</span></span>
@@ -232,14 +232,14 @@ footer p{font-size:0.68rem;color:var(--earth)}
       <button class="btn-read"><span class="vi">Đọc bài viết</span><span class="en">Read article</span> →</button>
     </div>
   </div>
-</div>
+</a>
 
 <!-- ARTICLE GRID -->
 <div class="articles-wrap">
   <div class="articles-grid">
 
     <!-- Article 1 -->
-    <div class="art-card">
+    <div class="art-card" data-cat="peel">
       <div class="art-body">
         <span class="art-category">Chemical Peel</span>
         <h3 class="art-title">
@@ -258,7 +258,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
 
     <!-- Article 2 -->
-    <div class="art-card">
+    <div class="art-card" data-cat="skincare">
       <div class="art-body">
         <span class="art-category"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></span>
         <h3 class="art-title">
@@ -277,7 +277,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
 
     <!-- Article 3 -->
-    <div class="art-card">
+    <div class="art-card" data-cat="lifestyle">
       <div class="art-body">
         <span class="art-category">Lifestyle</span>
         <h3 class="art-title">
@@ -296,7 +296,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
 
     <!-- Article 4 -->
-    <div class="art-card">
+    <div class="art-card" data-cat="skincare">
       <div class="art-body">
         <span class="art-category"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></span>
         <h3 class="art-title">
@@ -315,7 +315,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
 
     <!-- Article 5 -->
-    <div class="art-card">
+    <div class="art-card" data-cat="peel">
       <div class="art-body">
         <span class="art-category">Chemical Peel</span>
         <h3 class="art-title">
@@ -380,11 +380,25 @@ function setLang(l){
   });
 }
 
-// Filter buttons (UI only for now)
+// Filter
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+    const filter = btn.getAttribute('data-filter');
+    document.querySelectorAll('.art-card, .art-card[data-cat]').forEach(card => {
+      const cat = card.getAttribute('data-cat') || 'all';
+      if(filter === 'all' || cat === filter){
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    // Also handle featured card
+    const featured = document.querySelector('.featured-card');
+    if(featured){
+      featured.style.display = (filter === 'all' || filter === 'acne') ? '' : 'none';
+    }
   });
 });
 
