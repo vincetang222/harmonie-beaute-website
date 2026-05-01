@@ -188,6 +188,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   /* Address */
   .address-section{padding:1.8rem 1.2rem}
   /* address handled by mobile-first CSS above */
+  .map-embed iframe{height:160px}
   /* CTA */
   .cta-strip{flex-direction:column;gap:1.2rem;text-align:center;padding:2rem 1.2rem}
   .cta-strip h3{font-size:1.4rem}
@@ -207,6 +208,8 @@ footer p{font-size:0.68rem;color:var(--earth)}
 /* ── ADDRESS ── */
 /* Mobile-first address */
 .address-section{background:linear-gradient(160deg,#1E3028,#111E16);padding:1.8rem 1.2rem}
+.map-embed{width:100%;border-radius:12px;overflow:hidden;border:1px solid rgba(201,169,110,0.15);line-height:0;margin-bottom:1.2rem}
+.map-embed iframe{width:100%;height:200px;border:none;filter:grayscale(20%) contrast(1.05)}
 .contact-bar{display:flex;flex-direction:column;gap:1.2rem}
 .contact-info{display:flex;flex-direction:column;gap:0.9rem}
 .contact-item{display:flex;align-items:center;gap:0.8rem}
@@ -504,6 +507,12 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
 <!-- ADDRESS -->
 <section class="address-section" id="address">
+  <div class="map-embed">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1!2d106.6856358!3d10.7929671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d90bebffd5eb%3A0x885cdcc50d793e81!2sHarmonie%20Beaut%C3%A9!5e0!3m2!1svi!2svn!4v1"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
   <div class="contact-bar">
     <div class="contact-info">
       <div class="contact-item">
