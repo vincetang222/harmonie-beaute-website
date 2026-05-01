@@ -255,6 +255,11 @@ footer p{font-size:0.68rem;color:var(--earth)}
   .hamburger{display:flex}
   .nav-links{display:none}
 }
+
+/* ── ANNOUNCEMENT PILL ── */
+.announce-pill{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.8rem;background:rgba(201,169,110,0.12);border:1px solid rgba(201,169,110,0.3);border-radius:50px;padding:0.45rem 1.1rem;font-size:0.75rem;color:rgba(255,255,255,0.8);backdrop-filter:blur(4px)}
+.announce-pill em{color:var(--gold);font-style:normal;font-weight:600}
+.announce-pill .pill-dot{color:rgba(201,169,110,0.4);font-size:0.5rem}
 </style>
 </head>
 <body>
@@ -314,6 +319,11 @@ footer p{font-size:0.68rem;color:var(--earth)}
       <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
         <span class="vi">Xem dịch vụ</span><span class="en">View services</span>
       </button>
+    </div>
+    <div class="announce-pill">
+      <span>🎉</span>
+      <span class="vi">Mừng địa điểm mới — Giảm <em>20%</em> từ <em>01/05 – 31/05</em></span>
+      <span class="en">New location — <em>20% off</em> from <em>May 1–31</em></span>
     </div>
     <div class="hero-stats">
       <div><span class="stat-num">500+</span><span class="stat-label vi">Khách hàng</span><span class="stat-label en">Clients</span></div>
@@ -502,6 +512,18 @@ footer p{font-size:0.68rem;color:var(--earth)}
     style="min-width:320px;height:700px">
   </div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async>
+
+// ── ANNOUNCEMENT BANNER ──
+(function(){
+  if(sessionStorage.getItem('bannerClosed')) {
+    const b = document.getElementById('announceBanner');
+    if(b) b.style.display='none';
+  }
+})();
+function closeBanner(){
+  document.getElementById('announceBanner').style.display='none';
+  sessionStorage.setItem('bannerClosed','1');
+}
 </script>
 </div>
 
