@@ -164,9 +164,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .mobile-menu ul li a:hover{background:var(--moss-pale);color:var(--moss)}
 .mobile-menu-book{padding:1rem 1.5rem;border-top:1px solid var(--sand)}
 .mobile-menu-book button{width:100%;background:var(--moss);color:#fff;border:none;padding:0.75rem;border-radius:50px;font-size:0.8rem;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer}
-.mobile-lang{display:flex;gap:0.5rem;padding:0.8rem 1.5rem 0}
-.mobile-lang button{flex:1;padding:0.45rem;border-radius:50px;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;border:1px solid var(--sand-dark);background:none;color:var(--earth);transition:all 0.2s}
-.mobile-lang button.active{background:var(--moss);border-color:var(--moss);color:#fff}
+
 
 @media(min-width:901px){.mobile-menu{display:none!important}}
 @media(max-width:900px){
@@ -200,10 +198,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-lang">
-    <button class="active" onclick="setLang('vi');setMobileLang(this)">VI</button>
-    <button onclick="setLang('en');setMobileLang(this)">EN</button>
-  </div>
   <ul>
     <li><a href="index.html#services" onclick="closeMobileMenu()"><span class="vi">Dịch vụ</span><span class="en">Services</span></a></li>
     <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
@@ -461,10 +455,7 @@ function closeMobileMenu(){
   document.getElementById('hamburgerBtn').classList.remove('open');
   document.getElementById('mobileMenu').classList.remove('open');
 }
-function setMobileLang(btn){
-  document.querySelectorAll('.mobile-lang button').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-}
+
 // Close menu when clicking outside
 document.addEventListener('click', e=>{
   const menu = document.getElementById('mobileMenu');
