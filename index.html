@@ -417,31 +417,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
     style="min-width:320px;height:700px">
   </div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async>
-// ── HAMBURGER ──
-function toggleMenu(){
-  const btn = document.getElementById('hamburgerBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.classList.toggle('open');
-  menu.classList.toggle('open');
-}
-function closeMobileMenu(){
-  document.getElementById('hamburgerBtn').classList.remove('open');
-  document.getElementById('mobileMenu').classList.remove('open');
-}
-function setMobileLang(btn){
-  document.querySelectorAll('.mobile-lang button').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-}
-// Close menu when clicking outside
-document.addEventListener('click', e=>{
-  const menu = document.getElementById('mobileMenu');
-  const btn = document.getElementById('hamburgerBtn');
-  if(menu && btn && !menu.contains(e.target) && !btn.contains(e.target)){
-    menu.classList.remove('open');
-    btn.classList.remove('open');
-  }
-});
-
 </script>
 </div>
 
@@ -660,8 +635,8 @@ document.addEventListener('click', e=>{
   <div class="footer-logo">Harmonie Beauté</div>
   <p>© 2024 Harmonie Beauté · Tân Định, TP. HCM</p>
   <div class="footer-links">
-    <a href="#"><span class="vi">Chính sách</span><span class="en">Policy</span></a>
-    <a href="#"><span class="vi">Bảo mật</span><span class="en">Privacy</span></a>
+    <a href="terms.html"><span class="vi">Điều khoản</span><span class="en">Terms</span></a>
+    <a href="privacy.html"><span class="vi">Bảo mật</span><span class="en">Privacy</span></a>
   </div>
 </footer>
 
