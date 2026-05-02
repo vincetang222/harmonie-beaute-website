@@ -127,6 +127,9 @@ a{text-decoration:none;color:inherit}
 .review-badge{display:inline-flex;align-items:center;gap:0.3rem;background:var(--moss-pale);color:var(--moss);padding:0.25rem 0.7rem;border-radius:50px;font-size:0.62rem;font-weight:600;letter-spacing:0.06em}
 @media(max-width:480px){.review-card{flex:0 0 240px}}
 .blog-section{background:var(--white)}
+.blog-header{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.blog-see-all{font-size:0.75rem;color:var(--moss);font-weight:500;text-decoration:none;white-space:nowrap;border:1px solid var(--moss-pale);padding:0.35rem 0.9rem;border-radius:50px;transition:all 0.2s;flex-shrink:0;margin-bottom:0.3rem}
+.blog-see-all:hover{background:var(--moss);color:#fff;border-color:var(--moss)}
 .blog-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:1rem;cursor:grab}
 .blog-card{background:var(--cream);border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);display:block;box-shadow:0 2px 16px var(--shadow);flex:0 0 280px;scroll-snap-align:start}
 .blog-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px var(--shadow-md)}
@@ -265,6 +268,20 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .social-link:hover{background:var(--moss);border-color:var(--moss);color:#fff}
 .social-link svg{width:13px;height:13px}
 
+
+/* ── FAQ ── */
+.faq-section{background:var(--cream);padding:4rem 6rem}
+.faq-list{display:flex;flex-direction:column;gap:0.6rem;max-width:780px;margin:0 auto}
+.faq-item{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 1px 6px var(--shadow)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:1.1rem 1.4rem;font-size:0.92rem;font-weight:500;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:background 0.15s}
+.faq-q:hover{background:var(--moss-pale)}
+.faq-q.open{background:var(--moss-pale);color:var(--moss)}
+.faq-icon{font-size:1.1rem;color:var(--moss-light);flex-shrink:0;transition:transform 0.25s;font-style:normal}
+.faq-q.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;padding:0 1.4rem}
+.faq-a.open{max-height:300px;padding:0 1.4rem 1.1rem}
+.faq-a p{font-size:0.88rem;color:var(--earth);line-height:1.8;font-weight:300}
+@media(max-width:900px){.faq-section{padding:3rem 1.2rem}}
 </style>
 </head>
 <body>
@@ -529,6 +546,20 @@ function closeBanner(){
   document.getElementById('announceBanner').style.display='none';
   sessionStorage.setItem('bannerClosed','1');
 }
+
+// ── FAQ ──
+function toggleFaq(btn){
+  const item = btn.closest('.faq-item');
+  const ans = item.querySelector('.faq-a');
+  const isOpen = btn.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-q.open').forEach(b=>{
+    b.classList.remove('open');
+    b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
+  });
+  // Open clicked if was closed
+  if(!isOpen){ btn.classList.add('open'); ans.classList.add('open'); }
+}
 </script>
 </div>
 
@@ -702,15 +733,20 @@ function closeBanner(){
 
 <!-- BLOG -->
 <section class="blog-section section" id="blog">
-  <p class="section-tag">✦ Blog</p>
-  <h2 class="section-title"><span class="vi">Bí quyết <em>chăm sóc da</em></span><span class="en">Beauty <em>tips & care</em></span></h2>
+  <div class="blog-header">
+    <div>
+      <p class="section-tag">✦ Blog</p>
+      <h2 class="section-title"><span class="vi">Bí quyết <em>chăm sóc da</em></span><span class="en">Beauty <em>tips & care</em></span></h2>
+    </div>
+    <a href="blog.html" class="blog-see-all"><span class="vi">Xem tất cả</span><span class="en">See all</span> →</a>
+  </div>
   <div class="section-line"></div>
   <div class="blog-grid">
     <a class="blog-card" href="nan-mun-tan-dinh.html">
       <div class="blog-body">
-        <div class="blog-pill"><span class="vi">Điều trị mụn</span><span class="en">Acne treatment</span></div>
+        <div class="blog-pill"><span class="vi">Điều trị mụn</span><span class="en">Acne</span></div>
         <div class="blog-title"><span class="vi">Nặn mụn ở đâu uy tín tại Tân Định?</span><span class="en">Trusted acne extractions in Tân Định?</span></div>
-        <div class="blog-excerpt"><span class="vi">Những điều cần biết trước khi chọn nơi giao phó làn da — tiêu chí quan trọng và tại sao kỹ thuật đúng tạo ra khác biệt.</span><span class="en">What to know before trusting anyone with your skin — key criteria and why technique matters.</span></div>
+        <div class="blog-excerpt"><span class="vi">Tiêu chí quan trọng và tại sao kỹ thuật đúng tạo ra khác biệt lớn.</span><span class="en">Key criteria and why proper technique makes all the difference.</span></div>
         <div class="blog-meta">May 2026 · 7 min</div>
       </div>
     </a>
@@ -718,24 +754,117 @@ function closeBanner(){
       <div class="blog-body">
         <div class="blog-pill">Chemical Peel</div>
         <div class="blog-title"><span class="vi">Chemical Peel là gì? Có đau không?</span><span class="en">What is a Chemical Peel? Does it hurt?</span></div>
-        <div class="blog-excerpt"><span class="vi">Cơ chế hoạt động, các loại peel khác nhau và ai thực sự phù hợp với liệu trình này.</span><span class="en">How it works, the different types, and who this treatment is actually right for.</span></div>
+        <div class="blog-excerpt"><span class="vi">Cơ chế, các loại peel và ai thực sự phù hợp với liệu trình này.</span><span class="en">How it works, types of peels, and who it's actually right for.</span></div>
         <div class="blog-meta">May 2026 · 8 min</div>
+      </div>
+    </a>
+    <a class="blog-card" href="tai-sao-mun-tai-phat.html">
+      <div class="blog-body">
+        <div class="blog-pill"><span class="vi">Điều trị mụn</span><span class="en">Acne</span></div>
+        <div class="blog-title"><span class="vi">Tại sao mụn cứ tái phát mãi dù đã điều trị?</span><span class="en">Why does acne keep coming back?</span></div>
+        <div class="blog-excerpt"><span class="vi">6 nguyên nhân phổ biến và cách điều trị đúng gốc rễ.</span><span class="en">6 common causes and how to treat the root, not symptoms.</span></div>
+        <div class="blog-meta">May 2026 · 7 min</div>
+      </div>
+    </a>
+    <a class="blog-card" href="peel-tao-decaar.html">
+      <div class="blog-body">
+        <div class="blog-pill">Chemical Peel</div>
+        <div class="blog-title"><span class="vi">Peel tảo Decaar là gì? Tại sao được yêu cầu nhiều nhất?</span><span class="en">What is Decaar Algae Peel? Why so popular?</span></div>
+        <div class="blog-excerpt"><span class="vi">Khác biệt so với peel acid thông thường và kết quả thực tế.</span><span class="en">How it differs from acid peels and what results to expect.</span></div>
+        <div class="blog-meta">May 2026 · 7 min</div>
       </div>
     </a>
     <a class="blog-card" href="5-thoi-quen-buoi-toi.html">
       <div class="blog-body">
         <div class="blog-pill">Lifestyle</div>
         <div class="blog-title"><span class="vi">5 thói quen buổi tối giúp da đẹp hơn mỗi sáng</span><span class="en">5 evening habits for better skin every morning</span></div>
-        <div class="blog-excerpt"><span class="vi">Những bước đơn giản trước khi ngủ tạo ra sự khác biệt rõ rệt sau vài tuần kiên trì.</span><span class="en">Simple nighttime steps that make a visible difference after a few consistent weeks.</span></div>
+        <div class="blog-excerpt"><span class="vi">Những bước đơn giản trước khi ngủ tạo ra sự khác biệt rõ rệt.</span><span class="en">Simple steps before sleep that make a visible difference.</span></div>
         <div class="blog-meta">May 2026 · 5 min</div>
       </div>
     </a>
   </div>
-  <div style="text-align:center;margin-top:1.8rem">
-    <a href="blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--moss);border:1.5px solid var(--moss);padding:0.65rem 2rem;border-radius:50px;font-size:0.78rem;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;transition:all 0.2s;text-decoration:none" onmouseover="this.style.background='var(--moss)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--moss)'">
-      <span class="vi">Xem tất cả bài viết</span><span class="en">View all articles</span>
-      <span>→</span>
-    </a>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section section">
+  <p class="section-tag" style="text-align:center">✦ FAQ</p>
+  <h2 class="section-title" style="text-align:center"><span class="vi">Câu hỏi <em>thường gặp</em></span><span class="en">Frequently asked <em>questions</em></span></h2>
+  <div class="section-line"></div>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="vi">Lần đầu đến cần chuẩn bị gì không?</span>
+        <span class="en">What should I prepare for my first visit?</span>
+        <em class="faq-icon">+</em>
+      </button>
+      <div class="faq-a">
+        <p class="vi">Không cần chuẩn bị gì đặc biệt. Bạn chỉ cần đến đúng giờ và mang theo mặt mộc (không trang điểm) để Hana có thể đánh giá tình trạng da chính xác nhất. Nếu bạn đang dùng thuốc điều trị da (retinol, isotretinoin...) hãy thông báo trước.</p>
+        <p class="en">No special preparation needed. Just arrive on time with a bare face (no makeup) so Hana can accurately assess your skin. If you're using any prescription skin medications (retinol, isotretinoin...) please mention it beforehand.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="vi">Một buổi điều trị kéo dài bao lâu?</span>
+        <span class="en">How long does a session take?</span>
+        <em class="faq-icon">+</em>
+      </button>
+      <div class="faq-a">
+        <p class="vi">Mỗi lịch hẹn được đặt trong 1 tiếng 45 phút — đủ để Hana thực hiện đầy đủ quy trình mà không vội vàng. Sau đó có 15 phút dọn dẹp và nghỉ giữa ca trước khi đón khách tiếp theo.</p>
+        <p class="en">Each appointment is booked for 1 hour 45 minutes — enough for Hana to complete the full treatment without rushing. There's then a 15-minute break for cleaning before the next client.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="vi">Sau khi nặn mụn, da có bị đỏ lâu không?</span>
+        <span class="en">Will my skin be red for long after extraction?</span>
+        <em class="faq-icon">+</em>
+      </button>
+      <div class="faq-a">
+        <p class="vi">Tùy tình trạng da và độ nhạy cảm. Thông thường da hơi hồng trong vài giờ đầu và trở về bình thường sau 24 giờ. Hana luôn sử dụng kỹ thuật nhẹ nhàng để giảm tối đa phản ứng sau điều trị.</p>
+        <p class="en">It depends on your skin condition and sensitivity. Usually skin is slightly pink for the first few hours and returns to normal within 24 hours. Hana always uses gentle technique to minimise post-treatment reaction.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="vi">Có phải đặt cọc trước không?</span>
+        <span class="en">Is a deposit required?</span>
+        <em class="faq-icon">+</em>
+      </button>
+      <div class="faq-a">
+        <p class="vi">Không cần đặt cọc. Tuy nhiên nếu cần hủy lịch, vui lòng thông báo trước ít nhất 24 giờ để Hana có thể sắp xếp lịch cho khách khác. Hủy trong vòng 24 giờ có thể phát sinh phí theo thỏa thuận.</p>
+        <p class="en">No deposit required. However if you need to cancel, please notify at least 24 hours in advance so Hana can rearrange the schedule. Cancellations within 24 hours may incur a fee.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="vi">Chemical Peel có phù hợp với da nhạy cảm không?</span>
+        <span class="en">Is Chemical Peel suitable for sensitive skin?</span>
+        <em class="faq-icon">+</em>
+      </button>
+      <div class="faq-a">
+        <p class="vi">Có, nếu chọn đúng loại peel. Tại Harmonie Beauté, Hana đánh giá kỹ tình trạng da trước khi chọn phác đồ. Peel tảo Decaar cao cấp đặc biệt phù hợp với da nhạy cảm nhờ cơ chế nhẹ nhàng hơn peel acid thông thường.</p>
+        <p class="en">Yes, if the right peel is chosen. At Harmonie Beauté, Hana carefully assesses skin condition before selecting a protocol. The Decaar Algae Peel is particularly suitable for sensitive skin due to its gentler mechanism compared to standard acid peels.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        <span class="vi">Khách nước ngoài không nói được tiếng Việt có được không?</span>
+        <span class="en">Can international clients who don't speak Vietnamese come?</span>
+        <em class="faq-icon">+</em>
+      </button>
+      <div class="faq-a">
+        <p class="vi">Hoàn toàn được. Harmonie Beauté phục vụ song ngữ Việt — Anh. Website, Calendly và toàn bộ quy trình tư vấn đều có tiếng Anh đầy đủ.</p>
+        <p class="en">Absolutely. Harmonie Beauté operates fully in both Vietnamese and English. The website, Calendly booking, and all consultation processes are available in English.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
