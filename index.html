@@ -271,16 +271,19 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
 /* ── FAQ ── */
 .faq-section{background:var(--cream);padding:4rem 6rem}
-.faq-list{display:flex;flex-direction:column;gap:0.6rem;max-width:780px;margin:0 auto}
-.faq-item{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 1px 6px var(--shadow)}
-.faq-q{width:100%;text-align:left;background:none;border:none;padding:1.1rem 1.4rem;font-size:0.92rem;font-weight:500;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:background 0.15s}
-.faq-q:hover{background:var(--moss-pale)}
-.faq-q.open{background:var(--moss-pale);color:var(--moss)}
-.faq-icon{font-size:1.1rem;color:var(--moss-light);flex-shrink:0;transition:transform 0.25s;font-style:normal}
+.faq-list{display:flex;flex-direction:column;max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--sand)}
+.faq-item:first-child{border-top:1px solid var(--sand)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:0.9rem 0;font-size:0.9rem;font-weight:500;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.15s}
+.faq-q:hover{color:var(--moss)}
+.faq-q.open{color:var(--moss)}
+.faq-icon{font-size:1rem;color:var(--moss-light);flex-shrink:0;transition:transform 0.25s;font-style:normal;font-weight:300}
 .faq-q.open .faq-icon{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;padding:0 1.4rem}
-.faq-a.open{max-height:300px;padding:0 1.4rem 1.1rem}
-.faq-a p{font-size:0.88rem;color:var(--earth);line-height:1.8;font-weight:300}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-a.open{max-height:400px}
+.faq-a-inner{padding:0 0 1rem;font-size:0.87rem;color:var(--earth);line-height:1.8;font-weight:300}
+.faq-more-btn{display:block;margin:1.2rem auto 0;background:none;border:none;color:var(--moss-light);font-size:0.78rem;font-family:'Be Vietnam Pro',sans-serif;cursor:pointer;letter-spacing:0.05em;text-decoration:underline;text-underline-offset:3px}
+.faq-more-btn:hover{color:var(--moss)}
 @media(max-width:900px){.faq-section{padding:3rem 1.2rem}}
 </style>
 </head>
@@ -534,7 +537,8 @@ footer p{font-size:0.68rem;color:var(--earth)}
     style="min-width:320px;height:700px">
   </div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async>
-
+  </script>
+<script>
 // ── ANNOUNCEMENT BANNER ──
 (function(){
   if(sessionStorage.getItem('bannerClosed')) {
@@ -545,20 +549,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 function closeBanner(){
   document.getElementById('announceBanner').style.display='none';
   sessionStorage.setItem('bannerClosed','1');
-}
-
-// ── FAQ ──
-function toggleFaq(btn){
-  const item = btn.closest('.faq-item');
-  const ans = item.querySelector('.faq-a');
-  const isOpen = btn.classList.contains('open');
-  // Close all
-  document.querySelectorAll('.faq-q.open').forEach(b=>{
-    b.classList.remove('open');
-    b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
-  });
-  // Open clicked if was closed
-  if(!isOpen){ btn.classList.add('open'); ans.classList.add('open'); }
 }
 </script>
 </div>
@@ -793,77 +783,125 @@ function toggleFaq(btn){
   <div class="section-line"></div>
   <div class="faq-list">
 
+    <!-- Visible by default: 5 câu -->
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Lần đầu đến cần chuẩn bị gì không?</span>
-        <span class="en">What should I prepare for my first visit?</span>
+        <span class="vi">Lần đầu đến cần chuẩn bị gì không?</span><span class="en">What should I prepare for my first visit?</span>
         <em class="faq-icon">+</em>
       </button>
-      <div class="faq-a">
-        <p class="vi">Không cần chuẩn bị gì đặc biệt. Bạn chỉ cần đến đúng giờ và mang theo mặt mộc (không trang điểm) để Hana có thể đánh giá tình trạng da chính xác nhất. Nếu bạn đang dùng thuốc điều trị da (retinol, isotretinoin...) hãy thông báo trước.</p>
-        <p class="en">No special preparation needed. Just arrive on time with a bare face (no makeup) so Hana can accurately assess your skin. If you're using any prescription skin medications (retinol, isotretinoin...) please mention it beforehand.</p>
-      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="vi">Không cần chuẩn bị gì đặc biệt. Chỉ cần đến đúng giờ và mang mặt mộc (không trang điểm) để Hana đánh giá tình trạng da chính xác nhất. Nếu đang dùng thuốc điều trị da như retinol hay isotretinoin, hãy thông báo trước.</span>
+        <span class="en">No special preparation needed. Just arrive on time with a bare face (no makeup) so Hana can accurately assess your skin. If you're using prescription skin treatments like retinol or isotretinoin, please mention it beforehand.</span>
+      </div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Một buổi điều trị kéo dài bao lâu?</span>
-        <span class="en">How long does a session take?</span>
+        <span class="vi">Một buổi điều trị kéo dài bao lâu?</span><span class="en">How long does a session take?</span>
         <em class="faq-icon">+</em>
       </button>
-      <div class="faq-a">
-        <p class="vi">Mỗi lịch hẹn được đặt trong 1 tiếng 45 phút — đủ để Hana thực hiện đầy đủ quy trình mà không vội vàng. Sau đó có 15 phút dọn dẹp và nghỉ giữa ca trước khi đón khách tiếp theo.</p>
-        <p class="en">Each appointment is booked for 1 hour 45 minutes — enough for Hana to complete the full treatment without rushing. There's then a 15-minute break for cleaning before the next client.</p>
-      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="vi">Mỗi lịch hẹn được đặt trong 1 tiếng 45 phút — đủ để Hana thực hiện đầy đủ quy trình mà không vội vàng. Sau đó có 15 phút nghỉ và dọn dẹp trước khi đón khách tiếp theo.</span>
+        <span class="en">Each appointment is booked for 1 hour 45 minutes — enough for Hana to complete the full treatment without rushing. There's then a 15-minute break for cleaning before the next client.</span>
+      </div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Sau khi nặn mụn, da có bị đỏ lâu không?</span>
-        <span class="en">Will my skin be red for long after extraction?</span>
+        <span class="vi">Sau khi nặn mụn, da có bị đỏ lâu không?</span><span class="en">Will my skin be red for long after extraction?</span>
         <em class="faq-icon">+</em>
       </button>
-      <div class="faq-a">
-        <p class="vi">Tùy tình trạng da và độ nhạy cảm. Thông thường da hơi hồng trong vài giờ đầu và trở về bình thường sau 24 giờ. Hana luôn sử dụng kỹ thuật nhẹ nhàng để giảm tối đa phản ứng sau điều trị.</p>
-        <p class="en">It depends on your skin condition and sensitivity. Usually skin is slightly pink for the first few hours and returns to normal within 24 hours. Hana always uses gentle technique to minimise post-treatment reaction.</p>
-      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="vi">Tùy tình trạng da. Thông thường da hơi hồng vài giờ đầu và trở về bình thường sau 24 giờ. Hana luôn dùng kỹ thuật nhẹ nhàng để giảm tối đa phản ứng sau điều trị và hướng dẫn chăm sóc da đúng cách sau buổi nặn.</span>
+        <span class="en">It depends on your skin. Usually skin is slightly pink for the first few hours and returns to normal within 24 hours. Hana always uses gentle technique to minimise post-treatment reaction and will guide you on proper aftercare.</span>
+      </div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Có phải đặt cọc trước không?</span>
-        <span class="en">Is a deposit required?</span>
+        <span class="vi">Có phải đặt cọc trước không?</span><span class="en">Is a deposit required?</span>
         <em class="faq-icon">+</em>
       </button>
-      <div class="faq-a">
-        <p class="vi">Không cần đặt cọc. Tuy nhiên nếu cần hủy lịch, vui lòng thông báo trước ít nhất 24 giờ để Hana có thể sắp xếp lịch cho khách khác. Hủy trong vòng 24 giờ có thể phát sinh phí theo thỏa thuận.</p>
-        <p class="en">No deposit required. However if you need to cancel, please notify at least 24 hours in advance so Hana can rearrange the schedule. Cancellations within 24 hours may incur a fee.</p>
-      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="vi">Không cần đặt cọc. Tuy nhiên nếu cần hủy lịch, vui lòng báo trước ít nhất 24 giờ. Hủy trong vòng 24 giờ có thể phát sinh phí theo thỏa thuận.</span>
+        <span class="en">No deposit required. However if you need to cancel, please notify at least 24 hours in advance. Cancellations within 24 hours may incur a fee.</span>
+      </div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Chemical Peel có phù hợp với da nhạy cảm không?</span>
-        <span class="en">Is Chemical Peel suitable for sensitive skin?</span>
+        <span class="vi">Chemical Peel có phù hợp với da nhạy cảm không?</span><span class="en">Is Chemical Peel suitable for sensitive skin?</span>
         <em class="faq-icon">+</em>
       </button>
-      <div class="faq-a">
-        <p class="vi">Có, nếu chọn đúng loại peel. Tại Harmonie Beauté, Hana đánh giá kỹ tình trạng da trước khi chọn phác đồ. Peel tảo Decaar cao cấp đặc biệt phù hợp với da nhạy cảm nhờ cơ chế nhẹ nhàng hơn peel acid thông thường.</p>
-        <p class="en">Yes, if the right peel is chosen. At Harmonie Beauté, Hana carefully assesses skin condition before selecting a protocol. The Decaar Algae Peel is particularly suitable for sensitive skin due to its gentler mechanism compared to standard acid peels.</p>
-      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="vi">Có, nếu chọn đúng loại. Hana đánh giá kỹ da trước khi chọn phác đồ. Peel tảo Decaar đặc biệt phù hợp với da nhạy cảm nhờ cơ chế nhẹ nhàng hơn peel acid thông thường.</span>
+        <span class="en">Yes, with the right peel type. Hana carefully assesses skin before choosing a protocol. The Decaar Algae Peel is particularly gentle and well-suited for sensitive skin compared to standard acid peels.</span>
+      </div></div>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Khách nước ngoài không nói được tiếng Việt có được không?</span>
-        <span class="en">Can international clients who don't speak Vietnamese come?</span>
-        <em class="faq-icon">+</em>
-      </button>
-      <div class="faq-a">
-        <p class="vi">Hoàn toàn được. Harmonie Beauté phục vụ song ngữ Việt — Anh. Website, Calendly và toàn bộ quy trình tư vấn đều có tiếng Anh đầy đủ.</p>
-        <p class="en">Absolutely. Harmonie Beauté operates fully in both Vietnamese and English. The website, Calendly booking, and all consultation processes are available in English.</p>
+    <!-- Hidden: 5 câu thêm, hiện khi click See more -->
+    <div id="faq-extra" style="display:none;flex-direction:column">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="vi">Khách nước ngoài có được phục vụ không?</span><span class="en">Can international clients be served?</span>
+          <em class="faq-icon">+</em>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <span class="vi">Hoàn toàn được. Website và Calendly đều song ngữ Việt — Anh. Hana giao tiếp với khách quốc tế qua công cụ dịch và chuyên môn kỹ thuật cao — không rào cản ngôn ngữ nào ảnh hưởng đến chất lượng điều trị.</span>
+          <span class="en">Absolutely. The website and Calendly are fully bilingual. Hana communicates with international clients via translation tools — her high level of technical expertise speaks clearly regardless of language.</span>
+        </div></div>
       </div>
-    </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="vi">Tôi đang dùng Accutane có làm được không?</span><span class="en">Can I come if I'm on Accutane?</span>
+          <em class="faq-icon">+</em>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <span class="vi">Không nên. Isotretinoin (Accutane) làm da mỏng và rất nhạy cảm — nặn mụn hoặc peel trong thời gian này có thể gây tổn thương nặng. Nên chờ ít nhất 6 tháng sau khi dừng thuốc trước khi điều trị.</span>
+          <span class="en">Not recommended. Isotretinoin (Accutane) thins the skin significantly — extractions or peels during this time can cause serious damage. Wait at least 6 months after stopping the medication before treatment.</span>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="vi">Tôi có thể trang điểm ngay sau buổi điều trị không?</span><span class="en">Can I wear makeup right after my session?</span>
+          <em class="faq-icon">+</em>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <span class="vi">Nên tránh trang điểm ít nhất 12–24 giờ sau nặn mụn hoặc peel. Lỗ chân lông vừa được làm sạch, trang điểm ngay có thể gây tắc nghẽn trở lại và làm giảm hiệu quả điều trị.</span>
+          <span class="en">Avoid makeup for at least 12–24 hours after extractions or a peel. Pores have just been cleared — applying makeup immediately can cause re-blockage and reduce the effectiveness of treatment.</span>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="vi">Nên đi bao lâu một lần để có kết quả tốt nhất?</span><span class="en">How often should I come for best results?</span>
+          <em class="faq-icon">+</em>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <span class="vi">Tùy loại da: da dầu mụn nhiều nên đến mỗi 3–4 tuần, da hỗn hợp mỗi 4–6 tuần, da ít mụn mỗi 6–8 tuần. Hana sẽ tư vấn chu kỳ phù hợp nhất sau khi đánh giá da trong buổi đầu tiên.</span>
+          <span class="en">Depends on skin type: oily acne-prone skin every 3–4 weeks, combination skin every 4–6 weeks, less acne-prone skin every 6–8 weeks. Hana will recommend the ideal frequency after assessing your skin at the first session.</span>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="vi">Có dịch vụ gội đầu và massage body không?</span><span class="en">Are hair washing and body massage available?</span>
+          <em class="faq-icon">+</em>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          <span class="vi">Có — sau khi hoàn thành liệu trình da với Harmonie Beauté, bạn có thể thêm dịch vụ gội đầu hoặc massage body tại giường kế bên từ Amor Spa. Xem thêm ở tab "Dịch vụ kết hợp" trong phần dịch vụ.</span>
+          <span class="en">Yes — after your skin treatment with Harmonie Beauté, you can add a hair wash or body massage next door from Amor Spa. See the "Add-on services" tab in the services section above.</span>
+        </div></div>
+      </div>
+
+    </div><!-- end faq-extra -->
+
+    <button class="faq-more-btn" id="faqMoreBtn" onclick="toggleFaqMore()">
+      <span class="vi">+ Xem thêm câu hỏi</span><span class="en">+ See more questions</span>
+    </button>
 
   </div>
 </section>
@@ -958,6 +996,30 @@ document.addEventListener('click', e=>{
     hamburger.classList.remove('open');
   }
 });
+
+// ── FAQ ──
+function toggleFaqMore(){
+  var extra=document.getElementById('faq-extra');
+  var btn=document.getElementById('faqMoreBtn');
+  var isOpen=extra.style.display==='flex';
+  if(isOpen){
+    extra.style.display='none';
+    btn.innerHTML='<span class="vi">+ Xem thêm câu hỏi</span><span class="en">+ See more questions</span>';
+  } else {
+    extra.style.display='flex';
+    btn.innerHTML='<span class="vi">− Thu gọn</span><span class="en">− Show less</span>';
+  }
+}
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var ans=item.querySelector('.faq-a');
+  var isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(function(b){
+    b.classList.remove('open');
+    b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
+  });
+  if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
+}
 </script>
 </body>
 </html>
