@@ -66,7 +66,7 @@ a{text-decoration:none;color:inherit}
 .avatar-badge-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
 
 /* ── STORY SECTION ── */
-.story-section{background:var(--white);padding:5rem 6rem}
+.story-section{background:var(--white);padding:4rem 6rem}
 .story-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
 .story-sidebar{position:sticky;top:5rem}
 .story-sidebar-tag{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:0.9rem;display:inline-flex;align-items:center;gap:6px;background:var(--terra);padding:4px 14px;border-radius:50px}
@@ -85,25 +85,25 @@ a{text-decoration:none;color:inherit}
 .chapter-highlight p{font-size:0.9rem;color:var(--charcoal);line-height:1.75;font-style:italic}
 
 /* ── VALUES ── */
-.values-section{background:var(--cream);padding:5rem 6rem}
-.values-header{text-align:center;margin-bottom:3.5rem}
+.values-section{background:linear-gradient(160deg,#1E3028,#0F1F18);padding:4rem 6rem}
+.values-header{text-align:center;margin-bottom:2.2rem}
 .section-tag{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:1rem;display:inline-flex;align-items:center;gap:6px;background:var(--moss);padding:4px 14px;border-radius:50px}
 .section-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:400;color:var(--charcoal);line-height:1.15;letter-spacing:-0.01em}
 .section-title em{color:var(--moss);font-style:italic}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.value-card{background:var(--white);border-radius:16px;padding:2rem;box-shadow:0 4px 20px var(--shadow);display:flex;flex-direction:column;gap:0.8rem;transition:transform 0.25s,box-shadow 0.25s;border-top:3px solid var(--moss);border:0.5px solid rgba(61,90,71,0.12);border-top:3px solid var(--moss)}
-.value-card:hover{transform:translateY(-5px);box-shadow:0 12px 36px var(--shadow-md)}
-.value-icon{font-size:1.6rem;width:48px;height:48px;border-radius:50%;background:var(--moss-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.value-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:500;color:var(--charcoal)}
-.value-desc{font-size:0.85rem;color:var(--earth);line-height:1.75;font-weight:300}
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem}
+.value-card{padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:0.7rem;transition:all 0.22s;border:1px solid rgba(201,169,110,0.2);background:rgba(255,255,255,0.05);border-radius:14px}
+.value-card:hover{border-color:var(--gold);background:rgba(255,255,255,0.1);transform:translateY(-3px)}
+.value-icon{display:none}
+.values-grid{counter-reset:val}.value-card{counter-increment:val}.value-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;color:#F2EBD9;display:flex;flex-direction:column;gap:0.2rem}.value-title::before{content:counter(val,decimal-leading-zero);font-size:0.58rem;letter-spacing:0.2em;color:var(--gold);font-family:"Be Vietnam Pro",sans-serif;font-weight:700;opacity:0.7}
+.value-desc{font-size:0.82rem;color:rgba(242,235,217,0.5);line-height:1.65;font-weight:300}
 
 /* ── EXPERTISE ── */
-.expertise-section{background:var(--cream);padding:5rem 6rem}
-.expertise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2.5rem}
-.exp-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem;background:var(--white);border-radius:12px;border-left:3px solid var(--moss);box-shadow:0 2px 10px var(--shadow);transition:transform 0.2s,box-shadow 0.2s}
-.exp-icon{width:42px;height:42px;border-radius:50%;background:var(--moss);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.exp-text h4{font-size:0.88rem;font-weight:600;color:var(--charcoal);margin-bottom:0.3rem}
-.exp-text p{font-size:0.8rem;color:var(--earth);line-height:1.6;font-weight:300}
+.expertise-section{background:var(--cream);padding:4rem 6rem}
+.expertise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:2.5rem;border:1px solid var(--sand);border-radius:16px;overflow:hidden}
+.exp-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem 1.6rem;background:var(--white);border-right:1px solid var(--sand);border-bottom:1px solid var(--sand);transition:all 0.2s}
+.exp-icon{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--moss);font-weight:400;line-height:1;flex-shrink:0;width:32px;text-align:center;opacity:0.4;transition:all 0.2s;margin-top:0.15rem}
+.exp-text h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;color:var(--charcoal);margin-bottom:0.5rem}
+.exp-text p{font-size:0.82rem;color:var(--earth);line-height:1.7;font-weight:300}
 
 /* ── PROMISE ── */
 .promise-section{background:linear-gradient(160deg,#1E3028,#111E16);padding:5rem 6rem;text-align:center}
@@ -191,12 +191,25 @@ footer p{font-size:0.68rem;color:var(--earth)}
 @media(max-width:480px){.wa-btn{width:46px;height:46px}.wa-btn svg{width:24px;height:24px}}
 
 /* ── EXTRA DEPTH ── */
-.exp-item:hover{transform:translateX(4px);box-shadow:0 4px 18px var(--shadow-md)}
+.exp-item:hover{background:var(--cream)}.exp-item:hover .exp-icon{opacity:0.85;color:var(--moss)}
 .story-chapter{border-bottom:1px solid var(--sand);padding-bottom:2rem}
 .story-chapter:last-child{border-bottom:none;padding-bottom:0}
 .promise-quote{font-size:1.9rem}
 .avatar-ring{box-shadow:0 24px 64px rgba(0,0,0,0.45),0 0 0 1px rgba(201,169,110,0.15)}
 
+
+/* Values section on dark bg */
+.values-section .section-tag{background:rgba(201,169,110,0.18);border:1px solid rgba(201,169,110,0.3);color:var(--gold)}
+.values-section .section-title{color:#F2EBD9}
+.values-section .section-title em{color:var(--gold)}
+/* Expertise: last row no bottom border */
+.exp-item:nth-child(3),.exp-item:nth-child(4){border-bottom:none}
+.exp-item:nth-child(2),.exp-item:nth-child(4){border-right:none}
+@media(max-width:900px){
+  .expertise-grid{grid-template-columns:1fr}
+  .exp-item{border-right:none}
+  .exp-item:nth-child(3){border-bottom:1px solid var(--sand)}
+}
 </style>
 </head>
 <body>
@@ -364,7 +377,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
   <div class="values-grid">
     <div class="value-card">
-      <div class="value-icon">🎯</div>
       <h3 class="value-title"><span class="vi">Kết quả trên mọi thứ</span><span class="en">Results above all</span></h3>
       <p class="value-desc">
         <span class="vi">Mỗi ca điều trị phải mang lại sự thay đổi thật sự — dù nhỏ hay lớn. Hana không chấp nhận "tạm được". Kết quả là thước đo duy nhất của sự tận tâm.</span>
@@ -372,7 +384,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
       </p>
     </div>
     <div class="value-card">
-      <div class="value-icon">🤍</div>
       <h3 class="value-title"><span class="vi">Không tư vấn thừa</span><span class="en">No unnecessary upselling</span></h3>
       <p class="value-desc">
         <span class="vi">Khách đến với mình để được chăm sóc — không phải để bị thuyết phục mua thêm. Mình chỉ đề xuất những gì da thật sự cần, không hơn không kém.</span>
@@ -380,14 +391,25 @@ footer p{font-size:0.68rem;color:var(--earth)}
       </p>
     </div>
     <div class="value-card">
-      <div class="value-icon">⏳</div>
       <h3 class="value-title"><span class="vi">Kiên nhẫn là kỹ năng</span><span class="en">Patience is a skill</span></h3>
       <p class="value-desc">
         <span class="vi">Làm đẹp không có con đường tắt. Mình sẵn sàng dành 3–4 tiếng cho một ca khó — vì da đẹp bền không đến từ sự vội vàng.</span>
         <span class="en">Beauty has no shortcuts. Hana is willing to spend 3–4 hours on a difficult case — because lasting, healthy skin doesn't come from rushing.</span>
       </p>
     </div>
-  </div>
+  
+      <div class="value-card">
+        <div class="value-icon"></div>
+        <div class="value-title">
+          <span class="vi">Học hỏi liên tục</span>
+          <span class="en">Continuous learning</span>
+        </div>
+        <p class="value-desc">
+          <span class="vi">Làn da thay đổi, kiến thức y học thẩm mỹ không ngừng phát triển. Mình chủ động cập nhật kỹ thuật mới, thành phần mới để mỗi khách luôn được chăm sóc theo tiêu chuẩn tốt nhất hiện có.</span>
+          <span class="en">Skin changes, and aesthetic medicine knowledge keeps evolving. Hana actively updates on new techniques and ingredients so every client always receives the best available standard of care.</span>
+        </p>
+      </div>
+</div>
 </section>
 
 <!-- EXPERTISE -->
@@ -396,28 +418,28 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <h2 class="section-title"><span class="vi">Hana <em>giỏi nhất</em> ở điều gì?</span><span class="en">Where Hana <em>excels</em></span></h2>
   <div class="expertise-grid">
     <div class="exp-item">
-      <div class="exp-icon">💎</div>
+      <div class="exp-icon">01</div>
       <div class="exp-text">
         <h4><span class="vi">Nặn mụn chuyên sâu</span><span class="en">Advanced acne extraction</span></h4>
         <p><span class="vi">Kỹ thuật nặn đúng góc độ, đúng áp lực — không gây sưng, không để lại thâm, không tổn thương mô da xung quanh. Đây là điều khách hàng nhắc đến nhiều nhất.</span><span class="en">The right angle, the right pressure — no swelling, no bruising, no damage to surrounding tissue. This is what clients mention most in their reviews.</span></p>
       </div>
     </div>
     <div class="exp-item">
-      <div class="exp-icon">🧪</div>
+      <div class="exp-icon">02</div>
       <div class="exp-text">
         <h4>Chemical Peel</h4>
         <p><span class="vi">Từ peel nhẹ trị mụn đến peel chuyên sâu phục hồi da — Hana đánh giá tình trạng da kỹ trước khi chọn phác đồ, đảm bảo phù hợp với từng người.</span><span class="en">From light acne peels to deep restorative treatments — Hana carefully assesses skin condition before selecting a protocol, ensuring it fits each individual.</span></p>
       </div>
     </div>
     <div class="exp-item">
-      <div class="exp-icon">🌿</div>
+      <div class="exp-icon">03</div>
       <div class="exp-text">
         <h4><span class="vi">Điều trị mụn tổng hợp</span><span class="en">Comprehensive acne treatment</span></h4>
         <p><span class="vi">Kết hợp nặn mụn, chăm sóc da mặt và peel trong cùng một lộ trình điều trị — tiếp cận toàn diện thay vì xử lý từng triệu chứng riêng lẻ.</span><span class="en">Combining extraction, facial care and peels in one treatment plan — a holistic approach rather than treating each symptom separately.</span></p>
       </div>
     </div>
     <div class="exp-item">
-      <div class="exp-icon">💬</div>
+      <div class="exp-icon">04</div>
       <div class="exp-text">
         <h4><span class="vi">Tư vấn lộ trình cá nhân hóa</span><span class="en">Personalised treatment planning</span></h4>
         <p><span class="vi">Không có hai làn da giống nhau. Mình dành thời gian lắng nghe lịch sử da, thói quen sinh hoạt và mục tiêu của từng khách để đưa ra lộ trình phù hợp nhất.</span><span class="en">No two skins are alike. Hana takes time to understand each client's skin history, lifestyle habits and goals before recommending a path forward.</span></p>
