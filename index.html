@@ -431,6 +431,14 @@ footer p{font-size:0.68rem;color:var(--earth)}
   .combo-tiers-grid{grid-template-columns:1fr}
   .points-tiers-grid{grid-template-columns:1fr}
 }
+
+.svc-note-box{background:var(--moss-pale);border-radius:10px;padding:1rem 1.2rem;margin-top:1.2rem}
+.svc-note-box p{font-size:0.78rem;color:var(--moss);line-height:1.7;font-weight:400}
+.combo-note{background:var(--cream);border-radius:10px;padding:1rem 1.3rem;margin-bottom:1.2rem;border-left:3px solid var(--gold)}
+.combo-note strong{color:var(--charcoal)}
+.combo-note span{font-size:0.82rem;color:var(--earth);line-height:1.7;font-weight:300}
+
+.svc-desc{display:block;font-size:0.68rem;color:var(--earth);font-weight:300;margin-top:0.15rem;opacity:0.75}
 </style>
 </head>
 <body>
@@ -516,6 +524,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     <button class="tab-btn" onclick="switchTab(this,'facial')"><span class="vi">Chăm sóc mặt</span><span class="en">Facial Treatment</span></button>
     <button class="tab-btn" onclick="switchTab(this,'peel')">Chemical Peel</button>
     <button class="tab-btn" onclick="switchTab(this,'combo')"><span class="vi">✦ Dịch vụ kết hợp</span><span class="en">✦ Add-on services</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'pmu')"><span class="vi">✦ Phun xăm PMU</span><span class="en">✦ PMU Services</span></button>
   </div>
 
   <!-- ACNE -->
@@ -579,16 +588,15 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <!-- COMBO -->
   <div class="tab-content" id="tab-combo">
     <div class="combo-note">
-      <span class="combo-partner">Amor Spa</span>
       <div>
-        <span class="vi"><strong>Dịch vụ kết hợp</strong> — Sau khi hoàn thành liệu trình da với Harmonie Beauté, bạn có thể dùng thêm dịch vụ gội đầu hoặc massage body tại giường.</span>
-        <span class="en"><strong>Add-on services</strong> — After your skin treatment, you can add a hair wash or body massage in the same space.</span>
+        <span class="vi"><strong>Dịch vụ kết hợp</strong> — Sau khi hoàn thành liệu trình da, bạn có thể thêm dịch vụ gội đầu hoặc massage body tại không gian kế bên.</span>
+        <span class="en"><strong>Add-on services</strong> — After your skin treatment, you can add a hair wash or body massage in the adjoining space.</span>
       </div>
     </div>
     <div class="two-col">
 
       <div>
-        <div class="sub-cat-title">💆 Hair Care</div>
+        <div class="sub-cat-title">Hair Care</div>
         <div>
           <div class="svc-row">
             <div class="svc-left">
@@ -664,8 +672,58 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
   </div>
 
-</section>
 
+  <!-- PMU -->
+  <div class="tab-content" id="tab-pmu">
+    <div class="combo-note">
+      <div>
+        <span class="vi"><strong>Phun xăm thẩm mỹ</strong> — Dịch vụ phun xăm bán vĩnh viễn · Thực hiện tại không gian Harmonie Beauté · Đặt lịch qua Calendly để được tư vấn trước.</span>
+        <span class="en"><strong>Semi-permanent makeup</strong> — Professional PMU services · Available at Harmonie Beauté · Book via Calendly for a consultation.</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="sub-cat-title"><span class="vi">Lông mày — Tint & Lamination</span><span class="en">Brows — Tint & Lamination</span></div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hybrid Tint</span><span class="en">Hybrid Tint</span><span class="svc-desc"><span class="vi">Nhuộm màu lông mày bán vĩnh viễn</span><span class="en">Semi-permanent brow tinting</span></span></span></div><div class="svc-right"><span class="svc-price">150,000đ</span><button class="svc-book-btn" onclick="fillBook('Hybrid Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brow Lamination</span><span class="en">Brow Lamination</span><span class="svc-desc"><span class="vi">Định hình và uốn lông mày</span><span class="en">Brow shaping & lifting treatment</span></span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><button class="svc-book-btn" onclick="fillBook('Brow Lamination')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo Lami + Tint</span><span class="en">Combo Lami + Tint</span><span class="svc-desc"><span class="vi">Định hình + Nhuộm</span><span class="en">Shaping + tinting combined</span></span></span></div><div class="svc-right"><span class="svc-price">450,000đ</span><button class="svc-book-btn" onclick="fillBook('Combo Brow Lami Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+        <div class="sub-cat-title" style="margin-top:1rem"><span class="vi">Lông mày — Phun xăm</span><span class="en">Brows — PMU</span></div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Natural Brows</span><span class="en">Natural Brows</span><span class="svc-desc"><span class="vi">Phun mày tự nhiên</span><span class="en">Natural brows PMU</span></span></span></div><div class="svc-right"><span class="svc-price">3,000,000đ</span><button class="svc-book-btn" onclick="fillBook('Natural Brows PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brows Cover</span><span class="en">Brows Cover</span><span class="svc-desc"><span class="vi">Phun mày trên nền cũ</span><span class="en">Cover over existing brows</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Brows Cover PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hairstroke</span><span class="en">Hairstroke Brows</span><span class="svc-desc"><span class="vi">Sợi mày thiết kế</span><span class="en">Designed hairstrokes</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mixstyle Hairstroke</span><span class="en">Mixstyle Hairstroke</span><span class="svc-desc"><span class="vi">Tạo sợi đầu phun đuôi</span><span class="en">Hairstrokes at head, shading at tail</span></span></span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><button class="svc-book-btn" onclick="fillBook('Mixstyle Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+        <div class="sub-cat-title" style="margin-top:1rem"><span class="vi">Mí mắt</span><span class="en">Eyelids</span></div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Open Eyes</span><span class="en">Open Eyes</span><span class="svc-desc"><span class="vi">Phun mí mở tròng</span><span class="en">Open eyes liner</span></span></span></div><div class="svc-right"><span class="svc-price">2,000,000đ</span><button class="svc-book-btn" onclick="fillBook('Open Eyes PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Eyeliner</span><span class="en">Eyeliner PMU</span><span class="svc-desc"><span class="vi">Phun mí có đuôi</span><span class="en">Eyeliner with tail</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Eyeliner PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="sub-cat-title"><span class="vi">Môi</span><span class="en">Lips</span></div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Lip Pigment Removal</span><span class="en">Lip Pigment Removal</span><span class="svc-desc"><span class="vi">Loại bỏ mực môi cũ</span><span class="en">Removes old lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">1,200,000đ</span><button class="svc-book-btn" onclick="fillBook('Lip Pigment Removal')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm cơ bản</span><span class="en">Basic lip correction</span><span class="svc-desc"><span class="vi">Cân bằng sắc tố môi tối màu</span><span class="en">Balances dark lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Khu tham co ban')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm chuyên sâu</span><span class="en">Advanced lip correction</span><span class="svc-desc"><span class="vi">Kết hợp cân bằng + phủ màu</span><span class="en">Combines balancing + colour overlay</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><button class="svc-book-btn" onclick="fillBook('Khu tham chuyen sau')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Phun môi mới</span><span class="en">Lip PMU cover</span><span class="svc-desc"><span class="vi">Cover trên nền môi cũ đã từng làm</span><span class="en">Cover over previously tattooed lips</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Phun moi moi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Điện di tinh chất TBG</span><span class="en">TBG stem cell treatment</span><span class="svc-desc"><span class="vi">Tăng sinh collagen - giúp môi sau phun nhanh hồi màu</span><span class="en">Stimulates collagen - accelerates post-PMU colour recovery</span></span></span></div><div class="svc-right"><span class="svc-price">800,000đ</span><button class="svc-book-btn" onclick="fillBook('Dien di TBG')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+        <div class="sub-cat-title" style="margin-top:1rem"><span class="vi">Laser xóa xăm</span><span class="en">Laser Removal</span></div>
+        <div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Xóa lẻ theo vùng</span><span class="en">Laser removal (per area)</span></span></div><div class="svc-right"><span class="svc-price">1,000,000đ</span><button class="svc-book-btn" onclick="fillBook('Laser xoa le')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo không giới hạn</span><span class="en">Unlimited laser sessions</span></span><span class="best-badge">⭐ Best Value</span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><button class="svc-book-btn" onclick="fillBook('Laser combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+        <div class="svc-note-box">
+          <p class="vi">✦ Tất cả dịch vụ cá nhân hóa theo sắc tố từng khách · Bảo hành và chăm sóc sau phun tận tâm · Cam kết an toàn, tỉ mỉ, đúng chuẩn thẩm mỹ hiện đại</p>
+          <p class="en">✦ All services personalised to each client · Post-treatment warranty & aftercare · Safe, precise, modern aesthetic standards</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- PROMOTIONS -->
 <section class="promo-section section" id="promotions">
   <p class="section-tag">✦ <span class="vi">Ưu đãi</span><span class="en">Promotions</span></p>
@@ -1164,8 +1222,8 @@ function closeBanner(){
           <em class="faq-icon">+</em>
         </button>
         <div class="faq-a"><div class="faq-a-inner">
-          <span class="vi">Có — sau khi hoàn thành liệu trình da với Harmonie Beauté, bạn có thể thêm dịch vụ gội đầu hoặc massage body tại giường kế bên từ Amor Spa. Xem thêm ở tab "Dịch vụ kết hợp" trong phần dịch vụ.</span>
-          <span class="en">Yes — after your skin treatment with Harmonie Beauté, you can add a hair wash or body massage next door from Amor Spa. See the "Add-on services" tab in the services section above.</span>
+          <span class="vi">Có — sau khi hoàn thành liệu trình da, bạn có thể thêm dịch vụ gội đầu hoặc massage body tại không gian kế bên. Xem thêm ở tab "Dịch vụ kết hợp" trong phần dịch vụ.</span>
+          <span class="en">Yes — after your skin treatment, you can add a hair wash or body massage in the adjoining space. See the "Add-on services" tab above.</span>
         </div></div>
       </div>
 
