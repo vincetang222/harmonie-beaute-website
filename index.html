@@ -373,13 +373,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .review-date{font-size:0.65rem;color:var(--earth);margin-top:1px}
 .review-badge{display:inline-flex;align-items:center;gap:0.3rem;background:var(--moss);color:#fff;padding:0.25rem 0.7rem;border-radius:50px;font-size:0.62rem;font-weight:600;letter-spacing:0.06em}
 
-/* ── PROMO SECTION ── */
-.promo-section{background:linear-gradient(160deg,#1E3028,#0F1F18);padding:2.8rem 6rem}
-.promo-section .section-tag{color:var(--gold);background:rgba(201,169,110,0.12);border:1px solid rgba(201,169,110,0.25)}
-.promo-section .section-title{color:#F2EBD9}
-.promo-section .section-line{background:var(--gold);opacity:0.4}
-.promo-wrap{display:grid;grid-template-columns:1fr auto 1fr;gap:0;margin-top:1.8rem}
-.promo-divider{width:1px;background:rgba(255,255,255,0.1);margin:0 2.5rem}
+
 /* Combo */
 .promo-label{font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:1rem;opacity:0.85}
 .combo-row{display:flex;align-items:center;gap:1rem;padding:0.65rem 0.9rem;border-radius:8px;background:rgba(255,255,255,0.05);margin-bottom:0.5rem}
@@ -398,6 +392,44 @@ footer p{font-size:0.68rem;color:var(--earth)}
   .promo-section{padding:2.5rem 1.2rem}
   .promo-wrap{grid-template-columns:1fr;gap:1.8rem}
   .promo-divider{width:100%;height:1px;margin:0}
+}
+
+/* ── PROMO SECTION ── */
+.promo-section{background:var(--white);padding:4.5rem 6rem}
+.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+.promo-card{border-radius:16px;overflow:hidden;box-shadow:0 2px 16px var(--shadow)}
+.promo-card-combo{background:linear-gradient(145deg,#2A4A36,#1A3224)}
+.promo-card-points{background:linear-gradient(145deg,#1E2E38,#141E28)}
+.promo-card-head{padding:1.6rem 1.8rem 1.2rem}
+.promo-card-tag{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;margin-bottom:0.5rem;color:var(--gold)}
+.promo-card-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:500;line-height:1.25;margin-bottom:0.4rem}
+.promo-card-combo .promo-card-title{color:#F2EBD9}
+.promo-card-points .promo-card-title{color:#F0EAF8}
+.promo-card-sub{font-size:0.78rem;font-weight:300;line-height:1.6}
+.promo-card-combo .promo-card-sub{color:rgba(242,235,217,0.5)}
+.promo-card-points .promo-card-sub{color:rgba(240,234,248,0.45)}
+.promo-card-body{padding:0 1.8rem 1.6rem;display:flex;flex-direction:column;gap:0.6rem}
+/* Combo tiers: 2 ngang */
+.combo-tiers-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.combo-tier{display:flex;align-items:center;gap:0.8rem;padding:0.85rem 1rem;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(201,169,110,0.2)}
+.combo-tier-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);font-weight:400;line-height:1;min-width:36px;text-align:center}
+.combo-tier-text strong{display:block;font-size:0.82rem;color:#F2EBD9;font-weight:500}
+.combo-tier-text span{font-size:0.72rem;color:rgba(242,235,217,0.4);font-weight:300}
+.combo-note{font-size:0.68rem;color:rgba(242,235,217,0.28);padding-top:0.4rem;font-style:italic}
+/* Milestone tiers: 2x2 */
+.points-tiers-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.55rem}
+.points-tier{display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.7rem;border-radius:10px;background:rgba(255,255,255,0.07);border:1px solid rgba(201,169,110,0.18)}
+.points-badge{font-size:1rem;flex-shrink:0}
+.points-tier-content{display:flex;flex-direction:column;gap:0.08rem}
+.points-tier-label{font-size:0.7rem;font-weight:600;color:#F0EAF8}
+.points-tier-pts{font-size:0.67rem;color:var(--gold);font-weight:700}
+.points-tier-gifts{font-size:0.65rem;color:rgba(240,234,248,0.5);line-height:1.35}
+.points-footnote{font-size:0.68rem;color:rgba(240,234,248,0.28);font-style:italic;margin-top:0.6rem;padding-top:0.6rem;border-top:1px solid rgba(255,255,255,0.08)}
+@media(max-width:900px){
+  .promo-section{padding:3rem 1.2rem}
+  .promo-grid{grid-template-columns:1fr}
+  .combo-tiers-grid{grid-template-columns:1fr}
+  .points-tiers-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -639,57 +671,98 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <p class="section-tag">✦ <span class="vi">Ưu đãi</span><span class="en">Promotions</span></p>
   <h2 class="section-title"><span class="vi">Chương trình <em>dành cho bạn</em></span><span class="en">Loyalty <em>programs</em></span></h2>
   <div class="section-line"></div>
-
-  <div class="promo-wrap">
+  <div class="promo-grid">
 
     <!-- COMBO NẶN MỤN -->
-    <div>
-      <p class="promo-label"><span class="vi">Combo nặn mụn</span><span class="en">Acne combo</span></p>
-      <div class="combo-row">
-        <div class="combo-num">3</div>
-        <div class="combo-detail">
-          <strong><span class="vi">buổi cùng loại → giảm 10% buổi 3</span><span class="en">sessions same type → 10% off 3rd</span></strong>
-          <span><span class="vi">Tự động áp dụng · Không cần thanh toán trước</span><span class="en">Auto-applied · No prepayment needed</span></span>
-        </div>
+    <div class="promo-card promo-card-combo">
+      <div class="promo-card-head">
+        <p class="promo-card-tag"><span class="vi">Combo nặn mụn</span><span class="en">Acne combo</span></p>
+        <h3 class="promo-card-title">
+          <span class="vi">Đi nhiều — <em style="font-style:italic;color:var(--gold)">nhận nhiều hơn</em></span>
+          <span class="en">More visits — <em style="font-style:italic;color:var(--gold)">more rewards</em></span>
+        </h3>
+        <p class="promo-card-sub">
+          <span class="vi">Áp dụng cho tất cả dịch vụ nặn mụn · Không cần thanh toán trước</span>
+          <span class="en">Applies to all acne extraction services · No prepayment needed</span>
+        </p>
       </div>
-      <div class="combo-row">
-        <div class="combo-num">5</div>
-        <div class="combo-detail">
-          <strong><span class="vi">buổi cùng loại → tặng 1 buổi miễn phí</span><span class="en">sessions same type → 1 free session</span></strong>
-          <span><span class="vi">Cùng dịch vụ đã chọn</span><span class="en">Same service of your choice</span></span>
+      <div class="promo-card-body">
+        <div class="combo-tiers-grid">
+          <div class="combo-tier">
+            <div class="combo-tier-num">3</div>
+            <div class="combo-tier-text">
+              <strong class="vi">buổi → Giảm 10% buổi 3</strong>
+              <strong class="en">sessions → 10% off 3rd</strong>
+              <span class="vi">Tự động khi đủ buổi</span>
+              <span class="en">Auto-applied</span>
+            </div>
+          </div>
+          <div class="combo-tier">
+            <div class="combo-tier-num">5</div>
+            <div class="combo-tier-text">
+              <strong class="vi">buổi → Tặng 1 buổi miễn phí</strong>
+              <strong class="en">sessions → 1 free session</strong>
+              <span class="vi">Cùng dịch vụ đã chọn</span>
+              <span class="en">Same service</span>
+            </div>
+          </div>
         </div>
+        <p class="combo-note vi">Không áp dụng cho dịch vụ kết hợp của đối tác · Không hết hạn</p>
+        <p class="combo-note en">Excludes partner add-on services · Never expires</p>
       </div>
-      <p class="promo-footnote vi">Không áp dụng cho dịch vụ kết hợp đối tác · Không hết hạn</p>
-      <p class="promo-footnote en">Excludes partner add-on services · Never expires</p>
     </div>
 
-    <div class="promo-divider"></div>
-
-    <!-- TÍCH LŨY MILESTONE -->
-    <div>
-      <p class="promo-label"><span class="vi">Tích lũy chi tiêu — nhận quà</span><span class="en">Cumulative spend rewards</span></p>
-      <div class="milestone-row">
-        <span class="milestone-amount">3 triệu</span>
-        <span class="milestone-arrow">→</span>
-        <span class="milestone-gift"><span class="vi">Thải độc CO2</span><span class="en">CO2 Detox</span></span>
+    <!-- LOYALTY MILESTONE -->
+    <div class="promo-card promo-card-points">
+      <div class="promo-card-head">
+        <p class="promo-card-tag"><span class="vi">Tích lũy — Đổi quà</span><span class="en">Spend & earn rewards</span></p>
+        <h3 class="promo-card-title">
+          <span class="vi">Đạt ngưỡng chi tiêu → <em style="font-style:italic;color:var(--gold)">Nhận quà</em></span>
+          <span class="en">Hit a spending milestone → <em style="font-style:italic;color:var(--gold)">Get rewarded</em></span>
+        </h3>
+        <p class="promo-card-sub">
+          <span class="vi">Tính trên tổng chi tiêu tích lũy · Không hết hạn · Không tính dịch vụ đối tác</span>
+          <span class="en">Based on cumulative spending · Never expires · Excludes partner services</span>
+        </p>
       </div>
-      <div class="milestone-row">
-        <span class="milestone-amount">5 triệu</span>
-        <span class="milestone-arrow">→</span>
-        <span class="milestone-gift"><span class="vi">Peel trị thâm căng bóng</span><span class="en">Brightening peel</span></span>
+      <div class="promo-card-body">
+        <div class="points-tiers-grid">
+          <div class="points-tier">
+            <div class="points-badge">🌱</div>
+            <div class="points-tier-content">
+              <div class="points-tier-label"><span class="vi">Cấp 1</span><span class="en">Level 1</span></div>
+              <div class="points-tier-pts">3,000,000đ</div>
+              <div class="points-tier-gifts"><span class="vi">Thải độc CO2</span><span class="en">CO2 Detox</span></div>
+            </div>
+          </div>
+          <div class="points-tier">
+            <div class="points-badge">🌿</div>
+            <div class="points-tier-content">
+              <div class="points-tier-label"><span class="vi">Cấp 2</span><span class="en">Level 2</span></div>
+              <div class="points-tier-pts">5,000,000đ</div>
+              <div class="points-tier-gifts"><span class="vi">Peel trị thâm căng bóng</span><span class="en">Brightening peel</span></div>
+            </div>
+          </div>
+          <div class="points-tier">
+            <div class="points-badge">💎</div>
+            <div class="points-tier-content">
+              <div class="points-tier-label"><span class="vi">Cấp 3</span><span class="en">Level 3</span></div>
+              <div class="points-tier-pts">8,000,000đ</div>
+              <div class="points-tier-gifts"><span class="vi">Peel tảo Decaar cao cấp</span><span class="en">Decaar Algae Peel</span></div>
+            </div>
+          </div>
+          <div class="points-tier">
+            <div class="points-badge">⭐</div>
+            <div class="points-tier-content">
+              <div class="points-tier-label"><span class="vi">Cấp 4 — VIP</span><span class="en">Level 4 — VIP</span></div>
+              <div class="points-tier-pts">12,000,000đ</div>
+              <div class="points-tier-gifts"><span class="vi">Peel phục hồi cao cấp</span><span class="en">Premium Restorative Peel</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="points-footnote vi">Hỏi Hana để biết tổng chi tiêu tích lũy của bạn</p>
+        <p class="points-footnote en">Ask Hana to check your cumulative spending total</p>
       </div>
-      <div class="milestone-row">
-        <span class="milestone-amount">8 triệu</span>
-        <span class="milestone-arrow">→</span>
-        <span class="milestone-gift"><span class="vi">Peel tảo Decaar cao cấp</span><span class="en">Decaar Algae Peel</span></span>
-      </div>
-      <div class="milestone-row">
-        <span class="milestone-amount">12 triệu</span>
-        <span class="milestone-arrow">→</span>
-        <span class="milestone-gift"><span class="vi">Peel phục hồi cao cấp</span><span class="en">Premium Restorative Peel</span></span>
-      </div>
-      <p class="promo-footnote vi">Không tính dịch vụ đối tác · Hỏi Hana để biết số dư hiện tại</p>
-      <p class="promo-footnote en">Excludes partner services · Ask Hana for your current total</p>
     </div>
 
   </div>
