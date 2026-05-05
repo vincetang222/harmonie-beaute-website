@@ -411,6 +411,10 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .theme-toggle-track{width:36px;height:20px;border-radius:50px;position:relative;transition:background 0.3s;border:1px solid rgba(0,0,0,0.08)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
+
+.partner-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.6rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;background:rgba(122,48,80,0.08);color:var(--moss);border:0.5px solid rgba(122,48,80,0.2);padding:3px 10px;border-radius:50px;margin-bottom:8px}
+.partner-book-btn{font-size:0.7rem;font-weight:500;color:#fff;background:var(--moss);border:none;padding:7px 18px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s;text-decoration:none;display:inline-block}
+.partner-book-btn:hover{background:var(--moss-light)}
 </style>
 </head>
 <body>
@@ -796,8 +800,14 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <!-- COMBO -->
   <div class="tab-content" id="tab-combo">
     <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
-      <span class="vi">✦ <strong>Dịch vụ kết hợp</strong> — Thêm gội đầu hoặc massage sau liệu trình da. Thực hiện tại chỗ, không cần di chuyển.</span>
-      <span class="en">✦ <strong>Add-on services</strong> — Extend your visit with a hair wash or body massage after your skin treatment. All in the same space.</span>
+      <div class="partner-badge">✦ Đối tác của Harmonie Beauté</div>
+      <div style="margin-bottom:0.6rem">
+        <span class="vi"><strong>Dịch vụ kết hợp</strong> — Thêm gội đầu hoặc massage sau liệu trình da. Thực hiện tại chỗ, không cần di chuyển. <em>Đặt lịch riêng bên dưới.</em></span>
+        <span class="en"><strong>Add-on services</strong> — Extend your visit with a hair wash or body massage after your skin treatment. <em>Book separately below.</em></span>
+      </div>
+      <a href="https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone" target="_blank" class="partner-book-btn">
+        <span class="vi">Đặt lịch Dịch vụ kết hợp →</span><span class="en">Book Add-on services →</span>
+      </a>
     </div>
     <div class="two-col">
       <div class="svc-card-wrap">
@@ -810,7 +820,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">299,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 60'</span></span>
               <span class="svc-price-usd">~$11.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Gội dưỡng sinh')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Gội dưỡng sinh"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -820,7 +830,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">599,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 90'</span></span>
               <span class="svc-price-usd">~$22.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Gội trị liệu')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Gội trị liệu"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row is-best">
@@ -830,7 +840,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">1,500,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 90'</span></span>
               <span class="svc-price-usd">~$57</span>
-              <button class="svc-book-btn" onclick="fillBook('Gội tóc đẹp')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Gội tóc đẹp"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
@@ -846,7 +856,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">550,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span>
               <span class="svc-price-usd">~$21 / 60' &nbsp; ~$26.5 / 90'</span>
-              <button class="svc-book-btn" onclick="fillBook('Aroma Massage')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Aroma Massage"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -856,7 +866,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">900,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span>
               <span class="svc-price-usd">~$26.5 / 60' &nbsp; ~$34 / 90'</span>
-              <button class="svc-book-btn" onclick="fillBook('Therapy Massage')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Therapy Massage"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
@@ -868,8 +878,14 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <!-- PMU -->
   <div class="tab-content" id="tab-pmu">
     <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
-      <span class="vi">✦ <strong>Phun xăm thẩm mỹ</strong> — Dịch vụ bán vĩnh viễn tại Harmonie Beauté · Đặt lịch qua Calendly để được tư vấn trước khi thực hiện.</span>
-      <span class="en">✦ <strong>Semi-permanent makeup</strong> — PMU services at Harmonie Beauté · Book via Calendly for a consultation before your appointment.</span>
+      <div class="partner-badge">✦ Đối tác của Harmonie Beauté</div>
+      <div style="margin-bottom:0.6rem">
+        <span class="vi"><strong>Phun xăm thẩm mỹ</strong> — Dịch vụ bán vĩnh viễn thực hiện bởi chuyên gia PMU đối tác tại không gian Harmonie Beauté. <em>Vui lòng tư vấn trước khi đặt.</em></span>
+        <span class="en"><strong>Semi-permanent makeup</strong> — PMU services performed by a partner specialist at Harmonie Beauté. <em>Consultation required before booking.</em></span>
+      </div>
+      <a href="https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1" target="_blank" class="partner-book-btn">
+        <span class="vi">Đặt lịch PMU →</span><span class="en">Book PMU →</span>
+      </a>
     </div>
     <div class="two-col">
       <div class="svc-card-wrap">
@@ -884,7 +900,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">150,000đ</span>
               <span class="svc-price-usd">~$6</span>
-              <button class="svc-book-btn" onclick="fillBook('Hybrid Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Hybrid Tint"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -894,7 +910,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">350,000đ</span>
               <span class="svc-price-usd">~$13.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Brow Lamination')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Brow Lamination"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -904,7 +920,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">450,000đ</span>
               <span class="svc-price-usd">~$17</span>
-              <button class="svc-book-btn" onclick="fillBook('Combo Brow Lami Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Combo Brow Lami Tint"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Phun xăm / PMU</div>
@@ -915,7 +931,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">3,000,000đ</span>
               <span class="svc-price-usd">~$114</span>
-              <button class="svc-book-btn" onclick="fillBook('Natural Brows PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Natural Brows PMU"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -925,7 +941,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">3,500,000đ</span>
               <span class="svc-price-usd">~$133</span>
-              <button class="svc-book-btn" onclick="fillBook('Brows Cover PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Brows Cover PMU"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row is-best">
@@ -935,7 +951,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">4,500,000đ</span>
               <span class="svc-price-usd">~$171</span>
-              <button class="svc-book-btn" onclick="fillBook('Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Hairstroke PMU"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -945,7 +961,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">4,000,000đ</span>
               <span class="svc-price-usd">~$152</span>
-              <button class="svc-book-btn" onclick="fillBook('Mixstyle Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Mixstyle Hairstroke PMU"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Mí mắt / Eyelids</div>
@@ -956,7 +972,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">2,000,000đ</span>
               <span class="svc-price-usd">~$76</span>
-              <button class="svc-book-btn" onclick="fillBook('Open Eyes PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Open Eyes PMU"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -966,7 +982,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">2,500,000đ</span>
               <span class="svc-price-usd">~$95</span>
-              <button class="svc-book-btn" onclick="fillBook('Eyeliner PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Eyeliner PMU"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
@@ -982,7 +998,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">1,200,000đ</span>
               <span class="svc-price-usd">~$45.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Lip Pigment Removal')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Lip Pigment Removal"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -992,7 +1008,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">2,500,000đ</span>
               <span class="svc-price-usd">~$95</span>
-              <button class="svc-book-btn" onclick="fillBook('Khu tham co ban')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Khu tham co ban"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row is-best">
@@ -1002,7 +1018,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">4,000,000đ</span>
               <span class="svc-price-usd">~$152</span>
-              <button class="svc-book-btn" onclick="fillBook('Khu tham chuyen sau')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Khu tham chuyen sau"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -1012,7 +1028,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">3,500,000đ</span>
               <span class="svc-price-usd">~$133</span>
-              <button class="svc-book-btn" onclick="fillBook('Phun moi moi')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Phun moi moi"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
@@ -1022,7 +1038,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">800,000đ</span>
               <span class="svc-price-usd">~$30.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Dien di TBG')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Dien di TBG"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Laser xóa xăm / Laser Removal</div>
@@ -1033,7 +1049,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">1,000,000đ</span>
               <span class="svc-price-usd">~$38</span>
-              <button class="svc-book-btn" onclick="fillBook('Laser xoa le')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Laser xoa le"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row is-best">
@@ -1043,7 +1059,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="svc-right">
               <span class="svc-price">2,500,000đ</span>
               <span class="svc-price-usd">~$95</span>
-              <button class="svc-book-btn" onclick="fillBook('Laser combo')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank" data-svc="Laser combo"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div style="font-size:0.7rem;color:var(--earth);padding:0.8rem 0 0.2rem;line-height:1.5;border-top:1px solid rgba(122,48,80,0.08);margin-top:0.3rem">✦ <span class="vi">Cá nhân hóa theo sắc tố · Bảo hành sau phun · An toàn, tỉ mỉ</span><span class="en">Personalised · Post-treatment warranty · Safe & precise</span></div>
@@ -1052,8 +1068,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
       </div>
     </div>
   </div>
-
-</section>
 
 
   <!-- PMU -->
@@ -1068,34 +1082,34 @@ footer p{font-size:0.68rem;color:var(--earth)}
       <div class="svc-card-wrap">
         <div class="sub-cat-title"><span class="vi">Lông mày — Tint & Lamination</span><span class="en">Brows — Tint & Lamination</span></div>
         <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hybrid Tint</span><span class="en">Hybrid Tint</span><span class="svc-desc"><span class="vi">Nhuộm màu lông mày bán vĩnh viễn</span><span class="en">Semi-permanent brow tinting</span></span></span></div><div class="svc-right"><span class="svc-price">150,000đ</span><div class="svc-price-usd">~$6</div><button class="svc-book-btn" onclick="fillBook('Hybrid Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brow Lamination</span><span class="en">Brow Lamination</span><span class="svc-desc"><span class="vi">Định hình và uốn lông mày</span><span class="en">Brow shaping & lifting treatment</span></span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><div class="svc-price-usd">~$13.5</div><button class="svc-book-btn" onclick="fillBook('Brow Lamination')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo Lami + Tint</span><span class="en">Combo Lami + Tint</span><span class="svc-desc"><span class="vi">Định hình + Nhuộm</span><span class="en">Shaping + tinting combined</span></span></span></div><div class="svc-right"><span class="svc-price">450,000đ</span><div class="svc-price-usd">~$17</div><button class="svc-book-btn" onclick="fillBook('Combo Brow Lami Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Natural Brows</span><span class="en">Natural Brows</span><span class="svc-desc"><span class="vi">Phun mày tự nhiên</span><span class="en">Natural brows PMU</span></span></span></div><div class="svc-right"><span class="svc-price">3,000,000đ</span><div class="svc-price-usd">~$114</div><button class="svc-book-btn" onclick="fillBook('Natural Brows PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brows Cover</span><span class="en">Brows Cover</span><span class="svc-desc"><span class="vi">Phun mày trên nền cũ</span><span class="en">Cover over existing brows</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><div class="svc-price-usd">~$133</div><button class="svc-book-btn" onclick="fillBook('Brows Cover PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hairstroke</span><span class="en">Hairstroke Brows</span><span class="svc-desc"><span class="vi">Sợi mày thiết kế</span><span class="en">Designed hairstrokes</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,500,000đ</span><div class="svc-price-usd">~$171</div><button class="svc-book-btn" onclick="fillBook('Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mixstyle Hairstroke</span><span class="en">Mixstyle Hairstroke</span><span class="svc-desc"><span class="vi">Tạo sợi đầu phun đuôi</span><span class="en">Hairstrokes at head, shading at tail</span></span></span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><div class="svc-price-usd">~$152</div><button class="svc-book-btn" onclick="fillBook('Mixstyle Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hybrid Tint</span><span class="en">Hybrid Tint</span><span class="svc-desc"><span class="vi">Nhuộm màu lông mày bán vĩnh viễn</span><span class="en">Semi-permanent brow tinting</span></span></span></div><div class="svc-right"><span class="svc-price">150,000đ</span><div class="svc-price-usd">~$6</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Hybrid Tint"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brow Lamination</span><span class="en">Brow Lamination</span><span class="svc-desc"><span class="vi">Định hình và uốn lông mày</span><span class="en">Brow shaping & lifting treatment</span></span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><div class="svc-price-usd">~$13.5</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Brow Lamination"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo Lami + Tint</span><span class="en">Combo Lami + Tint</span><span class="svc-desc"><span class="vi">Định hình + Nhuộm</span><span class="en">Shaping + tinting combined</span></span></span></div><div class="svc-right"><span class="svc-price">450,000đ</span><div class="svc-price-usd">~$17</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Combo Brow Lami Tint"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Natural Brows</span><span class="en">Natural Brows</span><span class="svc-desc"><span class="vi">Phun mày tự nhiên</span><span class="en">Natural brows PMU</span></span></span></div><div class="svc-right"><span class="svc-price">3,000,000đ</span><div class="svc-price-usd">~$114</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Natural Brows PMU"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brows Cover</span><span class="en">Brows Cover</span><span class="svc-desc"><span class="vi">Phun mày trên nền cũ</span><span class="en">Cover over existing brows</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><div class="svc-price-usd">~$133</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Brows Cover PMU"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hairstroke</span><span class="en">Hairstroke Brows</span><span class="svc-desc"><span class="vi">Sợi mày thiết kế</span><span class="en">Designed hairstrokes</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,500,000đ</span><div class="svc-price-usd">~$171</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Hairstroke PMU"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mixstyle Hairstroke</span><span class="en">Mixstyle Hairstroke</span><span class="svc-desc"><span class="vi">Tạo sợi đầu phun đuôi</span><span class="en">Hairstrokes at head, shading at tail</span></span></span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><div class="svc-price-usd">~$152</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Mixstyle Hairstroke PMU"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
         </div>
         <div class="sub-cat-title" style="margin-top:1rem"><span class="vi">Mí mắt</span><span class="en">Eyelids</span></div>
         <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Open Eyes</span><span class="en">Open Eyes</span><span class="svc-desc"><span class="vi">Phun mí mở tròng</span><span class="en">Open eyes liner</span></span></span></div><div class="svc-right"><span class="svc-price">2,000,000đ</span><div class="svc-price-usd">~$76</div><button class="svc-book-btn" onclick="fillBook('Open Eyes PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Eyeliner</span><span class="en">Eyeliner PMU</span><span class="svc-desc"><span class="vi">Phun mí có đuôi</span><span class="en">Eyeliner with tail</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="fillBook('Eyeliner PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Open Eyes</span><span class="en">Open Eyes</span><span class="svc-desc"><span class="vi">Phun mí mở tròng</span><span class="en">Open eyes liner</span></span></span></div><div class="svc-right"><span class="svc-price">2,000,000đ</span><div class="svc-price-usd">~$76</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Open Eyes PMU"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Eyeliner</span><span class="en">Eyeliner PMU</span><span class="svc-desc"><span class="vi">Phun mí có đuôi</span><span class="en">Eyeliner with tail</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Eyeliner PMU"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
       <div class="svc-card-wrap">
         <div class="sub-cat-title"><span class="vi">Môi</span><span class="en">Lips</span></div>
         <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Lip Pigment Removal</span><span class="en">Lip Pigment Removal</span><span class="svc-desc"><span class="vi">Loại bỏ mực môi cũ</span><span class="en">Removes old lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">1,200,000đ</span><div class="svc-price-usd">~$45.5</div><button class="svc-book-btn" onclick="fillBook('Lip Pigment Removal')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm cơ bản</span><span class="en">Basic lip correction</span><span class="svc-desc"><span class="vi">Cân bằng sắc tố môi tối màu</span><span class="en">Balances dark lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="fillBook('Khu tham co ban')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm chuyên sâu</span><span class="en">Advanced lip correction</span><span class="svc-desc"><span class="vi">Kết hợp cân bằng + phủ màu</span><span class="en">Combines balancing + colour overlay</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><div class="svc-price-usd">~$152</div><button class="svc-book-btn" onclick="fillBook('Khu tham chuyen sau')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Phun môi mới</span><span class="en">Lip PMU cover</span><span class="svc-desc"><span class="vi">Cover trên nền môi cũ đã từng làm</span><span class="en">Cover over previously tattooed lips</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><div class="svc-price-usd">~$133</div><button class="svc-book-btn" onclick="fillBook('Phun moi moi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Điện di tinh chất TBG</span><span class="en">TBG stem cell treatment</span><span class="svc-desc"><span class="vi">Tăng sinh collagen - giúp môi sau phun nhanh hồi màu</span><span class="en">Stimulates collagen - accelerates post-PMU colour recovery</span></span></span></div><div class="svc-right"><span class="svc-price">800,000đ</span><div class="svc-price-usd">~$30.5</div><button class="svc-book-btn" onclick="fillBook('Dien di TBG')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Lip Pigment Removal</span><span class="en">Lip Pigment Removal</span><span class="svc-desc"><span class="vi">Loại bỏ mực môi cũ</span><span class="en">Removes old lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">1,200,000đ</span><div class="svc-price-usd">~$45.5</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Lip Pigment Removal"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm cơ bản</span><span class="en">Basic lip correction</span><span class="svc-desc"><span class="vi">Cân bằng sắc tố môi tối màu</span><span class="en">Balances dark lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Khu tham co ban"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm chuyên sâu</span><span class="en">Advanced lip correction</span><span class="svc-desc"><span class="vi">Kết hợp cân bằng + phủ màu</span><span class="en">Combines balancing + colour overlay</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><div class="svc-price-usd">~$152</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Khu tham chuyen sau"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Phun môi mới</span><span class="en">Lip PMU cover</span><span class="svc-desc"><span class="vi">Cover trên nền môi cũ đã từng làm</span><span class="en">Cover over previously tattooed lips</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><div class="svc-price-usd">~$133</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Phun moi moi"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Điện di tinh chất TBG</span><span class="en">TBG stem cell treatment</span><span class="svc-desc"><span class="vi">Tăng sinh collagen - giúp môi sau phun nhanh hồi màu</span><span class="en">Stimulates collagen - accelerates post-PMU colour recovery</span></span></span></div><div class="svc-right"><span class="svc-price">800,000đ</span><div class="svc-price-usd">~$30.5</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Dien di TBG"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
         </div>
         <div class="sub-cat-title" style="margin-top:1rem"><span class="vi">Laser xóa xăm</span><span class="en">Laser Removal</span></div>
         <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Xóa lẻ theo vùng</span><span class="en">Laser removal (per area)</span></span></div><div class="svc-right"><span class="svc-price">1,000,000đ</span><div class="svc-price-usd">~$38</div><button class="svc-book-btn" onclick="fillBook('Laser xoa le')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo không giới hạn</span><span class="en">Unlimited laser sessions</span></span><span class="best-badge">⭐ Best Value</span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="fillBook('Laser combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Xóa lẻ theo vùng</span><span class="en">Laser removal (per area)</span></span></div><div class="svc-right"><span class="svc-price">1,000,000đ</span><div class="svc-price-usd">~$38</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Laser xoa le"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo không giới hạn</span><span class="en">Unlimited laser sessions</span></span><span class="best-badge">⭐ Best Value</span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank" data-svc="Laser combo"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
         <div class="svc-note-box" style="margin:1rem 0.5rem 0.5rem;padding:0.8rem 1rem;background:rgba(122,48,80,0.06);border-radius:10px;border-left:3px solid var(--gold)">
@@ -1220,7 +1234,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
 <div id="booking" style="background:var(--white)">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <div class="calendly-inline-widget"
-    data-url="https://calendly.com/harmoniebeautevn/reservation?hide_gdpr_banner=1&primary_color=2E4E3A"
+    data-url="https://calendly.com/harmoniebeautevn/reservation?hide_gdpr_banner=1&primary_color=7A3050"
     style="min-width:320px;height:700px">
   </div>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async>
