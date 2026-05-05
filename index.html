@@ -73,30 +73,48 @@ a{text-decoration:none;color:inherit}
 
 /* ── SERVICES ── */
 .services-section{background:var(--white)}
+
+/* ── Tabs ── */
 .tab-bar{display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap}
-.tab-btn{padding:0.55rem 1.2rem;background:transparent;border:1px solid rgba(122,48,80,0.2);border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--charcoal);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}
+.tab-btn{padding:0.5rem 1.1rem;background:transparent;border:1px solid rgba(122,48,80,0.18);border-radius:50px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--charcoal);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}
 .tab-btn.active{background:var(--moss);border-color:var(--moss);color:#fff;box-shadow:0 2px 12px var(--shadow)}
 .tab-btn:not(.active):hover{border-color:var(--moss-light);color:var(--moss)}
 .tab-content{display:none}
 .tab-content.active{display:block}
-/* ── Card header (sub-cat-title) ── */
-.sub-cat-title{display:flex;align-items:center;gap:0.5rem;background:var(--moss);color:#fff;padding:0.7rem 1.2rem;border-radius:12px 12px 0 0;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;margin-bottom:0}
+
+/* ── Card wrap ── */
+.svc-card-wrap{border-radius:14px;overflow:hidden;box-shadow:0 4px 24px var(--shadow);border:0.5px solid rgba(122,48,80,0.1)}
+
+/* ── Card header ── */
+.sub-cat-title{display:flex;align-items:center;gap:0.6rem;background:var(--moss);color:#fff;padding:0.75rem 1.2rem;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.16em;font-weight:700}
+
+/* ── Card body ── */
+.svc-card-body{background:#fff;padding:0.4rem 0 0.6rem}
+
 /* ── Grid ── */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+
 /* ── Service row ── */
-.svc-row{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:0.85rem 1rem;border-bottom:1px solid rgba(122,48,80,0.08);transition:background 0.15s}
+.svc-row{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:0.8rem 1.2rem;border-bottom:1px solid rgba(122,48,80,0.06)}
 .svc-row:last-of-type{border-bottom:none}
-.svc-row:hover{background:rgba(122,48,80,0.025);border-radius:8px}
-/* ── Left side: name + desc stacked ── */
-.svc-left{display:flex;flex-direction:column;gap:0.25rem;flex:1;min-width:0}
-.svc-name{font-size:0.88rem;color:var(--charcoal);font-weight:500;line-height:1.3}
-.svc-desc{font-size:0.7rem;color:var(--earth);font-weight:300;line-height:1.4;margin-top:0.1rem}
-.best-badge{align-self:flex-start;font-size:0.55rem;background:rgba(200,144,106,0.12);color:#8B5A2A;padding:2px 8px;border-radius:50px;letter-spacing:0.04em;font-weight:600;border:1px solid rgba(200,144,106,0.35);margin-top:0.2rem;white-space:nowrap}
-/* ── Right side: price + button ── */
-.svc-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem;flex-shrink:0}
-.svc-price{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:500;color:var(--gold);white-space:nowrap;line-height:1}
-.svc-book-btn{font-size:0.62rem;color:var(--moss);border:1px solid rgba(122,48,80,0.3);background:transparent;padding:3px 10px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;white-space:nowrap;font-weight:500;transition:all 0.2s}
+.svc-row:hover{background:rgba(122,48,80,0.022)}
+.svc-row.is-best{background:linear-gradient(90deg,rgba(200,144,106,0.06),transparent);border-left:3px solid var(--gold);padding-left:1rem}
+
+/* ── Left: name + desc + badge ── */
+.svc-left{display:flex;flex-direction:column;gap:0;flex:1;min-width:0}
+.svc-name{font-size:0.87rem;color:var(--charcoal);font-weight:500;line-height:1.35}
+.svc-desc{font-size:0.68rem;color:var(--earth);font-weight:300;line-height:1.45;margin-top:0.2rem;opacity:0.85}
+.best-badge{align-self:flex-start;margin-top:0.25rem;font-size:0.52rem;background:rgba(200,144,106,0.1);color:#8B5A2A;padding:2px 7px;border-radius:50px;font-weight:600;border:1px solid rgba(200,144,106,0.3);white-space:nowrap}
+
+/* ── Right: price + usd + button ── */
+.svc-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.35rem;flex-shrink:0;padding-top:0.05rem}
+.svc-price{font-family:'Playfair Display',serif;font-size:0.93rem;font-weight:500;color:var(--gold);white-space:nowrap;line-height:1.1}
+.svc-price-usd{font-size:0.62rem;color:var(--earth);text-align:right;opacity:0.7}
+.svc-book-btn{font-size:0.6rem;color:var(--moss);border:1px solid rgba(122,48,80,0.28);background:transparent;padding:3px 10px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;white-space:nowrap;font-weight:500;transition:all 0.2s}
 .svc-book-btn:hover{background:var(--moss);color:#fff;border-color:var(--moss)}
+
+/* ── VAT note ── */
+.svc-vat-note{font-size:0.62rem;color:var(--earth);font-style:italic;padding:0.5rem 1.2rem 0.3rem;opacity:0.65}
 
 /* ── ADDRESS ── */
 
@@ -349,20 +367,20 @@ footer p{font-size:0.68rem;color:var(--earth)}
 }
 
 /* ── SVC CARD WRAP ── */
-.svc-card-wrap{border-radius:12px;overflow:hidden;box-shadow:0 4px 20px var(--shadow);border:0.5px solid rgba(122,48,80,0.12)}
-.svc-card-wrap > div:last-child{background:#fff;padding:0 0.2rem 0.8rem}
-.svc-row:has(.best-badge){background:linear-gradient(90deg,rgba(200,144,106,0.08),transparent);border-radius:8px;border-left:3px solid var(--gold);padding-left:0.8rem}
 
-.svc-desc{font-size:0.72rem;color:var(--earth);font-weight:300;line-height:1.4;display:block}
+
+
+
+
 
 /* ── FACIAL TAB CARD ── */
-#tab-facial.active{background:#fff;border-radius:12px;padding:1.2rem;border:0.5px solid rgba(122,48,80,0.12);box-shadow:0 4px 20px var(--shadow);max-width:560px}#tab-combo.active{display:block}
+#tab-facial.active{display:block}
 
 .blog-header-area{background:linear-gradient(145deg,#6E2442,#5A1E38);padding:0.85rem 1.2rem 0.8rem}
 .blog-content-area{padding:0.85rem 1.2rem 1rem;background:#fff;flex:1}
 
-.svc-price-usd{font-size:0.65rem;color:var(--earth);font-weight:400;text-align:right;line-height:1}
-.svc-vat-note{font-size:0.65rem;color:var(--earth);font-style:italic;padding:0.5rem 1rem 0.3rem;opacity:0.75}
+
+
 
 /* ── GREEN THEME ── */
 [data-theme="green"]{
@@ -490,147 +508,537 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <div class="tab-content active" id="tab-acne">
     <div class="two-col">
       <div class="svc-card-wrap">
-        <div class="sub-cat-title">Facial</div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mụn cơ bản</span><span class="en">Basic acne treatment</span></span></div><div class="svc-right"><span class="svc-price">179,000đ</span><div class="svc-price-usd">~$7</div><button class="svc-book-btn" onclick="fillBook('Mụn cơ bản / Basic acne treatment')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mụn chuyên sâu</span><span class="en">Deep acne</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">300,000đ</span><div class="svc-price-usd">~$11.5</div><button class="svc-book-btn" onclick="fillBook('Mụn chuyên sâu / Deep acne')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Phục hồi da mụn</span><span class="en">Acne skin recovery</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><div class="svc-price-usd">~$13.5</div><button class="svc-book-btn" onclick="fillBook('Phục hồi da mụn / Acne skin recovery')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thải độc CO2</span><span class="en">CO2 detox</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">450,000đ</span><div class="svc-price-usd">~$17</div><button class="svc-book-btn" onclick="fillBook('Thải độc CO2 / CO2 detox')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        <div class="sub-cat-title">🌿 Facial</div>
+        <div class="svc-card-body">
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Mụn cơ bản</span><span class="en">Basic acne treatment</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">179,000đ</span>
+              <span class="svc-price-usd">~$7</span>
+              <button class="svc-book-btn" onclick="fillBook('Mụn cơ bản / Basic acne treatment')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Mụn chuyên sâu</span><span class="en">Deep acne treatment</span></span><span class="best-badge">⭐ Best Seller</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">300,000đ</span>
+              <span class="svc-price-usd">~$11.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Mụn chuyên sâu / Deep acne')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Phục hồi da mụn</span><span class="en">Acne skin recovery</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">350,000đ</span>
+              <span class="svc-price-usd">~$13.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Phục hồi da mụn / Acne skin recovery')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Thải độc CO2</span><span class="en">CO2 detox</span></span><span class="best-badge">⭐ Best Seller</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">450,000đ</span>
+              <span class="svc-price-usd">~$17</span>
+              <button class="svc-book-btn" onclick="fillBook('Thải độc CO2 / CO2 detox')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
       <div class="svc-card-wrap">
-        <div class="sub-cat-title">Body</div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn ngực</span><span class="en">Chest acne extraction</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><div class="svc-price-usd">~$13.5</div><button class="svc-book-btn" onclick="fillBook('Nặn mụn ngực / Chest acne extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn ½ lưng</span><span class="en">Half-back extraction</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><div class="svc-price-usd">~$13.5</div><button class="svc-book-btn" onclick="fillBook('Nặn mụn ½ lưng / Half-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn full lưng</span><span class="en">Full-back extraction</span></span></div><div class="svc-right"><span class="svc-price">500,000đ</span><div class="svc-price-usd">~$19</div><button class="svc-book-btn" onclick="fillBook('Nặn mụn full lưng / Full-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-<p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-      </div>
+        <div class="sub-cat-title">✨ Body</div>
+        <div class="svc-card-body">
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Nặn mụn ngực</span><span class="en">Chest acne extraction</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">350,000đ</span>
+              <span class="svc-price-usd">~$13.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Nặn mụn ngực / Chest acne extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Nặn mụn ½ lưng</span><span class="en">Half-back extraction</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">350,000đ</span>
+              <span class="svc-price-usd">~$13.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Nặn mụn ½ lưng / Half-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Nặn mụn full lưng</span><span class="en">Full-back extraction</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">500,000đ</span>
+              <span class="svc-price-usd">~$19</span>
+              <button class="svc-book-btn" onclick="fillBook('Nặn mụn full lưng / Full-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- FACIAL -->
   <div class="tab-content" id="tab-facial">
-    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn vội vàng</span><span class="en">Quick relax</span></span></div><div class="svc-right"><span class="svc-price">250,000đ</span><div class="svc-price-usd">~$9.5</div><button class="svc-book-btn" onclick="fillBook('Thư giãn vội vàng / Quick relax')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn thành thơi</span><span class="en">Leisurely relax</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><div class="svc-price-usd">~$13.5</div><button class="svc-book-btn" onclick="fillBook('Thư giãn thành thơi / Leisurely relax')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn & làm sạch sâu</span><span class="en">Relax & deep cleanse</span></span></div><div class="svc-right"><span class="svc-price">400,000đ</span><div class="svc-price-usd">~$15</div><button class="svc-book-btn" onclick="fillBook('Thư giãn & làm sạch sâu / Relax & deep cleanse')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-    <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn & sáng da</span><span class="en">Relax & brightening</span></span></div><div class="svc-right"><span class="svc-price">450,000đ</span><div class="svc-price-usd">~$17</div><button class="svc-book-btn" onclick="fillBook('Thư giãn & sáng da / Relax & brightening')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+    <div class="two-col">
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">🌸 Chăm sóc mặt / Facial Care</div>
+        <div class="svc-card-body">
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Thư giãn vội vàng</span><span class="en">Quick relax</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">250,000đ</span>
+              <span class="svc-price-usd">~$9.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Thư giãn vội vàng / Quick relax')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Thư giãn thành thơi</span><span class="en">Leisurely relax</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">350,000đ</span>
+              <span class="svc-price-usd">~$13.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Thư giãn thành thơi / Leisurely relax')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Thư giãn & làm sạch sâu</span><span class="en">Relax & deep cleanse</span></span><span class="best-badge">⭐ Best Seller</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">400,000đ</span>
+              <span class="svc-price-usd">~$15</span>
+              <button class="svc-book-btn" onclick="fillBook('Thư giãn & làm sạch sâu / Relax & deep cleanse')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Thư giãn & sáng da</span><span class="en">Relax & brightening</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">450,000đ</span>
+              <span class="svc-price-usd">~$17</span>
+              <button class="svc-book-btn" onclick="fillBook('Thư giãn & sáng da / Relax & brightening')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- CHEMICAL PEEL -->
   <div class="tab-content" id="tab-peel">
     <div class="two-col">
       <div class="svc-card-wrap">
-        <div class="sub-cat-title">Facial</div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị mụn</span><span class="en">Acne peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">500,000đ</span><div class="svc-price-usd">~$19</div><button class="svc-book-btn" onclick="fillBook('Peel trị mụn / Acne peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm, căng bóng</span><span class="en">Dark spot & glow peel</span></span></div><div class="svc-right"><span class="svc-price">600,000đ</span><div class="svc-price-usd">~$23</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm, căng bóng / Dark spot & glow peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel sần sùi, trẻ hóa</span><span class="en">Textured skin & anti-aging peel</span></span></div><div class="svc-right"><span class="svc-price">650,000đ</span><div class="svc-price-usd">~$24.5</div><button class="svc-book-btn" onclick="fillBook('Peel sần sùi, trẻ hóa / Anti-aging peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel tảo Decaar cao cấp</span><span class="en">Decaar algae premium peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">950,000đ</span><div class="svc-price-usd">~$36</div><button class="svc-book-btn" onclick="fillBook('Peel tảo Decaar cao cấp / Decaar premium peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel phục hồi cao cấp</span><span class="en">Premium recovery peel</span></span></div><div class="svc-right"><span class="svc-price">1,500,000đ</span><div class="svc-price-usd">~$57</div><button class="svc-book-btn" onclick="fillBook('Peel phục hồi cao cấp / Premium recovery peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        <div class="sub-cat-title">🧴 Facial Peel</div>
+        <div class="svc-card-body">
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị mụn</span><span class="en">Acne peel</span></span><span class="best-badge">⭐ Best Seller</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">500,000đ</span>
+              <span class="svc-price-usd">~$19</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị mụn / Acne peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm, căng bóng</span><span class="en">Dark spot & glow peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">600,000đ</span>
+              <span class="svc-price-usd">~$23</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm, căng bóng / Dark spot & glow peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel sần sùi, trẻ hóa</span><span class="en">Textured skin & anti-aging peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">650,000đ</span>
+              <span class="svc-price-usd">~$24.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel sần sùi, trẻ hóa / Anti-aging peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel tảo Decaar cao cấp</span><span class="en">Decaar algae premium peel</span></span><span class="best-badge">⭐ Best Seller</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">950,000đ</span>
+              <span class="svc-price-usd">~$36</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel tảo Decaar cao cấp / Decaar premium peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel phục hồi cao cấp</span><span class="en">Premium recovery peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,500,000đ</span>
+              <span class="svc-price-usd">~$57</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel phục hồi cao cấp / Premium recovery peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
       <div class="svc-card-wrap">
-        <div class="sub-cat-title">Body</div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn ngực</span><span class="en">Chest dark spot peel</span></span></div><div class="svc-right"><span class="svc-price">1,350,000đ</span><div class="svc-price-usd">~$51</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ngực / Chest dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn ½ lưng</span><span class="en">Half-back dark spot peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">1,500,000đ</span><div class="svc-price-usd">~$57</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ½ lưng / Half-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn full lưng</span><span class="en">Full-back dark spot peel</span></span></div><div class="svc-right"><span class="svc-price">1,950,000đ</span><div class="svc-price-usd">~$74</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn full lưng / Full-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm nách</span><span class="en">Underarm dark spot peel</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">650,000đ</span><div class="svc-price-usd">~$24.5</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm nách / Underarm dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm ½ lưng</span><span class="en">Half-back body peel</span></span></div><div class="svc-right"><span class="svc-price">1,200,000đ</span><div class="svc-price-usd">~$45.5</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm ½ lưng / Half-back body peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm full lưng</span><span class="en">Full-back body peel</span></span></div><div class="svc-right"><span class="svc-price">1,600,000đ</span><div class="svc-price-usd">~$60.5</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm full lưng / Full-back body peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mông, bẹn</span><span class="en">Buttocks & inner thigh peel</span></span></div><div class="svc-right"><span class="svc-price">1,600,000đ</span><div class="svc-price-usd">~$60.5</div><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mông, bẹn / Buttocks & inner thigh peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-<p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-      </div>
+        <div class="sub-cat-title">✨ Body Peel</div>
+        <div class="svc-card-body">
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm mụn ngực</span><span class="en">Chest dark spot peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,350,000đ</span>
+              <span class="svc-price-usd">~$51</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ngực / Chest dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm mụn ½ lưng</span><span class="en">Half-back dark spot peel</span></span><span class="best-badge">⭐ Best Seller</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,500,000đ</span>
+              <span class="svc-price-usd">~$57</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ½ lưng / Half-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm mụn full lưng</span><span class="en">Full-back dark spot peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,950,000đ</span>
+              <span class="svc-price-usd">~$74</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn full lưng / Full-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm nách</span><span class="en">Underarm dark spot peel</span></span><span class="best-badge">⭐ Best Seller</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">650,000đ</span>
+              <span class="svc-price-usd">~$24.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm nách / Underarm dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm ½ lưng</span><span class="en">Half-back body peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,200,000đ</span>
+              <span class="svc-price-usd">~$45.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm ½ lưng / Half-back body peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm full lưng</span><span class="en">Full-back body peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,600,000đ</span>
+              <span class="svc-price-usd">~$60.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm full lưng / Full-back body peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Peel trị thâm mông, bẹn</span><span class="en">Buttocks & inner thigh peel</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,600,000đ</span>
+              <span class="svc-price-usd">~$60.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mông, bẹn / Buttocks & inner thigh peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+        </div>
       </div>
     </div>
   </div>
+
   <!-- COMBO -->
   <div class="tab-content" id="tab-combo">
-    <div class="combo-note">
-      <span class="combo-partner">Amor Spa</span>
-      <div>
-        <span class="vi"><strong>Dịch vụ kết hợp</strong> — Sau khi hoàn thành liệu trình da với Harmonie Beauté, bạn có thể dùng thêm dịch vụ gội đầu hoặc massage body tại giường.</span>
-        <span class="en"><strong>Add-on services</strong> — After your skin treatment, you can add a hair wash or body massage in the same space.</span>
-      </div>
+    <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
+      <span class="vi">✦ <strong>Dịch vụ kết hợp</strong> — Thêm gội đầu hoặc massage sau liệu trình da. Thực hiện tại chỗ, không cần di chuyển.</span>
+      <span class="en">✦ <strong>Add-on services</strong> — Extend your visit with a hair wash or body massage after your skin treatment. All in the same space.</span>
     </div>
     <div class="two-col">
-
-      <div>
+      <div class="svc-card-wrap">
         <div class="sub-cat-title">💆 Hair Care</div>
-        <div>
+        <div class="svc-card-body">
           <div class="svc-row">
             <div class="svc-left">
-              <span class="svc-name"><span class="vi">Gội dưỡng sinh</span><span class="en">Herbal hair wash</span></span>
+              <span class="svc-name"><span class="vi">Gội dưỡng sinh</span><span class="en">Herbal hair wash</span></span><span class="svc-desc"><span class="vi">Thảo dược tự nhiên · dưỡng tóc & da đầu</span><span class="en">Natural herbs · nourishes scalp & hair</span></span>
             </div>
             <div class="svc-right">
-              <div class="svc-price">299,000đ<div class="svc-price-usd">~$11.5</div>
-                <div class="svc-sub">60 <span class="vi">phút</span><span class="en">min</span></div>
-<p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-      </div>
+              <span class="svc-price">299,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 60'</span></span>
+              <span class="svc-price-usd">~$11.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Gội dưỡng sinh')"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
             <div class="svc-left">
-              <span class="svc-name"><span class="vi">Gội trị liệu</span><span class="en">Therapeutic hair wash</span></span>
+              <span class="svc-name"><span class="vi">Gội trị liệu</span><span class="en">Therapeutic hair wash</span></span><span class="svc-desc"><span class="vi">Phục hồi chuyên sâu · giảm rụng tóc</span><span class="en">Intensive repair · reduces hair loss</span></span>
             </div>
             <div class="svc-right">
-              <div class="svc-price">599,000đ<div class="svc-price-usd">~$22.5</div>
-                <div class="svc-sub">90 <span class="vi">phút</span><span class="en">min</span></div>
-<p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-      </div>
+              <span class="svc-price">599,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 90'</span></span>
+              <span class="svc-price-usd">~$22.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Gội trị liệu')"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
-          <div class="svc-row">
+          <div class="svc-row is-best">
             <div class="svc-left">
-              <span class="svc-name"><span class="vi">Gội tóc đẹp</span><span class="en">Beauty hair wash</span></span>
-              <span class="best-badge">✨ Premium</span>
+              <span class="svc-name"><span class="vi">Gội tóc đẹp</span><span class="en">Beauty hair wash</span></span><span class="svc-desc"><span class="vi">Liệu trình cao cấp · tóc bóng mượt, phục hồi hư tổn</span><span class="en">Premium treatment · glossy, damage-repaired hair</span></span><span class="best-badge">✨ Premium</span>
             </div>
             <div class="svc-right">
-              <div class="svc-price">1,500,000đ<div class="svc-price-usd">~$57</div>
-                <div class="svc-sub">90 <span class="vi">phút</span><span class="en">min</span></div>
-<p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-      </div>
+              <span class="svc-price">1,500,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 90'</span></span>
+              <span class="svc-price-usd">~$57</span>
+              <button class="svc-book-btn" onclick="fillBook('Gội tóc đẹp')"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
-
-      <div>
+      <div class="svc-card-wrap">
         <div class="sub-cat-title">🌿 Body Massage</div>
-        <div>
+        <div class="svc-card-body">
           <div class="svc-row">
             <div class="svc-left">
-              <div>
-                <span class="svc-name">Aroma Massage</span>
-                <div class="svc-sub"><span class="vi">Phù hợp: ít luyện tập, làm việc nhiều, máu huyết lưu thông kém</span><span class="en">Best for: sedentary lifestyle, poor circulation</span></div>
-              </div>
+              <span class="svc-name"><span class="vi">Aroma Massage</span><span class="en">Aroma Massage</span></span><span class="svc-desc"><span class="vi">Phù hợp: ít vận động, làm việc nhiều, tuần hoàn kém</span><span class="en">Best for: sedentary lifestyle, poor circulation</span></span>
             </div>
             <div class="svc-right">
-              <div class="svc-price">550,000đ<span style="font-size:0.7rem;color:var(--earth);font-family:'Be Vietnam Pro',sans-serif"> / 60'</span><div class="svc-price-usd">~$21</div>
-                <div class="svc-price">700,000đ<span style="font-size:0.7rem;color:var(--earth);font-family:'Be Vietnam Pro',sans-serif"> / 90'</span><div class="svc-price-usd">~$26.5</div></div>
-<p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-      </div>
+              <span class="svc-price">550,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span>
+              <span class="svc-price-usd">~$21 / 60' &nbsp; ~$26.5 / 90'</span>
+              <button class="svc-book-btn" onclick="fillBook('Aroma Massage')"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
           <div class="svc-row">
             <div class="svc-left">
-              <div>
-                <span class="svc-name">Therapy Massage</span>
-                <div class="svc-sub"><span class="vi">Phù hợp: phục hồi cơ sau tập, căng cơ, đau nhức xương khớp</span><span class="en">Best for: post-workout recovery, muscle tension, joint pain</span></div>
-              </div>
+              <span class="svc-name"><span class="vi">Therapy Massage</span><span class="en">Therapy Massage</span></span><span class="svc-desc"><span class="vi">Phù hợp: phục hồi cơ sau tập, căng cơ, đau nhức</span><span class="en">Best for: post-workout recovery, muscle tension & joint pain</span></span>
             </div>
             <div class="svc-right">
-              <div class="svc-price">700,000đ<span style="font-size:0.7rem;color:var(--earth);font-family:'Be Vietnam Pro',sans-serif"> / 60'</span><div class="svc-price-usd">~$26.5</div>
-                <div class="svc-price">900,000đ<span style="font-size:0.7rem;color:var(--earth);font-family:'Be Vietnam Pro',sans-serif"> / 90'</span><div class="svc-price-usd">~$34</div></div>
-<p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-      </div>
+              <span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">900,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span>
+              <span class="svc-price-usd">~$26.5 / 60' &nbsp; ~$34 / 90'</span>
+              <button class="svc-book-btn" onclick="fillBook('Therapy Massage')"><span class="vi">Đặt</span><span class="en">Book</span></button>
             </div>
           </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
+    </div>
+  </div>
 
+  <!-- PMU -->
+  <div class="tab-content" id="tab-pmu">
+    <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
+      <span class="vi">✦ <strong>Phun xăm thẩm mỹ</strong> — Dịch vụ bán vĩnh viễn tại Harmonie Beauté · Đặt lịch qua Calendly để được tư vấn trước khi thực hiện.</span>
+      <span class="en">✦ <strong>Semi-permanent makeup</strong> — PMU services at Harmonie Beauté · Book via Calendly for a consultation before your appointment.</span>
+    </div>
+    <div class="two-col">
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">🖊 Lông mày & Mí mắt / Brows & Eyes</div>
+        <div class="svc-card-body">
+
+          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0 -0rem;font-weight:700;border-left:2px solid var(--moss)">Tint &amp; Lamination</div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Hybrid Tint</span><span class="en">Hybrid Tint</span></span><span class="svc-desc"><span class="vi">Nhuộm màu lông mày bán vĩnh viễn</span><span class="en">Semi-permanent brow tinting</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">150,000đ</span>
+              <span class="svc-price-usd">~$6</span>
+              <button class="svc-book-btn" onclick="fillBook('Hybrid Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Brow Lamination</span><span class="en">Brow Lamination</span></span><span class="svc-desc"><span class="vi">Định hình và uốn lông mày</span><span class="en">Brow shaping & lifting treatment</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">350,000đ</span>
+              <span class="svc-price-usd">~$13.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Brow Lamination')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Combo Lami + Tint</span><span class="en">Combo Lami + Tint</span></span><span class="svc-desc"><span class="vi">Định hình + Nhuộm</span><span class="en">Shaping + tinting combined</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">450,000đ</span>
+              <span class="svc-price-usd">~$17</span>
+              <button class="svc-book-btn" onclick="fillBook('Combo Brow Lami Tint')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Phun xăm / PMU</div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Natural Brows</span><span class="en">Natural Brows</span></span><span class="svc-desc"><span class="vi">Phun mày tự nhiên</span><span class="en">Natural brows PMU</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">3,000,000đ</span>
+              <span class="svc-price-usd">~$114</span>
+              <button class="svc-book-btn" onclick="fillBook('Natural Brows PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Brows Cover</span><span class="en">Brows Cover</span></span><span class="svc-desc"><span class="vi">Phun mày trên nền cũ</span><span class="en">Cover over existing brows</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">3,500,000đ</span>
+              <span class="svc-price-usd">~$133</span>
+              <button class="svc-book-btn" onclick="fillBook('Brows Cover PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Hairstroke</span><span class="en">Hairstroke Brows</span></span><span class="svc-desc"><span class="vi">Sợi mày thiết kế</span><span class="en">Designed hairstrokes</span></span><span class="best-badge">⭐ Premium</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">4,500,000đ</span>
+              <span class="svc-price-usd">~$171</span>
+              <button class="svc-book-btn" onclick="fillBook('Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Mixstyle Hairstroke</span><span class="en">Mixstyle Hairstroke</span></span><span class="svc-desc"><span class="vi">Tạo sợi đầu phun đuôi</span><span class="en">Hairstrokes at head, shading at tail</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">4,000,000đ</span>
+              <span class="svc-price-usd">~$152</span>
+              <button class="svc-book-btn" onclick="fillBook('Mixstyle Hairstroke PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Mí mắt / Eyelids</div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Open Eyes</span><span class="en">Open Eyes PMU</span></span><span class="svc-desc"><span class="vi">Phun mí mở tròng</span><span class="en">Open eyes liner</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">2,000,000đ</span>
+              <span class="svc-price-usd">~$76</span>
+              <button class="svc-book-btn" onclick="fillBook('Open Eyes PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Eyeliner</span><span class="en">Eyeliner PMU</span></span><span class="svc-desc"><span class="vi">Phun mí có đuôi</span><span class="en">Eyeliner with tail</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">2,500,000đ</span>
+              <span class="svc-price-usd">~$95</span>
+              <button class="svc-book-btn" onclick="fillBook('Eyeliner PMU')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+        </div>
+      </div>
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">💋 Môi & Laser / Lips & Laser</div>
+        <div class="svc-card-body">
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Lip Pigment Removal</span><span class="en">Lip Pigment Removal</span></span><span class="svc-desc"><span class="vi">Loại bỏ mực môi cũ</span><span class="en">Removes old lip pigment</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,200,000đ</span>
+              <span class="svc-price-usd">~$45.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Lip Pigment Removal')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Khử thâm cơ bản</span><span class="en">Basic lip correction</span></span><span class="svc-desc"><span class="vi">Cân bằng sắc tố môi tối màu</span><span class="en">Balances dark lip pigment</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">2,500,000đ</span>
+              <span class="svc-price-usd">~$95</span>
+              <button class="svc-book-btn" onclick="fillBook('Khu tham co ban')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Khử thâm chuyên sâu</span><span class="en">Advanced lip correction</span></span><span class="svc-desc"><span class="vi">Kết hợp cân bằng + phủ màu</span><span class="en">Combines balancing + colour overlay</span></span><span class="best-badge">⭐ Premium</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">4,000,000đ</span>
+              <span class="svc-price-usd">~$152</span>
+              <button class="svc-book-btn" onclick="fillBook('Khu tham chuyen sau')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Phun môi mới</span><span class="en">Lip PMU cover</span></span><span class="svc-desc"><span class="vi">Cover trên nền môi cũ đã từng làm</span><span class="en">Cover over previously tattooed lips</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">3,500,000đ</span>
+              <span class="svc-price-usd">~$133</span>
+              <button class="svc-book-btn" onclick="fillBook('Phun moi moi')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Điện di tinh chất TBG</span><span class="en">TBG stem cell treatment</span></span><span class="svc-desc"><span class="vi">Tăng sinh collagen · môi sau phun nhanh hồi màu</span><span class="en">Stimulates collagen · accelerates post-PMU colour recovery</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">800,000đ</span>
+              <span class="svc-price-usd">~$30.5</span>
+              <button class="svc-book-btn" onclick="fillBook('Dien di TBG')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Laser xóa xăm / Laser Removal</div>
+          <div class="svc-row">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Xóa lẻ theo vùng</span><span class="en">Laser removal (per area)</span></span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">1,000,000đ</span>
+              <span class="svc-price-usd">~$38</span>
+              <button class="svc-book-btn" onclick="fillBook('Laser xoa le')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div class="svc-row is-best">
+            <div class="svc-left">
+              <span class="svc-name"><span class="vi">Combo không giới hạn</span><span class="en">Unlimited laser sessions</span></span><span class="best-badge">⭐ Best Value</span>
+            </div>
+            <div class="svc-right">
+              <span class="svc-price">2,500,000đ</span>
+              <span class="svc-price-usd">~$95</span>
+              <button class="svc-book-btn" onclick="fillBook('Laser combo')"><span class="vi">Đặt</span><span class="en">Book</span></button>
+            </div>
+          </div>
+          <div style="font-size:0.7rem;color:var(--earth);padding:0.8rem 0 0.2rem;line-height:1.5;border-top:1px solid rgba(122,48,80,0.08);margin-top:0.3rem">✦ <span class="vi">Cá nhân hóa theo sắc tố · Bảo hành sau phun · An toàn, tỉ mỉ</span><span class="en">Personalised · Post-treatment warranty · Safe & precise</span></div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -861,7 +1269,7 @@ function closeBanner(){
   <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
     <div style="display:flex;gap:2px;color:var(--gold);font-size:1.1rem">★★★★★</div>
     <span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--charcoal);font-weight:400">5.0</span>
-    <span style="font-size:0.78rem;color:var(--earth)"><span class="vi">· 20 đánh giá trên Google</span><span class="en">· 20 reviews on Google</span></span>
+    <span style="font-size:0.78rem;color:var(--earth)"><span class="vi">· Google Maps</span><span class="en">· Google Maps</span></span>
     <span class="review-badge">✓ Google</span>
   </div>
   <div class="reviews-grid">
