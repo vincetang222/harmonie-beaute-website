@@ -9,8 +9,9 @@
 <meta name="description" content="Bí quyết chăm sóc da, điều trị mụn, Chemical Peel từ chuyên gia Harmonie Beauté – Private Spa tại Tân Định, TP. HCM.">
 <meta property="og:title" content="Blog Làm Đẹp – Harmonie Beauté">
 <meta property="og:description" content="Bí quyết chăm sóc da, điều trị mụn, Chemical Peel từ chuyên gia Harmonie Beauté.">
-<meta property="og:image" content="https://harmonie-beaute-vietnam.com/og-image.jpg">
-<meta property="og:url" content="https://harmonie-beaute-vietnam.com/blog.html">
+<!-- FIX 1: Sửa OG URL đúng domain Vercel -->
+<meta property="og:image" content="https://harmonie-beaute-website.vercel.app/og-image.jpg">
+<meta property="og:url" content="https://harmonie-beaute-website.vercel.app/blog.html">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,9 +160,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .featured-excerpt{font-size:0.88rem;color:var(--earth);line-height:1.75;font-weight:300;margin-bottom:1rem}
 .featured-link:hover .featured-head{filter:brightness(1.08)}
 
-
-
-
 /* ── GREEN THEME ── */
 [data-theme="green"]{
   --moss:#3D5A47;--moss-light:#6B8F71;--moss-pale:#D4E4D0;
@@ -183,7 +181,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .theme-toggle-track{width:36px;height:20px;border-radius:50px;position:relative;transition:background 0.3s;border:1px solid rgba(0,0,0,0.08)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
-
 </style>
 </head>
 <body>
@@ -247,6 +244,9 @@ footer p{font-size:0.68rem;color:var(--earth)}
 <!-- MAIN -->
 <div class="blog-main">
 
+  <!-- ═══════════════════════════════════════════════════
+       PANEL: ALL — FIX 3: Thêm 6 bài còn thiếu (tổng 23)
+       ═══════════════════════════════════════════════════ -->
   <div class="tab-panel" id="panel-all">
   <div class="featured-section">
     <a class="featured-link" href="nan-mun-tan-dinh.html">
@@ -278,13 +278,15 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
   <div class="articles-section">
     <div class="articles-header">
-      <span class="articles-label vi">Bài viết khác (17)</span>
-      <span class="articles-label en">More articles (17)</span>
+      <!-- FIX 3: 17 → 23 bài -->
+      <span class="articles-label vi">Bài viết khác (23)</span>
+      <span class="articles-label en">More articles (23)</span>
     </div>
     <div class="art-grid-3">
+    <!-- ACNE (5) -->
     <a class="art-card" href="tai-sao-mun-tai-phat.html" data-cat="acne">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
+        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span>
         <div class="art-card-title"><span class="vi">Tại sao mụn cứ tái phát mãi dù đã điều trị?</span><span class="en">Why does acne keep coming back?</span></div>
       </div>
       <div class="art-card-body">
@@ -294,7 +296,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="da-dau-mun.html" data-cat="acne">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
+        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span>
         <div class="art-card-title"><span class="vi">Da dầu mụn nên chăm sóc như thế nào?</span><span class="en">How to care for oily, acne-prone skin?</span></div>
       </div>
       <div class="art-card-body">
@@ -304,7 +306,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="mun-an-la-gi.html" data-cat="acne">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
+        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span>
         <div class="art-card-title"><span class="vi">Mụn ẩn là gì — và tại sao khó điều trị hơn?</span><span class="en">What are closed comedones — and why harder to treat?</span></div>
       </div>
       <div class="art-card-body">
@@ -314,7 +316,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="nan-mun-lung.html" data-cat="acne">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
+        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span>
         <div class="art-card-title"><span class="vi">Nặn mụn lưng — quy trình đúng và tại sao không nên tự làm</span><span class="en">Back acne extraction — correct process and why not to DIY</span></div>
       </div>
       <div class="art-card-body">
@@ -324,7 +326,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="blackhead-vs-whitehead.html" data-cat="acne">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
+        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span>
         <div class="art-card-title"><span class="vi">Blackhead và Whitehead — sự khác biệt và cách xử lý đúng</span><span class="en">Blackheads vs Whiteheads — differences and correct treatment</span></div>
       </div>
       <div class="art-card-body">
@@ -332,6 +334,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
       </div>
     </a>
+    <!-- PEEL (8) -->
     <a class="art-card" href="chemical-peel-la-gi.html" data-cat="peel">
       <div class="art-card-head">
         <span class="art-card-cat">Chemical Peel</span>
@@ -372,9 +375,50 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
       </div>
     </a>
+    <a class="art-card" href="peel-tham-nach-can-may-buoi.html" data-cat="peel">
+      <div class="art-card-head">
+        <span class="art-card-cat">Chemical Peel</span>
+        <div class="art-card-title"><span class="vi">Peel thâm nách cần mấy buổi? Hana giải đáp thật lòng</span><span class="en">How many sessions to lighten dark underarms?</span></div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-card-excerpt"><span class="vi">Không có con số cố định — nhưng có những tín hiệu rõ ràng để biết da bạn đang đi đúng hướng.</span><span class="en">No fixed number — but clear signs your skin is moving in the right direction.</span></div>
+        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
+      </div>
+    </a>
+    <a class="art-card" href="peel-body-co-an-toan-khong.html" data-cat="peel">
+      <div class="art-card-head">
+        <span class="art-card-cat">Chemical Peel</span>
+        <div class="art-card-title"><span class="vi">Peel body có an toàn không? Những điều cần biết</span><span class="en">Is body peel safe? What you need to know</span></div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-card-excerpt"><span class="vi">Peel body đúng kỹ thuật là một trong những liệu trình an toàn nhất trong da liễu thẩm mỹ.</span><span class="en">A properly performed body peel is one of the safest aesthetic treatments.</span></div>
+        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
+      </div>
+    </a>
+    <a class="art-card" href="peel-da-mun-co-du-dieu-kien.html" data-cat="peel">
+      <div class="art-card-head">
+        <span class="art-card-cat">Chemical Peel</span>
+        <div class="art-card-title"><span class="vi">Chemical peel da mụn — bạn có đủ điều kiện không?</span><span class="en">Chemical peel for acne-prone skin — are you ready?</span></div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-card-excerpt"><span class="vi">Peel đúng lúc phá vỡ vòng lặp mụn. Đây là cách biết bạn có đủ điều kiện.</span><span class="en">Peeling at the right time breaks the acne cycle. Here's how to tell if you're ready.</span></div>
+        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
+      </div>
+    </a>
+    <a class="art-card" href="chemical-peel-guide-foreigner-saigon.html" data-cat="peel">
+      <div class="art-card-head">
+        <span class="art-card-cat vi">Chemical Peel</span><span class="art-card-cat en">Expat Guide</span>
+        <div class="art-card-title"><span class="vi">Hướng dẫn chemical peel cho khách quốc tế tại TP.HCM</span><span class="en">Chemical peel in Ho Chi Minh City — a foreigner's guide</span></div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-card-excerpt"><span class="vi">Giá, quy trình, và những điều cần biết trước khi đặt lịch peel tại Sài Gòn.</span><span class="en">Prices, process, and everything to know before booking a peel in Saigon.</span></div>
+        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
+      </div>
+    </a>
+    <!-- SKINCARE (6) -->
     <a class="art-card" href="bao-lau-nan-mun.html" data-cat="skincare">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
+        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span>
         <div class="art-card-title"><span class="vi">Bao lâu nên đi nặn mụn một lần?</span><span class="en">How often should you get extractions?</span></div>
       </div>
       <div class="art-card-body">
@@ -384,7 +428,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="cham-soc-sau-nan-mun.html" data-cat="skincare">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
+        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span>
         <div class="art-card-title"><span class="vi">Chăm sóc da sau khi nặn mụn — làm gì để không bị thâm?</span><span class="en">Post-extraction care — how to prevent dark spots?</span></div>
       </div>
       <div class="art-card-body">
@@ -394,7 +438,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="kem-chong-nang.html" data-cat="skincare">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
+        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span>
         <div class="art-card-title"><span class="vi">Cách chọn kem chống nắng phù hợp với da mụn</span><span class="en">How to choose the right sunscreen for acne-prone skin</span></div>
       </div>
       <div class="art-card-body">
@@ -404,7 +448,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="cham-soc-da-nhay-cam.html" data-cat="skincare">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
+        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span>
         <div class="art-card-title"><span class="vi">Da nhạy cảm chăm sóc thế nào — và những gì cần tránh</span><span class="en">How to care for sensitive skin — and what to avoid</span></div>
       </div>
       <div class="art-card-body">
@@ -414,7 +458,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="retinol-va-mun.html" data-cat="skincare">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
+        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span>
         <div class="art-card-title"><span class="vi">Retinol và mụn — dùng đúng cách để không phản tác dụng</span><span class="en">Retinol and acne — use it correctly or it backfires</span></div>
       </div>
       <div class="art-card-body">
@@ -424,7 +468,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </a>
     <a class="art-card" href="vitamin-c-da-mun.html" data-cat="skincare">
       <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
+        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span>
         <div class="art-card-title"><span class="vi">Vitamin C serum cho da mụn — dùng đúng cách</span><span class="en">Vitamin C serum for acne-prone skin — correct use</span></div>
       </div>
       <div class="art-card-body">
@@ -432,6 +476,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
       </div>
     </a>
+    <!-- LIFESTYLE (4) -->
     <a class="art-card" href="5-thoi-quen-buoi-toi.html" data-cat="lifestyle">
       <div class="art-card-head">
         <span class="art-card-cat">Lifestyle</span>
@@ -452,10 +497,33 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
       </div>
     </a>
+    <a class="art-card" href="private-acne-facial-saigon.html" data-cat="lifestyle">
+      <div class="art-card-head">
+        <span class="art-card-cat">Private Spa</span>
+        <div class="art-card-title"><span class="vi">Liệu trình mụn riêng tư tại Sài Gòn — điều gì khiến nó khác biệt</span><span class="en">Private acne facial in Saigon — what makes it different</span></div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-card-excerpt"><span class="vi">Một phòng, một khách, một kỹ thuật viên tập trung hoàn toàn.</span><span class="en">One room, one client, one technician with complete focus.</span></div>
+        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
+      </div>
+    </a>
+    <a class="art-card" href="hidden-gem-skincare-tan-dinh-saigon.html" data-cat="lifestyle">
+      <div class="art-card-head">
+        <span class="art-card-cat vi">Về Harmonie</span><span class="art-card-cat en">About</span>
+        <div class="art-card-title"><span class="vi">Tiệm spa ẩn tại Tân Định — Harmonie Beauté</span><span class="en">Hidden gem skincare in Tân Định, Saigon</span></div>
+      </div>
+      <div class="art-card-body">
+        <div class="art-card-excerpt"><span class="vi">Khu yên tĩnh nhất Quận 1, và một tiệm spa riêng tư đang dần được biết đến.</span><span class="en">Saigon's quietest District 1 neighbourhood — and the private spa slowly getting noticed.</span></div>
+        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
+      </div>
+    </a>
     </div>
   </div>
   </div>
 
+  <!-- ═══════════════════════════════════════
+       PANEL: ACNE (không đổi)
+       ═══════════════════════════════════════ -->
   <div class="tab-panel" id="panel-acne" style="display:none">
   <div class="featured-section">
     <a class="featured-link" href="nan-mun-tan-dinh.html">
@@ -476,8 +544,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
           <span class="en">What to know before trusting anyone with your skin — key criteria and why technique matters.</span>
         </p>
         <div class="featured-foot">
-          <span>Harmonie Beauté</span>
-          <span class="featured-foot-sep">·</span>
+          <span>Harmonie Beauté</span><span class="featured-foot-sep">·</span>
           <span>May 2026 · 7 min</span>
           <span class="featured-read vi" style="margin-left:auto">Đọc bài →</span>
           <span class="featured-read en" style="margin-left:auto">Read →</span>
@@ -492,59 +559,32 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
     <div class="art-grid-3">
     <a class="art-card" href="tai-sao-mun-tai-phat.html" data-cat="acne">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
-        <div class="art-card-title"><span class="vi">Tại sao mụn cứ tái phát mãi dù đã điều trị?</span><span class="en">Why does acne keep coming back?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">6 nguyên nhân phổ biến và cách điều trị đúng gốc rễ, không chỉ triệu chứng.</span><span class="en">6 common causes and how to treat the root, not just symptoms.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span><div class="art-card-title"><span class="vi">Tại sao mụn cứ tái phát mãi dù đã điều trị?</span><span class="en">Why does acne keep coming back?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">6 nguyên nhân phổ biến và cách điều trị đúng gốc rễ, không chỉ triệu chứng.</span><span class="en">6 common causes and how to treat the root, not just symptoms.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="da-dau-mun.html" data-cat="acne">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
-        <div class="art-card-title"><span class="vi">Da dầu mụn nên chăm sóc như thế nào?</span><span class="en">How to care for oily, acne-prone skin?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Sai lầm phổ biến nhất: nghĩ rằng da dầu cần "làm khô". Thực tế hoàn toàn ngược lại.</span><span class="en">The biggest mistake: thinking oily skin needs drying out.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span><div class="art-card-title"><span class="vi">Da dầu mụn nên chăm sóc như thế nào?</span><span class="en">How to care for oily, acne-prone skin?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Sai lầm phổ biến nhất: nghĩ rằng da dầu cần "làm khô". Thực tế hoàn toàn ngược lại.</span><span class="en">The biggest mistake: thinking oily skin needs drying out.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="mun-an-la-gi.html" data-cat="acne">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
-        <div class="art-card-title"><span class="vi">Mụn ẩn là gì — và tại sao khó điều trị hơn?</span><span class="en">What are closed comedones — and why harder to treat?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Mụn ẩn không có đầu, không có mủ nhưng dai dẳng hơn bất kỳ loại mụn nào.</span><span class="en">No head, no pus — yet more persistent than any other acne type.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span><div class="art-card-title"><span class="vi">Mụn ẩn là gì — và tại sao khó điều trị hơn?</span><span class="en">What are closed comedones — and why harder to treat?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Mụn ẩn không có đầu, không có mủ nhưng dai dẳng hơn bất kỳ loại mụn nào.</span><span class="en">No head, no pus — yet more persistent than any other acne type.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="nan-mun-lung.html" data-cat="acne">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
-        <div class="art-card-title"><span class="vi">Nặn mụn lưng — quy trình đúng và tại sao không nên tự làm</span><span class="en">Back acne extraction — correct process and why not to DIY</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Mụn lưng khó tự xử lý vì góc tiếp cận khó và nguy cơ nhiễm trùng cao hơn.</span><span class="en">Hard to self-treat due to difficult access and higher infection risk.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span><div class="art-card-title"><span class="vi">Nặn mụn lưng — quy trình đúng và tại sao không nên tự làm</span><span class="en">Back acne extraction — correct process and why not to DIY</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Mụn lưng khó tự xử lý vì góc tiếp cận khó và nguy cơ nhiễm trùng cao hơn.</span><span class="en">Hard to self-treat due to difficult access and higher infection risk.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="blackhead-vs-whitehead.html" data-cat="acne">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en" style="display:none">Acne</span>
-        <div class="art-card-title"><span class="vi">Blackhead và Whitehead — sự khác biệt và cách xử lý đúng</span><span class="en">Blackheads vs Whiteheads — differences and correct treatment</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Hai loại này thường bị điều trị theo cùng một cách — đó là sai lầm.</span><span class="en">Often treated the same way — that's a mistake.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Điều trị mụn</span><span class="art-card-cat en">Acne</span><div class="art-card-title"><span class="vi">Blackhead và Whitehead — sự khác biệt và cách xử lý đúng</span><span class="en">Blackheads vs Whiteheads — differences and correct treatment</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Hai loại này thường bị điều trị theo cùng một cách — đó là sai lầm.</span><span class="en">Often treated the same way — that's a mistake.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     </div>
   </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════════
+       PANEL: PEEL — FIX 4: Thêm 4 bài peel còn thiếu (tổng 7)
+       ═══════════════════════════════════════════════════════ -->
   <div class="tab-panel" id="panel-peel" style="display:none">
   <div class="featured-section">
     <a class="featured-link" href="chemical-peel-la-gi.html">
@@ -565,8 +605,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
           <span class="en">How it works, the different types, and who it's right for.</span>
         </p>
         <div class="featured-foot">
-          <span>Harmonie Beauté</span>
-          <span class="featured-foot-sep">·</span>
+          <span>Harmonie Beauté</span><span class="featured-foot-sep">·</span>
           <span>May 2026 · 8 min</span>
           <span class="featured-read vi" style="margin-left:auto">Đọc bài →</span>
           <span class="featured-read en" style="margin-left:auto">Read →</span>
@@ -576,44 +615,46 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
   <div class="articles-section">
     <div class="articles-header">
-      <span class="articles-label vi">Bài viết khác (3)</span>
-      <span class="articles-label en">More articles (3)</span>
+      <!-- FIX 4: 3 → 7 bài -->
+      <span class="articles-label vi">Bài viết khác (7)</span>
+      <span class="articles-label en">More articles (7)</span>
     </div>
     <div class="art-grid-3">
     <a class="art-card" href="peel-tao-decaar.html" data-cat="peel">
-      <div class="art-card-head">
-        <span class="art-card-cat">Chemical Peel</span>
-        <div class="art-card-title"><span class="vi">Peel tảo Decaar cao cấp là gì?</span><span class="en">What is Decaar Premium Algae Peel?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Khác biệt so với peel acid thông thường, cơ chế nhẹ nhàng và kết quả thực tế.</span><span class="en">How it differs from acid peels and what real results to expect.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat">Chemical Peel</span><div class="art-card-title"><span class="vi">Peel tảo Decaar cao cấp là gì?</span><span class="en">What is Decaar Premium Algae Peel?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Khác biệt so với peel acid thông thường, cơ chế nhẹ nhàng và kết quả thực tế.</span><span class="en">How it differs from acid peels and what real results to expect.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="peel-tai-nha-co-nen.html" data-cat="peel">
-      <div class="art-card-head">
-        <span class="art-card-cat">Chemical Peel</span>
-        <div class="art-card-title"><span class="vi">Peel da tại nhà — có nên tự làm không?</span><span class="en">Chemical peels at home — should you DIY?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Sản phẩm peel tại nhà ngày càng phổ biến nhưng rủi ro thường bị đánh giá thấp.</span><span class="en">At-home peels are popular but risks are commonly underestimated.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat">Chemical Peel</span><div class="art-card-title"><span class="vi">Peel da tại nhà — có nên tự làm không?</span><span class="en">Chemical peels at home — should you DIY?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Sản phẩm peel tại nhà ngày càng phổ biến nhưng rủi ro thường bị đánh giá thấp.</span><span class="en">At-home peels are popular but risks are commonly underestimated.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="peel-body-lung-mong-ben.html" data-cat="peel">
-      <div class="art-card-head">
-        <span class="art-card-cat">Chemical Peel</span>
-        <div class="art-card-title"><span class="vi">Peel body — điều trị thâm lưng, mông bẹn</span><span class="en">Body peels — treating pigmentation on back & bikini area</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Thâm ở lưng, mông và vùng bẹn là vấn đề phổ biến nhưng ít được nói đến.</span><span class="en">Common pigmentation rarely discussed — effective peel solutions exist.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat">Chemical Peel</span><div class="art-card-title"><span class="vi">Peel body — điều trị thâm lưng, mông bẹn</span><span class="en">Body peels — treating pigmentation on back & bikini area</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Thâm ở lưng, mông và vùng bẹn là vấn đề phổ biến nhưng ít được nói đến.</span><span class="en">Common pigmentation rarely discussed — effective peel solutions exist.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
+    </a>
+    <a class="art-card" href="peel-tham-nach-can-may-buoi.html" data-cat="peel">
+      <div class="art-card-head"><span class="art-card-cat">Chemical Peel</span><div class="art-card-title"><span class="vi">Peel thâm nách cần mấy buổi? Hana giải đáp thật lòng</span><span class="en">How many sessions to lighten dark underarms?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Không có con số cố định — nhưng có những tín hiệu rõ ràng để biết da bạn đang đi đúng hướng.</span><span class="en">No fixed number — but clear signs your skin is moving in the right direction.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
+    </a>
+    <a class="art-card" href="peel-body-co-an-toan-khong.html" data-cat="peel">
+      <div class="art-card-head"><span class="art-card-cat">Chemical Peel</span><div class="art-card-title"><span class="vi">Peel body có an toàn không? Những điều cần biết</span><span class="en">Is body peel safe? What you need to know</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Peel body đúng kỹ thuật là một trong những liệu trình an toàn nhất trong da liễu thẩm mỹ.</span><span class="en">A properly performed body peel is one of the safest aesthetic treatments.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
+    </a>
+    <a class="art-card" href="peel-da-mun-co-du-dieu-kien.html" data-cat="peel">
+      <div class="art-card-head"><span class="art-card-cat">Chemical Peel</span><div class="art-card-title"><span class="vi">Chemical peel da mụn — bạn có đủ điều kiện không?</span><span class="en">Chemical peel for acne-prone skin — are you ready?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Peel đúng lúc phá vỡ vòng lặp mụn. Đây là cách biết bạn có đủ điều kiện.</span><span class="en">Peeling at the right time breaks the acne cycle. Here's how to tell if you're ready.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div></div>
+    </a>
+    <a class="art-card" href="chemical-peel-guide-foreigner-saigon.html" data-cat="peel">
+      <div class="art-card-head"><span class="art-card-cat vi">Chemical Peel</span><span class="art-card-cat en">Expat Guide</span><div class="art-card-title"><span class="vi">Hướng dẫn chemical peel cho khách quốc tế tại TP.HCM</span><span class="en">Chemical peel in Ho Chi Minh City — a foreigner's guide</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Giá, quy trình, và những điều cần biết trước khi đặt lịch peel tại Sài Gòn.</span><span class="en">Prices, process, and everything to know before booking a peel in Saigon.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     </div>
   </div>
   </div>
 
+  <!-- ═══════════════════════════════════════
+       PANEL: SKINCARE (không đổi)
+       ═══════════════════════════════════════ -->
   <div class="tab-panel" id="panel-skincare" style="display:none">
   <div class="featured-section">
     <a class="featured-link" href="bao-lau-nan-mun.html">
@@ -634,8 +675,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
           <span class="en">The ideal cycle for each skin type — too often or too rarely both cause problems.</span>
         </p>
         <div class="featured-foot">
-          <span>Harmonie Beauté</span>
-          <span class="featured-foot-sep">·</span>
+          <span>Harmonie Beauté</span><span class="featured-foot-sep">·</span>
           <span>May 2026 · 6 min</span>
           <span class="featured-read vi" style="margin-left:auto">Đọc bài →</span>
           <span class="featured-read en" style="margin-left:auto">Read →</span>
@@ -650,59 +690,32 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
     <div class="art-grid-3">
     <a class="art-card" href="cham-soc-sau-nan-mun.html" data-cat="skincare">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
-        <div class="art-card-title"><span class="vi">Chăm sóc da sau khi nặn mụn — làm gì để không bị thâm?</span><span class="en">Post-extraction care — how to prevent dark spots?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">48 giờ sau nặn là giai đoạn quyết định. Hướng dẫn cụ thể những gì nên và không nên.</span><span class="en">The 48 hours after extraction are the most critical window.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span><div class="art-card-title"><span class="vi">Chăm sóc da sau khi nặn mụn — làm gì để không bị thâm?</span><span class="en">Post-extraction care — how to prevent dark spots?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">48 giờ sau nặn là giai đoạn quyết định. Hướng dẫn cụ thể những gì nên và không nên.</span><span class="en">The 48 hours after extraction are the most critical window.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="kem-chong-nang.html" data-cat="skincare">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
-        <div class="art-card-title"><span class="vi">Cách chọn kem chống nắng phù hợp với da mụn</span><span class="en">How to choose the right sunscreen for acne-prone skin</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">SPF, PA, physical hay chemical — những gì cần biết để chọn đúng cho da dầu mụn.</span><span class="en">SPF, PA, physical or chemical — what to know to choose right.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span><div class="art-card-title"><span class="vi">Cách chọn kem chống nắng phù hợp với da mụn</span><span class="en">How to choose the right sunscreen for acne-prone skin</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">SPF, PA, physical hay chemical — những gì cần biết để chọn đúng cho da dầu mụn.</span><span class="en">SPF, PA, physical or chemical — what to know to choose right.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="cham-soc-da-nhay-cam.html" data-cat="skincare">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
-        <div class="art-card-title"><span class="vi">Da nhạy cảm chăm sóc thế nào — và những gì cần tránh</span><span class="en">How to care for sensitive skin — and what to avoid</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Da nhạy cảm không phải là da xấu — chỉ là da cần được hiểu đúng hơn.</span><span class="en">Not bad skin — just skin that needs to be better understood.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span><div class="art-card-title"><span class="vi">Da nhạy cảm chăm sóc thế nào — và những gì cần tránh</span><span class="en">How to care for sensitive skin — and what to avoid</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Da nhạy cảm không phải là da xấu — chỉ là da cần được hiểu đúng hơn.</span><span class="en">Not bad skin — just skin that needs to be better understood.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="retinol-va-mun.html" data-cat="skincare">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
-        <div class="art-card-title"><span class="vi">Retinol và mụn — dùng đúng cách để không phản tác dụng</span><span class="en">Retinol and acne — use it correctly or it backfires</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Thành phần chứng minh tốt nhất cho mụn — nhưng dùng sai sẽ bùng mụn nặng hơn.</span><span class="en">Best-proven for acne — but incorrect use causes serious initial breakouts.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span><div class="art-card-title"><span class="vi">Retinol và mụn — dùng đúng cách để không phản tác dụng</span><span class="en">Retinol and acne — use it correctly or it backfires</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Thành phần chứng minh tốt nhất cho mụn — nhưng dùng sai sẽ bùng mụn nặng hơn.</span><span class="en">Best-proven for acne — but incorrect use causes serious initial breakouts.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 7 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="vitamin-c-da-mun.html" data-cat="skincare">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en" style="display:none">Skin care</span>
-        <div class="art-card-title"><span class="vi">Vitamin C serum cho da mụn — dùng đúng cách</span><span class="en">Vitamin C serum for acne-prone skin — correct use</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Thành phần mờ thâm mạnh nhất — nhưng dùng sai thời điểm hoặc kết hợp sai có thể kích ứng.</span><span class="en">Most powerful brightening ingredient — wrong timing or combinations can cause irritation.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Chăm sóc da</span><span class="art-card-cat en">Skin care</span><div class="art-card-title"><span class="vi">Vitamin C serum cho da mụn — dùng đúng cách</span><span class="en">Vitamin C serum for acne-prone skin — correct use</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Thành phần mờ thâm mạnh nhất — nhưng dùng sai thời điểm hoặc kết hợp sai có thể kích ứng.</span><span class="en">Most powerful brightening ingredient — wrong timing or combinations can cause irritation.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     </div>
   </div>
   </div>
 
+  <!-- ══════════════════════════════════════════════════════════════
+       PANEL: LIFESTYLE — FIX 5: Xóa 4 bài peel lạc chỗ, giữ 3 bài đúng
+       ══════════════════════════════════════════════════════════════ -->
   <div class="tab-panel" id="panel-lifestyle" style="display:none">
   <div class="featured-section">
     <a class="featured-link" href="5-thoi-quen-buoi-toi.html">
@@ -723,8 +736,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
           <span class="en">Simple steps before sleep that make a visible difference after a few weeks.</span>
         </p>
         <div class="featured-foot">
-          <span>Harmonie Beauté</span>
-          <span class="featured-foot-sep">·</span>
+          <span>Harmonie Beauté</span><span class="featured-foot-sep">·</span>
           <span>May 2026 · 5 min</span>
           <span class="featured-read vi" style="margin-left:auto">Đọc bài →</span>
           <span class="featured-read en" style="margin-left:auto">Read →</span>
@@ -734,79 +746,22 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
   <div class="articles-section">
     <div class="articles-header">
-      <span class="articles-label vi">Bài viết khác (1)</span>
-      <span class="articles-label en">More articles (1)</span>
+      <!-- FIX 5: 1 → 3 bài (chỉ bài đúng danh mục) -->
+      <span class="articles-label vi">Bài viết khác (3)</span>
+      <span class="articles-label en">More articles (3)</span>
     </div>
     <div class="art-grid-3">
     <a class="art-card" href="spa-private.html" data-cat="lifestyle">
-      <div class="art-card-head">
-        <span class="art-card-cat">Lifestyle</span>
-        <div class="art-card-title"><span class="vi">Tại sao nên chọn spa private thay vì cơ sở lớn?</span><span class="en">Why choose a private spa over a large chain?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Sự khác biệt thật sự về chất lượng điều trị và an toàn vệ sinh.</span><span class="en">Real differences in treatment quality and hygiene safety.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
-      </div>
-    </a>
-    <a class="art-card" href="peel-tham-nach-can-may-buoi.html" data-cat="peel">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chemical Peel</span><span class="art-card-cat en" style="display:none">Chemical Peel</span>
-        <div class="art-card-title"><span class="vi">Peel thâm nách cần mấy buổi? Hana giải đáp thật lòng</span><span class="en">How many sessions to lighten dark underarms?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Không có con số cố định — nhưng có những tín hiệu rõ ràng để biết da bạn đang đi đúng hướng.</span><span class="en">No fixed number — but clear signs your skin is moving in the right direction.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
-    </a>
-    <a class="art-card" href="peel-body-co-an-toan-khong.html" data-cat="peel">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chemical Peel</span><span class="art-card-cat en" style="display:none">Chemical Peel</span>
-        <div class="art-card-title"><span class="vi">Peel body có an toàn không? Những điều cần biết</span><span class="en">Is body peel safe? What you need to know</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Peel body đúng kỹ thuật là một trong những liệu trình an toàn nhất trong da liễu thẩm mỹ.</span><span class="en">A properly performed body peel is one of the safest aesthetic treatments.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
-    </a>
-    <a class="art-card" href="peel-da-mun-co-du-dieu-kien.html" data-cat="peel">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chemical Peel</span><span class="art-card-cat en" style="display:none">Chemical Peel</span>
-        <div class="art-card-title"><span class="vi">Chemical peel da mụn — bạn có đủ điều kiện không?</span><span class="en">Chemical peel for acne-prone skin — are you ready?</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Peel đúng lúc phá vỡ vòng lặp mụn. Đây là cách biết bạn có đủ điều kiện.</span><span class="en">Peeling at the right time breaks the acne cycle. Here's how to tell if you're ready.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat">Lifestyle</span><div class="art-card-title"><span class="vi">Tại sao nên chọn spa private thay vì cơ sở lớn?</span><span class="en">Why choose a private spa over a large chain?</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Sự khác biệt thật sự về chất lượng điều trị và an toàn vệ sinh.</span><span class="en">Real differences in treatment quality and hygiene safety.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="private-acne-facial-saigon.html" data-cat="lifestyle">
-      <div class="art-card-head">
-        <span class="art-card-cat">Private Spa</span>
-        <div class="art-card-title"><span class="vi">Liệu trình mụn riêng tư tại Sài Gòn — điều gì khiến nó khác biệt</span><span class="en">Private acne facial in Saigon — what makes it different</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Một phòng, một khách, một kỹ thuật viên tập trung hoàn toàn.</span><span class="en">One room, one client, one technician with complete focus.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
-      </div>
-    </a>
-    <a class="art-card" href="chemical-peel-guide-foreigner-saigon.html" data-cat="peel">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Chemical Peel</span><span class="art-card-cat en" style="display:none">Expat Guide</span>
-        <div class="art-card-title"><span class="vi">Hướng dẫn chemical peel cho khách quốc tế tại TP.HCM</span><span class="en">Chemical peel in Ho Chi Minh City — a foreigner's guide</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Giá, quy trình, và những điều cần biết trước khi đặt lịch peel tại Sài Gòn.</span><span class="en">Prices, process, and everything to know before booking a peel in Saigon.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat">Private Spa</span><div class="art-card-title"><span class="vi">Liệu trình mụn riêng tư tại Sài Gòn — điều gì khiến nó khác biệt</span><span class="en">Private acne facial in Saigon — what makes it different</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Một phòng, một khách, một kỹ thuật viên tập trung hoàn toàn.</span><span class="en">One room, one client, one technician with complete focus.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     <a class="art-card" href="hidden-gem-skincare-tan-dinh-saigon.html" data-cat="lifestyle">
-      <div class="art-card-head">
-        <span class="art-card-cat vi">Về Harmonie</span><span class="art-card-cat en" style="display:none">About</span>
-        <div class="art-card-title"><span class="vi">Tiệm spa ẩn tại Tân Định — Harmonie Beauté</span><span class="en">Hidden gem skincare in Tân Định, Saigon</span></div>
-      </div>
-      <div class="art-card-body">
-        <div class="art-card-excerpt"><span class="vi">Khu yên tĩnh nhất Quận 1, và một tiệm spa riêng tư đang dần được biết đến.</span><span class="en">Saigon's quietest District 1 neighbourhood — and the private spa slowly getting noticed.</span></div>
-        <div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div>
-      </div>
+      <div class="art-card-head"><span class="art-card-cat vi">Về Harmonie</span><span class="art-card-cat en">About</span><div class="art-card-title"><span class="vi">Tiệm spa ẩn tại Tân Định — Harmonie Beauté</span><span class="en">Hidden gem skincare in Tân Định, Saigon</span></div></div>
+      <div class="art-card-body"><div class="art-card-excerpt"><span class="vi">Khu yên tĩnh nhất Quận 1, và một tiệm spa riêng tư đang dần được biết đến.</span><span class="en">Saigon's quietest District 1 neighbourhood — and the private spa slowly getting noticed.</span></div><div class="art-card-foot"><span class="art-card-meta">May 2026 · 5 min</span><span class="art-card-arrow">→</span></div></div>
     </a>
     </div>
   </div>
@@ -816,6 +771,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
 <footer>
   <div class="footer-logo">Harmonie Beauté</div>
+  <!-- FIX 2: 2024 → 2026 -->
   <p>© 2024 Harmonie Beauté · Tân Định, TP. HCM</p>
   <div class="social-links">
     <a class="social-link" href="https://www.facebook.com/p/Harmonie-Beaut%C3%A9-61576627743088/" target="_blank" rel="noopener" aria-label="Facebook">
@@ -850,13 +806,8 @@ function setLang(l){
   document.documentElement.setAttribute('data-lang',l);
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.lang-btn').forEach(b=>{if(b.getAttribute('onclick')==="setLang('"+l+"')") b.classList.add('active')});
-  // update art-row-cat visibility for EN
-  document.querySelectorAll('.art-row-cat.en').forEach(el=>{
-    el.style.display = l==='en' ? 'inline-block' : 'none';
-  });
-  document.querySelectorAll('.art-row-cat.vi').forEach(el=>{
-    el.style.display = l==='vi' ? 'inline-block' : 'none';
-  });
+  document.querySelectorAll('.art-row-cat.en').forEach(el=>{el.style.display=l==='en'?'inline-block':'none'});
+  document.querySelectorAll('.art-row-cat.vi').forEach(el=>{el.style.display=l==='vi'?'inline-block':'none'});
 }
 function toggleMenu(){
   document.getElementById('hamburgerBtn').classList.toggle('open');
@@ -870,11 +821,11 @@ document.addEventListener('click',e=>{
   const m=document.getElementById('mobileMenu'),b=document.getElementById('hamburgerBtn');
   if(m&&b&&!m.contains(e.target)&&!b.contains(e.target)){m.classList.remove('open');b.classList.remove('open')}
 });
-function filterPosts(btn, tab){
+function filterPosts(btn,tab){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.tab-panel').forEach(p=>p.style.display='none');
-  const panel = document.getElementById('panel-'+tab);
+  const panel=document.getElementById('panel-'+tab);
   if(panel) panel.style.display='';
 }
 </script>
