@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
   <link rel="icon" type="image/png" sizes="64x64" href="https://raw.githubusercontent.com/vincetang222/harmonie-beaute-website/main/favicon-64.png">
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/vincetang222/harmonie-beaute-website/main/favicon-64.png">  <link rel="apple-touch-icon" href="logo.jpg">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/vincetang222/harmonie-beaute-website/main/favicon-64.png">
+  <link rel="apple-touch-icon" href="logo.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harmonie Beauté – Spa & Beauty · Tân Định, Ho Chi Minh City</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,32 +13,19 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
 :root{
-  --moss:#7A3050;
-  --moss-light:#9A4A6A;
-  --moss-pale:#D4A8BC;
-  --cream:#F7F2EC;
-  --sand:#DDD4C0;
-  --sand-dark:#C8BFB0;
-  --charcoal:#2C1820;
-  --white:#FAF6F0;
-  --shadow:rgba(122,48,80,0.10);
-  --shadow-md:rgba(122,48,80,0.18);
-  --terra:#B5673B;
-  --gold:#C8906A;
-  --earth:#8B6F5C;
-  --dark:#2C1820;
+  --moss:#7A3050;--moss-light:#9A4A6A;--moss-pale:#D4A8BC;
+  --cream:#F7F2EC;--sand:#DDD4C0;--sand-dark:#C8BFB0;
+  --charcoal:#2C1820;--white:#FAF6F0;
+  --shadow:rgba(122,48,80,0.10);--shadow-md:rgba(122,48,80,0.18);
+  --terra:#B5673B;--gold:#C8906A;--earth:#8B6F5C;--dark:#2C1820;
 }
 body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.7;font-size:16px}
 a{text-decoration:none;color:inherit}
-
-/* ── LANG ── */
 [data-lang="vi"] .en{display:none}
 [data-lang="en"] .vi{display:none}
 .lang-toggle{display:flex;border:1px solid var(--sand-dark);border-radius:50px;overflow:hidden;flex-shrink:0}
 .lang-btn{padding:0.28rem 0.85rem;font-size:0.68rem;font-weight:600;letter-spacing:0.1em;cursor:pointer;background:none;border:none;color:var(--moss-light);font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s}
 .lang-btn.active{background:var(--moss);color:#fff}
-
-/* ── NAVBAR ── */
 .navbar{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--sand);box-shadow:0 2px 16px rgba(122,48,80,0.07);display:flex;justify-content:space-between;align-items:center;padding:0 3.5rem;height:68px;gap:1.5rem}
 .logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:500;color:var(--moss);letter-spacing:0.02em;flex-shrink:0}
 .logo em{font-style:italic;color:var(--gold)}
@@ -46,97 +34,65 @@ a{text-decoration:none;color:inherit}
 .nav-links a:hover{color:var(--moss)}
 .nav-right{display:flex;align-items:center;gap:0.75rem;flex-shrink:0}
 .btn-nav{background:var(--moss);color:#fff;padding:0.55rem 1.5rem;border:none;border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;box-shadow:0 2px 12px var(--shadow);transition:all 0.25s}
-.btn-nav:hover{background:#8A3A60;box-shadow:0 4px 20px var(--shadow-md);transform:translateY(-1px)}
-
-/* ── HERO ── */
+.btn-nav:hover{background:#8A3A60;transform:translateY(-1px)}
 .hero{background:linear-gradient(160deg,#5E2244 0%,#451A34 50%,#2E1024 100%);min-height:85vh;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;text-align:center}
 .hero-left{padding:5rem 6rem;position:relative;z-index:1;max-width:820px;width:100%;display:flex;flex-direction:column;align-items:center}
-.hero-eyebrow{font-size:0.63rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;font-weight:400;opacity:0.85;text-align:center}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:400;line-height:1.15;color:#F2EBD9;margin-bottom:1.4rem;text-align:center}
+.hero-eyebrow{font-size:0.63rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;font-weight:400;opacity:0.85}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,3.5vw,3.8rem);font-weight:400;line-height:1.15;color:#F2EBD9;margin-bottom:1.4rem}
 .hero-title em{font-style:italic;color:var(--gold)}
-.hero-desc{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.85;max-width:520px;margin-bottom:2.2rem;font-weight:300;text-align:center}
+.hero-desc{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.85;max-width:520px;margin-bottom:2.2rem;font-weight:300}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 .btn-primary{background:#fff;color:var(--moss);border:none;padding:0.9rem 2.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.12em;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.25s}
-.btn-primary:hover{background:var(--cream);box-shadow:0 8px 32px rgba(0,0,0,0.28);transform:translateY(-1px)}
+.btn-primary:hover{background:var(--cream);transform:translateY(-1px)}
 .btn-ghost{background:transparent;color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.25);padding:0.9rem 1.8rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:400;transition:all 0.25s}
 .btn-ghost:hover{border-color:rgba(255,255,255,0.6);color:#fff}
-.hero-stats{display:flex;gap:4rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(201,169,110,0.2);justify-content:center}
-.stat-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);font-weight:400;display:block;text-align:center}
-.stat-label{font-size:0.6rem;color:rgba(255,255,255,0.38);text-transform:uppercase;letter-spacing:0.18em;margin-top:3px;font-weight:400;text-align:center}
-
-/* ── SECTIONS ── */
+/* ── HERO MINI REVIEWS (replaces stats) ── */
+.hero-reviews{margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(201,169,110,0.15);width:100%;max-width:680px}
+.hero-reviews-badge{display:flex;align-items:center;justify-content:center;gap:0.6rem;margin-bottom:1rem}
+.hero-reviews-stars{color:var(--gold);font-size:0.85rem;letter-spacing:2px}
+.hero-reviews-score{font-family:'Playfair Display',serif;font-size:1rem;color:rgba(255,255,255,0.75);font-weight:400}
+.hero-reviews-source{font-size:0.6rem;color:rgba(255,255,255,0.28);letter-spacing:0.1em;text-transform:uppercase}
+.hero-reviews-dot{width:3px;height:3px;border-radius:50%;background:rgba(201,169,110,0.35)}
+.hero-reviews-row{display:flex;gap:0;overflow:hidden}
+.hero-mini-review{flex:1;padding:0.7rem 1rem;position:relative;text-align:left}
+.hero-mini-review + .hero-mini-review::before{content:'';position:absolute;left:0;top:10%;height:80%;width:1px;background:rgba(201,169,110,0.15)}
+.hero-mini-quote{font-size:0.72rem;color:rgba(255,255,255,0.55);line-height:1.5;font-style:italic;font-weight:300;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0.4rem}
+.hero-mini-name{font-size:0.58rem;color:rgba(201,169,110,0.7);font-weight:600;letter-spacing:0.06em;text-transform:uppercase}
+@media(max-width:600px){
+  .hero-mini-review:nth-child(3){display:none}
+  .hero-mini-review{padding:0.6rem 0.7rem}
+  .hero-mini-quote{font-size:0.68rem;-webkit-line-clamp:2}
+}
 .section{padding:4.5rem 6rem}
 .section-tag{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:1.1rem;display:inline-flex;align-items:center;gap:6px;background:var(--moss);padding:5px 16px;border-radius:50px}
 .section-title{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:0.9rem;letter-spacing:-0.01em}
 .section-title em{color:var(--gold);font-style:italic}
-.section-line{width:48px;height:2.5px;background:var(--gold);margin-bottom:2.2rem;border-radius:2px;opacity:1}
-
-/* ── SERVICES ── */
+.section-line{width:48px;height:2.5px;background:var(--gold);margin-bottom:2.2rem;border-radius:2px}
 .services-section{background:var(--white)}
-
-/* ── Tabs ── */
 .tab-bar{display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap}
 .tab-btn{padding:0.5rem 1.1rem;background:transparent;border:1px solid rgba(122,48,80,0.18);border-radius:50px;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--charcoal);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}
 .tab-btn.active{background:var(--moss);border-color:var(--moss);color:#fff;box-shadow:0 2px 12px var(--shadow)}
 .tab-btn:not(.active):hover{border-color:var(--moss-light);color:var(--moss)}
 .tab-content{display:none}
 .tab-content.active{display:block}
-
-/* ── Card wrap ── */
 .svc-card-wrap{border-radius:14px;overflow:hidden;box-shadow:0 4px 24px var(--shadow);border:0.5px solid rgba(122,48,80,0.1)}
-
-/* ── Card header ── */
 .sub-cat-title{display:flex;align-items:center;gap:0.6rem;background:var(--moss);color:#fff;padding:0.75rem 1.2rem;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.16em;font-weight:700}
-
-/* ── Card body ── */
 .svc-card-body{background:#fff;padding:0.4rem 0 0.6rem}
-
-/* ── Grid ── */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
-
-/* ── Service row ── */
 .svc-row{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:0.8rem 1.2rem;border-bottom:1px solid rgba(122,48,80,0.06)}
 .svc-row:last-of-type{border-bottom:none}
 .svc-row:hover{background:rgba(122,48,80,0.022)}
 .svc-row.is-best{background:linear-gradient(90deg,rgba(200,144,106,0.06),transparent);border-left:3px solid var(--gold);padding-left:1rem}
-
-/* ── Left: name + desc + badge ── */
 .svc-left{display:flex;flex-direction:column;gap:0;flex:1;min-width:0}
 .svc-name{font-size:0.87rem;color:var(--charcoal);font-weight:500;line-height:1.35}
 .svc-desc{font-size:0.68rem;color:var(--earth);font-weight:300;line-height:1.45;margin-top:0.2rem;opacity:0.85}
 .best-badge{align-self:flex-start;margin-top:0.25rem;font-size:0.52rem;background:rgba(200,144,106,0.1);color:#8B5A2A;padding:2px 7px;border-radius:50px;font-weight:600;border:1px solid rgba(200,144,106,0.3);white-space:nowrap}
-
-/* ── Right: price + usd + button ── */
 .svc-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.35rem;flex-shrink:0;padding-top:0.05rem}
 .svc-price{font-family:'Playfair Display',serif;font-size:0.93rem;font-weight:500;color:var(--gold);white-space:nowrap;line-height:1.1}
 .svc-price-usd{font-size:0.62rem;color:var(--earth);text-align:right;opacity:0.7}
 .svc-book-btn{font-size:0.6rem;color:var(--moss);border:1px solid rgba(122,48,80,0.28);background:transparent;padding:3px 10px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;white-space:nowrap;font-weight:500;transition:all 0.2s}
 .svc-book-btn:hover{background:var(--moss);color:#fff;border-color:var(--moss)}
-
-/* ── VAT note ── */
 .svc-vat-note{font-size:0.62rem;color:var(--earth);font-style:italic;padding:0.5rem 1.2rem 0.3rem;opacity:0.65}
-
-/* ── ADDRESS ── */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ── REVIEWS ── */
 .reviews-section{background:#EFE0E8}
 .reviews-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:1rem}
 .reviews-grid::-webkit-scrollbar{height:4px}
@@ -145,36 +101,47 @@ a{text-decoration:none;color:inherit}
 .review-card{background:#FFFFFF;border-radius:16px;padding:1.5rem;flex:0 0 280px;scroll-snap-align:start;box-shadow:0 2px 16px var(--shadow);display:flex;flex-direction:column;gap:0.8rem;border:0.5px solid rgba(122,48,80,0.12);border-left:3px solid var(--gold)}
 .review-stars{color:var(--gold);font-size:1rem;letter-spacing:3px}
 .review-text{font-size:0.87rem;color:#6A4458;line-height:1.75;font-style:italic;flex:1}
-.review-author{display:flex;align-items:center;gap:0.6rem;margin-top:0.6rem;background:rgba(122,48,80,0.07);border-radius:10px;padding:0.6rem 0.8rem;margin-left:-0.2rem;margin-right:-0.2rem;border-left:2px solid var(--gold)}
+.review-author{display:flex;align-items:center;gap:0.6rem;margin-top:0.6rem;background:rgba(122,48,80,0.07);border-radius:10px;padding:0.6rem 0.8rem;border-left:2px solid var(--gold)}
 .review-avatar{width:34px;height:34px;border-radius:50%;background:var(--moss);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:#fff;flex-shrink:0}
 .review-name{font-size:0.78rem;font-weight:700;color:#7A3050}
 .review-date{font-size:0.65rem;color:var(--earth);margin-top:1px}
-.review-source{display:flex;align-items:center;gap:0.4rem;font-size:0.62rem;color:var(--earth);margin-top:0.2rem}
 .review-badge{display:inline-flex;align-items:center;gap:0.3rem;background:var(--moss);color:#fff;padding:0.25rem 0.7rem;border-radius:50px;font-size:0.62rem;font-weight:600;letter-spacing:0.06em}
-@media(max-width:480px){
-  .navbar{padding:0 0.85rem}
-  .theme-toggle-track{width:30px;height:18px}
-  .theme-toggle-thumb{width:12px;height:12px}
-  .lang-btn{padding:0.22rem 0.65rem;font-size:0.62rem}
-.review-card{flex:0 0 240px}}
-.blog-section{background:var(--cream)}
+@media(max-width:480px){.review-card{flex:0 0 240px}}
+
+/* ── BLOG SECTION ── */
+.blog-section{background:var(--cream);padding-top:2.8rem;padding-bottom:2.8rem}
 .blog-header{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
 .blog-see-all{font-size:0.75rem;color:var(--moss);font-weight:500;text-decoration:none;white-space:nowrap;border:1px solid var(--moss-pale);padding:0.35rem 0.9rem;border-radius:50px;transition:all 0.2s;flex-shrink:0;margin-bottom:0.3rem}
 .blog-see-all:hover{background:var(--moss);color:#fff;border-color:var(--moss)}
-.blog-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:1rem;cursor:grab}
-.blog-card{background:#FFFFFF;border-radius:16px;overflow:hidden;cursor:pointer;transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);display:block;box-shadow:0 2px 16px var(--shadow);flex:0 0 280px;scroll-snap-align:start;border:0.5px solid rgba(122,48,80,0.12)}
-.blog-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px var(--shadow-md)}
-.blog-body{padding:0;display:flex;flex-direction:column;height:100%}
-.blog-pill{display:block;font-size:0.58rem;background:var(--moss);color:#fff;padding:7px 1.2rem;text-transform:uppercase;letter-spacing:0.12em;font-weight:700;margin:0}
-.blog-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:600;color:#2C1820;line-height:1.3;margin-bottom:0.4rem}
-.blog-header-area .blog-title{color:#F2E8E0}
-.blog-excerpt{font-size:0.75rem;color:#7A4A5E;line-height:1.6;font-weight:400}
-.blog-meta{font-size:0.63rem;color:#B09098;margin-top:0.6rem;font-weight:400}
-.blog-grid::-webkit-scrollbar{height:4px}
-.blog-grid::-webkit-scrollbar-track{background:var(--sand);border-radius:2px}
-.blog-grid::-webkit-scrollbar-thumb{background:var(--moss-pale);border-radius:2px}
 
-/* ── CTA ── */
+/* ── BLOG FEATURED LAYOUT ── */
+.blog-feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+.blog-feat-main{display:block;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px var(--shadow);transition:all 0.25s;border:0.5px solid rgba(122,48,80,0.1);text-decoration:none}
+.blog-feat-main:hover{transform:translateY(-3px);box-shadow:0 8px 32px var(--shadow-md)}
+.blog-feat-main-head{background:linear-gradient(145deg,#6E2442,#5A1E38);padding:1rem 1.3rem 1.1rem;transition:filter 0.2s}
+.blog-feat-main:hover .blog-feat-main-head{filter:brightness(1.08)}
+.blog-feat-pill{display:inline-block;font-size:0.55rem;background:rgba(201,169,110,0.18);color:var(--gold);padding:2px 8px;border-radius:50px;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;border:1px solid rgba(201,169,110,0.3);margin-bottom:0.6rem}
+.blog-feat-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;color:#F2EBD9;line-height:1.3;margin-bottom:0.5rem}
+.blog-feat-title em{font-style:italic;color:var(--gold)}
+.blog-feat-excerpt{font-size:0.76rem;color:rgba(255,255,255,0.48);line-height:1.65;font-weight:300;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.blog-feat-main-foot{background:var(--white);padding:0.6rem 1.3rem;display:flex;justify-content:space-between;align-items:center}
+.blog-feat-foot-meta{font-size:0.62rem;color:var(--earth);opacity:0.5}
+.blog-feat-foot-read{font-size:0.68rem;color:var(--moss);font-weight:600;letter-spacing:0.04em;transition:letter-spacing 0.2s}
+.blog-feat-main:hover .blog-feat-foot-read{letter-spacing:0.09em}
+/* blog side: 2×2 grid, both desktop and mobile */
+.blog-side-stack{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
+.blog-side-card{display:flex;flex-direction:column;overflow:hidden;border-radius:10px;box-shadow:0 1px 8px var(--shadow);border:0.5px solid rgba(122,48,80,0.1);transition:all 0.22s;text-decoration:none}
+.blog-side-card:hover{transform:translateY(-2px);box-shadow:0 4px 14px var(--shadow-md)}
+.blog-side-cat{background:linear-gradient(135deg,#6E2442,#5A1E38);padding:0.4rem 0.65rem;font-size:0.46rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.blog-side-content{background:var(--white);padding:0.5rem 0.65rem 0.55rem;display:flex;flex-direction:column;justify-content:space-between;flex:1}
+.blog-side-title{font-family:'Playfair Display',serif;font-size:0.72rem;font-weight:500;color:var(--charcoal);line-height:1.3;margin-bottom:0.2rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.blog-side-foot{display:flex;justify-content:space-between;align-items:center;margin-top:0.3rem}
+.blog-side-meta{font-size:0.54rem;color:var(--earth);opacity:0.4}
+.blog-side-arrow{font-size:0.6rem;color:var(--moss-light);transition:transform 0.2s}
+.blog-side-card:hover .blog-side-arrow{transform:translateX(2px);color:var(--moss)}
+/* featured stacks on mobile, but side grid stays 2×2 always */
+@media(max-width:700px){.blog-feat-grid{grid-template-columns:1fr}}
+
 .cta-strip{background:linear-gradient(160deg,#5E2244 0%,#451A34 50%,#2E1024 100%);padding:2.2rem 6rem;display:flex;justify-content:space-between;align-items:center}
 .cta-strip h3{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:var(--cream);margin-bottom:0.2rem}
 .cta-strip p{font-size:0.92rem;color:rgba(255,255,255,0.6);font-weight:300}
@@ -182,68 +149,14 @@ a{text-decoration:none;color:inherit}
 .cta-btn-w{background:var(--cream);color:#1A0C14;border:none;padding:0.75rem 1.8rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 2px 12px rgba(0,0,0,0.15)}
 .cta-btn-o{background:transparent;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.35);padding:0.75rem 1.8rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:400;transition:all 0.2s}
 .cta-btn-o:hover{border-color:rgba(255,255,255,0.7);color:#fff}
-
-/* ── FOOTER ── */
-footer{background:var(--cream);padding:1.8rem 6rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--sand);}
+footer{background:var(--cream);padding:1.8rem 6rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--sand)}
 .footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--moss);font-style:italic}
 footer p{font-size:0.68rem;color:var(--earth)}
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{font-size:0.66rem;color:var(--earth);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
 .footer-links a:hover{color:var(--moss-light)}
-
-/* ── CALENDLY ── */
 #booking{background:var(--cream)}
-#booking .calendly-inline-widget{border-radius:0}
-
-/* ── BOOKING INTRO ── */
 .booking-intro{background:var(--white)}
-
-/* ── RESPONSIVE ── */
-@media(max-width:900px){
-  /* Navbar */
-  .navbar{padding:0 1rem;height:56px}
-  .nav-links{display:none}
-  .btn-nav{display:none}
-  .nav-right{gap:0.5rem}
-  .lang-toggle{display:flex}
-  .logo{font-size:1rem}
-  /* Hero */
-  .hero{min-height:70vh}
-  .hero-left{padding:2.5rem 1.2rem}
-  .hero-eyebrow{font-size:0.55rem;letter-spacing:0.2em}
-  .hero-stats{gap:2rem}
-  /* Sections */
-  .section{padding:2.5rem 1.2rem}
-  .section-title{font-size:1.8rem}
-  /* Services */
-  .two-col{grid-template-columns:1fr}
-  .tab-bar{gap:0.3rem}
-  .tab-btn{padding:0.45rem 0.9rem;font-size:0.68rem}
-  /* Blog scroll */
-  .blog-grid{padding-bottom:0.8rem}
-  .blog-card{flex:0 0 220px}
-  /* Address */
-  .address-section{padding:1.8rem 1.2rem}
-  /* address handled by mobile-first CSS above */
-  .map-embed iframe{height:160px}
-  /* CTA */
-  .cta-strip{flex-direction:column;gap:1.2rem;text-align:center;padding:2rem 1.2rem}
-  .cta-strip h3{font-size:1.4rem}
-  .cta-btns{justify-content:center;flex-wrap:wrap}
-  /* Footer */
-  footer{flex-direction:column;gap:0.6rem;text-align:center;padding:1.2rem}
-}
-@media(max-width:480px){
-  .hero-title{font-size:clamp(1.8rem,7vw,2.4rem)}
-  .blog-card{flex:0 0 200px}
-  .section{padding:2rem 1rem}
-  .address-section{padding:1.5rem 1rem}
-  .cta-strip{padding:1.8rem 1rem}
-  footer{padding:1rem}
-}
-
-/* ── ADDRESS ── */
-/* Mobile-first address */
 .address-section{background:linear-gradient(160deg,#2C1020,#160810);padding:1.8rem 1.2rem}
 .map-embed{width:100%;border-radius:12px;overflow:hidden;border:1px solid rgba(201,169,110,0.15);line-height:0;margin-bottom:1.2rem}
 .map-embed iframe{width:100%;height:200px;border:none;filter:grayscale(20%) contrast(1.05)}
@@ -259,7 +172,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .c-btn-call:hover{background:#2A4233;transform:translateY(-1px)}
 .c-btn-zalo{background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(201,169,110,0.3);padding:0.6rem 1.4rem;border-radius:50px;font-size:0.75rem;font-family:'Be Vietnam Pro',sans-serif;font-weight:400;cursor:pointer;transition:all 0.2s}
 .c-btn-zalo:hover{border-color:rgba(201,169,110,0.6);color:#fff}
-/* Desktop override */
 @media(min-width:768px){
   .mobile-menu{display:none!important}
   .address-section{padding:2rem 6rem}
@@ -269,43 +181,26 @@ footer p{font-size:0.68rem;color:var(--earth)}
   .contact-item:first-child{padding-left:0}
   .contact-item + .contact-item{border-left:1px solid rgba(201,169,110,0.15)}
 }
-
-/* ── HAMBURGER ── */
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:var(--moss);border-radius:2px;transition:all 0.3s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-/* Mobile drawer */
 .mobile-menu{display:block;position:fixed;top:56px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--sand);box-shadow:0 8px 24px rgba(122,48,80,0.12);z-index:99;padding:0;overflow:hidden;max-height:0;transition:max-height 0.35s cubic-bezier(0.4,0,0.2,1);visibility:hidden}
 .mobile-menu.open{max-height:400px;visibility:visible}
 .mobile-menu ul{list-style:none;padding:0.8rem 0}
-.mobile-menu ul li a{display:block;padding:0.85rem 1.5rem;font-size:0.85rem;color:var(--earth);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;border-bottom:1px solid rgba(221,212,192,0.4);transition:background 0.15s}
-.mobile-menu ul li:last-child a{border-bottom:none}
+.mobile-menu ul li a{display:block;padding:0.85rem 1.5rem;font-size:0.85rem;color:var(--earth);text-transform:uppercase;letter-spacing:0.1em;font-weight:500;border-bottom:1px solid rgba(221,212,192,0.4)}
 .mobile-menu ul li a:hover{background:var(--moss-pale);color:var(--moss)}
 .mobile-menu-book{padding:1rem 1.5rem;border-top:1px solid var(--sand)}
 .mobile-menu-book button{width:100%;background:var(--moss);color:#fff;border:none;padding:0.75rem;border-radius:50px;font-size:0.8rem;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer}
-
-
-@media(max-width:900px){
-  .hamburger{display:flex}
-  .nav-links{display:none}
-}
-
-/* ── ANNOUNCEMENT PILL ── */
-.announce-pill{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.8rem;background:rgba(201,169,110,0.12);border:1px solid rgba(201,169,110,0.3);border-radius:50px;padding:0.45rem 1.1rem;font-size:0.75rem;color:rgba(255,255,255,0.8);backdrop-filter:blur(4px)}
+@media(max-width:900px){.hamburger{display:flex}.nav-links{display:none}}
+.announce-pill{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.8rem;background:rgba(201,169,110,0.12);border:1px solid rgba(201,169,110,0.3);border-radius:50px;padding:0.45rem 1.1rem;font-size:0.75rem;color:rgba(255,255,255,0.8)}
 .announce-pill em{color:var(--gold);font-style:normal;font-weight:600}
 .announce-pill .pill-dot{color:rgba(201,169,110,0.4);font-size:0.5rem}
-
-/* ── SOCIAL ICONS ── */
 .social-links{display:flex;gap:0.6rem;align-items:center}
 .social-link{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--sand-dark);color:var(--earth);transition:all 0.2s;flex-shrink:0}
 .social-link:hover{background:var(--moss);border-color:var(--moss);color:#fff}
 .social-link svg{width:13px;height:13px}
-
-
-/* ── FAQ ── */
 .faq-section{background:var(--cream);padding:4rem 6rem}
 .faq-list{display:flex;flex-direction:column;max-width:720px;margin:0 auto}
 .faq-item{border-bottom:1px solid var(--sand)}
@@ -321,109 +216,90 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .faq-more-btn{display:block;margin:1.2rem auto 0;background:none;border:none;color:var(--moss-light);font-size:0.78rem;font-family:'Be Vietnam Pro',sans-serif;cursor:pointer;letter-spacing:0.05em;text-decoration:underline;text-underline-offset:3px}
 .faq-more-btn:hover{color:var(--moss)}
 @media(max-width:900px){.faq-section{padding:3rem 1.2rem}}
-
-/* ── WHATSAPP FLOAT ── */
 .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:0.5rem}
 .wa-btn{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,0.35);transition:all 0.25s;cursor:pointer;text-decoration:none}
 .wa-btn:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(37,211,102,0.5)}
 .wa-btn svg{width:28px;height:28px;fill:#fff}
-.wa-label{background:var(--charcoal,#1E2F25);color:#fff;font-size:0.68rem;padding:0.3rem 0.75rem;border-radius:50px;white-space:nowrap;font-family:'Be Vietnam Pro',sans-serif;opacity:0;transform:translateX(8px);transition:all 0.2s;pointer-events:none}
+.wa-label{background:var(--charcoal);color:#fff;font-size:0.68rem;padding:0.3rem 0.75rem;border-radius:50px;white-space:nowrap;font-family:'Be Vietnam Pro',sans-serif;opacity:0;transform:translateX(8px);transition:all 0.2s;pointer-events:none}
 .wa-float:hover .wa-label{opacity:1;transform:translateX(0)}
 @media(max-width:480px){.wa-btn{width:46px;height:46px}.wa-btn svg{width:24px;height:24px}}
-
-/* ── PROMO SECTION ── */
 .promo-section{background:var(--cream);padding:4.5rem 6rem}
 .promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
 .promo-card{border-radius:16px;overflow:hidden;box-shadow:0 2px 16px var(--shadow)}
-
-/* Combo card */
 .promo-card-combo{background:linear-gradient(145deg,#8A3055,#6E2442)}
 .promo-card-points{background:linear-gradient(145deg,#3A2E62,#2A2048)}
-
 .promo-card-head{padding:1.6rem 1.8rem 1.2rem}
-.promo-card-tag{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;margin-bottom:0.5rem}
-.promo-card-combo .promo-card-tag{color:var(--gold)}
-.promo-card-points .promo-card-tag{color:var(--gold)}
+.promo-card-tag{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;margin-bottom:0.5rem;color:var(--gold)}
 .promo-card-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:500;line-height:1.25;margin-bottom:0.4rem}
 .promo-card-combo .promo-card-title{color:#F2E8E0}
 .promo-card-points .promo-card-title{color:#F0EAF8}
 .promo-card-sub{font-size:0.78rem;font-weight:300;line-height:1.6}
 .promo-card-combo .promo-card-sub{color:rgba(242,232,224,0.6)}
 .promo-card-points .promo-card-sub{color:rgba(240,234,248,0.55)}
-
 .promo-card-body{padding:0 1.8rem 1.6rem;display:flex;flex-direction:column;gap:0.6rem}
-
-/* Combo tiers */
 .combo-tier{display:flex;align-items:center;gap:1rem;padding:0.85rem 1rem;border-radius:12px;background:rgba(255,255,255,0.08);border:1px solid rgba(200,144,106,0.2)}
 .combo-tier-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);font-weight:400;line-height:1;min-width:36px}
 .combo-tier-text strong{display:block;font-size:0.82rem;color:#F2E8E0;font-weight:500}
 .combo-tier-text span{font-size:0.72rem;color:rgba(242,232,224,0.45);font-weight:300}
 .combo-note{font-size:0.68rem;color:rgba(242,232,224,0.3);padding-top:0.4rem;font-style:italic}
-
-/* Points tiers */
 .points-tier{display:flex;gap:1rem;align-items:flex-start;padding:0.85rem 1rem;border-radius:12px;background:rgba(255,255,255,0.07);border:1px solid rgba(200,144,106,0.18)}
-.points-tier:last-of-type{margin-bottom:0}
 .points-badge{font-size:1.1rem;min-width:32px;height:32px;border-radius:50%;background:rgba(200,144,106,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.points-tier-content{}
 .points-tier-label{font-size:0.85rem;font-weight:600;color:#F0EAF8;margin-bottom:0.2rem}
 .points-tier-pts{font-size:0.72rem;color:var(--gold);font-weight:600;letter-spacing:0.04em;margin-bottom:0.3rem}
 .points-tier-gifts{font-size:0.74rem;color:rgba(240,234,248,0.5);font-weight:300;line-height:1.6}
 .points-footnote{font-size:0.68rem;color:rgba(240,234,248,0.28);font-style:italic;margin-top:0.6rem;padding-top:0.6rem;border-top:1px solid rgba(255,255,255,0.1)}
-
 @media(max-width:900px){
+  .navbar{padding:0 1rem;height:56px}
+  .nav-links{display:none}
+  .btn-nav{display:none}
+  .hero{min-height:70vh}
+  .hero-left{padding:2.5rem 1.2rem}
+  .hero-stats{gap:2rem}
+  .section{padding:2.5rem 1.2rem}
+  .section-title{font-size:1.8rem}
+  .two-col{grid-template-columns:1fr}
+  .tab-bar{gap:0.3rem}
+  .tab-btn{padding:0.45rem 0.9rem;font-size:0.68rem}
+  .cta-strip{flex-direction:column;gap:1.2rem;text-align:center;padding:2rem 1.2rem}
+  .cta-strip h3{font-size:1.4rem}
+  .cta-btns{justify-content:center;flex-wrap:wrap}
+  footer{flex-direction:column;gap:0.6rem;text-align:center;padding:1.2rem}
   .promo-section{padding:3rem 1.2rem}
   .promo-grid{grid-template-columns:1fr}
 }
-
-/* ── SVC CARD WRAP ── */
-
-
-
-
-
-
-/* ── FACIAL TAB CARD ── */
-#tab-facial.active{display:block}
-
+@media(max-width:480px){
+  .hero-title{font-size:clamp(1.8rem,7vw,2.4rem)}
+  .section{padding:2rem 1rem}
+}
+.partner-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.6rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;background:rgba(122,48,80,0.08);color:var(--moss);border:0.5px solid rgba(122,48,80,0.2);padding:3px 10px;border-radius:50px;margin-bottom:8px}
+.partner-book-btn{font-size:0.7rem;font-weight:500;color:#fff;background:var(--moss);border:none;padding:7px 18px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s;text-decoration:none;display:inline-block}
+.partner-book-btn:hover{background:var(--moss-light)}
 .blog-header-area{background:linear-gradient(145deg,#6E2442,#5A1E38);padding:0.85rem 1.2rem 0.8rem}
 .blog-content-area{padding:0.85rem 1.2rem 1rem;background:#fff;flex:1}
 
-
-
-
 /* ── GREEN THEME ── */
 [data-theme="green"]{
-  --moss:#3D5A47;
-  --moss-light:#6B8F71;
-  --moss-pale:#D4E4D0;
-  --charcoal:#1E2F25;
-  --dark:#1E2F25;
-  --shadow:rgba(61,90,71,0.10);
-  --shadow-md:rgba(61,90,71,0.18);
+  --moss:#3D5A47;--moss-light:#6B8F71;--moss-pale:#D4E4D0;
+  --charcoal:#1E2F25;--dark:#1E2F25;
+  --shadow:rgba(61,90,71,0.10);--shadow-md:rgba(61,90,71,0.18);
 }
 [data-theme="green"] .hero{background:linear-gradient(160deg,#1E3028 0%,#162620 50%,#0F1F18 100%)}
 [data-theme="green"] .cta-strip{background:linear-gradient(160deg,#1E3028 0%,#162620 50%,#0F1F18 100%)}
 [data-theme="green"] .address-section{background:linear-gradient(160deg,#1E3028,#111E16)}
 [data-theme="green"] .promo-card-combo{background:linear-gradient(145deg,#2D5A3A,#1E3D28)}
 [data-theme="green"] .promo-card-points{background:linear-gradient(145deg,#1E3A2E,#142A20)}
-[data-theme="green"] .promo-card-combo .promo-card-tag{color:var(--gold)}
-[data-theme="green"] .promo-card-points .promo-card-tag{color:var(--gold)}
+[data-theme="green"] .blog-feat-main-head{background:linear-gradient(145deg,#2A4A36,#1A3224)}
+[data-theme="green"] .blog-side-cat{background:linear-gradient(180deg,#2A4A36,#1A3224)}
 [data-theme="green"] .blog-header-area{background:linear-gradient(145deg,#2D5A3A,#244A30)}
-[data-theme="green"] .blog-pill{background:var(--moss);color:#fff}
 [data-theme="green"] .reviews-section{background:#E8F0E8}
-[data-theme="green"] .navbar{box-shadow:0 2px 16px rgba(61,90,71,0.07)}
 [data-theme="green"] .review-author{background:rgba(61,90,71,0.07);border-left:2px solid var(--gold)}
-[data-theme="green"] .svc-row:has(.best-badge){background:linear-gradient(90deg,rgba(200,144,106,0.08),transparent)}
+[data-theme="green"] .navbar{box-shadow:0 2px 16px rgba(61,90,71,0.07)}
 
 /* ── THEME TOGGLE ── */
 .theme-toggle{display:flex;align-items:center;gap:6px;cursor:pointer;padding:4px;border-radius:50px;transition:all 0.2s}
 .theme-toggle-track{width:36px;height:20px;border-radius:50px;position:relative;transition:background 0.3s;border:1px solid rgba(0,0,0,0.08)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
-
-.partner-badge{display:inline-flex;align-items:center;gap:5px;font-size:0.6rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;background:rgba(122,48,80,0.08);color:var(--moss);border:0.5px solid rgba(122,48,80,0.2);padding:3px 10px;border-radius:50px;margin-bottom:8px}
-.partner-book-btn{font-size:0.7rem;font-weight:500;color:#fff;background:var(--moss);border:none;padding:7px 18px;border-radius:50px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:all 0.2s;text-decoration:none;display:inline-block}
-.partner-book-btn:hover{background:var(--moss-light)}
 </style>
   <meta name="description" content="Harmonie Beauté — spa private 1-1 tại Tân Định, Quận 1. Chuyên nặn mụn chuyên sâu, chemical peel mặt &amp; body, peel thâm nách lưng gối. 7 năm kinh nghiệm · Private spa · English-friendly.">
   <meta name="keywords" content="spa tân định, nặn mụn tân định, chemical peel hcm, peel body hcm, spa private saigon, acne extraction saigon, peel thâm nách, private spa ho chi minh, facial spa expat saigon, Harmonie Beaute">
@@ -432,69 +308,13 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://harmonie-beaute-vietnam.com/">
   <meta property="og:image" content="https://harmonie-beaute-vietnam.com/og-image.jpg">
-  <meta property="og:locale" content="vi_VN">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Harmonie Beauté – Private Spa · Tân Định, Saigon">
-  <meta name="twitter:description" content="Private spa 1-1 tại Tân Định. Nặn mụn, chemical peel, peel thâm body. English-friendly.">
   <link rel="canonical" href="https://harmonie-beaute-vietnam.com/">
   <link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/">
   <link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BeautySalon",
-    "name": "Harmonie Beauté",
-    "alternateName": "Harmonie Beaute Private Spa",
-    "description": "Private spa 1-1 tại Tân Định, Quận 1, TP.HCM. Chuyên nặn mụn chuyên sâu, chemical peel mặt và body, peel thâm nách lưng gối. 7 năm kinh nghiệm.",
-    "url": "https://harmonie-beaute-vietnam.com",
-    "telephone": "+84899090762",
-    "image": "https://harmonie-beaute-vietnam.com/og-image.jpg",
-    "priceRange": "$$",
-    "currenciesAccepted": "VND",
-    "paymentAccepted": "Cash, Bank Transfer",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "30 Đặng Tất",
-      "addressLocality": "Phường Tân Định",
-      "addressRegion": "Quận 1",
-      "addressCountry": "VN",
-      "postalCode": "70000"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 10.7929671,
-      "longitude": 106.6882107
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/harmonie_beautee/",
-      "https://www.facebook.com/p/Harmonie-Beaut%C3%A9-61576627743088/",
-      "https://www.tiktok.com/@harmoniebeautee",
-      "https://maps.app.goo.gl/rJE4ZBQ85ujrVCEm8"
-    ],
-    "hasMap": "https://maps.app.goo.gl/rJE4ZBQ85ujrVCEm8",
-    "areaServed": ["Tân Định", "Quận 1", "Ho Chi Minh City"],
-    "knowsLanguage": ["vi", "en"],
-    "offers": [
-      {"@type": "Offer", "name": "Nặn mụn chuyên sâu", "price": "350000", "priceCurrency": "VND"},
-      {"@type": "Offer", "name": "Chemical Peel trị mụn", "price": "500000", "priceCurrency": "VND"},
-      {"@type": "Offer", "name": "Peel thâm nách", "price": "650000", "priceCurrency": "VND"},
-      {"@type": "Offer", "name": "Peel tảo Decaar", "price": "1100000", "priceCurrency": "VND"}
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Harmonie Beauté","description":"Private spa 1-1 tại Tân Định, Quận 1, TP.HCM. Chuyên nặn mụn chuyên sâu, chemical peel mặt và body, peel thâm nách lưng gối.","url":"https://harmonie-beaute-vietnam.com","telephone":"+84899090762","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"30 Đặng Tất","addressLocality":"Phường Tân Định","addressRegion":"Quận 1","addressCountry":"VN"},"geo":{"@type":"GeoCoordinates","latitude":10.7929671,"longitude":106.6882107},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"}],"sameAs":["https://www.instagram.com/harmonie_beautee/","https://www.facebook.com/p/Harmonie-Beaut%C3%A9-61576627743088/","https://www.tiktok.com/@harmoniebeautee"]}</script>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <a class="logo" href="#" style="text-decoration:none">Harmonie <em>beauté</em></a>
   <ul class="nav-links">
@@ -505,32 +325,27 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <div class="nav-right">
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Switch theme" aria-label="Toggle color theme">
       <span class="theme-toggle-icon" id="themeIcon">🌿</span>
-      <div class="theme-toggle-track" id="themeTrack">
-        <div class="theme-toggle-thumb" id="themeThumb"></div>
-      </div>
+      <div class="theme-toggle-track" id="themeTrack"><div class="theme-toggle-thumb" id="themeThumb"></div></div>
     </button>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('vi')">VI</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
-    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
     <button class="btn-nav" onclick="document.getElementById('calendar').scrollIntoView({behavior:'smooth'})">
       <span class="vi">Đặt lịch</span><span class="en">Book now</span>
     </button>
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="index.html#services" onclick="closeMobileMenu()"><span class="vi">Dịch vụ</span><span class="en">Services</span></a></li>
+    <li><a href="#services" onclick="closeMobileMenu()"><span class="vi">Dịch vụ</span><span class="en">Services</span></a></li>
     <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
     <li><a href="about.html" onclick="closeMobileMenu()"><span class="vi">Về Hana</span><span class="en">Meet Hana</span></a></li>
   </ul>
   <div class="mobile-menu-book">
-    <button onclick="closeMobileMenu();document.getElementById('calendar') ? document.getElementById('calendar').scrollIntoView({behavior:'smooth'}) : window.location.href='index.html#calendar'">
+    <button onclick="closeMobileMenu();document.getElementById('calendar').scrollIntoView({behavior:'smooth'})">
       <span class="vi">Đặt lịch ngay</span><span class="en">Book now</span>
     </button>
   </div>
@@ -540,7 +355,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
 <section class="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">✦ Private Spa · 30 Đặng Tất, Tân Định, TP. HCM</p>
-    <h1 class="hero-title" itemprop="name">
+    <h1 class="hero-title">
       <span class="vi"><span style="white-space:nowrap">Chăm sóc chuyên sâu.</span><br><em>Không gian riêng tư.</em></span>
       <span class="en"><span style="white-space:nowrap">Expert care.</span><br><em>Your private space.</em></span>
     </h1>
@@ -561,10 +376,30 @@ footer p{font-size:0.68rem;color:var(--earth)}
       <span class="vi">Mừng địa điểm mới — Giảm <em>20%</em> từ <em>01/05 – 31/05</em></span>
       <span class="en">New location — <em>20% off</em> from <em>May 1–31</em></span>
     </div>
-    <div class="hero-stats">
-      <div><span class="stat-num">500+</span><span class="stat-label vi">Khách hàng</span><span class="stat-label en">Clients</span></div>
-      <div><span class="stat-num">4</span><span class="stat-label vi">Nhóm liệu trình</span><span class="stat-label en">Treatment types</span></div>
-      <div><span class="stat-num">5★</span><span class="stat-label vi">Đánh giá</span><span class="stat-label en">Reviews</span></div>
+    <div class="hero-reviews">
+      <div class="hero-reviews-badge">
+        <span class="hero-reviews-stars">★★★★★</span>
+        <span class="hero-reviews-score">5.0</span>
+        <span class="hero-reviews-dot"></span>
+        <span class="hero-reviews-source">Google · 500+ khách</span>
+      </div>
+      <div class="hero-reviews-row">
+        <div class="hero-mini-review">
+          <div class="hero-mini-quote vi">"Nhẹ nhàng, riêng tư, sạch sẽ đến từng chi tiết. Chưa tới 300k mà được nuông chiều quá trời!"</div>
+          <div class="hero-mini-quote en">"So gentle, private and spotless. Under 300k for all that? Absolutely unreal."</div>
+          <div class="hero-mini-name">Khoa Nguyễn</div>
+        </div>
+        <div class="hero-mini-review">
+          <div class="hero-mini-quote vi">"Chị nặn mát tay, không bị sần đỏ như mấy chỗ trước. Chắc chắn sẽ quay lại!"</div>
+          <div class="hero-mini-quote en">"So gentle, no redness like other places. Definitely coming back!"</div>
+          <div class="hero-mini-name">Bạn Nga</div>
+        </div>
+        <div class="hero-mini-review">
+          <div class="hero-mini-quote vi">"Uy tín, hiệu quả, giá phải chăng — xứng đáng được biết đến nhiều hơn!"</div>
+          <div class="hero-mini-quote en">"Trusted, effective, affordable — deserves to be way more well-known."</div>
+          <div class="hero-mini-name">Hường Nguyễn</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -574,7 +409,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <p class="section-tag">✦ <span class="vi">Bảng dịch vụ</span><span class="en">Our services</span></p>
   <h2 class="section-title"><span class="vi">Liệu trình <em>chuyên sâu</em></span><span class="en">Signature <em>treatments</em></span></h2>
   <div class="section-line"></div>
-
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab(this,'acne')"><span class="vi">Điều trị mụn</span><span class="en">Acne Treatment</span></button>
     <button class="tab-btn" onclick="switchTab(this,'facial')"><span class="vi">Chăm sóc mặt</span><span class="en">Facial Treatment</span></button>
@@ -584,789 +418,169 @@ footer p{font-size:0.68rem;color:var(--earth)}
     <button class="tab-btn" onclick="switchTab(this,'pmu')"><span class="vi">✦ Phun xăm PMU</span><span class="en">✦ PMU Services</span></button>
   </div>
 
-  <!-- ACNE -->
+  <!-- ACNE TAB -->
   <div class="tab-content active" id="tab-acne">
     <div class="two-col">
       <div class="svc-card-wrap">
         <div class="sub-cat-title">🌿 Facial</div>
         <div class="svc-card-body">
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Mụn cơ bản</span><span class="en">Basic acne treatment</span></span>
-              <span class="svc-desc"><span class="vi">Làm sạch & nặn mụn đầu đen, mụn cám, mụn cơ bản</span><span class="en">Cleanse & extract blackheads, milia, basic breakouts</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">220,000đ</span>
-              <span class="svc-price-usd">~$8.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Mụn cơ bản / Basic acne treatment')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Mụn chuyên sâu</span><span class="en">Deep acne treatment</span></span>
-              <span class="svc-desc"><span class="vi">Nặn mụn viêm, mụn ẩn, điều trị chuyên sâu từng nốt</span><span class="en">Inflammatory & closed comedone extraction, targeted treatment</span></span>
-              <span class="best-badge">⭐ Best Seller</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">350,000đ</span>
-              <span class="svc-price-usd">~$13.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Mụn chuyên sâu / Deep acne')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Thải độc CO2</span><span class="en">CO2 detox</span></span>
-              <span class="svc-desc"><span class="vi">Oxy hoá da sâu, thải độc lỗ chân lông, tăng sinh tế bào mới</span><span class="en">Deep skin oxygenation, pore detox, cell regeneration</span></span>
-              <span class="best-badge">⭐ Best Seller</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">450,000đ</span>
-              <span class="svc-price-usd">~$17</span>
-              <button class="svc-book-btn" onclick="fillBook('Thải độc CO2 / CO2 detox')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Nặn mụn không đau</span><span class="en">Painless acne extraction</span></span>
-              <span class="svc-desc"><span class="vi">Kết hợp enzyme sinh học · làm mềm nhân mụn, giảm đau tối đa · phù hợp da nhạy cảm và người lần đầu nặn mụn</span><span class="en">Enzyme-assisted extraction · softens comedones for near-painless removal · ideal for sensitive skin &amp; first-timers</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">500,000đ</span>
-              <span class="svc-price-usd">~$19</span>
-              <button class="svc-book-btn" onclick="fillBook('Nặn mụn không đau / Painless extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mụn cơ bản</span><span class="en">Basic acne treatment</span></span><span class="svc-desc"><span class="vi">Làm sạch & nặn mụn đầu đen, mụn cám, mụn cơ bản</span><span class="en">Cleanse & extract blackheads, milia, basic breakouts</span></span></div><div class="svc-right"><span class="svc-price">220,000đ</span><span class="svc-price-usd">~$8.5</span><button class="svc-book-btn" onclick="fillBook('Mụn cơ bản / Basic acne treatment')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Mụn chuyên sâu</span><span class="en">Deep acne treatment</span></span><span class="svc-desc"><span class="vi">Nặn mụn viêm, mụn ẩn, điều trị chuyên sâu từng nốt</span><span class="en">Inflammatory & closed comedone extraction, targeted treatment</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">350,000đ</span><span class="svc-price-usd">~$13.5</span><button class="svc-book-btn" onclick="fillBook('Mụn chuyên sâu / Deep acne')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Thải độc CO2</span><span class="en">CO2 detox</span></span><span class="svc-desc"><span class="vi">Oxy hoá da sâu, thải độc lỗ chân lông, tăng sinh tế bào mới</span><span class="en">Deep skin oxygenation, pore detox, cell regeneration</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">450,000đ</span><span class="svc-price-usd">~$17</span><button class="svc-book-btn" onclick="fillBook('Thải độc CO2 / CO2 detox')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn không đau</span><span class="en">Painless acne extraction</span></span><span class="svc-desc"><span class="vi">Kết hợp enzyme sinh học · làm mềm nhân mụn, giảm đau tối đa · phù hợp da nhạy cảm và người lần đầu nặn mụn</span><span class="en">Enzyme-assisted extraction · softens comedones for near-painless removal · ideal for sensitive skin &amp; first-timers</span></span></div><div class="svc-right"><span class="svc-price">500,000đ</span><span class="svc-price-usd">~$19</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn không đau / Painless extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
       <div class="svc-card-wrap">
         <div class="sub-cat-title">✨ Body</div>
         <div class="svc-card-body">
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Nặn mụn ngực</span><span class="en">Chest acne extraction</span></span>
-              <span class="svc-desc"><span class="vi">Vùng ngực · dụng cụ tiệt trùng, hạn chế thâm sẹo</span><span class="en">Chest area · sterilised tools, minimises post-acne marks</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">400,000đ</span>
-              <span class="svc-price-usd">~$15</span>
-              <button class="svc-book-btn" onclick="fillBook('Nặn mụn ngực / Chest acne extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Nặn mụn ½ lưng</span><span class="en">Half-back extraction</span></span>
-              <span class="svc-desc"><span class="vi">Nửa lưng trên hoặc dưới · chuyên sâu từng vùng</span><span class="en">Upper or lower half-back · targeted extraction</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">400,000đ</span>
-              <span class="svc-price-usd">~$15</span>
-              <button class="svc-book-btn" onclick="fillBook('Nặn mụn ½ lưng / Half-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Nặn mụn full lưng</span><span class="en">Full-back extraction</span></span>
-              <span class="svc-desc"><span class="vi">Toàn bộ lưng · liệu trình kỹ lưỡng nhất cho mụn lưng nặng</span><span class="en">Full back · most thorough treatment for severe back acne</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">600,000đ</span>
-              <span class="svc-price-usd">~$23</span>
-              <button class="svc-book-btn" onclick="fillBook('Nặn mụn full lưng / Full-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Nặn mụn mông</span><span class="en">Buttocks acne extraction</span></span>
-              <span class="svc-desc"><span class="vi">Vùng mông · dụng cụ tiệt trùng, xử lý kỹ từng nốt</span><span class="en">Buttocks area · sterilised tools, careful treatment per lesion</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">600,000đ</span>
-              <span class="svc-price-usd">~$23</span>
-              <button class="svc-book-btn" onclick="fillBook('Nặn mụn mông / Buttocks acne extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn ngực</span><span class="en">Chest acne extraction</span></span><span class="svc-desc"><span class="vi">Vùng ngực · dụng cụ tiệt trùng, hạn chế thâm sẹo</span><span class="en">Chest area · sterilised tools, minimises post-acne marks</span></span></div><div class="svc-right"><span class="svc-price">400,000đ</span><span class="svc-price-usd">~$15</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn ngực / Chest acne extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn ½ lưng</span><span class="en">Half-back extraction</span></span><span class="svc-desc"><span class="vi">Nửa lưng trên hoặc dưới · chuyên sâu từng vùng</span><span class="en">Upper or lower half-back · targeted extraction</span></span></div><div class="svc-right"><span class="svc-price">400,000đ</span><span class="svc-price-usd">~$15</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn ½ lưng / Half-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn full lưng</span><span class="en">Full-back extraction</span></span><span class="svc-desc"><span class="vi">Toàn bộ lưng · liệu trình kỹ lưỡng nhất cho mụn lưng nặng</span><span class="en">Full back · most thorough treatment for severe back acne</span></span></div><div class="svc-right"><span class="svc-price">600,000đ</span><span class="svc-price-usd">~$23</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn full lưng / Full-back extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nặn mụn mông</span><span class="en">Buttocks acne extraction</span></span><span class="svc-desc"><span class="vi">Vùng mông · dụng cụ tiệt trùng, xử lý kỹ từng nốt</span><span class="en">Buttocks area · sterilised tools, careful treatment per lesion</span></span></div><div class="svc-right"><span class="svc-price">600,000đ</span><span class="svc-price-usd">~$23</span><button class="svc-book-btn" onclick="fillBook('Nặn mụn mông / Buttocks acne extraction')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FACIAL -->
+  <!-- FACIAL TAB -->
   <div class="tab-content" id="tab-facial">
     <div class="two-col">
       <div class="svc-card-wrap">
         <div class="sub-cat-title">🌸 Chăm sóc mặt / Facial Care</div>
         <div class="svc-card-body">
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Thư giãn vội vàng</span><span class="en">Quick relax</span></span>
-              <span class="svc-desc"><span class="vi">45' · Vệ sinh & massage mặt · Dành cho người không có nhiều thời gian</span><span class="en">45' · Cleanse & facial massage · For those short on time</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">250,000đ</span>
-              <span class="svc-price-usd">~$9.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Thư giãn vội vàng / Quick relax')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Thư giãn thảnh thơi</span><span class="en">Leisurely relax</span></span>
-              <span class="svc-desc"><span class="vi">70' · Massage nâng cơ thư giãn & cấp ẩm sâu</span><span class="en">70' · Lifting massage & deep hydration</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">350,000đ</span>
-              <span class="svc-price-usd">~$13.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Thư giãn thảnh thơi / Leisurely relax')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Thư giãn & làm sạch sâu</span><span class="en">Relax & deep cleanse</span></span>
-              <span class="svc-desc"><span class="vi">75' · Detox sạch sâu & massage nâng cơ thư giãn</span><span class="en">75' · Deep detox cleanse & lifting massage</span></span>
-              <span class="best-badge">⭐ Best Seller</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">450,000đ</span>
-              <span class="svc-price-usd">~$17</span>
-              <button class="svc-book-btn" onclick="fillBook('Thư giãn & làm sạch sâu / Relax & deep cleanse')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Thư giãn & sáng da</span><span class="en">Relax & brightening</span></span>
-              <span class="svc-desc"><span class="vi">75' · Massage nâng cơ thư giãn & tinh chất sáng da</span><span class="en">75' · Lifting massage & brightening serum</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">500,000đ</span>
-              <span class="svc-price-usd">~$19</span>
-              <button class="svc-book-btn" onclick="fillBook('Thư giãn & sáng da / Relax & brightening')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn vội vàng</span><span class="en">Quick relax</span></span><span class="svc-desc"><span class="vi">45' · Vệ sinh & massage mặt</span><span class="en">45' · Cleanse & facial massage</span></span></div><div class="svc-right"><span class="svc-price">250,000đ</span><span class="svc-price-usd">~$9.5</span><button class="svc-book-btn" onclick="fillBook('Thư giãn vội vàng / Quick relax')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn thảnh thơi</span><span class="en">Leisurely relax</span></span><span class="svc-desc"><span class="vi">70' · Massage nâng cơ thư giãn & cấp ẩm sâu</span><span class="en">70' · Lifting massage & deep hydration</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><span class="svc-price-usd">~$13.5</span><button class="svc-book-btn" onclick="fillBook('Thư giãn thảnh thơi / Leisurely relax')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn & làm sạch sâu</span><span class="en">Relax & deep cleanse</span></span><span class="svc-desc"><span class="vi">75' · Detox sạch sâu & massage nâng cơ thư giãn</span><span class="en">75' · Deep detox cleanse & lifting massage</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">450,000đ</span><span class="svc-price-usd">~$17</span><button class="svc-book-btn" onclick="fillBook('Thư giãn & làm sạch sâu / Relax & deep cleanse')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Thư giãn & sáng da</span><span class="en">Relax & brightening</span></span><span class="svc-desc"><span class="vi">75' · Massage nâng cơ thư giãn & tinh chất sáng da</span><span class="en">75' · Lifting massage & brightening serum</span></span></div><div class="svc-right"><span class="svc-price">500,000đ</span><span class="svc-price-usd">~$19</span><button class="svc-book-btn" onclick="fillBook('Thư giãn & sáng da / Relax & brightening')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CHEMICAL PEEL -->
+  <!-- PEEL TAB -->
   <div class="tab-content" id="tab-peel">
     <div class="two-col">
       <div class="svc-card-wrap">
         <div class="sub-cat-title">🧴 Facial Peel</div>
         <div class="svc-card-body">
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị mụn</span><span class="en">Acne peel</span></span>
-              <span class="svc-desc"><span class="vi">BHA thẩm thấu sâu · thông tắc lỗ chân lông · kháng khuẩn</span><span class="en">BHA deep penetration · unclogs pores · antibacterial</span></span>
-              <span class="best-badge">⭐ Best Seller</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">500,000đ</span>
-              <span class="svc-price-usd">~$19</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị mụn / Acne peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm, căng bóng</span><span class="en">Dark spot & glow peel</span></span>
-              <span class="svc-desc"><span class="vi">AHA kết hợp · mờ thâm sau mụn · da căng sáng rõ</span><span class="en">AHA blend · fades post-acne marks · visibly firmer & brighter</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">600,000đ</span>
-              <span class="svc-price-usd">~$23</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm, căng bóng / Dark spot & glow peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel sần sùi, trẻ hóa</span><span class="en">Textured skin & anti-aging peel</span></span>
-              <span class="svc-desc"><span class="vi">Tái tạo cấu trúc da · giảm lỗ chân lông to · chống lão hoá</span><span class="en">Resurfaces texture · minimises pores · anti-aging</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">650,000đ</span>
-              <span class="svc-price-usd">~$24.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel sần sùi, trẻ hóa / Anti-aging peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel tảo Decaar cao cấp</span><span class="en">Decaar algae premium peel</span></span>
-              <span class="svc-desc"><span class="vi">Chiết xuất tảo biển cao cấp · nhẹ nhàng nhưng hiệu quả mạnh · phù hợp da nhạy cảm</span><span class="en">Premium seaweed extract · gentle yet powerful · ideal for sensitive skin</span></span>
-              <span class="best-badge">⭐ Best Seller</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,100,000đ</span>
-              <span class="svc-price-usd">~$42</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel tảo Decaar cao cấp / Decaar premium peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel phục hồi cao cấp</span><span class="en">Premium recovery peel</span></span>
-              <span class="svc-desc"><span class="vi">Tái tạo chuyên sâu · da tổn thương, sần sùi, nám nhẹ</span><span class="en">Intensive resurfacing · damaged, textured, or mildly pigmented skin</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,600,000đ</span>
-              <span class="svc-price-usd">~$60.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel phục hồi cao cấp / Premium recovery peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị mụn</span><span class="en">Acne peel</span></span><span class="svc-desc"><span class="vi">BHA thẩm thấu sâu · thông tắc lỗ chân lông · kháng khuẩn</span><span class="en">BHA deep penetration · unclogs pores · antibacterial</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">500,000đ</span><span class="svc-price-usd">~$19</span><button class="svc-book-btn" onclick="fillBook('Peel trị mụn / Acne peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm, căng bóng</span><span class="en">Dark spot & glow peel</span></span><span class="svc-desc"><span class="vi">AHA kết hợp · mờ thâm sau mụn · da căng sáng rõ</span><span class="en">AHA blend · fades post-acne marks · visibly firmer & brighter</span></span></div><div class="svc-right"><span class="svc-price">600,000đ</span><span class="svc-price-usd">~$23</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm, căng bóng / Dark spot & glow peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel sần sùi, trẻ hóa</span><span class="en">Textured skin & anti-aging peel</span></span><span class="svc-desc"><span class="vi">Tái tạo cấu trúc da · giảm lỗ chân lông to · chống lão hoá</span><span class="en">Resurfaces texture · minimises pores · anti-aging</span></span></div><div class="svc-right"><span class="svc-price">650,000đ</span><span class="svc-price-usd">~$24.5</span><button class="svc-book-btn" onclick="fillBook('Peel sần sùi, trẻ hóa / Anti-aging peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Peel tảo Decaar cao cấp</span><span class="en">Decaar algae premium peel</span></span><span class="svc-desc"><span class="vi">Chiết xuất tảo biển cao cấp · nhẹ nhàng nhưng hiệu quả mạnh · phù hợp da nhạy cảm</span><span class="en">Premium seaweed extract · gentle yet powerful · ideal for sensitive skin</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">1,100,000đ</span><span class="svc-price-usd">~$42</span><button class="svc-book-btn" onclick="fillBook('Peel tảo Decaar cao cấp / Decaar premium peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel phục hồi cao cấp</span><span class="en">Premium recovery peel</span></span><span class="svc-desc"><span class="vi">Tái tạo chuyên sâu · da tổn thương, sần sùi, nám nhẹ</span><span class="en">Intensive resurfacing · damaged, textured, or mildly pigmented skin</span></span></div><div class="svc-right"><span class="svc-price">1,600,000đ</span><span class="svc-price-usd">~$60.5</span><button class="svc-book-btn" onclick="fillBook('Peel phục hồi cao cấp / Premium recovery peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
       <div class="svc-card-wrap">
         <div class="sub-cat-title">✨ Body Peel</div>
         <div class="svc-card-body">
-<div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm nách</span><span class="en">Underarm dark spot peel</span></span>
-              <span class="svc-desc"><span class="vi">Làm sáng & se khít lỗ chân lông · giảm thâm do cạo lông</span><span class="en">Brightens & tightens pores · fades shaving-induced pigmentation</span></span>
-              <span class="best-badge">⭐ Best Seller</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">650,000đ</span>
-              <span class="svc-price-usd">~$24.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm nách / Underarm dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm khuỷu tay</span><span class="en">Elbow dark spot peel</span></span>
-              <span class="svc-desc"><span class="vi">Làm sáng và đều màu da vùng khuỷu tay</span><span class="en">Brightens &amp; evens elbow skin tone</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">750,000đ</span>
-              <span class="svc-price-usd">~$28.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm khuỷu tay / Elbow peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm đầu gối</span><span class="en">Knee dark spot peel</span></span>
-              <span class="svc-desc"><span class="vi">Làm sáng và đều màu da vùng đầu gối</span><span class="en">Brightens &amp; evens skin tone on knees</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">850,000đ</span>
-              <span class="svc-price-usd">~$32</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm đầu gối / Knee dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-<div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm mụn ngực</span><span class="en">Chest acne dark spot peel</span></span>
-              <span class="svc-desc"><span class="vi">Làm mờ thâm mụn vùng ngực · kết hợp kháng khuẩn & sáng da</span><span class="en">Fades chest acne marks · antibacterial + brightening</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,350,000đ</span>
-              <span class="svc-price-usd">~$51</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ngực / Chest dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-<div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm mụn ½ lưng</span><span class="en">Half-back acne dark spot peel</span></span>
-              <span class="svc-desc"><span class="vi">BHA chuyên sâu · trị mụn & thâm vùng lưng một lúc</span><span class="en">BHA deep treatment · clears back acne & pigmentation together</span></span>
-              <span class="best-badge">⭐ Best Seller</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,500,000đ</span>
-              <span class="svc-price-usd">~$57</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ½ lưng / Half-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-<div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm mụn full lưng</span><span class="en">Full-back acne dark spot peel</span></span>
-              <span class="svc-desc"><span class="vi">Toàn bộ lưng · liệu trình toàn diện cho mụn lưng nặng</span><span class="en">Full back · comprehensive treatment for severe back acne</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">2,200,000đ</span>
-              <span class="svc-price-usd">~$83.5</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn full lưng / Full-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-<div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel trị thâm mông, bẹn</span><span class="en">Buttocks &amp; inner thigh peel</span></span>
-              <span class="svc-desc"><span class="vi">Đồng đều màu da vùng bikini · an toàn, kín đáo</span><span class="en">Evens bikini area skin tone · safe &amp; discreet</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,800,000đ</span>
-              <span class="svc-price-usd">~$68</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel trị thâm mông, bẹn / Buttocks & inner thigh peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-<div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel Bikini</span><span class="en">Bikini peel</span></span>
-              <span class="svc-desc"><span class="vi">Vùng bikini line · làm sáng, giảm thâm, mịn da</span><span class="en">Bikini line · brightens, reduces pigmentation, smooths skin</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,800,000đ</span>
-              <span class="svc-price-usd">~$68</span>
-              <button class="svc-book-btn" onclick="fillBook('Peel Bikini / Bikini peel')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm nách</span><span class="en">Underarm dark spot peel</span></span><span class="svc-desc"><span class="vi">Làm sáng & se khít lỗ chân lông · giảm thâm do cạo lông</span><span class="en">Brightens & tightens pores · fades shaving-induced pigmentation</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">650,000đ</span><span class="svc-price-usd">~$24.5</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm nách / Underarm dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm đầu gối</span><span class="en">Knee dark spot peel</span></span><span class="svc-desc"><span class="vi">Làm sáng và đều màu da vùng đầu gối</span><span class="en">Brightens &amp; evens skin tone on knees</span></span></div><div class="svc-right"><span class="svc-price">850,000đ</span><span class="svc-price-usd">~$32</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm đầu gối / Knee dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn ½ lưng</span><span class="en">Half-back acne dark spot peel</span></span><span class="svc-desc"><span class="vi">BHA chuyên sâu · trị mụn & thâm vùng lưng một lúc</span><span class="en">BHA deep treatment · clears back acne & pigmentation together</span></span><span class="best-badge">⭐ Best Seller</span></div><div class="svc-right"><span class="svc-price">1,500,000đ</span><span class="svc-price-usd">~$57</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn ½ lưng / Half-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mụn full lưng</span><span class="en">Full-back acne dark spot peel</span></span><span class="svc-desc"><span class="vi">Toàn bộ lưng · liệu trình toàn diện cho mụn lưng nặng</span><span class="en">Full back · comprehensive treatment for severe back acne</span></span></div><div class="svc-right"><span class="svc-price">2,200,000đ</span><span class="svc-price-usd">~$83.5</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mụn full lưng / Full-back dark spot peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel trị thâm mông, bẹn</span><span class="en">Buttocks &amp; inner thigh peel</span></span><span class="svc-desc"><span class="vi">Đồng đều màu da vùng bikini · an toàn, kín đáo</span><span class="en">Evens bikini area skin tone · safe &amp; discreet</span></span></div><div class="svc-right"><span class="svc-price">1,800,000đ</span><span class="svc-price-usd">~$68</span><button class="svc-book-btn" onclick="fillBook('Peel trị thâm mông, bẹn / Buttocks & inner thigh peel')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- COMBO -->
+  <!-- PACKAGES TAB -->
+  <div class="tab-content" id="tab-packages">
+    <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
+      <span class="vi">✦ <strong>Gói giá</strong> — Kết hợp nhiều dịch vụ cùng lúc để tiết kiệm hơn. Đặt lịch qua form bên dưới và ghi rõ gói muốn sử dụng.</span>
+      <span class="en">✦ <strong>Packages</strong> — Combine multiple services in one visit and save. Book below and mention the package you want.</span>
+    </div>
+    <div class="two-col">
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">🌿 <span class="vi">Gói body</span><span class="en">Body peel combos</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Body Glow — Nách + Đầu gối</span><span class="en">Body Glow — Underarms + Knees</span></span><span class="svc-desc"><span class="vi">2 vùng thâm phổ biến nhất · 1 buổi</span><span class="en">2 most popular dark areas · 1 session</span></span><span class="best-badge">⭐ Gợi ý</span></div><div class="svc-right"><span class="svc-price">1,200,000đ</span><span class="svc-price-usd">~$45.5 · tiết kiệm 250k</span><button class="svc-book-btn" onclick="fillBook('Body Glow - Nách + Đầu gối')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Summer Glow · Nách + Full Lưng</span><span class="en">Summer Glow · Underarms + Full Back</span></span><span class="svc-desc"><span class="vi">Peel thâm nách + peel mụn full lưng · sẵn sàng cho mùa hè</span><span class="en">Underarm + full-back acne peel · summer-ready skin</span></span><span class="best-badge">☀️ Hè 2026</span></div><div class="svc-right"><span class="svc-price">2,400,000đ</span><span class="svc-price-usd">~$91 · tiết kiệm 450k</span><button class="svc-book-btn" onclick="fillBook('Summer Glow - Nách + Full Lưng')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Beach Ready · Nách + Mông</span><span class="en">Beach Ready · Underarms + Buttocks</span></span><span class="svc-desc"><span class="vi">Peel thâm nách + peel thâm mông bẹn · tự tin diện bikini</span><span class="en">Underarm + buttocks dark spot peel · bikini-confident</span></span><span class="best-badge">🏖️ Hè 2026</span></div><div class="svc-right"><span class="svc-price">2,050,000đ</span><span class="svc-price-usd">~$78 · tiết kiệm 400k</span><button class="svc-book-btn" onclick="fillBook('Beach Ready - Nách + Mông')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Peel Lưng & Nách</span><span class="en">Back & Underarm Peel</span></span><span class="svc-desc"><span class="vi">Peel thâm ½ lưng + nách · 1 buổi</span><span class="en">½ back dark spot peel + underarm peel · 1 session</span></span></div><div class="svc-right"><span class="svc-price">1,900,000đ</span><span class="svc-price-usd">~$72</span><button class="svc-book-btn" onclick="fillBook('Peel Lưng & Nách combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Total Body Peel — lưng + nách + gối</span><span class="en">Total Body Peel — back + underarms + knees</span></span><span class="svc-desc"><span class="vi">Peel mụn full lưng · nách · đầu gối · 1 buổi</span><span class="en">Full-back acne peel · underarms · knees · 1 session</span></span><span class="best-badge">✨ Premium</span></div><div class="svc-right"><span class="svc-price">3,200,000đ</span><span class="svc-price-usd">~$121.5 · tiết kiệm 450k</span><button class="svc-book-btn" onclick="fillBook('Total Body Peel combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div class="svc-card-wrap">
+          <div class="sub-cat-title">✨ <span class="vi">Gói mặt + body</span><span class="en">Face & body bundle</span></div>
+          <div class="svc-card-body">
+            <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Peel Full — Mặt + Nách</span><span class="en">Peel Full — Face + Underarms</span></span><span class="svc-desc"><span class="vi">Peel mụn mặt + peel thâm nách · 1 buổi</span><span class="en">Acne peel + underarm pigmentation · 1 session</span></span><span class="best-badge">⭐ Best Value</span></div><div class="svc-right"><span class="svc-price">950,000đ</span><span class="svc-price-usd">~$36 · tiết kiệm 200k</span><button class="svc-book-btn" onclick="fillBook('Peel Full - Mặt + Nách')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+            <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+          </div>
+        </div>
+        <div class="svc-card-wrap">
+          <div class="sub-cat-title">🌍 Expat-friendly</div>
+          <div class="svc-card-body">
+            <div class="svc-row is-best"><div class="svc-left"><span class="svc-name">Saigon Skin Experience</span><span class="svc-desc"><span class="vi">Peel tảo Decaar + recovery mask sau peel</span><span class="en">Decaar algae peel + post-peel recovery mask</span></span><span class="best-badge">⭐ Popular with foreigners</span></div><div class="svc-right"><span class="svc-price">1,100,000đ</span><span class="svc-price-usd">~$42 · tiết kiệm 200k</span><button class="svc-book-btn" onclick="fillBook('Saigon Skin Experience')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+            <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMBO TAB -->
   <div class="tab-content" id="tab-combo">
     <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
       <div class="partner-badge">✦ Đối tác của Harmonie Beauté</div>
-      <div style="margin-bottom:0.6rem">
-        <span class="vi"><strong>Dịch vụ kết hợp</strong> — Thêm gội đầu hoặc massage sau liệu trình da. Thực hiện tại chỗ, không cần di chuyển. <em>Đặt lịch riêng bên dưới.</em></span>
-        <span class="en"><strong>Add-on services</strong> — Extend your visit with a hair wash or body massage after your skin treatment. <em>Book separately below.</em></span>
-      </div>
-      <a href="https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone" target="_blank" class="partner-book-btn">
-        <span class="vi">Đặt lịch Dịch vụ kết hợp →</span><span class="en">Book Add-on services →</span>
-      </a>
+      <div style="margin-bottom:0.6rem"><span class="vi"><strong>Dịch vụ kết hợp</strong> — Thêm gội đầu hoặc massage sau liệu trình da. <em>Đặt lịch riêng bên dưới.</em></span><span class="en"><strong>Add-on services</strong> — Extend your visit with a hair wash or body massage. <em>Book separately below.</em></span></div>
+      <a href="https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone" target="_blank" class="partner-book-btn"><span class="vi">Đặt lịch Dịch vụ kết hợp →</span><span class="en">Book Add-on services →</span></a>
     </div>
     <div class="two-col">
       <div class="svc-card-wrap">
         <div class="sub-cat-title">💆 Hair Care</div>
         <div class="svc-card-body">
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Gội dưỡng sinh</span><span class="en">Herbal hair wash</span></span><span class="svc-desc"><span class="vi">Thảo dược tự nhiên · dưỡng tóc & da đầu</span><span class="en">Natural herbs · nourishes scalp & hair</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">299,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 60'</span></span>
-              <span class="svc-price-usd">~$11.5</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Gội trị liệu</span><span class="en">Therapeutic hair wash</span></span><span class="svc-desc"><span class="vi">Phục hồi chuyên sâu · giảm rụng tóc</span><span class="en">Intensive repair · reduces hair loss</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">599,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 90'</span></span>
-              <span class="svc-price-usd">~$22.5</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Gội tóc đẹp</span><span class="en">Beauty hair wash</span></span><span class="svc-desc"><span class="vi">Liệu trình cao cấp · tóc bóng mượt, phục hồi hư tổn</span><span class="en">Premium treatment · glossy, damage-repaired hair</span></span><span class="best-badge">✨ Premium</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,500,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 90'</span></span>
-              <span class="svc-price-usd">~$57</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Gội dưỡng sinh</span><span class="en">Herbal hair wash</span></span><span class="svc-desc"><span class="vi">Thảo dược tự nhiên · dưỡng tóc & da đầu</span><span class="en">Natural herbs · nourishes scalp & hair</span></span></div><div class="svc-right"><span class="svc-price">299,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 60'</span></span><span class="svc-price-usd">~$11.5</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Gội trị liệu</span><span class="en">Therapeutic hair wash</span></span><span class="svc-desc"><span class="vi">Phục hồi chuyên sâu · giảm rụng tóc</span><span class="en">Intensive repair · reduces hair loss</span></span></div><div class="svc-right"><span class="svc-price">599,000đ<span style="font-size:0.65rem;color:var(--earth);font-weight:400"> / 90'</span></span><span class="svc-price-usd">~$22.5</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
       <div class="svc-card-wrap">
         <div class="sub-cat-title">🌿 Body Massage</div>
         <div class="svc-card-body">
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Aroma Massage</span><span class="en">Aroma Massage</span></span><span class="svc-desc"><span class="vi">Phù hợp: ít vận động, làm việc nhiều, tuần hoàn kém</span><span class="en">Best for: sedentary lifestyle, poor circulation</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">550,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span>
-              <span class="svc-price-usd">~$21 / 60' &nbsp; ~$26.5 / 90'</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Therapy Massage</span><span class="en">Therapy Massage</span></span><span class="svc-desc"><span class="vi">Phù hợp: phục hồi cơ sau tập, căng cơ, đau nhức</span><span class="en">Best for: post-workout recovery, muscle tension & joint pain</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">900,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span>
-              <span class="svc-price-usd">~$26.5 / 60' &nbsp; ~$34 / 90'</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name">Aroma Massage</span><span class="svc-desc"><span class="vi">Phù hợp: ít vận động, làm việc nhiều, tuần hoàn kém</span><span class="en">Best for: sedentary lifestyle, poor circulation</span></span></div><div class="svc-right"><span class="svc-price">550,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span><span class="svc-price-usd">~$21 / 60' · ~$26.5 / 90'</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name">Therapy Massage</span><span class="svc-desc"><span class="vi">Phù hợp: phục hồi cơ sau tập, căng cơ, đau nhức</span><span class="en">Best for: post-workout recovery, muscle tension & joint pain</span></span></div><div class="svc-right"><span class="svc-price">700,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 60'</span></span><span class="svc-price">900,000đ <span style="font-size:0.65rem;color:var(--earth);font-weight:400">/ 90'</span></span><span class="svc-price-usd">~$26.5 / 60' · ~$34 / 90'</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
           <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PMU -->
+  <!-- PMU TAB -->
   <div class="tab-content" id="tab-pmu">
     <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
       <div class="partner-badge">✦ Đối tác của Harmonie Beauté</div>
-      <div style="margin-bottom:0.6rem">
-        <span class="vi"><strong>Phun xăm thẩm mỹ</strong> — Dịch vụ vĩnh viễn thực hiện bởi chuyên gia PMU đối tác tại không gian Harmonie Beauté. <em>Vui lòng tư vấn trước khi đặt.</em></span>
-        <span class="en"><strong>Permanent makeup (PMU)</strong> — PMU services performed by a partner specialist at Harmonie Beauté. <em>Consultation required before booking.</em></span>
-      </div>
-      <a href="https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1" target="_blank" class="partner-book-btn">
-        <span class="vi">Đặt lịch PMU →</span><span class="en">Book PMU →</span>
-      </a>
+      <div style="margin-bottom:0.6rem"><span class="vi"><strong>Phun xăm thẩm mỹ</strong> — Dịch vụ vĩnh viễn thực hiện bởi chuyên gia PMU đối tác. <em>Vui lòng tư vấn trước khi đặt.</em></span><span class="en"><strong>Permanent makeup (PMU)</strong> — PMU services by a partner specialist. <em>Consultation required before booking.</em></span></div>
+      <a href="https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1" target="_blank" class="partner-book-btn"><span class="vi">Đặt lịch PMU →</span><span class="en">Book PMU →</span></a>
     </div>
     <div class="two-col">
       <div class="svc-card-wrap">
         <div class="sub-cat-title">🖊 Lông mày & Mí mắt / Brows & Eyes</div>
         <div class="svc-card-body">
-
-          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0 -0rem;font-weight:700;border-left:2px solid var(--moss)">Tint &amp; Lamination</div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Hybrid Tint</span><span class="en">Hybrid Tint</span></span><span class="svc-desc"><span class="vi">Nhuộm màu lông mày vĩnh viễn</span><span class="en">Permanent brow tinting</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">150,000đ</span>
-              <span class="svc-price-usd">~$6</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Brow Lamination</span><span class="en">Brow Lamination</span></span><span class="svc-desc"><span class="vi">Định hình và uốn lông mày</span><span class="en">Brow shaping & lifting treatment</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">350,000đ</span>
-              <span class="svc-price-usd">~$13.5</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Combo Lami + Tint</span><span class="en">Combo Lami + Tint</span></span><span class="svc-desc"><span class="vi">Định hình + Nhuộm</span><span class="en">Shaping + tinting combined</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">450,000đ</span>
-              <span class="svc-price-usd">~$17</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Phun xăm / PMU</div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Natural Brows</span><span class="en">Natural Brows</span></span><span class="svc-desc"><span class="vi">Phun mày tự nhiên</span><span class="en">Natural brows PMU</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">3,000,000đ</span>
-              <span class="svc-price-usd">~$114</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Brows Cover</span><span class="en">Brows Cover</span></span><span class="svc-desc"><span class="vi">Phun mày trên nền cũ</span><span class="en">Cover over existing brows</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">3,500,000đ</span>
-              <span class="svc-price-usd">~$133</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Hairstroke</span><span class="en">Hairstroke Brows</span></span><span class="svc-desc"><span class="vi">Sợi mày thiết kế</span><span class="en">Designed hairstrokes</span></span><span class="best-badge">⭐ Premium</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">4,500,000đ</span>
-              <span class="svc-price-usd">~$171</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Mixstyle Hairstroke</span><span class="en">Mixstyle Hairstroke</span></span><span class="svc-desc"><span class="vi">Tạo sợi đầu phun đuôi</span><span class="en">Hairstrokes at head, shading at tail</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">4,000,000đ</span>
-              <span class="svc-price-usd">~$152</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Mí mắt / Eyelids</div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Open Eyes</span><span class="en">Open Eyes PMU</span></span><span class="svc-desc"><span class="vi">Phun mí mở tròng</span><span class="en">Open eyes liner</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">2,000,000đ</span>
-              <span class="svc-price-usd">~$76</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Eyeliner</span><span class="en">Eyeliner PMU</span></span><span class="svc-desc"><span class="vi">Phun mí có đuôi</span><span class="en">Eyeliner with tail</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">2,500,000đ</span>
-              <span class="svc-price-usd">~$95</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name">Hybrid Tint</span><span class="svc-desc"><span class="vi">Nhuộm màu lông mày vĩnh viễn</span><span class="en">Permanent brow tinting</span></span></div><div class="svc-right"><span class="svc-price">150,000đ</span><span class="svc-price-usd">~$6</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name">Brow Lamination</span><span class="svc-desc"><span class="vi">Định hình và uốn lông mày</span><span class="en">Brow shaping & lifting treatment</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><span class="svc-price-usd">~$13.5</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name">Hairstroke Brows</span><span class="svc-desc"><span class="vi">Sợi mày thiết kế cao cấp</span><span class="en">Designed hairstrokes — premium</span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,500,000đ</span><span class="svc-price-usd">~$171</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT · Xem đầy đủ khi đặt lịch</span><span class="en">* Prices exclude VAT · Full menu available on booking</span></p>
         </div>
       </div>
       <div class="svc-card-wrap">
         <div class="sub-cat-title">💋 Môi & Laser / Lips & Laser</div>
         <div class="svc-card-body">
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Lip Pigment Removal</span><span class="en">Lip Pigment Removal</span></span><span class="svc-desc"><span class="vi">Loại bỏ mực môi cũ</span><span class="en">Removes old lip pigment</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,200,000đ</span>
-              <span class="svc-price-usd">~$45.5</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Khử thâm cơ bản</span><span class="en">Basic lip correction</span></span><span class="svc-desc"><span class="vi">Cân bằng sắc tố môi tối màu</span><span class="en">Balances dark lip pigment</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">2,500,000đ</span>
-              <span class="svc-price-usd">~$95</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Khử thâm chuyên sâu</span><span class="en">Advanced lip correction</span></span><span class="svc-desc"><span class="vi">Kết hợp cân bằng + phủ màu</span><span class="en">Combines balancing + colour overlay</span></span><span class="best-badge">⭐ Premium</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">4,000,000đ</span>
-              <span class="svc-price-usd">~$152</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Phun môi mới</span><span class="en">Lip PMU cover</span></span><span class="svc-desc"><span class="vi">Cover trên nền môi cũ đã từng làm</span><span class="en">Cover over previously tattooed lips</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">3,500,000đ</span>
-              <span class="svc-price-usd">~$133</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Điện di tinh chất TBG</span><span class="en">TBG stem cell treatment</span></span><span class="svc-desc"><span class="vi">Tăng sinh collagen · môi sau phun nhanh hồi màu</span><span class="en">Stimulates collagen · accelerates post-PMU colour recovery</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">800,000đ</span>
-              <span class="svc-price-usd">~$30.5</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div style="font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--moss);background:rgba(122,48,80,0.07);padding:0.4rem 1.2rem;margin:0.4rem 0 0;font-weight:700;border-left:2px solid var(--moss)">Laser xóa xăm / Laser Removal</div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Xóa lẻ theo vùng</span><span class="en">Laser removal (per area)</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,000,000đ</span>
-              <span class="svc-price-usd">~$38</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Combo không giới hạn</span><span class="en">Unlimited laser sessions</span></span><span class="best-badge">⭐ Best Value</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">2,500,000đ</span>
-              <span class="svc-price-usd">~$95</span>
-              <button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div style="font-size:0.7rem;color:var(--earth);padding:0.8rem 0 0.2rem;line-height:1.5;border-top:1px solid rgba(122,48,80,0.08);margin-top:0.3rem">✦ <span class="vi">Cá nhân hóa theo sắc tố · Bảo hành sau phun · An toàn, tỉ mỉ</span><span class="en">Personalised · Post-treatment warranty · Safe & precise</span></div>
-          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm cơ bản</span><span class="en">Basic lip correction</span></span><span class="svc-desc"><span class="vi">Cân bằng sắc tố môi tối màu</span><span class="en">Balances dark lip pigment</span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><span class="svc-price-usd">~$95</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm chuyên sâu</span><span class="en">Advanced lip correction</span></span><span class="svc-desc"><span class="vi">Kết hợp cân bằng + phủ màu</span><span class="en">Combines balancing + colour overlay</span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><span class="svc-price-usd">~$152</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Combo laser không giới hạn</span><span class="en">Unlimited laser sessions</span></span><span class="best-badge">⭐ Best Value</span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><span class="svc-price-usd">~$95</span><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT · Xem đầy đủ khi đặt lịch</span><span class="en">* Prices exclude VAT · Full menu available on booking</span></p>
         </div>
       </div>
     </div>
   </div>
-
-
-  <!-- PMU -->
-  <div class="tab-content" id="tab-pmu">
-    <div class="combo-note">
-      <div>
-        <span class="vi"><strong>Phun xăm thẩm mỹ</strong> — Dịch vụ phun xăm vĩnh viễn · Thực hiện tại không gian Harmonie Beauté · Đặt lịch qua Calendly để được tư vấn trước.</span>
-        <span class="en"><strong>Permanent makeup (PMU)</strong> — Professional PMU services · Available at Harmonie Beauté · Book via Calendly for a consultation.</span>
-      </div>
-    </div>
-    <div class="two-col">
-      <div class="svc-card-wrap">
-        <div class="sub-cat-title"><span class="vi">Lông mày — Tint & Lamination</span><span class="en">Brows — Tint & Lamination</span></div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hybrid Tint</span><span class="en">Hybrid Tint</span><span class="svc-desc"><span class="vi">Nhuộm màu lông mày vĩnh viễn</span><span class="en">Permanent brow tinting</span></span></span></div><div class="svc-right"><span class="svc-price">150,000đ</span><div class="svc-price-usd">~$6</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brow Lamination</span><span class="en">Brow Lamination</span><span class="svc-desc"><span class="vi">Định hình và uốn lông mày</span><span class="en">Brow shaping & lifting treatment</span></span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><div class="svc-price-usd">~$13.5</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo Lami + Tint</span><span class="en">Combo Lami + Tint</span><span class="svc-desc"><span class="vi">Định hình + Nhuộm</span><span class="en">Shaping + tinting combined</span></span></span></div><div class="svc-right"><span class="svc-price">450,000đ</span><div class="svc-price-usd">~$17</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Natural Brows</span><span class="en">Natural Brows</span><span class="svc-desc"><span class="vi">Phun mày tự nhiên</span><span class="en">Natural brows PMU</span></span></span></div><div class="svc-right"><span class="svc-price">3,000,000đ</span><div class="svc-price-usd">~$114</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Brows Cover</span><span class="en">Brows Cover</span><span class="svc-desc"><span class="vi">Phun mày trên nền cũ</span><span class="en">Cover over existing brows</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><div class="svc-price-usd">~$133</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Hairstroke</span><span class="en">Hairstroke Brows</span><span class="svc-desc"><span class="vi">Sợi mày thiết kế</span><span class="en">Designed hairstrokes</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,500,000đ</span><div class="svc-price-usd">~$171</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mixstyle Hairstroke</span><span class="en">Mixstyle Hairstroke</span><span class="svc-desc"><span class="vi">Tạo sợi đầu phun đuôi</span><span class="en">Hairstrokes at head, shading at tail</span></span></span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><div class="svc-price-usd">~$152</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-        </div>
-        <div class="sub-cat-title" style="margin-top:1rem"><span class="vi">Mí mắt</span><span class="en">Eyelids</span></div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Open Eyes</span><span class="en">Open Eyes</span><span class="svc-desc"><span class="vi">Phun mí mở tròng</span><span class="en">Open eyes liner</span></span></span></div><div class="svc-right"><span class="svc-price">2,000,000đ</span><div class="svc-price-usd">~$76</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Eyeliner</span><span class="en">Eyeliner PMU</span><span class="svc-desc"><span class="vi">Phun mí có đuôi</span><span class="en">Eyeliner with tail</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-        </div>
-      </div>
-      <div class="svc-card-wrap">
-        <div class="sub-cat-title"><span class="vi">Môi</span><span class="en">Lips</span></div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Lip Pigment Removal</span><span class="en">Lip Pigment Removal</span><span class="svc-desc"><span class="vi">Loại bỏ mực môi cũ</span><span class="en">Removes old lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">1,200,000đ</span><div class="svc-price-usd">~$45.5</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm cơ bản</span><span class="en">Basic lip correction</span><span class="svc-desc"><span class="vi">Cân bằng sắc tố môi tối màu</span><span class="en">Balances dark lip pigment</span></span></span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Khử thâm chuyên sâu</span><span class="en">Advanced lip correction</span><span class="svc-desc"><span class="vi">Kết hợp cân bằng + phủ màu</span><span class="en">Combines balancing + colour overlay</span></span></span><span class="best-badge">⭐ Premium</span></div><div class="svc-right"><span class="svc-price">4,000,000đ</span><div class="svc-price-usd">~$152</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Phun môi mới</span><span class="en">Lip PMU cover</span><span class="svc-desc"><span class="vi">Cover trên nền môi cũ đã từng làm</span><span class="en">Cover over previously tattooed lips</span></span></span></div><div class="svc-right"><span class="svc-price">3,500,000đ</span><div class="svc-price-usd">~$133</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Điện di tinh chất TBG</span><span class="en">TBG stem cell treatment</span><span class="svc-desc"><span class="vi">Tăng sinh collagen - giúp môi sau phun nhanh hồi màu</span><span class="en">Stimulates collagen - accelerates post-PMU colour recovery</span></span></span></div><div class="svc-right"><span class="svc-price">800,000đ</span><div class="svc-price-usd">~$30.5</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-        </div>
-        <div class="sub-cat-title" style="margin-top:1rem"><span class="vi">Laser xóa xăm</span><span class="en">Laser Removal</span></div>
-        <div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Xóa lẻ theo vùng</span><span class="en">Laser removal (per area)</span></span></div><div class="svc-right"><span class="svc-price">1,000,000đ</span><div class="svc-price-usd">~$38</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Combo không giới hạn</span><span class="en">Unlimited laser sessions</span></span><span class="best-badge">⭐ Best Value</span></div><div class="svc-right"><span class="svc-price">2,500,000đ</span><div class="svc-price-usd">~$95</div><button class="svc-book-btn" onclick="window.open('https://calendly.com/harmoniebeautevn/appointment-harmonie-beaute-clone-1','_blank')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
-          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-        </div>
-        <div class="svc-note-box" style="margin:1rem 0.5rem 0.5rem;padding:0.8rem 1rem;background:rgba(122,48,80,0.06);border-radius:10px;border-left:3px solid var(--gold)">
-          <p class="vi" style="font-size:0.72rem;color:var(--earth);line-height:1.6">✦ Tất cả dịch vụ cá nhân hóa theo sắc tố từng khách · Bảo hành và chăm sóc sau phun tận tâm · Cam kết an toàn, tỉ mỉ, đúng chuẩn thẩm mỹ hiện đại</p>
-          <p class="en" style="font-size:0.72rem;color:var(--earth);line-height:1.6">✦ All services personalised to each client · Post-treatment warranty & aftercare · Safe, precise, modern aesthetic standards</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- PACKAGES -->
-  <div class="tab-content" id="tab-packages">
-    <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
-      <span class="vi">✦ <strong>Gói giá</strong> — Kết hợp nhiều dịch vụ cùng lúc để tiết kiệm hơn. Đặt lịch qua form bên dưới và ghi rõ gói muốn sử dụng.</span>
-      <span class="en">✦ <strong>Packages</strong> — Combine multiple services in one visit and save. Book below and mention the package you want.</span>
-    </div>
-
-    <div class="two-col">
-      <!-- COL 1: BODY COMBOS -->
-      <div class="svc-card-wrap">
-        <div class="sub-cat-title"><span class="vi">🌿 Gói body — Body peel combos</span><span class="en">🌿 Body peel combos</span></div>
-        <div class="svc-card-body">
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Body Glow — Nách + Đầu gối</span><span class="en">Body Glow — Underarms + Knees</span></span>
-              <span class="svc-desc"><span class="vi">2 vùng thâm phổ biến nhất · 1 buổi</span><span class="en">2 most popular dark areas · 1 session</span></span>
-              <span class="best-badge">⭐ Gợi ý</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,200,000đ</span>
-              <span class="svc-price-usd">~$45.5 · tiết kiệm 250k</span>
-              <button class="svc-book-btn" onclick="fillBook('Body Glow - Nách + Đầu gối')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Summer Glow · Nách + Full Lưng</span><span class="en">Summer Glow · Underarms + Full Back</span></span>
-              <span class="svc-desc"><span class="vi">Peel thâm nách + peel mụn full lưng · sẵn sàng cho mùa hè</span><span class="en">Underarm + full-back acne peel · summer-ready skin</span></span>
-              <span class="best-badge">☀️ Hè 2026</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">2,400,000đ</span>
-              <span class="svc-price-usd">~$91 · tiết kiệm 450k</span>
-              <button class="svc-book-btn" onclick="fillBook('Summer Glow - Nách + Full Lưng')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Beach Ready · Nách + Mông</span><span class="en">Beach Ready · Underarms + Buttocks</span></span>
-              <span class="svc-desc"><span class="vi">Peel thâm nách + peel thâm mông bẹn · tự tin diện bikini</span><span class="en">Underarm + buttocks dark spot peel · bikini-confident</span></span>
-              <span class="best-badge">🏖️ Hè 2026</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">2,050,000đ</span>
-              <span class="svc-price-usd">~$78 · tiết kiệm 400k</span>
-              <button class="svc-book-btn" onclick="fillBook('Beach Ready - Nách + Mông')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Peel Lưng & Nách</span><span class="en">Back & Underarm Peel</span></span>
-              <span class="svc-desc"><span class="vi">Peel thâm ½ lưng + nách · 1 buổi</span><span class="en">½ back + underarm dark spot peel · 1 session</span></span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">1,600,000đ</span>
-              <span class="svc-price-usd">~$60.5 · tiết kiệm 250k</span>
-              <button class="svc-book-btn" onclick="fillBook('Back + Nách combo')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <div class="svc-row is-best">
-            <div class="svc-left">
-              <span class="svc-name"><span class="vi">Total Body Peel — lưng + nách + gối</span><span class="en">Total Body Peel — back + underarms + knees</span></span>
-              <span class="svc-desc"><span class="vi">Peel mụn full lưng · nách · đầu gối · 1 buổi</span><span class="en">Full-back acne peel · underarms · knees · 1 session</span></span>
-              <span class="best-badge">✨ Premium</span>
-            </div>
-            <div class="svc-right">
-              <span class="svc-price">3,200,000đ</span>
-              <span class="svc-price-usd">~$121.5 · tiết kiệm 450k</span>
-              <button class="svc-book-btn" onclick="fillBook('Total Body Peel combo')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-            </div>
-          </div>
-          <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-        </div>
-      </div>
-
-      <!-- COL 2: FACE+BODY & EXPAT -->
-      <div style="display:flex;flex-direction:column;gap:1.5rem">
-        <div class="svc-card-wrap">
-          <div class="sub-cat-title"><span class="vi">✨ Gói mặt + body</span><span class="en">✨ Face & body bundle</span></div>
-          <div class="svc-card-body">
-            <div class="svc-row is-best">
-              <div class="svc-left">
-                <span class="svc-name"><span class="vi">Peel Full — Mặt + Nách</span><span class="en">Peel Full — Face + Underarms</span></span>
-                <span class="svc-desc"><span class="vi">Peel mụn mặt + peel thâm nách · 1 buổi</span><span class="en">Acne peel + underarm pigmentation · 1 session</span></span>
-                <span class="best-badge">⭐ Best Value</span>
-              </div>
-              <div class="svc-right">
-                <span class="svc-price">950,000đ</span>
-                <span class="svc-price-usd">~$36 · tiết kiệm 200k</span>
-                <button class="svc-book-btn" onclick="fillBook('Peel Full - Mặt + Nách')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-              </div>
-            </div>
-            <div class="svc-row">
-              <div class="svc-left">
-                <span class="svc-name"><span class="vi">Glow Day — Mặt + Nách + Gối</span><span class="en">Glow Day — Face + Underarms + Knees</span></span>
-                <span class="svc-desc"><span class="vi">Trọn gói mặt và 2 vùng body · 1 buổi</span><span class="en">Full face + 2 body areas · 1 session</span></span>
-              </div>
-              <div class="svc-right">
-                <span class="svc-price">1,700,000đ</span>
-                <span class="svc-price-usd">~$64.5 · tiết kiệm 250k</span>
-                <button class="svc-book-btn" onclick="fillBook('Glow Day combo')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-              </div>
-            </div>
-            <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-          </div>
-        </div>
-
-        <div class="svc-card-wrap">
-          <div class="sub-cat-title">🌍 Expat-friendly</div>
-          <div class="svc-card-body">
-            <div class="svc-row is-best">
-              <div class="svc-left">
-                <span class="svc-name">Saigon Skin Experience</span>
-                <span class="svc-desc"><span class="vi">Peel tảo Decaar + recovery mask sau peel</span><span class="en">Decaar algae peel + post-peel recovery mask</span></span>
-                <span class="best-badge">⭐ Popular with foreigners</span>
-              </div>
-              <div class="svc-right">
-                <span class="svc-price">1,100,000đ</span>
-                <span class="svc-price-usd">~$42 · tiết kiệm 200k</span>
-                <button class="svc-book-btn" onclick="fillBook('Saigon Skin Experience')"><span class="vi">Đặt</span><span class="en">Book</span></button>
-              </div>
-            </div>
-            <p class="svc-vat-note"><span class="vi">* Giá chưa bao gồm VAT</span><span class="en">* Prices exclude VAT</span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+</section>
 
 <!-- PROMOTIONS -->
 <section class="promo-section section" id="promotions">
@@ -1374,107 +588,34 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <h2 class="section-title"><span class="vi">Chương trình <em>dành cho bạn</em></span><span class="en">Loyalty <em>programs</em></span></h2>
   <div class="section-line"></div>
   <div class="promo-grid">
-
-    <!-- COMBO NẶN MỤN -->
     <div class="promo-card promo-card-combo">
       <div class="promo-card-head">
         <p class="promo-card-tag"><span class="vi">Combo nặn mụn</span><span class="en">Acne combo</span></p>
-        <h3 class="promo-card-title">
-          <span class="vi">Đi nhiều — <em style="font-style:italic;color:var(--gold)">nhận nhiều hơn</em></span>
-          <span class="en">More visits — <em style="font-style:italic;color:var(--gold)">more rewards</em></span>
-        </h3>
-        <p class="promo-card-sub">
-          <span class="vi">Áp dụng cho tất cả dịch vụ nặn mụn · Không cần thanh toán trước</span>
-          <span class="en">Applies to all acne extraction services · No prepayment needed</span>
-        </p>
+        <h3 class="promo-card-title"><span class="vi">Đi nhiều — <em style="font-style:italic;color:var(--gold)">nhận nhiều hơn</em></span><span class="en">More visits — <em style="font-style:italic;color:var(--gold)">more rewards</em></span></h3>
+        <p class="promo-card-sub"><span class="vi">Áp dụng cho tất cả dịch vụ nặn mụn · Không cần thanh toán trước</span><span class="en">Applies to all acne extraction services · No prepayment needed</span></p>
       </div>
       <div class="promo-card-body">
-        <div class="combo-tier">
-          <div class="combo-tier-num">3</div>
-          <div class="combo-tier-text">
-            <strong class="vi">Buổi cùng loại → Giảm 10% buổi thứ 3</strong>
-            <strong class="en">Sessions same type → 10% off 3rd session</strong>
-            <span class="vi">Tự động áp dụng khi đủ buổi</span>
-            <span class="en">Automatically applied when eligible</span>
-          </div>
-        </div>
-        <div class="combo-tier">
-          <div class="combo-tier-num">5</div>
-          <div class="combo-tier-text">
-            <strong class="vi">Buổi cùng loại → Tặng 1 buổi miễn phí</strong>
-            <strong class="en">Sessions same type → 1 free session</strong>
-            <span class="vi">Cùng dịch vụ đã chọn</span>
-            <span class="en">Same service of your choice</span>
-          </div>
-        </div>
+        <div class="combo-tier"><div class="combo-tier-num">3</div><div class="combo-tier-text"><strong class="vi">Buổi cùng loại → Giảm 10% buổi thứ 3</strong><strong class="en">Sessions same type → 10% off 3rd session</strong><span class="vi">Tự động áp dụng khi đủ buổi</span><span class="en">Automatically applied when eligible</span></div></div>
+        <div class="combo-tier"><div class="combo-tier-num">5</div><div class="combo-tier-text"><strong class="vi">Buổi cùng loại → Tặng 1 buổi miễn phí</strong><strong class="en">Sessions same type → 1 free session</strong><span class="vi">Cùng dịch vụ đã chọn</span><span class="en">Same service of your choice</span></div></div>
         <p class="combo-note vi">Không áp dụng cho dịch vụ kết hợp của đối tác · Không hết hạn</p>
         <p class="combo-note en">Excludes partner add-on services · Points never expire</p>
       </div>
     </div>
-
-    <!-- TÍCH ĐIỂM -->
     <div class="promo-card promo-card-points">
       <div class="promo-card-head">
         <p class="promo-card-tag"><span class="vi">Tích điểm đổi quà</span><span class="en">Points rewards</span></p>
-        <h3 class="promo-card-title">
-          <span class="vi">10,000đ = <em style="font-style:italic;color:var(--gold)">1 điểm</em></span>
-          <span class="en">10,000đ = <em style="font-style:italic;color:var(--gold)">1 point</em></span>
-        </h3>
-        <p class="promo-card-sub">
-          <span class="vi">Điểm không hết hạn · Áp dụng cho tất cả dịch vụ Harmonie</span>
-          <span class="en">Points never expire · Applies to all Harmonie services</span>
-        </p>
+        <h3 class="promo-card-title"><span class="vi">10,000đ = <em style="font-style:italic;color:var(--gold)">1 điểm</em></span><span class="en">10,000đ = <em style="font-style:italic;color:var(--gold)">1 point</em></span></h3>
+        <p class="promo-card-sub"><span class="vi">Điểm không hết hạn · Áp dụng cho tất cả dịch vụ Harmonie</span><span class="en">Points never expire · Applies to all Harmonie services</span></p>
       </div>
       <div class="promo-card-body">
-        <div class="points-tier">
-          <div class="points-badge">🌱</div>
-          <div class="points-tier-content">
-            <div class="points-tier-label"><span class="vi">Cấp 1</span><span class="en">Level 1</span></div>
-            <div class="points-tier-pts">300 <span class="vi">điểm</span><span class="en">points</span></div>
-            <div class="points-tier-gifts">
-              <span class="vi">Tặng: Thải độc CO2</span>
-              <span class="en">Gift: CO2 detox</span>
-            </div>
-          </div>
-        </div>
-        <div class="points-tier">
-          <div class="points-badge">🌿</div>
-          <div class="points-tier-content">
-            <div class="points-tier-label"><span class="vi">Cấp 2</span><span class="en">Level 2</span></div>
-            <div class="points-tier-pts">500 <span class="vi">điểm</span><span class="en">points</span></div>
-            <div class="points-tier-gifts">
-              <span class="vi">Tặng: Peel trị thâm căng bóng</span>
-              <span class="en">Gift: Dark spot & glow peel</span>
-            </div>
-          </div>
-        </div>
-        <div class="points-tier">
-          <div class="points-badge">💎</div>
-          <div class="points-tier-content">
-            <div class="points-tier-label"><span class="vi">Cấp 3</span><span class="en">Level 3</span></div>
-            <div class="points-tier-pts">800 <span class="vi">điểm</span><span class="en">points</span></div>
-            <div class="points-tier-gifts">
-              <span class="vi">Tặng: Peel tảo Decaar cao cấp</span>
-              <span class="en">Gift: Decaar algae premium peel</span>
-            </div>
-          </div>
-        </div>
-        <div class="points-tier">
-          <div class="points-badge">⭐</div>
-          <div class="points-tier-content">
-            <div class="points-tier-label"><span class="vi">Cấp 4</span><span class="en">Level 4</span></div>
-            <div class="points-tier-pts">1,200 <span class="vi">điểm</span><span class="en">points</span></div>
-            <div class="points-tier-gifts">
-              <span class="vi">Tặng: Peel phục hồi cao cấp</span>
-              <span class="en">Gift: Premium recovery peel</span>
-            </div>
-          </div>
-        </div>
+        <div class="points-tier"><div class="points-badge">🌱</div><div class="points-tier-content"><div class="points-tier-label"><span class="vi">Cấp 1</span><span class="en">Level 1</span></div><div class="points-tier-pts">300 <span class="vi">điểm</span><span class="en">points</span></div><div class="points-tier-gifts"><span class="vi">Tặng: Thải độc CO2</span><span class="en">Gift: CO2 detox</span></div></div></div>
+        <div class="points-tier"><div class="points-badge">🌿</div><div class="points-tier-content"><div class="points-tier-label"><span class="vi">Cấp 2</span><span class="en">Level 2</span></div><div class="points-tier-pts">500 <span class="vi">điểm</span><span class="en">points</span></div><div class="points-tier-gifts"><span class="vi">Tặng: Peel trị thâm căng bóng</span><span class="en">Gift: Dark spot & glow peel</span></div></div></div>
+        <div class="points-tier"><div class="points-badge">💎</div><div class="points-tier-content"><div class="points-tier-label"><span class="vi">Cấp 3</span><span class="en">Level 3</span></div><div class="points-tier-pts">800 <span class="vi">điểm</span><span class="en">points</span></div><div class="points-tier-gifts"><span class="vi">Tặng: Peel tảo Decaar cao cấp</span><span class="en">Gift: Decaar algae premium peel</span></div></div></div>
+        <div class="points-tier"><div class="points-badge">⭐</div><div class="points-tier-content"><div class="points-tier-label"><span class="vi">Cấp 4</span><span class="en">Level 4</span></div><div class="points-tier-pts">1,200 <span class="vi">điểm</span><span class="en">points</span></div><div class="points-tier-gifts"><span class="vi">Tặng: Peel phục hồi cao cấp</span><span class="en">Gift: Premium recovery peel</span></div></div></div>
         <p class="points-footnote vi">Không tính điểm cho dịch vụ kết hợp của đối tác · Hỏi Hana để biết số điểm hiện tại</p>
         <p class="points-footnote en">Points exclude partner add-on services · Ask Hana to check your current balance</p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -1488,55 +629,97 @@ footer p{font-size:0.68rem;color:var(--earth)}
     <span class="en">Pick your service, date & time. Each session is 2 hours (1h45 treatment + 15 min break).</span>
   </p>
 </section>
-
-<!-- CALENDLY INLINE -->
 <div id="booking" style="background:var(--white)">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <div class="calendly-inline-widget"
-    data-url="https://calendly.com/harmoniebeautevn/reservation?hide_gdpr_banner=1&primary_color=7A3050"
-    style="min-width:320px;height:700px">
-  </div>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async>
-  </script>
-<script>
-// ── ANNOUNCEMENT BANNER ──
-(function(){
-  if(sessionStorage.getItem('bannerClosed')) {
-    const b = document.getElementById('announceBanner');
-    if(b) b.style.display='none';
-  }
-})();
-function closeBanner(){
-  document.getElementById('announceBanner').style.display='none';
-  sessionStorage.setItem('bannerClosed','1');
-}
-</script>
+  <div class="calendly-inline-widget" data-url="https://calendly.com/harmoniebeautevn/reservation?hide_gdpr_banner=1&primary_color=7A3050" style="min-width:320px;height:700px"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </div>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     BLOG — Featured 2-column layout (replaces horizontal scroll)
+     ═══════════════════════════════════════════════════════ -->
+<section class="blog-section section" id="blog">
+  <div class="blog-header">
+    <div>
+      <p class="section-tag">✦ Blog</p>
+      <h2 class="section-title"><span class="vi">Bí quyết <em>chăm sóc da</em></span><span class="en">Beauty <em>tips & care</em></span></h2>
+    </div>
+    <a href="blog.html" class="blog-see-all"><span class="vi">Xem tất cả →</span><span class="en">See all →</span></a>
+  </div>
+  <div class="section-line"></div>
+
+  <div class="blog-feat-grid">
+
+    <!-- LEFT: Featured main article -->
+    <a class="blog-feat-main" href="nan-mun-tan-dinh.html">
+      <div class="blog-feat-main-head">
+        <div class="blog-feat-pill vi">⭐ Nổi bật · Điều trị mụn</div>
+        <div class="blog-feat-pill en">⭐ Featured · Acne</div>
+        <h3 class="blog-feat-title">
+          <span class="vi">Nặn mụn ở đâu uy tín tại <em>Tân Định?</em></span>
+          <span class="en">Trusted acne extractions in <em>Tân Định?</em></span>
+        </h3>
+        <p class="blog-feat-excerpt">
+          <span class="vi">Những điều cần biết trước khi chọn nơi giao phó làn da — tiêu chí quan trọng và tại sao kỹ thuật đúng tạo ra khác biệt.</span>
+          <span class="en">What to know before trusting anyone with your skin — key criteria and why technique matters.</span>
+        </p>
+      </div>
+      <div class="blog-feat-main-foot">
+        <span class="blog-feat-foot-meta">Harmonie Beauté · May 2026 · 7 min</span>
+        <span class="blog-feat-foot-read vi">Đọc bài →</span>
+        <span class="blog-feat-foot-read en">Read →</span>
+      </div>
+    </a>
+
+    <!-- RIGHT: 4 cards in 2×2 grid -->
+    <div class="blog-side-stack">
+
+      <a class="blog-side-card" href="chemical-peel-la-gi.html">
+        <div class="blog-side-cat">Chemical Peel</div>
+        <div class="blog-side-content">
+          <div class="blog-side-title"><span class="vi">Chemical Peel là gì? Có đau không?</span><span class="en">What is a Chemical Peel? Does it hurt?</span></div>
+          <div class="blog-side-foot"><span class="blog-side-meta">8 min</span><span class="blog-side-arrow">→</span></div>
+        </div>
+      </a>
+
+      <a class="blog-side-card" href="tai-sao-mun-tai-phat.html">
+        <div class="blog-side-cat vi">Điều trị mụn</div><div class="blog-side-cat en" style="display:none">Acne</div>
+        <div class="blog-side-content">
+          <div class="blog-side-title"><span class="vi">Tại sao mụn cứ tái phát mãi dù đã điều trị?</span><span class="en">Why does acne keep coming back?</span></div>
+          <div class="blog-side-foot"><span class="blog-side-meta">7 min</span><span class="blog-side-arrow">→</span></div>
+        </div>
+      </a>
+
+      <a class="blog-side-card" href="5-thoi-quen-buoi-toi.html">
+        <div class="blog-side-cat">Lifestyle</div>
+        <div class="blog-side-content">
+          <div class="blog-side-title"><span class="vi">5 thói quen buổi tối giúp da đẹp hơn mỗi sáng</span><span class="en">5 evening habits for better skin every morning</span></div>
+          <div class="blog-side-foot"><span class="blog-side-meta">5 min</span><span class="blog-side-arrow">→</span></div>
+        </div>
+      </a>
+
+      <a class="blog-side-card" href="peel-tao-decaar.html">
+        <div class="blog-side-cat">Chemical Peel</div>
+        <div class="blog-side-content">
+          <div class="blog-side-title"><span class="vi">Peel tảo Decaar cao cấp là gì?</span><span class="en">What is Decaar Premium Algae Peel?</span></div>
+          <div class="blog-side-foot"><span class="blog-side-meta">7 min</span><span class="blog-side-arrow">→</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <!-- ADDRESS -->
 <section class="address-section" id="address">
   <div class="map-embed">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3919.1234!2d106.68821!3d10.79297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDQ3JzM0LjciTiAxMDbCsDQxJzE3LjYiRQ!5e0!3m2!1svi!2svn!4v1"
-      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3919.1234!2d106.68821!3d10.79297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDQ3JzM0LjciTiAxMDbCsDQxJzE3LjYiRQ!5e0!3m2!1svi!2svn!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <div class="contact-bar">
     <div class="contact-info">
-      <div class="contact-item">
-        <span class="contact-icon">📍</span>
-        <div class="contact-text">
-          <span class="contact-label"><span class="vi">Địa chỉ</span><span class="en">Address</span></span>
-          <span class="contact-value">30 Đặng Tất, Tân Định, TP. HCM</span>
-        </div>
-      </div>
-<div class="contact-item">
-        <span class="contact-icon">🕐</span>
-        <div class="contact-text">
-          <span class="contact-label"><span class="vi">Giờ mở cửa</span><span class="en">Hours</span></span>
-          <span class="contact-value"><span class="vi">T2 – CN · 10:00 – 20:00</span><span class="en">Mon – Sun · 10AM – 8PM</span></span>
-        </div>
-      </div>
+      <div class="contact-item"><span class="contact-icon">📍</span><div class="contact-text"><span class="contact-label"><span class="vi">Địa chỉ</span><span class="en">Address</span></span><span class="contact-value">30 Đặng Tất, Tân Định, TP. HCM</span></div></div>
+      <div class="contact-item"><span class="contact-icon">🕐</span><div class="contact-text"><span class="contact-label"><span class="vi">Giờ mở cửa</span><span class="en">Hours</span></span><span class="contact-value"><span class="vi">T2 – CN · 10:00 – 20:00</span><span class="en">Mon – Sun · 10AM – 8PM</span></span></div></div>
     </div>
     <div class="contact-btns">
       <button class="c-btn-call" onclick="document.getElementById('calendar').scrollIntoView({behavior:'smooth'})"><span class="vi">Đặt lịch ngay</span><span class="en">Book now</span></button>
@@ -1545,346 +728,25 @@ function closeBanner(){
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section class="reviews-section section" id="reviews">
-  <p class="section-tag">✦ <span class="vi">Khách hàng nói gì</span><span class="en">What clients say</span></p>
-  <h2 class="section-title"><span class="vi">Đánh giá <em>thực tế</em></span><span class="en">Real <em>reviews</em></span></h2>
-  <div class="section-line"></div>
-  <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
-    <div style="display:flex;gap:2px;color:var(--gold);font-size:1.1rem">★★★★★</div>
-    <span style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--charcoal);font-weight:400">5.0</span>
-    <span style="font-size:0.78rem;color:var(--earth)"><span class="vi">· Google Maps</span><span class="en">· Google Maps</span></span>
-    <span class="review-badge">✓ Google</span>
-  </div>
-  <div class="reviews-grid">
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Gấp gáp tìm tiệm mà không hy vọng nhiều — ai ngờ gặp được chỗ nhẹ nhàng, riêng tư, sạch sẽ đến từng chi tiết. Lúc đắp mặt nạ còn được massage đầu luôn! Chưa tới 300k mà được nuông chiều quá trời. Iuuuu tiệm quó!"</span>
-        <span class="en">"Rushed here with low expectations — then found somewhere so gentle, private and spotless. She even gave me a head massage while the mask was on. Under 300k for all that? Absolutely unreal."</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">K</div>
-        <div>
-          <div class="review-name">Khoa Nguyễn</div>
-          <div class="review-date"><span class="vi">1 tháng trước</span><span class="en">1 month ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Mới đi về là phải đánh giá liền — chị nặn mát tay, không bị sần đỏ như mấy chỗ trước. Giá okila lắm mà ít người biết tới tiệm. Chắc chắn sẽ quay lại!"</span>
-        <span class="en">"Got home and had to review right away — so gentle, no redness like other places. Great price but not enough people know this gem yet. Definitely coming back!"</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">N</div>
-        <div>
-          <div class="review-name">Bạn Nga</div>
-          <div class="review-date"><span class="vi">10 tháng trước</span><span class="en">10 months ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Mình ở SG từ hồi đại học mà toàn về quê nặn mụn vì sợ SG không uy tín. Từ khi tìm được Harmonie — trộm vía không thất vọng. Uy tín, hiệu quả, giá phải chăng — xứng đáng được biết đến nhiều hơn!"</span>
-        <span class="en">"I used to travel all the way home just for acne treatment — too scared of Saigon spas. Since finding Harmonie, I never have to do that again. Trusted, effective, affordable — deserves to be way more well-known."</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">H</div>
-        <div>
-          <div class="review-name">Hường Nguyễn</div>
-          <div class="review-date"><span class="vi">10 tháng trước</span><span class="en">10 months ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Chị chủ siêu thân thiện, cửa hàng sạch sẽ. Nặn có tâm ghê, siêu kỹ — nằm từ 9 giờ sáng tới 12 giờ trưa mới xong. Giá hơn 200k xíu mà chất lượng tuyệt vời!"</span>
-        <span class="en">"Super friendly owner, spotless shop. The extraction is so thorough — we went from 9am all the way to noon. Just over 200k for that level of care? Outstanding."</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">D</div>
-        <div>
-          <div class="review-name">Dương Hoàng</div>
-          <div class="review-date"><span class="vi">5 tháng trước</span><span class="en">5 months ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Tiệm nhỏ mà hiệu quả rẻ nhất quả đất — chị chủ dễ thương, đặc biệt nặn xong ít sưng, ít thâm lắm."</span>
-        <span class="en">"Small shop but incredibly effective and best value around. Lovely owner — extractions leave minimal swelling and bruising. That's what matters most."</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">L</div>
-        <div>
-          <div class="review-name">Lộc Lâm</div>
-          <div class="review-date"><span class="vi">11 tháng trước</span><span class="en">11 months ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Trước mình sợ spa nhỏ lắm — từ khi đến đây có suy nghĩ khác rồi. Chị nặn mát tay, không sưng thâm, tối nặn sáng hôm sau đã xẹp hết. Giá bình dân mà hiệu quả thật sự."</span>
-        <span class="en">"Used to be scared of small spas — this place changed my mind entirely. No swelling, no bruising; by next morning everything had calmed down. Affordable and genuinely effective."</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">L</div>
-        <div>
-          <div class="review-name">Lan Nhi</div>
-          <div class="review-date"><span class="vi">1 năm trước</span><span class="en">1 year ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Không gian nhỏ, xinh, dễ thương. Kỹ thuật viên mát tay, nói chuyện nhẹ nhàng. Sản phẩm tốt — da sau nặn siêu trộm vía!"</span>
-        <span class="en">"Small, pretty and charming space. The technician is gentle and soft-spoken. Great products — my skin looked amazing after the treatment."</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">M</div>
-        <div>
-          <div class="review-name">Mọc Văn Kim</div>
-          <div class="review-date"><span class="vi">9 tháng trước</span><span class="en">9 months ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-text">
-        <span class="vi">"Đã quay lại nhiều lần vì chất lượng ổn định — và không bị tư vấn thêm gì cả."</span>
-        <span class="en">"Kept coming back for consistently great quality — and never any pushy upselling. That trust means everything."</span>
-      </p>
-      <div class="review-author">
-        <div class="review-avatar">Đ</div>
-        <div>
-          <div class="review-name">Đậu Đậu</div>
-          <div class="review-date"><span class="vi">11 tháng trước</span><span class="en">11 months ago</span> · Google</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- BLOG -->
-<section class="blog-section section" id="blog">
-  <div class="blog-header">
-    <div>
-      <p class="section-tag">✦ Blog</p>
-      <h2 class="section-title"><span class="vi">Bí quyết <em>chăm sóc da</em></span><span class="en">Beauty <em>tips & care</em></span></h2>
-    </div>
-    <a href="blog.html" class="blog-see-all"><span class="vi">Xem tất cả</span><span class="en">See all</span> →</a>
-  </div>
-  <div class="section-line"></div>
-  <div class="blog-grid">
-    <a class="blog-card" href="nan-mun-tan-dinh.html">
-      <div class="blog-body">
-        <div class="blog-pill"><span class="vi">Điều trị mụn</span><span class="en">Acne</span></div>
-        <div class="blog-header-area">
-        <div class="blog-title"><span class="vi">Nặn mụn ở đâu uy tín tại Tân Định?</span><span class="en">Trusted acne extractions in Tân Định?</span></div>
-        </div>
-        <div class="blog-content-area">
-        <div class="blog-excerpt"><span class="vi">Tiêu chí quan trọng và tại sao kỹ thuật đúng tạo ra khác biệt lớn.</span><span class="en">Key criteria and why proper technique makes all the difference.</span></div>
-        <div class="blog-meta">May 2026 · 7 min</div>
-        </div>
-      </div>
-    </a>
-    <a class="blog-card" href="chemical-peel-la-gi.html">
-      <div class="blog-body">
-        <div class="blog-pill">Chemical Peel</div>
-        <div class="blog-header-area">
-        <div class="blog-title"><span class="vi">Chemical Peel là gì? Có đau không?</span><span class="en">What is a Chemical Peel? Does it hurt?</span></div>
-        </div>
-        <div class="blog-content-area">
-        <div class="blog-excerpt"><span class="vi">Cơ chế, các loại peel và ai thực sự phù hợp với liệu trình này.</span><span class="en">How it works, types of peels, and who it's actually right for.</span></div>
-        <div class="blog-meta">May 2026 · 8 min</div>
-        </div>
-      </div>
-    </a>
-    <a class="blog-card" href="tai-sao-mun-tai-phat.html">
-      <div class="blog-body">
-        <div class="blog-pill"><span class="vi">Điều trị mụn</span><span class="en">Acne</span></div>
-        <div class="blog-header-area">
-        <div class="blog-title"><span class="vi">Tại sao mụn cứ tái phát mãi dù đã điều trị?</span><span class="en">Why does acne keep coming back?</span></div>
-        </div>
-        <div class="blog-content-area">
-        <div class="blog-excerpt"><span class="vi">6 nguyên nhân phổ biến và cách điều trị đúng gốc rễ.</span><span class="en">6 common causes and how to treat the root, not symptoms.</span></div>
-        <div class="blog-meta">May 2026 · 7 min</div>
-        </div>
-      </div>
-    </a>
-    <a class="blog-card" href="peel-tao-decaar.html">
-      <div class="blog-body">
-        <div class="blog-pill">Chemical Peel</div>
-        <div class="blog-header-area">
-        <div class="blog-title"><span class="vi">Peel tảo Decaar là gì? Tại sao được yêu cầu nhiều nhất?</span><span class="en">What is Decaar Algae Peel? Why so popular?</span></div>
-        </div>
-        <div class="blog-content-area">
-        <div class="blog-excerpt"><span class="vi">Khác biệt so với peel acid thông thường và kết quả thực tế.</span><span class="en">How it differs from acid peels and what results to expect.</span></div>
-        <div class="blog-meta">May 2026 · 7 min</div>
-        </div>
-      </div>
-    </a>
-    <a class="blog-card" href="5-thoi-quen-buoi-toi.html">
-      <div class="blog-body">
-        <div class="blog-pill">Lifestyle</div>
-        <div class="blog-header-area">
-        <div class="blog-title"><span class="vi">5 thói quen buổi tối giúp da đẹp hơn mỗi sáng</span><span class="en">5 evening habits for better skin every morning</span></div>
-        </div>
-        <div class="blog-content-area">
-        <div class="blog-excerpt"><span class="vi">Những bước đơn giản trước khi ngủ tạo ra sự khác biệt rõ rệt.</span><span class="en">Simple steps before sleep that make a visible difference.</span></div>
-        <div class="blog-meta">May 2026 · 5 min</div>
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
-
-
-
-
 <!-- FAQ -->
 <section class="faq-section section">
   <p class="section-tag" style="text-align:center;margin-bottom:0.35rem">✦ FAQ</p>
-  <h2 class="section-title" style="margin-bottom:0.5rem" style="text-align:center"><span class="vi">Câu hỏi <em>thường gặp</em></span><span class="en">Frequently asked <em>questions</em></span></h2>
+  <h2 class="section-title" style="margin-bottom:0.5rem"><span class="vi">Câu hỏi <em>thường gặp</em></span><span class="en">Frequently asked <em>questions</em></span></h2>
   <div class="section-line"></div>
   <div class="faq-list">
-
-    <!-- Visible by default: 5 câu -->
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Lần đầu đến cần chuẩn bị gì không?</span><span class="en">What should I prepare for my first visit?</span>
-        <em class="faq-icon">+</em>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">
-        <span class="vi">Không cần chuẩn bị gì đặc biệt. Chỉ cần đến đúng giờ và mang mặt mộc (không trang điểm) để Hana đánh giá tình trạng da chính xác nhất. Nếu đang dùng thuốc điều trị da như retinol hay isotretinoin, hãy thông báo trước.</span>
-        <span class="en">No special preparation needed. Just arrive on time with a bare face (no makeup) so Hana can accurately assess your skin. If you're using prescription skin treatments like retinol or isotretinoin, please mention it beforehand.</span>
-      </div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Một buổi điều trị kéo dài bao lâu?</span><span class="en">How long does a session take?</span>
-        <em class="faq-icon">+</em>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">
-        <span class="vi">Mỗi lịch hẹn được đặt trong 1 tiếng 45 phút — đủ để Hana thực hiện đầy đủ quy trình mà không vội vàng. Sau đó có 15 phút nghỉ và dọn dẹp trước khi đón khách tiếp theo.</span>
-        <span class="en">Each appointment is booked for 1 hour 45 minutes — enough for Hana to complete the full treatment without rushing. There's then a 15-minute break for cleaning before the next client.</span>
-      </div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Sau khi nặn mụn, da có bị đỏ lâu không?</span><span class="en">Will my skin be red for long after extraction?</span>
-        <em class="faq-icon">+</em>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">
-        <span class="vi">Tùy tình trạng da. Thông thường da hơi hồng vài giờ đầu và trở về bình thường sau 24 giờ. Hana luôn dùng kỹ thuật nhẹ nhàng để giảm tối đa phản ứng sau điều trị và hướng dẫn chăm sóc da đúng cách sau buổi nặn.</span>
-        <span class="en">It depends on your skin. Usually skin is slightly pink for the first few hours and returns to normal within 24 hours. Hana always uses gentle technique to minimise post-treatment reaction and will guide you on proper aftercare.</span>
-      </div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Có phải đặt cọc trước không?</span><span class="en">Is a deposit required?</span>
-        <em class="faq-icon">+</em>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">
-        <span class="vi">Không cần đặt cọc. Tuy nhiên nếu cần hủy lịch, vui lòng báo trước ít nhất 24 giờ. Hủy trong vòng 24 giờ có thể phát sinh phí theo thỏa thuận.</span>
-        <span class="en">No deposit required. However if you need to cancel, please notify at least 24 hours in advance. Cancellations within 24 hours may incur a fee.</span>
-      </div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-q" onclick="toggleFaq(this)">
-        <span class="vi">Chemical Peel có phù hợp với da nhạy cảm không?</span><span class="en">Is Chemical Peel suitable for sensitive skin?</span>
-        <em class="faq-icon">+</em>
-      </button>
-      <div class="faq-a"><div class="faq-a-inner">
-        <span class="vi">Có, nếu chọn đúng loại. Hana đánh giá kỹ da trước khi chọn phác đồ. Peel tảo Decaar đặc biệt phù hợp với da nhạy cảm nhờ cơ chế nhẹ nhàng hơn peel acid thông thường.</span>
-        <span class="en">Yes, with the right peel type. Hana carefully assesses skin before choosing a protocol. The Decaar Algae Peel is particularly gentle and well-suited for sensitive skin compared to standard acid peels.</span>
-      </div></div>
-    </div>
-
-    <!-- Hidden: 5 câu thêm, hiện khi click See more -->
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Lần đầu đến cần chuẩn bị gì không?</span><span class="en">What should I prepare for my first visit?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Không cần chuẩn bị gì đặc biệt. Chỉ cần đến đúng giờ và mang mặt mộc để Hana đánh giá tình trạng da chính xác nhất. Nếu đang dùng thuốc điều trị da như retinol hay isotretinoin, hãy thông báo trước.</span><span class="en">No special preparation needed. Just arrive on time with a bare face so Hana can accurately assess your skin. If you're using prescription skin treatments like retinol or isotretinoin, please mention it beforehand.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Một buổi điều trị kéo dài bao lâu?</span><span class="en">How long does a session take?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Mỗi lịch hẹn được đặt trong 1 tiếng 45 phút — đủ để Hana thực hiện đầy đủ quy trình mà không vội vàng. Sau đó có 15 phút nghỉ và dọn dẹp trước khi đón khách tiếp theo.</span><span class="en">Each appointment is booked for 1 hour 45 minutes — enough for Hana to complete the full treatment without rushing. There's then a 15-minute break for cleaning before the next client.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Sau khi nặn mụn, da có bị đỏ lâu không?</span><span class="en">Will my skin be red for long after extraction?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Tùy tình trạng da. Thông thường da hơi hồng vài giờ đầu và trở về bình thường sau 24 giờ. Hana luôn dùng kỹ thuật nhẹ nhàng để giảm tối đa phản ứng sau điều trị.</span><span class="en">It depends on your skin. Usually skin is slightly pink for the first few hours and returns to normal within 24 hours. Hana always uses gentle technique to minimise post-treatment reaction.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Có phải đặt cọc trước không?</span><span class="en">Is a deposit required?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Không cần đặt cọc. Tuy nhiên nếu cần hủy lịch, vui lòng báo trước ít nhất 24 giờ.</span><span class="en">No deposit required. However if you need to cancel, please notify at least 24 hours in advance.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Chemical Peel có phù hợp với da nhạy cảm không?</span><span class="en">Is Chemical Peel suitable for sensitive skin?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Có, nếu chọn đúng loại. Hana đánh giá kỹ da trước khi chọn phác đồ. Peel tảo Decaar đặc biệt phù hợp với da nhạy cảm.</span><span class="en">Yes, with the right peel type. Hana carefully assesses skin before choosing a protocol. The Decaar Algae Peel is particularly gentle and well-suited for sensitive skin.</span></div></div></div>
     <div id="faq-extra" style="display:none;flex-direction:column">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="vi">Khách nước ngoài có được phục vụ không?</span><span class="en">Can international clients be served?</span>
-          <em class="faq-icon">+</em>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <span class="vi">Hoàn toàn được. Website và Calendly đều song ngữ Việt — Anh. Hana giao tiếp với khách quốc tế qua công cụ dịch và chuyên môn kỹ thuật cao — không rào cản ngôn ngữ nào ảnh hưởng đến chất lượng điều trị.</span>
-          <span class="en">Absolutely. The website and Calendly are fully bilingual. Hana communicates with international clients via translation tools — her high level of technical expertise speaks clearly regardless of language.</span>
-        </div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="vi">Tôi đang dùng Accutane có làm được không?</span><span class="en">Can I come if I'm on Accutane?</span>
-          <em class="faq-icon">+</em>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <span class="vi">Không nên. Isotretinoin (Accutane) làm da mỏng và rất nhạy cảm — nặn mụn hoặc peel trong thời gian này có thể gây tổn thương nặng. Nên chờ ít nhất 6 tháng sau khi dừng thuốc trước khi điều trị.</span>
-          <span class="en">Not recommended. Isotretinoin (Accutane) thins the skin significantly — extractions or peels during this time can cause serious damage. Wait at least 6 months after stopping the medication before treatment.</span>
-        </div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="vi">Tôi có thể trang điểm ngay sau buổi điều trị không?</span><span class="en">Can I wear makeup right after my session?</span>
-          <em class="faq-icon">+</em>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <span class="vi">Nên tránh trang điểm ít nhất 12–24 giờ sau nặn mụn hoặc peel. Lỗ chân lông vừa được làm sạch, trang điểm ngay có thể gây tắc nghẽn trở lại và làm giảm hiệu quả điều trị.</span>
-          <span class="en">Avoid makeup for at least 12–24 hours after extractions or a peel. Pores have just been cleared — applying makeup immediately can cause re-blockage and reduce the effectiveness of treatment.</span>
-        </div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="vi">Nên đi bao lâu một lần để có kết quả tốt nhất?</span><span class="en">How often should I come for best results?</span>
-          <em class="faq-icon">+</em>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <span class="vi">Tùy loại da: da dầu mụn nhiều nên đến mỗi 3–4 tuần, da hỗn hợp mỗi 4–6 tuần, da ít mụn mỗi 6–8 tuần. Hana sẽ tư vấn chu kỳ phù hợp nhất sau khi đánh giá da trong buổi đầu tiên.</span>
-          <span class="en">Depends on skin type: oily acne-prone skin every 3–4 weeks, combination skin every 4–6 weeks, less acne-prone skin every 6–8 weeks. Hana will recommend the ideal frequency after assessing your skin at the first session.</span>
-        </div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span class="vi">Có dịch vụ gội đầu và massage body không?</span><span class="en">Are hair washing and body massage available?</span>
-          <em class="faq-icon">+</em>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">
-          <span class="vi">Có — sau khi hoàn thành liệu trình da với Harmonie Beauté, bạn có thể thêm dịch vụ gội đầu hoặc massage body tại giường kế bên từ Amor Spa. Xem thêm ở tab "Dịch vụ kết hợp" trong phần dịch vụ.</span>
-          <span class="en">Yes — after your skin treatment with Harmonie Beauté, you can add a hair wash or body massage next door from Amor Spa. See the "Add-on services" tab in the services section above.</span>
-        </div></div>
-      </div>
-
-    </div><!-- end faq-extra -->
-
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Khách nước ngoài có được phục vụ không?</span><span class="en">Can international clients be served?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Hoàn toàn được. Website và Calendly đều song ngữ Việt — Anh. Hana giao tiếp với khách quốc tế qua công cụ dịch và chuyên môn kỹ thuật cao.</span><span class="en">Absolutely. The website and Calendly are fully bilingual. Hana communicates with international clients via translation tools — her technical expertise speaks clearly regardless of language.</span></div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Tôi đang dùng Accutane có làm được không?</span><span class="en">Can I come if I'm on Accutane?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Không nên. Isotretinoin làm da mỏng và rất nhạy cảm — nặn mụn hoặc peel trong thời gian này có thể gây tổn thương nặng. Nên chờ ít nhất 6 tháng sau khi dừng thuốc.</span><span class="en">Not recommended. Isotretinoin thins the skin significantly — extractions or peels during this time can cause serious damage. Wait at least 6 months after stopping the medication.</span></div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Nên đi bao lâu một lần để có kết quả tốt nhất?</span><span class="en">How often should I come for best results?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Tùy loại da: da dầu mụn nhiều nên đến mỗi 3–4 tuần, da hỗn hợp mỗi 4–6 tuần, da ít mụn mỗi 6–8 tuần. Hana sẽ tư vấn chu kỳ phù hợp nhất sau buổi đầu tiên.</span><span class="en">Depends on skin type: oily acne-prone skin every 3–4 weeks, combination skin every 4–6 weeks, less acne-prone skin every 6–8 weeks. Hana will recommend the ideal frequency at your first session.</span></div></div></div>
+    </div>
     <button class="faq-more-btn" id="faqMoreBtn" onclick="toggleFaqMore()">
       <span class="vi">+ Xem thêm câu hỏi</span><span class="en">+ See more questions</span>
     </button>
-
   </div>
 </section>
 
@@ -1900,111 +762,20 @@ function closeBanner(){
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Harmonie Beauté</div>
-  <p>© 2024 Harmonie Beauté · Tân Định, TP. HCM</p>
+  <p>© 2026 Harmonie Beauté · Tân Định, TP. HCM</p>
   <div class="social-links">
-      <a class="social-link" href="https://www.facebook.com/p/Harmonie-Beaut%C3%A9-61576627743088/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      </a>
-      <a class="social-link" href="https://www.instagram.com/harmonie_beautee/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <a class="social-link" href="https://www.threads.com/@harmonie_beautee/" target="_blank" rel="noopener" aria-label="Threads">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.028-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.284 2.651Zm1.586-11.439c-.807 0-2.693.198-2.696 1.887-.002.95.744 1.37 1.36 1.403 1.001.053 2.305-.307 2.567-2.013a11.21 11.21 0 0 0-1.231-.277Z"/></svg>
-      </a>
-      <a class="social-link" href="https://www.tiktok.com/@harmoniebeautee" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-      </a>
-    </div>
+    <a class="social-link" href="https://www.facebook.com/p/Harmonie-Beaut%C3%A9-61576627743088/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a class="social-link" href="https://www.instagram.com/harmonie_beautee/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a class="social-link" href="https://www.tiktok.com/@harmoniebeautee" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+  </div>
   <div class="footer-links">
     <a href="terms.html"><span class="vi">Điều khoản</span><span class="en">Terms</span></a>
     <a href="privacy.html"><span class="vi">Bảo mật</span><span class="en">Privacy</span></a>
   </div>
 </footer>
 
-<script>
-// ── BLOG DRAG SCROLL ──
-(function(){
-  const grid = document.querySelector('.blog-grid');
-  if(!grid) return;
-  let isDown=false, startX, scrollLeft;
-  grid.addEventListener('mousedown', e=>{isDown=true;startX=e.pageX-grid.offsetLeft;scrollLeft=grid.scrollLeft});
-  grid.addEventListener('mouseleave',()=>isDown=false);
-  grid.addEventListener('mouseup',()=>isDown=false);
-  grid.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();const x=e.pageX-grid.offsetLeft;grid.scrollLeft=scrollLeft-(x-startX)*1.5});
-})();
-
-// ── LANGUAGE ──
-function setLang(l){
-  document.documentElement.setAttribute('data-lang', l);
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    if(b.getAttribute('onclick') === "setLang('"+l+"')") b.classList.add('active');
-  });
-}
-
-// ── SERVICE TABS ──
-function switchTab(btn, id){
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('tab-'+id).classList.add('active');
-}
-
-// ── BOOK SHORTCUT ──
-function fillBook(name){
-  document.getElementById('calendar').scrollIntoView({behavior:'smooth'});
-}
-
-// ── HAMBURGER ──
-function toggleMenu(){
-  const btn = document.getElementById('hamburgerBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.classList.toggle('open');
-  menu.classList.toggle('open');
-}
-function closeMobileMenu(){
-  document.getElementById('hamburgerBtn').classList.remove('open');
-  document.getElementById('mobileMenu').classList.remove('open');
-}
-
-document.addEventListener('click', e=>{
-  const menu = document.getElementById('mobileMenu');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if(menu && hamburger && !menu.contains(e.target) && !hamburger.contains(e.target)){
-    menu.classList.remove('open');
-    hamburger.classList.remove('open');
-  }
-});
-
-// ── FAQ ──
-function toggleFaqMore(){
-  var extra=document.getElementById('faq-extra');
-  var btn=document.getElementById('faqMoreBtn');
-  var isOpen=extra.style.display==='flex';
-  if(isOpen){
-    extra.style.display='none';
-    btn.innerHTML='<span class="vi">+ Xem thêm câu hỏi</span><span class="en">+ See more questions</span>';
-  } else {
-    extra.style.display='flex';
-    btn.innerHTML='<span class="vi">− Thu gọn</span><span class="en">− Show less</span>';
-  }
-}
-function toggleFaq(btn){
-  var item=btn.closest('.faq-item');
-  var ans=item.querySelector('.faq-a');
-  var isOpen=btn.classList.contains('open');
-  document.querySelectorAll('.faq-q.open').forEach(function(b){
-    b.classList.remove('open');
-    b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
-  });
-  if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
-}
-</script>
-
-<!-- WHATSAPP FLOAT -->
 <div class="wa-float">
   <span class="wa-label">WhatsApp / Zalo</span>
   <a class="wa-btn" href="https://wa.me/84899090762?text=Xin+ch%C3%A0o+Harmonie+Beau%C3%A9+%E2%80%94+I%27d+like+to+book+an+appointment" target="_blank" rel="noopener" aria-label="WhatsApp">
@@ -2013,33 +784,65 @@ function toggleFaq(btn){
 </div>
 
 <script>
-// ── THEME TOGGLE ──
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('hb-theme', theme);
-  var track = document.getElementById('themeTrack');
-  var thumb = document.getElementById('themeThumb');
-  var icon  = document.getElementById('themeIcon');
-  if (!track) return;
-  if (theme === 'green') {
-    track.style.background = '#3D5A47';
-    thumb.style.background = '#fff';
-    thumb.style.left = '18px';
-    icon.textContent = '🌿';
-  } else {
-    track.style.background = '#7A3050';
-    thumb.style.background = '#fff';
-    thumb.style.left = '2px';
-    icon.textContent = '🌸';
-  }
+function setLang(l){
+  document.documentElement.setAttribute('data-lang',l);
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b=>{if(b.getAttribute('onclick')==="setLang('"+l+"')") b.classList.add('active')});
+  /* Fix side card cat labels for active lang */
+  document.querySelectorAll('.blog-side-cat.vi, .blog-side-cat.en').forEach(el=>{
+    el.style.display=(el.classList.contains(l))?'flex':'none';
+  });
 }
-function toggleTheme() {
-  var current = document.documentElement.getAttribute('data-theme') || 'rose';
-  applyTheme(current === 'green' ? 'rose' : 'green');
+function switchTab(btn,id){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active');
 }
-window.addEventListener('DOMContentLoaded', function(){
-  var saved = localStorage.getItem('hb-theme') || 'rose';
-  applyTheme(saved);
+function fillBook(name){document.getElementById('calendar').scrollIntoView({behavior:'smooth'});}
+function toggleMenu(){
+  document.getElementById('hamburgerBtn').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileMenu(){
+  document.getElementById('hamburgerBtn').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+document.addEventListener('click',e=>{
+  const menu=document.getElementById('mobileMenu'),hamburger=document.getElementById('hamburgerBtn');
+  if(menu&&hamburger&&!menu.contains(e.target)&&!hamburger.contains(e.target)){menu.classList.remove('open');hamburger.classList.remove('open')}
+});
+function toggleFaqMore(){
+  var extra=document.getElementById('faq-extra'),btn=document.getElementById('faqMoreBtn');
+  var isOpen=extra.style.display==='flex';
+  if(isOpen){extra.style.display='none';btn.innerHTML='<span class="vi">+ Xem thêm câu hỏi</span><span class="en">+ See more questions</span>';}
+  else{extra.style.display='flex';btn.innerHTML='<span class="vi">− Thu gọn</span><span class="en">− Show less</span>';}
+}
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item'),ans=item.querySelector('.faq-a'),isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(function(b){b.classList.remove('open');b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');});
+  if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
+}
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  localStorage.setItem('hb-theme',t);
+  var tk=document.getElementById('themeTrack'),th=document.getElementById('themeThumb'),ic=document.getElementById('themeIcon');
+  if(!tk)return;
+  if(t==='green'){tk.style.background='#3D5A47';th.style.left='18px';th.style.background='#fff';ic.textContent='🌿';}
+  else{tk.style.background='#7A3050';th.style.left='2px';th.style.background='#fff';ic.textContent='🌸';}
+}
+function toggleTheme(){
+  var c=document.documentElement.getAttribute('data-theme')||'rose';
+  applyTheme(c==='green'?'rose':'green');
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var s='rose';try{s=localStorage.getItem('hb-theme')||'rose';}catch(e){}
+  applyTheme(s);
+  /* Init side card lang visibility */
+  var lang=document.documentElement.getAttribute('data-lang')||'vi';
+  document.querySelectorAll('.blog-side-cat.vi,.blog-side-cat.en').forEach(el=>{
+    el.style.display=el.classList.contains(lang)?'flex':'none';
+  });
 });
 </script>
 </body>
