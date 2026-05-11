@@ -543,20 +543,16 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .wa-float:hover .wa-label{opacity:1;transform:translateX(0)}
 
 /* ── CATEGORY COLOURS ── */
-/* Acne: wine rose (default, khớp pick-card--acne) */
-/* Peel: medium purple (khớp pick-card--peel) */
-[data-cat="peel"] .art-card-head{background:linear-gradient(145deg,#5A3060,#3A1A45)}
-/* Skincare: olive green (khớp pick-card--care) */
-[data-cat="skincare"] .art-card-head{background:linear-gradient(145deg,#4A5820,#2E3A14)}
-/* Lifestyle: warm terracotta */
-[data-cat="lifestyle"] .art-card-head{background:linear-gradient(145deg,#6A4030,#4A2818)}
-/* Category panels: featured + all cards */
+/* Rose mode — C Warm editorial */
+[data-cat="peel"] .art-card-head{background:linear-gradient(145deg,#4A1A6A,#2E0A48)}
+[data-cat="skincare"] .art-card-head{background:linear-gradient(145deg,#4A5010,#2E3208)}
+[data-cat="lifestyle"] .art-card-head{background:linear-gradient(145deg,#7A5010,#523408)}
 #panel-peel .featured-head,
-#panel-peel .art-card-head{background:linear-gradient(145deg,#5A3060,#3A1A45)}
+#panel-peel .art-card-head{background:linear-gradient(145deg,#4A1A6A,#2E0A48)}
 #panel-skincare .featured-head,
-#panel-skincare .art-card-head{background:linear-gradient(145deg,#4A5820,#2E3A14)}
+#panel-skincare .art-card-head{background:linear-gradient(145deg,#4A5010,#2E3208)}
 #panel-lifestyle .featured-head,
-#panel-lifestyle .art-card-head{background:linear-gradient(145deg,#6A4030,#4A2818)}
+#panel-lifestyle .art-card-head{background:linear-gradient(145deg,#7A5010,#523408)}
 
 /* ── GREEN THEME ── */
 [data-theme="green"]{
@@ -572,15 +568,16 @@ footer p{font-size:0.68rem;color:var(--earth)}
 [data-theme="green"] .pick-card--peel .pick-card-head{background:linear-gradient(145deg,#1A3A30,#0E2820)}
 [data-theme="green"] .pick-card--care .pick-card-head{background:linear-gradient(145deg,#2A4018,#1A2C10)}
 /* Green overrides cho category colours */
+/* Green mode — D Forest · Navy · Gold · Rust */
 [data-theme="green"] [data-cat="peel"] .art-card-head,
 [data-theme="green"] #panel-peel .featured-head,
-[data-theme="green"] #panel-peel .art-card-head{background:linear-gradient(145deg,#1A3A30,#0E2820)}
+[data-theme="green"] #panel-peel .art-card-head{background:linear-gradient(145deg,#1A2A4A,#0E1A30)}
 [data-theme="green"] [data-cat="skincare"] .art-card-head,
 [data-theme="green"] #panel-skincare .featured-head,
-[data-theme="green"] #panel-skincare .art-card-head{background:linear-gradient(145deg,#2A4018,#1A2C10)}
+[data-theme="green"] #panel-skincare .art-card-head{background:linear-gradient(145deg,#4A3A10,#2E2408)}
 [data-theme="green"] [data-cat="lifestyle"] .art-card-head,
 [data-theme="green"] #panel-lifestyle .featured-head,
-[data-theme="green"] #panel-lifestyle .art-card-head{background:linear-gradient(145deg,#3A3018,#28200E)}
+[data-theme="green"] #panel-lifestyle .art-card-head{background:linear-gradient(145deg,#5A2A18,#3A180A)}
 
 /* ── THEME TOGGLE ── */
 .theme-toggle{display:flex;align-items:center;gap:6px;cursor:pointer;padding:4px;border-radius:50px}
