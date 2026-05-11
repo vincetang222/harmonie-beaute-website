@@ -150,7 +150,7 @@ a{text-decoration:none;color:inherit}
 .blog-3grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem}
 .blog-grid-card{display:flex;flex-direction:column;overflow:hidden;border-radius:10px;box-shadow:0 1px 8px var(--shadow);border:0.5px solid rgba(122,48,80,0.1);transition:all 0.22s;text-decoration:none}
 .blog-grid-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px var(--shadow-md)}
-.blog-grid-head{background:linear-gradient(145deg,#6E2442,#5A1E38);padding:0.65rem 0.75rem 0.7rem;transition:filter 0.2s;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.blog-grid-head{background:linear-gradient(145deg,#6E2442,#5A1E38);padding:0.65rem 0.75rem 0.7rem;transition:filter 0.2s;flex:1;display:flex;flex-direction:column;justify-content:flex-start;gap:0.3rem}
 .blog-grid-card:hover .blog-grid-head{filter:brightness(1.08)}
 .blog-grid-cat{font-size:0.44rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);font-weight:700;margin-bottom:0.3rem;opacity:0.8}
 .blog-grid-title{font-family:'Playfair Display',serif;font-size:0.75rem;font-weight:500;color:#F2EBD9;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
@@ -316,6 +316,21 @@ footer p{font-size:0.68rem;color:var(--earth)}
 [data-theme="green"] .blog-feat-wide-head{background:linear-gradient(135deg,#2A4A36,#1A3224)}
 [data-theme="green"] .blog-feat-tall-head{background:linear-gradient(160deg,#1E4A30,#102A1A)}
 [data-theme="green"] .blog-grid-head{background:linear-gradient(145deg,#2A4A36,#1A3224)}
+/* ── BLOG CARD CATEGORY COLOURS ── */
+/* Rose mode */
+[data-cat="peel"] .blog-feat-tall-head{background:linear-gradient(145deg,#4A1A6A,#2E0A48)}
+[data-cat="peel"] .blog-grid-head{background:linear-gradient(145deg,#4A1A6A,#2E0A48)}
+[data-cat="skincare"] .blog-feat-tall-head{background:linear-gradient(145deg,#4A5010,#2E3208)}
+[data-cat="skincare"] .blog-grid-head{background:linear-gradient(145deg,#4A5010,#2E3208)}
+[data-cat="lifestyle"] .blog-feat-tall-head{background:linear-gradient(145deg,#7A5010,#523408)}
+[data-cat="lifestyle"] .blog-grid-head{background:linear-gradient(145deg,#7A5010,#523408)}
+/* Green mode */
+[data-theme="green"] [data-cat="peel"] .blog-feat-tall-head,
+[data-theme="green"] [data-cat="peel"] .blog-grid-head{background:linear-gradient(145deg,#1A2A4A,#0E1A30)}
+[data-theme="green"] [data-cat="skincare"] .blog-feat-tall-head,
+[data-theme="green"] [data-cat="skincare"] .blog-grid-head{background:linear-gradient(145deg,#4A3A10,#2E2408)}
+[data-theme="green"] [data-cat="lifestyle"] .blog-feat-tall-head,
+[data-theme="green"] [data-cat="lifestyle"] .blog-grid-head{background:linear-gradient(145deg,#5A2A18,#3A180A)}
 [data-theme="green"] .blog-side-cat{background:linear-gradient(180deg,#2A4A36,#1A3224)}
 [data-theme="green"] .blog-header-area{background:linear-gradient(145deg,#2D5A3A,#244A30)}
 [data-theme="green"] .reviews-section{background:#E8F0E8}
@@ -774,7 +789,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <div class="blog-split-grid">
 
     <!-- LEFT: Featured tall card -->
-    <a class="blog-feat-tall" href="nan-mun-tan-dinh.html">
+    <a class="blog-feat-tall" href="nan-mun-tan-dinh.html" data-cat="acne">
       <div class="blog-feat-tall-head">
         <span class="blog-feat-tall-pill vi">⭐ Nổi bật</span>
         <span class="blog-feat-tall-pill en">⭐ Featured</span>
@@ -799,15 +814,15 @@ footer p{font-size:0.68rem;color:var(--earth)}
     <!-- RIGHT: 2×2 grid -->
     <div class="blog-3grid">
 
-      <a class="blog-grid-card" href="chemical-peel-la-gi.html">
+      <a class="blog-grid-card" href="chemical-peel-la-gi.html" data-cat="peel">
         <div class="blog-grid-head">
-          <div class="blog-grid-cat">Chemical Peel</div>
+          <div class="blog-grid-cat vi">Chemical Peel</div><div class="blog-grid-cat en" style="display:none">Chemical Peel</div>
           <div class="blog-grid-title"><span class="vi">Chemical Peel là gì? Có đau không?</span><span class="en">What is a Chemical Peel? Does it hurt?</span></div>
         </div>
         <div class="blog-grid-foot"><span class="blog-grid-meta">8 min</span><span class="blog-grid-arrow">→</span></div>
       </a>
 
-      <a class="blog-grid-card" href="tai-sao-mun-tai-phat.html">
+      <a class="blog-grid-card" href="tai-sao-mun-tai-phat.html" data-cat="acne">
         <div class="blog-grid-head">
           <div class="blog-grid-cat vi">Điều trị mụn</div><div class="blog-grid-cat en" style="display:none">Acne</div>
           <div class="blog-grid-title"><span class="vi">Tại sao mụn cứ tái phát mãi dù đã điều trị?</span><span class="en">Why does acne keep coming back?</span></div>
@@ -815,15 +830,15 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="blog-grid-foot"><span class="blog-grid-meta">7 min</span><span class="blog-grid-arrow">→</span></div>
       </a>
 
-      <a class="blog-grid-card" href="peel-tham-nach-can-may-buoi.html">
+      <a class="blog-grid-card" href="peel-tham-nach-can-may-buoi.html" data-cat="peel">
         <div class="blog-grid-head">
-          <div class="blog-grid-cat">Chemical Peel</div>
+          <div class="blog-grid-cat vi">Chemical Peel</div><div class="blog-grid-cat en" style="display:none">Chemical Peel</div>
           <div class="blog-grid-title"><span class="vi">Peel thâm nách cần mấy buổi?</span><span class="en">How many sessions to lighten dark underarms?</span></div>
         </div>
         <div class="blog-grid-foot"><span class="blog-grid-meta">6 min</span><span class="blog-grid-arrow">→</span></div>
       </a>
 
-      <a class="blog-grid-card" href="bao-lau-nan-mun.html">
+      <a class="blog-grid-card" href="bao-lau-nan-mun.html" data-cat="skincare">
         <div class="blog-grid-head">
           <div class="blog-grid-cat vi">Chăm sóc da</div><div class="blog-grid-cat en" style="display:none">Skin care</div>
           <div class="blog-grid-title"><span class="vi">Bao lâu nên đi nặn mụn một lần?</span><span class="en">How often should you get extractions?</span></div>
@@ -834,6 +849,8 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div><!-- end blog-3grid -->
 
   </div><!-- end blog-split-grid -->
+
+</section><!-- end blog-section -->
 
 
 <!-- ADDRESS -->
