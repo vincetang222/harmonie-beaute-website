@@ -129,7 +129,7 @@ a{text-decoration:none;color:inherit}
 .blog-feat-foot-read{font-size:0.68rem;color:var(--moss);font-weight:600;letter-spacing:0.04em;transition:letter-spacing 0.2s}
 .blog-feat-main:hover .blog-feat-foot-read{letter-spacing:0.09em}
 /* ── BLOG: split left (featured tall) + right (3×3) ── */
-.blog-split-grid{display:grid;grid-template-columns:1fr 2fr;gap:0.7rem;align-items:stretch}
+.blog-split-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;align-items:stretch}
 
 /* Featured tall card (left column) */
 .blog-feat-tall{display:flex;flex-direction:column;overflow:hidden;border-radius:13px;box-shadow:0 3px 18px var(--shadow);border:0.5px solid rgba(122,48,80,0.1);text-decoration:none;transition:all 0.22s;height:100%}
@@ -147,7 +147,7 @@ a{text-decoration:none;color:inherit}
 .blog-feat-tall:hover .blog-feat-tall-read{letter-spacing:0.1em}
 
 /* 3×3 grid (right column) */
-.blog-3grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem}
+.blog-3grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem}
 .blog-grid-card{display:flex;flex-direction:column;overflow:hidden;border-radius:10px;box-shadow:0 1px 8px var(--shadow);border:0.5px solid rgba(122,48,80,0.1);transition:all 0.22s;text-decoration:none}
 .blog-grid-card:hover{transform:translateY(-2px);box-shadow:0 5px 16px var(--shadow-md)}
 .blog-grid-head{background:linear-gradient(145deg,#6E2442,#5A1E38);padding:0.65rem 0.75rem 0.7rem;transition:filter 0.2s;flex:1;display:flex;flex-direction:column;justify-content:space-between}
@@ -721,7 +721,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
       </div>
     </a>
 
-    <!-- RIGHT: 3×3 grid (9 articles, no duplicates with featured) -->
+    <!-- RIGHT: 2×2 grid -->
     <div class="blog-3grid">
 
       <a class="blog-grid-card" href="chemical-peel-la-gi.html">
@@ -732,14 +732,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="blog-grid-foot"><span class="blog-grid-meta">8 min</span><span class="blog-grid-arrow">→</span></div>
       </a>
 
-      <a class="blog-grid-card" href="peel-tham-nach-can-may-buoi.html">
-        <div class="blog-grid-head">
-          <div class="blog-grid-cat">Chemical Peel</div>
-          <div class="blog-grid-title"><span class="vi">Peel thâm nách cần mấy buổi?</span><span class="en">How many sessions to lighten dark underarms?</span></div>
-        </div>
-        <div class="blog-grid-foot"><span class="blog-grid-meta">6 min</span><span class="blog-grid-arrow">→</span></div>
-      </a>
-
       <a class="blog-grid-card" href="tai-sao-mun-tai-phat.html">
         <div class="blog-grid-head">
           <div class="blog-grid-cat vi">Điều trị mụn</div><div class="blog-grid-cat en" style="display:none">Acne</div>
@@ -748,26 +740,10 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="blog-grid-foot"><span class="blog-grid-meta">7 min</span><span class="blog-grid-arrow">→</span></div>
       </a>
 
-      <a class="blog-grid-card" href="da-dau-mun.html">
-        <div class="blog-grid-head">
-          <div class="blog-grid-cat vi">Điều trị mụn</div><div class="blog-grid-cat en" style="display:none">Acne</div>
-          <div class="blog-grid-title"><span class="vi">Da dầu mụn nên chăm sóc như thế nào?</span><span class="en">How to care for oily, acne-prone skin?</span></div>
-        </div>
-        <div class="blog-grid-foot"><span class="blog-grid-meta">6 min</span><span class="blog-grid-arrow">→</span></div>
-      </a>
-
-      <a class="blog-grid-card" href="peel-tao-decaar.html">
+      <a class="blog-grid-card" href="peel-tham-nach-can-may-buoi.html">
         <div class="blog-grid-head">
           <div class="blog-grid-cat">Chemical Peel</div>
-          <div class="blog-grid-title"><span class="vi">Peel tảo Decaar cao cấp là gì?</span><span class="en">What is Decaar Premium Algae Peel?</span></div>
-        </div>
-        <div class="blog-grid-foot"><span class="blog-grid-meta">7 min</span><span class="blog-grid-arrow">→</span></div>
-      </a>
-
-      <a class="blog-grid-card" href="mun-an-la-gi.html">
-        <div class="blog-grid-head">
-          <div class="blog-grid-cat vi">Điều trị mụn</div><div class="blog-grid-cat en" style="display:none">Acne</div>
-          <div class="blog-grid-title"><span class="vi">Mụn ẩn là gì — và tại sao khó điều trị hơn?</span><span class="en">What are closed comedones — and why harder to treat?</span></div>
+          <div class="blog-grid-title"><span class="vi">Peel thâm nách cần mấy buổi?</span><span class="en">How many sessions to lighten dark underarms?</span></div>
         </div>
         <div class="blog-grid-foot"><span class="blog-grid-meta">6 min</span><span class="blog-grid-arrow">→</span></div>
       </a>
@@ -776,22 +752,6 @@ footer p{font-size:0.68rem;color:var(--earth)}
         <div class="blog-grid-head">
           <div class="blog-grid-cat vi">Chăm sóc da</div><div class="blog-grid-cat en" style="display:none">Skin care</div>
           <div class="blog-grid-title"><span class="vi">Bao lâu nên đi nặn mụn một lần?</span><span class="en">How often should you get extractions?</span></div>
-        </div>
-        <div class="blog-grid-foot"><span class="blog-grid-meta">6 min</span><span class="blog-grid-arrow">→</span></div>
-      </a>
-
-      <a class="blog-grid-card" href="nan-mun-lung.html">
-        <div class="blog-grid-head">
-          <div class="blog-grid-cat vi">Điều trị mụn</div><div class="blog-grid-cat en" style="display:none">Acne</div>
-          <div class="blog-grid-title"><span class="vi">Nặn mụn lưng — quy trình đúng và tại sao không nên tự làm</span><span class="en">Back acne extraction — correct process & why not DIY</span></div>
-        </div>
-        <div class="blog-grid-foot"><span class="blog-grid-meta">6 min</span><span class="blog-grid-arrow">→</span></div>
-      </a>
-
-      <a class="blog-grid-card" href="chemical-peel-guide-foreigner-saigon.html">
-        <div class="blog-grid-head">
-          <div class="blog-grid-cat">Expat Guide</div>
-          <div class="blog-grid-title"><span class="vi">Hướng dẫn chemical peel cho khách quốc tế</span><span class="en">Chemical peel in HCMC — a foreigner's guide</span></div>
         </div>
         <div class="blog-grid-foot"><span class="blog-grid-meta">6 min</span><span class="blog-grid-arrow">→</span></div>
       </a>
