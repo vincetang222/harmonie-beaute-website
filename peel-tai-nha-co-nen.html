@@ -148,7 +148,66 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
 
+
+/* ── FAQ (from index) ── */
+.faq-section-inline{margin:3rem 0}
+.faq-section-inline .faq-tag{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:700;display:inline-flex;align-items:center;gap:6px;background:var(--moss);padding:5px 16px;border-radius:50px;margin-bottom:1.1rem}
+.faq-section-inline h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:0.9rem}
+.faq-section-inline h2 em{color:var(--gold);font-style:italic}
+.faq-section-inline .faq-line{width:48px;height:2.5px;background:var(--gold);margin-bottom:2rem;border-radius:2px}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--sand)}
+.faq-item:first-child{border-top:1px solid var(--sand)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:0.9rem 0;font-size:0.9rem;font-weight:500;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.15s}
+.faq-q:hover{color:var(--moss)}
+.faq-q.open{color:var(--moss)}
+.faq-icon{font-size:1rem;color:var(--moss-light);flex-shrink:0;transition:transform 0.25s;font-style:normal;font-weight:300}
+.faq-q.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-a.open{max-height:500px}
+.faq-a-inner{padding:0 0 1rem;font-size:0.87rem;color:var(--earth);line-height:1.8;font-weight:300}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://harmonie-beaute-vietnam.com/peel-tai-nha-co-nen.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AHA nồng độ bao nhiêu là an toàn để dùng tại nhà?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AHA dưới 10% với pH trên 3.5 được coi là an toàn cho tự dùng tại nhà. Từ AHA 20% trở lên cần thực hiện tại cơ sở chuyên nghiệp vì nguy cơ bỏng hóa học nếu không trung hòa đúng cách."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sau khi peel tại nhà, da bị đỏ kéo dài có đáng lo không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Đỏ nhẹ trong 1–2 giờ là bình thường. Đỏ kéo dài hơn 24 giờ hoặc kèm cảm giác nóng rát và sưng là dấu hiệu phản ứng quá mức — cần dừng sản phẩm ngay và không bôi thêm bất kỳ active nào."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peel tại nhà và peel tại spa khác nhau thế nào về kết quả?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Peel tại nhà ở nồng độ thấp chủ yếu tẩy tế bào chết bề mặt và duy trì kết quả giữa các buổi trị liệu — không thay thế được peel chuyên sâu. Peel chuyên nghiệp dùng nồng độ cao hơn với kỹ thuật kiểm soát chính xác, cho phép xử lý sâu hơn mà vẫn an toàn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bao lâu nên peel da một lần tại nhà?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sản phẩm AHA/BHA nồng độ thấp (toner, serum) có thể dùng 2–3 lần/tuần. Mask peel nồng độ trung bình (AHA 10%) tối đa 1–2 lần/tuần. Tần suất cao hơn không cho kết quả tốt hơn — ngược lại gây mỏng da và tăng nhạy cảm."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -251,6 +310,18 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
 
 <div class="references"><div class="references-title vi">Tài liệu tham khảo</div><div class="references-title en">References</div><ol><li>Sharad, J. (2013). Glycolic acid peel therapy — a current review. <em>Clinical, Cosmetic and Investigational Dermatology</em>, 6, 281–288.</li><li>Landau, M. (2008). Cardiac complications in deep chemical peels. <em>Dermatologic Surgery</em>, 34(2), 190–193.</li></ol></div>
+
+<div class="faq-section-inline">
+  <p class="faq-tag"><span class="vi">✦ Giải đáp thắc mắc</span><span class="en">✦ FAQ</span></p>
+  <h2><span class="vi">Câu hỏi <em>thường gặp</em></span><span class="en">Frequently asked <em>questions</em></span></h2>
+  <div class="faq-line"></div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">AHA nồng độ bao nhiêu là an toàn để dùng tại nhà?</span><span class="en">What AHA concentration is safe for home use?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">AHA dưới 10% với pH trên 3.5 được coi là an toàn cho tự dùng tại nhà. Từ AHA 20% trở lên cần thực hiện tại cơ sở chuyên nghiệp vì nguy cơ bỏng hóa học nếu không trung hòa đúng cách.</span><span class="en">AHA below 10% with pH above 3.5 is considered safe for home use. From AHA 20% upward, professional application is required due to chemical burn risk without proper neutralisation.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Sau khi peel tại nhà, da bị đỏ kéo dài có đáng lo không?</span><span class="en">Is prolonged redness after at-home peeling a concern?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Đỏ nhẹ trong 1–2 giờ là bình thường. Đỏ kéo dài hơn 24 giờ hoặc kèm cảm giác nóng rát và sưng là dấu hiệu phản ứng quá mức — cần dừng sản phẩm ngay và không bôi thêm bất kỳ active nào.</span><span class="en">Mild redness for 1–2 hours is normal. Redness lasting more than 24 hours, or with burning and swelling, signals an excessive reaction — stop the product immediately and don't apply any other actives.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Peel tại nhà và peel tại spa khác nhau thế nào về kết quả?</span><span class="en">How do at-home peels compare to professional peels in results?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Peel tại nhà ở nồng độ thấp chủ yếu tẩy tế bào chết bề mặt và duy trì kết quả giữa các buổi trị liệu — không thay thế được peel chuyên sâu. Peel chuyên nghiệp dùng nồng độ cao hơn với kỹ thuật kiểm soát chính xác, cho phép xử lý sâu hơn mà vẫn an toàn.</span><span class="en">At-home peels at low concentrations mainly exfoliate the surface and maintain results between treatments — they can't replace professional deep peels. Professional peels use higher concentrations with precise technique, allowing deeper treatment while remaining safe.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Bao lâu nên peel da một lần tại nhà?</span><span class="en">How often should you peel at home?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Sản phẩm AHA/BHA nồng độ thấp (toner, serum) có thể dùng 2–3 lần/tuần. Mask peel nồng độ trung bình (AHA 10%) tối đa 1–2 lần/tuần. Tần suất cao hơn không cho kết quả tốt hơn — ngược lại gây mỏng da và tăng nhạy cảm.</span><span class="en">Low-concentration AHA/BHA products (toners, serums) can be used 2–3 times per week. Medium-concentration peel masks (AHA 10%) maximum 1–2 times per week. More frequency doesn't mean better results — it causes skin thinning and increased sensitivity.</span></div></div></div>
+  </div>
+</div>
 <div class="cta-banner">
     <p class="cta-banner-tag">✦ Harmonie Beauté · Tân Định</p>
     <h3 class="vi">Peel chuyên nghiệp — <em>an toàn hơn, hiệu quả hơn</em></h3><h3 class="en">Professional peel — <em>safer and more effective</em></h3>

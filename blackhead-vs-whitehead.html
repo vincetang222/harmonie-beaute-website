@@ -148,7 +148,66 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
 
+
+/* ── FAQ (from index) ── */
+.faq-section-inline{margin:3rem 0}
+.faq-section-inline .faq-tag{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:700;display:inline-flex;align-items:center;gap:6px;background:var(--moss);padding:5px 16px;border-radius:50px;margin-bottom:1.1rem}
+.faq-section-inline h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:0.9rem}
+.faq-section-inline h2 em{color:var(--gold);font-style:italic}
+.faq-section-inline .faq-line{width:48px;height:2.5px;background:var(--gold);margin-bottom:2rem;border-radius:2px}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--sand)}
+.faq-item:first-child{border-top:1px solid var(--sand)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:0.9rem 0;font-size:0.9rem;font-weight:500;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.15s}
+.faq-q:hover{color:var(--moss)}
+.faq-q.open{color:var(--moss)}
+.faq-icon{font-size:1rem;color:var(--moss-light);flex-shrink:0;transition:transform 0.25s;font-style:normal;font-weight:300}
+.faq-q.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-a.open{max-height:500px}
+.faq-a-inner{padding:0 0 1rem;font-size:0.87rem;color:var(--earth);line-height:1.8;font-weight:300}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": "https://harmonie-beaute-vietnam.com/blackhead-vs-whitehead.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Blackhead có phải do da bẩn không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Không. Màu đen đến từ phản ứng oxy hóa của melanin trong bã nhờn khi tiếp xúc không khí — không phải bụi bẩn. Rửa mặt quá nhiều lần thực ra làm tình trạng tệ hơn vì kích thích da tiết nhiều bã nhờn hơn để bù."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pore strip có trị được blackhead không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chỉ lấy được phần đầu trên — rễ mụn vẫn còn nguyên bên dưới và blackhead mọc lại sau 3–5 ngày. Dùng thường xuyên còn có thể làm giãn lỗ chân lông và làm da mỏng đi theo thời gian."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Whitehead có tự khỏi không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whitehead nhỏ đôi khi tự tiêu sau 1–2 tuần khi da tự làm mỏng màng phủ. Nhưng nhiều whitehead tồn tại lâu hơn và có thể viêm thành mụn mủ nếu không được xử lý đúng cách. Không nên tự nặn khi da chưa được làm mềm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Blackhead và whitehead có cùng cách điều trị không?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Không — đây là lỗi phổ biến nhất. Blackhead phản ứng tốt với BHA (salicylic acid) vì tan trong dầu, thẩm thấu vào lỗ chân lông mở. Whitehead cần AHA hoặc retinol để làm mỏng màng da phủ trước. Dùng nhầm không chỉ kém hiệu quả mà đôi khi làm nặng hơn."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -241,6 +300,18 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
 
 <div class="references"><div class="references-title vi">Tài liệu tham khảo</div><div class="references-title en">References</div><ol><li>Cunliffe, W.J., Holland, D.B., Clark, S.M., Stables, G.I. (2000). Comedogenesis: some new aetiological, clinical and therapeutic strategies. <em>British Journal of Dermatology</em>, 142(6), 1084–1091.</li><li>Kligman, A.M. (2000). Acne vulgaris: tricks and treatments. <em>Cutis</em>, 66(2), 100–102.</li></ol></div>
+
+<div class="faq-section-inline">
+  <p class="faq-tag"><span class="vi">✦ Giải đáp thắc mắc</span><span class="en">✦ FAQ</span></p>
+  <h2><span class="vi">Câu hỏi <em>thường gặp</em></span><span class="en">Frequently asked <em>questions</em></span></h2>
+  <div class="faq-line"></div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Blackhead có phải do da bẩn không?</span><span class="en">Are blackheads caused by dirty skin?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Không. Màu đen đến từ phản ứng oxy hóa của melanin trong bã nhờn khi tiếp xúc không khí — không phải bụi bẩn. Rửa mặt quá nhiều lần thực ra làm tình trạng tệ hơn vì kích thích da tiết nhiều bã nhờn hơn để bù.</span><span class="en">No. The black colour comes from melanin in sebum oxidising when exposed to air — not dirt. Washing your face too often actually worsens the condition by triggering more sebum production to compensate.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Pore strip có trị được blackhead không?</span><span class="en">Do pore strips work for blackheads?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Chỉ lấy được phần đầu trên — rễ mụn vẫn còn nguyên bên dưới và blackhead mọc lại sau 3–5 ngày. Dùng thường xuyên còn có thể làm giãn lỗ chân lông và làm da mỏng đi theo thời gian.</span><span class="en">They only remove the top portion — the root remains below and blackheads regrow within 3–5 days. Frequent use can also stretch pores and thin skin over time.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Whitehead có tự khỏi không?</span><span class="en">Do whiteheads clear up on their own?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Whitehead nhỏ đôi khi tự tiêu sau 1–2 tuần khi da tự làm mỏng màng phủ. Nhưng nhiều whitehead tồn tại lâu hơn và có thể viêm thành mụn mủ nếu không được xử lý đúng cách. Không nên tự nặn khi da chưa được làm mềm.</span><span class="en">Small whiteheads sometimes resolve within 1–2 weeks as skin naturally thins the covering film. But many persist longer and can become pustules if untreated. Don't self-extract without proper skin softening first.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Blackhead và whitehead có cùng cách điều trị không?</span><span class="en">Are blackheads and whiteheads treated the same way?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Không — đây là lỗi phổ biến nhất. Blackhead phản ứng tốt với BHA (salicylic acid) vì tan trong dầu, thẩm thấu vào lỗ chân lông mở. Whitehead cần AHA hoặc retinol để làm mỏng màng da phủ trước. Dùng nhầm không chỉ kém hiệu quả mà đôi khi làm nặng hơn.</span><span class="en">No — this is the most common mistake. Blackheads respond to BHA (salicylic acid) as it's oil-soluble and penetrates open pores. Whiteheads need AHA or retinol to thin the covering film first. Using the wrong product isn't just less effective — it can worsen the condition.</span></div></div></div>
+  </div>
+</div>
 <div class="cta-banner">
     <p class="cta-banner-tag">✦ Harmonie Beauté · Tân Định</p>
     <h3 class="vi">Blackhead, whitehead hay mụn ẩn — <em>Hana xử lý đúng từng loại</em></h3><h3 class="en">Blackheads, whiteheads or closed comedones — <em>Hana treats each correctly</em></h3>
