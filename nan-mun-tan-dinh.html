@@ -219,7 +219,27 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .theme-toggle-track{width:36px;height:20px;border-radius:50px;position:relative;transition:background 0.3s;border:1px solid rgba(0,0,0,0.08)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
+
+/* ── FAQ inline ── */
+.faq-section-inline{margin:3rem 0}
+.faq-section-inline .faq-tag{font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:700;display:inline-flex;align-items:center;gap:6px;background:var(--moss);padding:5px 16px;border-radius:50px;margin-bottom:1.1rem}
+.faq-section-inline h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--charcoal);line-height:1.15;margin-bottom:0.9rem}
+.faq-section-inline h2 em{color:var(--gold);font-style:italic}
+.faq-section-inline .faq-line{width:48px;height:2.5px;background:var(--gold);margin-bottom:2rem;border-radius:2px}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--sand)}
+.faq-item:first-child{border-top:1px solid var(--sand)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:0.9rem 0;font-size:0.9rem;font-weight:500;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.15s}
+.faq-q:hover,.faq-q.open{color:var(--moss)}
+.faq-icon{font-size:1rem;color:var(--moss-light);flex-shrink:0;transition:transform 0.25s;font-style:normal;font-weight:300}
+.faq-q.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-a.open{max-height:500px}
+.faq-a-inner{padding:0 0 1rem;font-size:0.87rem;color:var(--earth);line-height:1.8;font-weight:300}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://harmonie-beaute-vietnam.com/nan-mun-tan-dinh.html", "mainEntity": [{"@type": "Question", "name": "Nặn mụn ở Tân Định giá bao nhiêu?", "acceptedAnswer": {"@type": "Answer", "text": "Tại Harmonie Beauté, giá một buổi nặn mụn dao động tùy theo tình trạng da và thời gian điều trị. Mỗi buổi khoảng 90 phút bao gồm đánh giá da, nặn mụn chuyên sâu, điều trị LED và dưỡng phục hồi. Xem bảng giá chi tiết trên trang chủ hoặc đặt lịch tư vấn miễn phí."}}, {"@type": "Question", "name": "Nặn mụn chuyên nghiệp có đau không?", "acceptedAnswer": {"@type": "Answer", "text": "Có một chút khó chịu — đặc biệt với mụn nang sâu hoặc mụn viêm. Tuy nhiên kỹ thuật đúng làm giảm đáng kể cảm giác đau so với tự nặn tại nhà. Hana chuẩn bị da bằng hơi nước và làm mềm lỗ chân lông trước khi nặn để giảm thiểu khó chịu."}}, {"@type": "Question", "name": "Lần đầu đến Harmonie Beauté cần chuẩn bị gì?", "acceptedAnswer": {"@type": "Answer", "text": "Đến với mặt mộc để Hana đánh giá tình trạng da chính xác nhất. Nếu đang dùng thuốc điều trị da (retinoid, isotretinoin, kháng sinh), thông báo trước khi đặt lịch. Tránh nặn mụn tại nhà ít nhất 3 ngày trước buổi hẹn."}}, {"@type": "Question", "name": "Khu vực Tân Định có dễ tìm chỗ đậu xe không?", "acceptedAnswer": {"@type": "Answer", "text": "Tân Định thuộc Quận 1 nên khá đông đúc. Có bãi giữ xe máy gần địa chỉ 30 Đặng Tất. Khách đi ô tô nên đến bằng taxi hoặc grab để tránh khó khăn tìm chỗ đậu. Hana có thể gửi hướng dẫn đường đi chi tiết sau khi bạn đặt lịch."}}]}
+</script>
 </head>
 <body>
 
@@ -377,7 +397,19 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
 
   <!-- CTA BANNER -->
-  <div class="cta-banner">
+  
+<div class="faq-section-inline">
+  <p class="faq-tag"><span class="vi">✦ Giải đáp thắc mắc</span><span class="en">✦ FAQ</span></p>
+  <h2><span class="vi">Câu hỏi <em>thường gặp</em></span><span class="en">Frequently asked <em>questions</em></span></h2>
+  <div class="faq-line"></div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Nặn mụn ở Tân Định giá bao nhiêu?</span><span class="en">How much does acne extraction cost in Tân Định?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Tại Harmonie Beauté, giá một buổi nặn mụn dao động tùy theo tình trạng da và thời gian điều trị. Mỗi buổi khoảng 90 phút bao gồm đánh giá da, nặn mụn chuyên sâu, điều trị LED và dưỡng phục hồi. Xem bảng giá chi tiết trên trang chủ hoặc đặt lịch tư vấn miễn phí.</span><span class="en">At Harmonie Beauté, the price for an extraction session varies depending on skin condition and treatment time. Each session is approximately 90 minutes including skin assessment, deep extraction, LED treatment and recovery care. See detailed pricing on the homepage or book a free consultation.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Nặn mụn chuyên nghiệp có đau không?</span><span class="en">Is professional acne extraction painful?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Có một chút khó chịu — đặc biệt với mụn nang sâu hoặc mụn viêm. Tuy nhiên kỹ thuật đúng làm giảm đáng kể cảm giác đau so với tự nặn tại nhà. Hana chuẩn bị da bằng hơi nước và làm mềm lỗ chân lông trước khi nặn để giảm thiểu khó chịu.</span><span class="en">There's some discomfort — especially with deep cystic or inflammatory acne. However correct technique significantly reduces pain compared to self-extraction at home. Hana prepares skin with steam and pore softening before extraction to minimise discomfort.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Lần đầu đến Harmonie Beauté cần chuẩn bị gì?</span><span class="en">What do you need to prepare for your first visit to Harmonie Beauté?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Đến với mặt mộc để Hana đánh giá tình trạng da chính xác nhất. Nếu đang dùng thuốc điều trị da (retinoid, isotretinoin, kháng sinh), thông báo trước khi đặt lịch. Tránh nặn mụn tại nhà ít nhất 3 ngày trước buổi hẹn.</span><span class="en">Come with a bare face so Hana can assess your skin condition accurately. If you're using skin medications (retinoids, isotretinoin, antibiotics), mention this when booking. Avoid self-extraction at home for at least 3 days before your appointment.</span></div></div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="vi">Khu vực Tân Định có dễ tìm chỗ đậu xe không?</span><span class="en">Is parking easy to find in the Tân Định area?</span><em class="faq-icon">+</em></button><div class="faq-a"><div class="faq-a-inner"><span class="vi">Tân Định thuộc Quận 1 nên khá đông đúc. Có bãi giữ xe máy gần địa chỉ 30 Đặng Tất. Khách đi ô tô nên đến bằng taxi hoặc grab để tránh khó khăn tìm chỗ đậu. Hana có thể gửi hướng dẫn đường đi chi tiết sau khi bạn đặt lịch.</span><span class="en">Tân Định is in District 1 so it's quite busy. There are motorbike parking areas near 30 Đặng Tất. Car passengers are advised to come by taxi or Grab to avoid parking difficulty. Hana can send detailed directions after you book.</span></div></div></div>
+  </div>
+</div>
+<div class="cta-banner">
     <p class="cta-banner-tag">✦ Harmonie Beauté · Tân Định</p>
     <h3 class="vi">Sẵn sàng để da <em>được chăm sóc đúng cách?</em></h3>
     <h3 class="en">Ready for skin care <em>done right?</em></h3>
@@ -486,6 +518,13 @@ window.addEventListener('DOMContentLoaded',function(){
   var s='green';try{s=localStorage.getItem('hb-theme')||'green';}catch(e){}
   applyTheme(s);
 });
+</script>
+<script>
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item'),ans=item.querySelector('.faq-a'),isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(function(b){b.classList.remove('open');b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');});
+  if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
+}
 </script>
 </body>
 </html>
