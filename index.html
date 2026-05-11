@@ -982,7 +982,7 @@ function toggleTheme(){
   applyTheme(c==='green'?'rose':'green');
 }
 window.addEventListener('DOMContentLoaded',function(){
-  var s='rose';try{s=localStorage.getItem('hb-theme')||'rose';}catch(e){}
+  var s='green';try{s=localStorage.getItem('hb-theme')||'green';}catch(e){}
   applyTheme(s);
   /* Init side card lang visibility */
   var lang=document.documentElement.getAttribute('data-lang')||'vi';
