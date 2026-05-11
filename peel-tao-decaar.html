@@ -369,5 +369,12 @@ function applyTheme(t){document.documentElement.setAttribute('data-theme',t);try
 function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')||'rose';applyTheme(c==='green'?'rose':'green')}
 window.addEventListener('DOMContentLoaded',function(){var s='green';try{s=localStorage.getItem('hb-theme')||'green'}catch(e){}applyTheme(s)});
 </script>
+<script>
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item'),ans=item.querySelector('.faq-a'),isOpen=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(function(b){b.classList.remove('open');b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');});
+  if(!isOpen){btn.classList.add('open');ans.classList.add('open');}
+}
+</script>
 </body>
 </html>
