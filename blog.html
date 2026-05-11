@@ -14,6 +14,9 @@
 <meta property="og:url" content="https://harmonie-beaute-vietnam.com/blog.html">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://harmonie-beaute-vietnam.com/blog.html">
+<link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/blog.html">
+<link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/blog.html">
+<link rel="alternate" hreflang="x-default" href="https://harmonie-beaute-vietnam.com/blog.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -230,7 +233,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </ul>
   <div class="nav-right">
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Switch theme" aria-label="Toggle color theme">
-      <span class="theme-toggle-icon" id="themeIcon">🌸</span>
+      <span class="theme-toggle-icon" id="themeIcon">🌿</span>
       <div class="theme-toggle-track" id="themeTrack">
         <div class="theme-toggle-thumb" id="themeThumb"></div>
       </div>
@@ -843,7 +846,7 @@ function applyTheme(t){
   else{tk.style.background='#7A3050';th.style.left='2px';th.style.background='#fff';ic.textContent='🌸';}
 }
 function toggleTheme(){
-  var c=document.documentElement.getAttribute('data-theme')||'rose';
+  var c=document.documentElement.getAttribute('data-theme')||'green';
   applyTheme(c==='green'?'rose':'green');
 }
 
@@ -882,7 +885,7 @@ function toggleTheme(){
 
 /* ── INIT ── */
 window.addEventListener('DOMContentLoaded',function(){
-  var s='rose';try{s=localStorage.getItem('hb-theme')||'rose';}catch(e){}
+  var s='green';try{s=localStorage.getItem('hb-theme')||'green';}catch(e){}
   applyTheme(s);
 });
 </script>

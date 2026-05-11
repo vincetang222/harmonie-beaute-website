@@ -339,6 +339,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <link rel="canonical" href="https://harmonie-beaute-vietnam.com/">
   <link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/">
   <link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/">
+  <link rel="alternate" hreflang="x-default" href="https://harmonie-beaute-vietnam.com/">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Harmonie Beauté","description":"Private spa 1-1 tại Tân Định, Quận 1, TP.HCM. Chuyên nặn mụn chuyên sâu, chemical peel mặt và body, peel thâm nách lưng gối.","url":"https://harmonie-beaute-vietnam.com","telephone":"+84899090762","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"30 Đặng Tất","addressLocality":"Phường Tân Định","addressRegion":"Quận 1","addressCountry":"VN"},"geo":{"@type":"GeoCoordinates","latitude":10.7929671,"longitude":106.6882107},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"20:00"}],"sameAs":["https://www.instagram.com/harmonie_beautee/","https://www.facebook.com/p/Harmonie-Beaut%C3%A9-61576627743088/","https://www.tiktok.com/@harmoniebeautee"]}</script>
 </head>
 <body>
@@ -882,11 +883,11 @@ function applyTheme(t){
   if(th) th.style.left=(t==='green')?'18px':'2px';
 }
 function toggleTheme(){
-  var c=document.documentElement.getAttribute('data-theme')||'rose';
+  var c=document.documentElement.getAttribute('data-theme')||'green';
   applyTheme(c==='green'?'rose':'green');
 }
 window.addEventListener('DOMContentLoaded',function(){
-  var s='rose';try{s=localStorage.getItem('hb-theme')||'rose';}catch(e){}
+  var s='green';try{s=localStorage.getItem('hb-theme')||'green';}catch(e){}
   applyTheme(s);
   /* Init side card lang visibility */
   var lang=document.documentElement.getAttribute('data-lang')||'vi';
