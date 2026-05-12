@@ -185,7 +185,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .step-desc{font-size:0.76rem;color:rgba(255,255,255,0.38);line-height:1.8;font-weight:300}
 
 /* photo strip */
-.photo-strip{display:grid;grid-template-columns:1.4fr 1fr 1fr;height:280px}
+.photo-strip{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;height:280px}
 .photo-slot{position:relative;overflow:hidden}
 .photo-slot img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
 .photo-slot:hover img{transform:scale(1.05)}
@@ -297,7 +297,7 @@ footer p{font-size:0.68rem;color:rgba(255,255,255,0.18)}
   .process-grid{grid-template-columns:1fr 1fr}
   .process-step{border-right:none;border-bottom:1px solid rgba(255,255,255,0.04)}
   .photo-strip{height:350px;grid-template-columns:1fr}
-  .photo-strip{grid-template-columns:1fr;height:auto}.photo-slot:nth-child(2),.photo-slot:nth-child(3){height:160px}
+  .photo-strip{grid-template-columns:1fr;height:auto}.photo-slot:nth-child(2),.photo-slot:nth-child(3),.photo-slot:nth-child(4){height:160px}
   .cta-banner{padding:5rem 1.5rem}
   footer{flex-direction:column;gap:0.6rem;text-align:center;padding:1.5rem}
 }
@@ -480,13 +480,20 @@ footer p{font-size:0.68rem;color:rgba(255,255,255,0.18)}
     <div class="photo-caption en">Treatment</div>
   </div>
   <div class="photo-slot">
-    <div class="photo-placeholder ph3">
-      <div class="ph-icon">🖼</div>
-      <p class="ph-text">Before / After<br><span style="font-size:0.55rem;opacity:0.6">Bổ sung sau</span></p>
-    </div>
+    <img src="harmonie-beaute-ket-qua-dieu-tri-mun.webp"
+         alt="Kết quả điều trị mụn tại Harmonie Beauté Tân Định — trước và sau"
+         loading="lazy" width="960" height="720">
     <div class="photo-overlay"></div>
     <div class="photo-caption vi">Kết quả</div>
     <div class="photo-caption en">Results</div>
+  </div>
+  <div class="photo-slot">
+    <img src="harmonie-beaute-khong-gian-phong-tri-lieu.webp"
+         alt="Không gian phòng trị liệu Harmonie Beauté — ánh sáng ấm, riêng tư"
+         loading="lazy" width="960" height="720">
+    <div class="photo-overlay"></div>
+    <div class="photo-caption vi">Không gian</div>
+    <div class="photo-caption en">The space</div>
   </div>
 </div>
 
