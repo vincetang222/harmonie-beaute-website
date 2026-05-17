@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmonie Beauté — Brand Asset Frames</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --rose:#6E2442;--rose-dark:#4A1530;--rose-light:#9A4A6A;
+  --moss:#3D5A47;--moss-dark:#2A4A36;
+  --gold:#C8906A;--gold-light:#E8C9A8;
+  --cream:#FAF6F0;--white:#FFFFFF;
+  --charcoal:#2C2825;--earth:#6B5B4E;
+  --sand:#E8DDD4;
+}
+body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--charcoal);min-height:100vh}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{background:var(--charcoal);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:2rem;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand-mark{text-align:center;padding-bottom:1.5rem;border-bottom:0.5px solid rgba(255,255,255,0.12)}
+.brand-mark h1{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;color:#FAF6F0;letter-spacing:0.05em;line-height:1.4}
+.brand-mark p{font-size:0.6rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--gold);margin-top:0.4rem}
+.nav-section{}
+.nav-label{font-size:0.55rem;text-transform:uppercase;letter-spacing:0.2em;color:rgba(255,255,255,0.35);margin-bottom:0.75rem}
+.nav-btn{display:block;width:100%;text-align:left;background:none;border:none;padding:0.55rem 0.75rem;border-radius:8px;font-family:'Be Vietnam Pro',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.6);cursor:pointer;transition:all 0.15s;margin-bottom:0.25rem}
+.nav-btn:hover{background:rgba(255,255,255,0.08);color:#fff}
+.nav-btn.active{background:rgba(200,144,106,0.2);color:var(--gold)}
+.nav-btn .nav-icon{display:inline-block;width:18px;height:18px;margin-right:0.6rem;opacity:0.7;vertical-align:middle}
+.color-dots{display:flex;gap:6px;margin-top:1.5rem}
+.dot{width:16px;height:16px;border-radius:50%}
+.tips{margin-top:auto;padding-top:1.5rem;border-top:0.5px solid rgba(255,255,255,0.1)}
+.tips p{font-size:0.7rem;color:rgba(255,255,255,0.35);line-height:1.7}
+
+/* MAIN */
+.main{padding:2.5rem}
+.main-header{margin-bottom:2rem}
+.main-header h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--charcoal)}
+.main-header p{font-size:0.8rem;color:var(--earth);margin-top:0.3rem}
+.section-group{display:none}
+.section-group.active{display:block}
+
+/* FRAME GRID */
+.frame-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2rem;margin-bottom:3rem}
+.frame-wrapper{background:white;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+.frame-label{padding:0.75rem 1rem 0.5rem;display:flex;justify-content:space-between;align-items:center}
+.frame-label span{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--earth);font-weight:500}
+.frame-label em{font-size:0.65rem;color:var(--gold);font-style:normal}
+.frame-canvas{padding:0 1rem 1rem}
+.download-row{padding:0.5rem 1rem 0.75rem;display:flex;justify-content:flex-end}
+.dl-btn{font-size:0.7rem;background:none;border:0.5px solid var(--sand);border-radius:50px;padding:0.3rem 0.9rem;color:var(--earth);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:all 0.15s}
+.dl-btn:hover{background:var(--cream);border-color:var(--gold);color:var(--gold)}
+
+/* ── FRAME DESIGNS ── */
+/* 1:1 Post */
+.post-sq{width:100%;aspect-ratio:1;position:relative;overflow:hidden;border-radius:4px}
+/* Story 9:16 */
+.post-story{width:100%;aspect-ratio:9/16;position:relative;overflow:hidden;border-radius:4px}
+/* Wide 4:5 */
+.post-tall{width:100%;aspect-ratio:4/5;position:relative;overflow:hidden;border-radius:4px}
+
+/* FRAME A — Clean Quote */
+.frame-a{background:var(--cream);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12%}
+.frame-a .fa-line{width:32px;height:1.5px;background:var(--gold);margin:0 auto 1.2rem}
+.frame-a .fa-quote{font-family:'Playfair Display',serif;font-size:clamp(0.8rem,3vw,1.05rem);font-weight:400;font-style:italic;color:var(--charcoal);text-align:center;line-height:1.6;margin-bottom:1.2rem}
+.frame-a .fa-author{font-size:clamp(0.5rem,1.5vw,0.65rem);text-transform:uppercase;letter-spacing:0.18em;color:var(--gold)}
+.frame-a .fa-brand{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);font-size:clamp(0.45rem,1.2vw,0.58rem);letter-spacing:0.2em;text-transform:uppercase;color:var(--earth);white-space:nowrap}
+.frame-a .fa-corner{position:absolute;width:20px;height:20px;border-color:var(--gold);border-style:solid;border-width:0}
+.frame-a .fa-corner.tl{top:6%;left:6%;border-top-width:1.5px;border-left-width:1.5px}
+.frame-a .fa-corner.tr{top:6%;right:6%;border-top-width:1.5px;border-right-width:1.5px}
+.frame-a .fa-corner.bl{bottom:6%;left:6%;border-bottom-width:1.5px;border-left-width:1.5px}
+.frame-a .fa-corner.br{bottom:6%;right:6%;border-bottom-width:1.5px;border-right-width:1.5px}
+
+/* FRAME B — Tip Card */
+.frame-b{background:var(--white);padding:10% 10% 8%;display:flex;flex-direction:column;justify-content:space-between}
+.frame-b .fb-tag{font-size:clamp(0.42rem,1.2vw,0.55rem);text-transform:uppercase;letter-spacing:0.2em;color:var(--white);background:var(--moss);padding:3px 10px;border-radius:50px;display:inline-block;margin-bottom:0.9rem;align-self:flex-start}
+.frame-b .fb-num{font-family:'Playfair Display',serif;font-size:clamp(2rem,8vw,3.5rem);color:var(--gold-light);font-weight:400;line-height:1;margin-bottom:0.3rem}
+.frame-b .fb-title{font-family:'Playfair Display',serif;font-size:clamp(0.8rem,2.8vw,1.1rem);font-weight:400;color:var(--charcoal);line-height:1.35;margin-bottom:0.7rem}
+.frame-b .fb-body{font-size:clamp(0.55rem,1.6vw,0.72rem);color:var(--earth);line-height:1.75;font-weight:300;flex:1}
+.frame-b .fb-footer{margin-top:auto;padding-top:0.8rem;border-top:0.5px solid var(--sand);display:flex;justify-content:space-between;align-items:center}
+.frame-b .fb-brand{font-size:clamp(0.42rem,1vw,0.55rem);letter-spacing:0.18em;text-transform:uppercase;color:var(--earth)}
+.frame-b .fb-accent{width:24px;height:1.5px;background:var(--gold)}
+
+/* FRAME C — Moss Dark */
+.frame-c{background:var(--moss-dark);padding:10%;display:flex;flex-direction:column;justify-content:flex-end}
+.frame-c .fc-tag{font-size:clamp(0.42rem,1vw,0.55rem);text-transform:uppercase;letter-spacing:0.2em;color:var(--gold);margin-bottom:1rem}
+.frame-c .fc-title{font-family:'Playfair Display',serif;font-size:clamp(1rem,3.5vw,1.4rem);font-weight:400;color:#FAF6F0;line-height:1.3;margin-bottom:0.8rem}
+.frame-c .fc-line{width:32px;height:1.5px;background:var(--gold);margin-bottom:0.8rem}
+.frame-c .fc-body{font-size:clamp(0.55rem,1.4vw,0.7rem);color:rgba(250,246,240,0.65);line-height:1.8;font-weight:300}
+.frame-c .fc-brand{margin-top:1.5rem;font-size:clamp(0.42rem,1vw,0.55rem);letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);opacity:0.7}
+.frame-c .fc-deco{position:absolute;top:8%;right:8%;font-family:'Playfair Display',serif;font-size:clamp(4rem,15vw,6rem);color:rgba(255,255,255,0.04);font-style:italic;line-height:1;user-select:none}
+
+/* FRAME D — Before After */
+.frame-ba{background:var(--white);padding:0;display:flex;flex-direction:column}
+.frame-ba .ba-header{background:var(--charcoal);padding:8% 8% 6%;flex-shrink:0}
+.frame-ba .ba-header-title{font-family:'Playfair Display',serif;font-size:clamp(0.9rem,3vw,1.2rem);font-weight:400;color:#FAF6F0;margin-bottom:0.3rem}
+.frame-ba .ba-header-sub{font-size:clamp(0.45rem,1.2vw,0.6rem);text-transform:uppercase;letter-spacing:0.18em;color:var(--gold)}
+.frame-ba .ba-cols{display:grid;grid-template-columns:1fr 1fr;flex:1;min-height:0}
+.frame-ba .ba-col{padding:8%;display:flex;flex-direction:column;justify-content:flex-end;min-height:120px;position:relative}
+.frame-ba .ba-col.before{background:#F2EDE8;border-right:1px solid var(--sand)}
+.frame-ba .ba-col.after{background:var(--cream)}
+.frame-ba .ba-label{font-size:clamp(0.4rem,1.1vw,0.55rem);text-transform:uppercase;letter-spacing:0.2em;font-weight:500}
+.frame-ba .ba-col.before .ba-label{color:var(--earth)}
+.frame-ba .ba-col.after .ba-label{color:var(--moss)}
+.frame-ba .ba-placeholder{flex:1;display:flex;align-items:center;justify-content:center;min-height:80px}
+.frame-ba .ba-img-box{width:70%;aspect-ratio:3/4;border:0.5px dashed var(--sand);border-radius:4px;display:flex;align-items:center;justify-content:center}
+.frame-ba .ba-img-box span{font-size:0.55rem;color:var(--sand);text-transform:uppercase;letter-spacing:0.1em}
+.frame-ba .ba-weeks{position:absolute;top:8%;right:8%;font-family:'Playfair Display',serif;font-size:clamp(0.55rem,1.5vw,0.7rem);color:var(--moss);font-style:italic}
+.frame-ba .ba-footer{background:var(--charcoal);padding:4% 8%;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.frame-ba .ba-footer-brand{font-size:clamp(0.4rem,1vw,0.55rem);letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,246,240,0.5)}
+.frame-ba .ba-footer-tag{font-size:clamp(0.38rem,0.9vw,0.52rem);color:var(--gold)}
+
+/* FRAME E — Story */
+.frame-s{background:var(--charcoal);padding:10% 8%;display:flex;flex-direction:column;justify-content:space-between}
+.frame-s .fs-top{display:flex;justify-content:space-between;align-items:flex-start}
+.frame-s .fs-logo{font-family:'Playfair Display',serif;font-size:clamp(0.8rem,2.5vw,1rem);font-weight:400;color:#FAF6F0;letter-spacing:0.05em}
+.frame-s .fs-tag{font-size:clamp(0.42rem,1vw,0.55rem);text-transform:uppercase;letter-spacing:0.18em;color:var(--gold);background:rgba(200,144,106,0.15);padding:3px 10px;border-radius:50px}
+.frame-s .fs-mid{flex:1;display:flex;flex-direction:column;justify-content:center;padding:12% 0}
+.frame-s .fs-num{font-family:'Playfair Display',serif;font-size:clamp(3rem,10vw,5rem);color:rgba(255,255,255,0.06);font-weight:400;line-height:1;margin-bottom:-0.5rem}
+.frame-s .fs-title{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,4vw,1.6rem);font-weight:400;color:#FAF6F0;line-height:1.25;margin-bottom:0.8rem}
+.frame-s .fs-line{width:32px;height:1.5px;background:var(--gold);margin-bottom:0.8rem}
+.frame-s .fs-body{font-size:clamp(0.6rem,1.6vw,0.75rem);color:rgba(250,246,240,0.6);line-height:1.8;font-weight:300}
+.frame-s .fs-cta{background:var(--gold);color:var(--charcoal);font-family:'Playfair Display',serif;font-size:clamp(0.6rem,1.5vw,0.75rem);padding:0.7rem 1.5rem;border-radius:50px;text-align:center;font-style:italic;align-self:flex-start}
+.frame-s .fs-bottom{display:flex;justify-content:space-between;align-items:center}
+.frame-s .fs-insta{font-size:clamp(0.42rem,1vw,0.55rem);color:rgba(255,255,255,0.35);letter-spacing:0.1em}
+.frame-s .fs-swipe{font-size:clamp(0.42rem,1vw,0.55rem);color:var(--gold);display:flex;align-items:center;gap:4px}
+
+/* FRAME F — Rose Dark */
+.frame-f{background:var(--rose-dark);padding:10%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.frame-f .ff-circle{width:clamp(50px,18%,80px);height:clamp(50px,18%,80px);border-radius:50%;border:1.5px solid rgba(200,144,106,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem}
+.frame-f .ff-icon{font-family:'Playfair Display',serif;font-size:clamp(1rem,3.5vw,1.4rem);color:var(--gold);font-style:italic}
+.frame-f .ff-title{font-family:'Playfair Display',serif;font-size:clamp(0.9rem,3vw,1.2rem);font-weight:400;color:#FAF6F0;line-height:1.3;margin-bottom:0.7rem}
+.frame-f .ff-line{width:24px;height:1px;background:var(--gold);margin:0 auto 0.7rem}
+.frame-f .ff-body{font-size:clamp(0.55rem,1.4vw,0.7rem);color:rgba(250,246,240,0.6);line-height:1.8;font-weight:300;margin-bottom:1.2rem}
+.frame-f .ff-cta{font-size:clamp(0.5rem,1.2vw,0.62rem);text-transform:uppercase;letter-spacing:0.18em;color:var(--gold)}
+.frame-f .ff-brand{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);font-size:clamp(0.4rem,1vw,0.52rem);letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25);white-space:nowrap}
+.frame-f .ff-corner{position:absolute;width:16px;height:16px;border-color:rgba(200,144,106,0.3);border-style:solid;border-width:0}
+.frame-f .ff-corner.tl{top:5%;left:5%;border-top-width:1px;border-left-width:1px}
+.frame-f .ff-corner.br{bottom:5%;right:5%;border-bottom-width:1px;border-right-width:1px}
+
+/* SECTION HEADER */
+.section-header{margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:0.5px solid var(--sand)}
+.section-header h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:var(--charcoal)}
+.section-header p{font-size:0.72rem;color:var(--earth);margin-top:0.2rem}
+
+.badge{display:inline-block;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.15em;background:var(--cream);border:0.5px solid var(--sand);color:var(--earth);padding:2px 8px;border-radius:50px;margin-left:0.5rem;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand-mark">
+      <h1>Harmonie<br>Beauté</h1>
+      <p>Brand Assets</p>
+    </div>
+
+    <nav class="nav-section">
+      <p class="nav-label">Frame type</p>
+      <button class="nav-btn active" onclick="show('posts')">
+        <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="2" width="14" height="14" rx="2"/></svg>
+        Instagram Posts
+      </button>
+      <button class="nav-btn" onclick="show('stories')">
+        <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="5" y="1" width="8" height="16" rx="2"/></svg>
+        Stories
+      </button>
+      <button class="nav-btn" onclick="show('beforeafter')">
+        <svg class="nav-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="6" cy="9" r="4"/><circle cx="12" cy="9" r="4"/></svg>
+        Before & After
+      </button>
+    </nav>
+
+    <div>
+      <p class="nav-label">Brand palette</p>
+      <div class="color-dots">
+        <div class="dot" style="background:#6E2442" title="Rose"></div>
+        <div class="dot" style="background:#3D5A47" title="Moss"></div>
+        <div class="dot" style="background:#C8906A" title="Gold"></div>
+        <div class="dot" style="background:#FAF6F0" title="Cream" style="border:1px solid #E8DDD4"></div>
+        <div class="dot" style="background:#2C2825" title="Charcoal"></div>
+      </div>
+    </div>
+
+    <div class="tips">
+      <p>Tải SVG về → mở Canva hoặc Figma → thay text và ảnh → export JPG/PNG.</p>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="main-header">
+      <h2>Brand Asset Frames</h2>
+      <p>Editorial & clean — Harmonie Beauté · Private Spa · Tân Định</p>
+    </div>
+
+    <!-- POSTS -->
+    <div id="posts" class="section-group active">
+      <div class="section-header">
+        <h3>Instagram Posts <span class="badge">1:1 · 1080×1080</span></h3>
+        <p>6 template khác nhau — quote, tip, promo, service</p>
+      </div>
+      <div class="frame-grid">
+
+        <!-- A1: Quote Cream -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Quote — Cream</span><em>1:1</em></div>
+          <div class="frame-canvas">
+            <div class="post-sq frame-a">
+              <div class="fa-corner tl"></div>
+              <div class="fa-corner tr"></div>
+              <div class="fa-corner bl"></div>
+              <div class="fa-corner br"></div>
+              <div class="fa-line"></div>
+              <p class="fa-quote">"Mỗi làn da đều có câu chuyện riêng. Việc của mình là lắng nghe — và giúp nó kể một câu chuyện đẹp hơn."</p>
+              <span class="fa-author">Hana · Harmonie Beauté</span>
+              <span class="fa-brand">harmonie-beaute-vietnam.com</span>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame('frame-a1')">Tải SVG</button></div>
+        </div>
+
+        <!-- B1: Tip Card Moss -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Tip Card — White</span><em>1:1</em></div>
+          <div class="frame-canvas">
+            <div class="post-sq frame-b" style="position:relative">
+              <div>
+                <span class="fb-tag">Skincare Tip</span>
+                <div class="fb-num">01</div>
+                <h3 class="fb-title">Da dầu vẫn cần dưỡng ẩm mỗi ngày</h3>
+                <p class="fb-body">Da tiết dầu nhiều thường là dấu hiệu thiếu nước — không phải thừa. Bỏ qua kem dưỡng ẩm khiến da càng tiết nhờn nhiều hơn để bù.</p>
+              </div>
+              <div class="fb-footer">
+                <span class="fb-brand">Harmonie Beauté</span>
+                <div class="fb-accent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame('frame-b1')">Tải SVG</button></div>
+        </div>
+
+        <!-- C1: Dark Moss -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Editorial — Moss</span><em>1:1</em></div>
+          <div class="frame-canvas">
+            <div class="post-sq frame-c" style="position:relative">
+              <div class="fc-deco">Hana</div>
+              <span class="fc-tag">Chemical Peel</span>
+              <h3 class="fc-title">Peel tảo Decaar — nhẹ nhàng hơn bạn nghĩ</h3>
+              <div class="fc-line"></div>
+              <p class="fc-body">Không rát. Không bong tróc nhiều. Chỉ là làn da mịn hơn, đều màu hơn sau mỗi buổi — bằng cơ chế sinh học của tảo biển.</p>
+              <span class="fc-brand">Harmonie Beauté · Tân Định</span>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame('frame-c1')">Tải SVG</button></div>
+        </div>
+
+        <!-- A2: Quote Rose -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Quote — Rose</span><em>1:1</em></div>
+          <div class="frame-canvas">
+            <div class="post-sq frame-a" style="background:var(--rose-dark)">
+              <div class="fa-corner tl"></div>
+              <div class="fa-corner tr"></div>
+              <div class="fa-corner bl"></div>
+              <div class="fa-corner br"></div>
+              <div class="fa-line"></div>
+              <p class="fa-quote" style="color:#FAF6F0">"Không phải về da hoàn hảo — mà là da khỏe mạnh, tự tin theo cách của bạn."</p>
+              <span class="fa-author">Hana · Harmonie Beauté</span>
+              <span class="fa-brand" style="color:rgba(250,246,240,0.4)">harmonie-beaute-vietnam.com</span>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+        <!-- B2: Tip Card -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Tip Card — Moss</span><em>1:1</em></div>
+          <div class="frame-canvas">
+            <div class="post-sq frame-b" style="position:relative;background:var(--moss-dark)">
+              <div>
+                <span class="fb-tag" style="background:var(--gold);color:var(--charcoal)">Acne Care</span>
+                <div class="fb-num" style="color:rgba(255,255,255,0.08)">03</div>
+                <h3 class="fb-title" style="color:#FAF6F0">Không nên tự nặn mụn tại nhà</h3>
+                <p class="fb-body" style="color:rgba(250,246,240,0.6)">Áp lực sai hướng đẩy nhân mụn xuống sâu hơn, gây viêm và để lại thâm lâu dài hơn bạn nghĩ.</p>
+              </div>
+              <div class="fb-footer" style="border-top-color:rgba(255,255,255,0.1)">
+                <span class="fb-brand" style="color:rgba(255,255,255,0.4)">Harmonie Beauté</span>
+                <div class="fb-accent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+        <!-- F1: Service Promo -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Service — Rose Dark</span><em>1:1</em></div>
+          <div class="frame-canvas">
+            <div class="post-sq frame-f" style="position:relative">
+              <div class="ff-corner tl"></div>
+              <div class="ff-corner br"></div>
+              <div class="ff-circle"><span class="ff-icon">✦</span></div>
+              <h3 class="ff-title">Nặn mụn<br>chuyên sâu</h3>
+              <div class="ff-line"></div>
+              <p class="ff-body">Một phòng · Một khách · Một kỹ thuật viên tập trung hoàn toàn. 90 phút cho làn da của bạn.</p>
+              <span class="ff-cta">Đặt lịch tại Tân Định →</span>
+              <span class="ff-brand">Harmonie Beauté</span>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STORIES -->
+    <div id="stories" class="section-group">
+      <div class="section-header">
+        <h3>Instagram Stories <span class="badge">9:16 · 1080×1920</span></h3>
+        <p>3 story template — educational, promo, tip series</p>
+      </div>
+      <div class="frame-grid" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))">
+
+        <!-- Story 1 -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Edu Story</span><em>9:16</em></div>
+          <div class="frame-canvas">
+            <div class="post-story frame-s" style="position:relative">
+              <div class="fs-top">
+                <span class="fs-logo">Harmonie<br>Beauté</span>
+                <span class="fs-tag">Skincare Tips</span>
+              </div>
+              <div class="fs-mid">
+                <div class="fs-num">01</div>
+                <h2 class="fs-title">Tại sao da dầu vẫn cần kem dưỡng ẩm?</h2>
+                <div class="fs-line"></div>
+                <p class="fs-body">Da tiết nhiều dầu không có nghĩa là đủ ẩm. Thiếu độ ẩm kích thích da sản xuất bã nhờn nhiều hơn — tạo vòng lặp không dứt.</p>
+              </div>
+              <div class="fs-cta">Swipe để đọc thêm ↓</div>
+              <div class="fs-bottom" style="margin-top:0.8rem">
+                <span class="fs-insta">@harmonie_beautee</span>
+                <span class="fs-swipe">Chi tiết →</span>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Promo Story</span><em>9:16</em></div>
+          <div class="frame-canvas">
+            <div class="post-story frame-s" style="position:relative;background:var(--rose-dark)">
+              <div class="fs-top">
+                <span class="fs-logo">Harmonie<br>Beauté</span>
+                <span class="fs-tag" style="background:rgba(200,144,106,0.2)">Đặt lịch</span>
+              </div>
+              <div class="fs-mid">
+                <div class="fs-num" style="font-size:clamp(2rem,7vw,4rem)">✦</div>
+                <h2 class="fs-title">Private Spa<br>tại Tân Định</h2>
+                <div class="fs-line"></div>
+                <p class="fs-body">Một phòng, một khách, một kỹ thuật viên — 7 năm kinh nghiệm điều trị mụn và Chemical Peel.</p>
+              </div>
+              <div class="fs-cta">Đặt lịch qua link bio →</div>
+              <div class="fs-bottom" style="margin-top:0.8rem">
+                <span class="fs-insta">@harmonie_beautee</span>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Cream Story</span><em>9:16</em></div>
+          <div class="frame-canvas">
+            <div class="post-story" style="background:var(--cream);padding:10% 8%;display:flex;flex-direction:column;justify-content:space-between;position:relative">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-family:'Playfair Display',serif;font-size:clamp(0.7rem,2vw,0.9rem);color:var(--charcoal)">Harmonie Beauté</span>
+                <span style="font-size:clamp(0.4rem,1vw,0.52rem);text-transform:uppercase;letter-spacing:0.18em;color:var(--gold);background:rgba(200,144,106,0.12);padding:3px 8px;border-radius:50px">FAQ</span>
+              </div>
+              <div>
+                <div style="width:28px;height:1.5px;background:var(--gold);margin-bottom:0.9rem"></div>
+                <h2 style="font-family:'Playfair Display',serif;font-size:clamp(0.9rem,3vw,1.2rem);font-weight:400;color:var(--charcoal);line-height:1.3;margin-bottom:0.7rem">Sau peel bao lâu thì thấy kết quả?</h2>
+                <p style="font-size:clamp(0.55rem,1.5vw,0.7rem);color:var(--earth);line-height:1.8;font-weight:300">Rõ nhất sau 7–14 ngày khi da hoàn tất tái tạo. Kết quả tốt nhất sau 3–5 buổi cách nhau 3–4 tuần.</p>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span style="font-size:clamp(0.4rem,1vw,0.52rem);color:var(--earth);opacity:0.5;text-transform:uppercase;letter-spacing:0.1em">@harmonie_beautee</span>
+                <span style="font-size:clamp(0.4rem,1vw,0.52rem);color:var(--gold)">Đặt lịch →</span>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BEFORE AFTER -->
+    <div id="beforeafter" class="section-group">
+      <div class="section-header">
+        <h3>Before & After Frames <span class="badge">4:5 · 1080×1350</span></h3>
+        <p>3 layout — thay ảnh vào slot dashed, export JPG</p>
+      </div>
+      <div class="frame-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+
+        <!-- BA1: Split Dark -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Split — Dark</span><em>4:5</em></div>
+          <div class="frame-canvas">
+            <div class="post-tall frame-ba" style="display:flex;flex-direction:column">
+              <div class="ba-header">
+                <h3 class="ba-header-title">Kết quả<br>sau điều trị</h3>
+                <span class="ba-header-sub">Harmonie Beauté · Tân Định</span>
+              </div>
+              <div class="ba-cols" style="flex:1">
+                <div class="ba-col before">
+                  <div class="ba-placeholder">
+                    <div class="ba-img-box"><span>Ảnh trước</span></div>
+                  </div>
+                  <span class="ba-label">Trước</span>
+                </div>
+                <div class="ba-col after">
+                  <div class="ba-placeholder">
+                    <div class="ba-img-box" style="border-color:rgba(61,90,71,0.2)"><span>Ảnh sau</span></div>
+                  </div>
+                  <span class="ba-weeks">4 tuần</span>
+                  <span class="ba-label">Sau</span>
+                </div>
+              </div>
+              <div class="ba-footer">
+                <span class="ba-footer-brand">harmonie-beaute-vietnam.com</span>
+                <span class="ba-footer-tag">Đặt lịch →</span>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+        <!-- BA2: Stacked -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Stacked — Cream</span><em>4:5</em></div>
+          <div class="frame-canvas">
+            <div class="post-tall" style="background:var(--cream);display:flex;flex-direction:column;padding:0">
+              <div style="flex:1;display:grid;grid-template-rows:1fr 1fr">
+                <div style="background:#EDE8E3;display:flex;align-items:center;justify-content:center;position:relative">
+                  <div style="width:60%;aspect-ratio:4/3;border:0.5px dashed #C8B8A8;border-radius:4px;display:flex;align-items:center;justify-content:center">
+                    <span style="font-size:0.5rem;color:#C8B8A8;text-transform:uppercase;letter-spacing:0.12em">Ảnh trước</span>
+                  </div>
+                  <span style="position:absolute;top:8%;left:8%;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--earth);font-weight:500">Trước</span>
+                </div>
+                <div style="background:var(--cream);display:flex;align-items:center;justify-content:center;position:relative;border-top:0.5px solid var(--sand)">
+                  <div style="width:60%;aspect-ratio:4/3;border:0.5px dashed rgba(61,90,71,0.25);border-radius:4px;display:flex;align-items:center;justify-content:center">
+                    <span style="font-size:0.5rem;color:rgba(61,90,71,0.4);text-transform:uppercase;letter-spacing:0.12em">Ảnh sau</span>
+                  </div>
+                  <span style="position:absolute;top:8%;left:8%;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--moss);font-weight:500">Sau</span>
+                  <span style="position:absolute;top:8%;right:8%;font-family:'Playfair Display',serif;font-size:0.65rem;color:var(--moss);font-style:italic">3 tuần</span>
+                </div>
+              </div>
+              <div style="padding:5% 8%;background:var(--charcoal);display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <p style="font-family:'Playfair Display',serif;font-size:0.7rem;font-weight:400;color:#FAF6F0;margin-bottom:0.2rem">Harmonie Beauté</p>
+                  <p style="font-size:0.5rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold)">Private Spa · Tân Định</p>
+                </div>
+                <span style="font-size:0.52rem;color:rgba(250,246,240,0.4)">@harmonie_beautee</span>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+        <!-- BA3: Overlay Text -->
+        <div class="frame-wrapper">
+          <div class="frame-label"><span>Overlay — Rose</span><em>4:5</em></div>
+          <div class="frame-canvas">
+            <div class="post-tall" style="background:var(--rose-dark);display:flex;flex-direction:column;padding:0;position:relative">
+              <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative">
+                <div style="width:72%;aspect-ratio:3/4;border:0.5px dashed rgba(200,144,106,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center">
+                  <span style="font-size:0.5rem;color:rgba(200,144,106,0.4);text-transform:uppercase;letter-spacing:0.12em">Ảnh kết quả</span>
+                </div>
+                <div style="position:absolute;top:8%;left:6%;background:rgba(200,144,106,0.15);border:0.5px solid rgba(200,144,106,0.3);border-radius:50px;padding:3px 10px">
+                  <span style="font-size:0.5rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold)">Sau 5 buổi</span>
+                </div>
+              </div>
+              <div style="padding:7% 8% 6%;background:rgba(0,0,0,0.2)">
+                <div style="width:24px;height:1px;background:var(--gold);margin-bottom:0.7rem"></div>
+                <h3 style="font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:400;color:#FAF6F0;line-height:1.3;margin-bottom:0.4rem">Điều trị mụn lưng<br>tại Harmonie Beauté</h3>
+                <p style="font-size:0.55rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gold)">harmonie-beaute-vietnam.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.section-group').forEach(el=>el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(btn=>btn.classList.remove('active'));
+  event.target.closest('.nav-btn').classList.add('active');
+}
+</script>
+
+<script>
+function downloadFrame(frameId) {
+  var el = document.getElementById(frameId);
+  if (!el) { alert('Frame not found: ' + frameId); return; }
+
+  // Find SVG inside the frame
+  var svg = el.querySelector('svg');
+  if (!svg) { alert('No SVG found in this frame.'); return; }
+
+  // Clone to get full SVG with styles
+  var clone = svg.cloneNode(true);
+
+  // Add xmlns if missing
+  clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+
+  // Inline computed styles for text/shapes
+  var serializer = new XMLSerializer();
+  var svgStr = serializer.serializeToString(clone);
+  var blob = new Blob([svgStr], {type: 'image/svg+xml'});
+  var url = URL.createObjectURL(blob);
+
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = frameId + '-harmonie-beaute.svg';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
