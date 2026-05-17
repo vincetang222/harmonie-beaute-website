@@ -205,7 +205,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
       <div class="frame-grid">
 
         <!-- A1: Quote Cream -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-a1">
           <div class="frame-label"><span>Quote — Cream</span><em>1:1</em></div>
           <div class="frame-canvas">
             <div class="post-sq frame-a">
@@ -223,7 +223,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
         </div>
 
         <!-- B1: Tip Card Moss -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-b1">
           <div class="frame-label"><span>Tip Card — White</span><em>1:1</em></div>
           <div class="frame-canvas">
             <div class="post-sq frame-b" style="position:relative">
@@ -243,7 +243,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
         </div>
 
         <!-- C1: Dark Moss -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-c1">
           <div class="frame-label"><span>Editorial — Moss</span><em>1:1</em></div>
           <div class="frame-canvas">
             <div class="post-sq frame-c" style="position:relative">
@@ -273,7 +273,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               <span class="fa-brand" style="color:rgba(250,246,240,0.4)">harmonie-beaute-vietnam.com</span>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
         <!-- B2: Tip Card -->
@@ -293,7 +293,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               </div>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
         <!-- F1: Service Promo -->
@@ -311,7 +311,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               <span class="ff-brand">Harmonie Beauté</span>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
       </div>
@@ -326,7 +326,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
       <div class="frame-grid" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))">
 
         <!-- Story 1 -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-s1">
           <div class="frame-label"><span>Edu Story</span><em>9:16</em></div>
           <div class="frame-canvas">
             <div class="post-story frame-s" style="position:relative">
@@ -347,11 +347,11 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               </div>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
         <!-- Story 2 -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-s2">
           <div class="frame-label"><span>Promo Story</span><em>9:16</em></div>
           <div class="frame-canvas">
             <div class="post-story frame-s" style="position:relative;background:var(--rose-dark)">
@@ -371,11 +371,11 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               </div>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
         <!-- Story 3 -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-s3">
           <div class="frame-label"><span>Cream Story</span><em>9:16</em></div>
           <div class="frame-canvas">
             <div class="post-story" style="background:var(--cream);padding:10% 8%;display:flex;flex-direction:column;justify-content:space-between;position:relative">
@@ -394,7 +394,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               </div>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
       </div>
@@ -409,7 +409,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
       <div class="frame-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
 
         <!-- BA1: Split Dark -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-ba1">
           <div class="frame-label"><span>Split — Dark</span><em>4:5</em></div>
           <div class="frame-canvas">
             <div class="post-tall frame-ba" style="display:flex;flex-direction:column">
@@ -438,11 +438,11 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               </div>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
         <!-- BA2: Stacked -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-ba2">
           <div class="frame-label"><span>Stacked — Cream</span><em>4:5</em></div>
           <div class="frame-canvas">
             <div class="post-tall" style="background:var(--cream);display:flex;flex-direction:column;padding:0">
@@ -470,11 +470,11 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               </div>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
         <!-- BA3: Overlay Text -->
-        <div class="frame-wrapper">
+        <div class="frame-wrapper" id="frame-ba3">
           <div class="frame-label"><span>Overlay — Rose</span><em>4:5</em></div>
           <div class="frame-canvas">
             <div class="post-tall" style="background:var(--rose-dark);display:flex;flex-direction:column;padding:0;position:relative">
@@ -493,7 +493,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:#F5F0EB;color:var(--char
               </div>
             </div>
           </div>
-          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('[id]').id)">Tải SVG</button></div>
+          <div class="download-row"><button class="dl-btn" onclick="downloadFrame(this.closest('.frame-wrapper').id)">Tải PNG</button></div>
         </div>
 
       </div>
@@ -510,35 +510,53 @@ function show(id){
 }
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
 function downloadFrame(frameId) {
-  var el = document.getElementById(frameId);
-  if (!el) { alert('Frame not found: ' + frameId); return; }
+  var wrapper = document.getElementById(frameId);
+  if (!wrapper) { alert('Không tìm thấy frame: ' + frameId); return; }
 
-  // Find SVG inside the frame
-  var svg = el.querySelector('svg');
-  if (!svg) { alert('No SVG found in this frame.'); return; }
+  // Try SVG first
+  var svg = wrapper.querySelector('svg');
+  if (svg) {
+    var clone = svg.cloneNode(true);
+    clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    var svgStr = new XMLSerializer().serializeToString(clone);
+    var blob = new Blob([svgStr], {type: 'image/svg+xml'});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = frameId + '-harmonie-beaute.svg';
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a); URL.revokeObjectURL(url);
+    return;
+  }
 
-  // Clone to get full SVG with styles
-  var clone = svg.cloneNode(true);
+  // Fallback: use html2canvas for div-based frames
+  var canvas_el = wrapper.querySelector('.frame-canvas > div');
+  if (!canvas_el) canvas_el = wrapper.querySelector('.frame-canvas');
+  if (!canvas_el) { alert('Không có nội dung để tải.'); return; }
 
-  // Add xmlns if missing
-  clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  var btn = wrapper.querySelector('.dl-btn');
+  if (btn) { btn.textContent = 'Đang xuất...'; btn.disabled = true; }
 
-  // Inline computed styles for text/shapes
-  var serializer = new XMLSerializer();
-  var svgStr = serializer.serializeToString(clone);
-  var blob = new Blob([svgStr], {type: 'image/svg+xml'});
-  var url = URL.createObjectURL(blob);
-
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = frameId + '-harmonie-beaute.svg';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  html2canvas(canvas_el, {
+    scale: 2,
+    useCORS: true,
+    allowTaint: true,
+    backgroundColor: null,
+    logging: false
+  }).then(function(canvas) {
+    var link = document.createElement('a');
+    link.download = frameId + '-harmonie-beaute.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    if (btn) { btn.textContent = 'Tải PNG'; btn.disabled = false; }
+  }).catch(function(err) {
+    alert('Lỗi xuất ảnh: ' + err.message);
+    if (btn) { btn.textContent = 'Tải PNG'; btn.disabled = false; }
+  });
 }
 </script>
+
 </body>
 </html>
