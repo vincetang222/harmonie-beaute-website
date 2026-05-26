@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en" data-lang="en" data-theme="green">
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -304,9 +304,22 @@ function closeMobileMenu(){document.getElementById('hamburgerBtn').classList.rem
 document.addEventListener('click',e=>{const m=document.getElementById('mobileMenu'),b=document.getElementById('hamburgerBtn');if(m&&b&&!m.contains(e.target)&&!b.contains(e.target)){m.classList.remove('open');b.classList.remove('open')}});
 </script>
 <script>
-function applyTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('hb-theme',t);}catch(e){}var ic=document.getElementById('themeIcon');var th=document.getElementById('themeThumb');if(ic) ic.textContent=(t==='green')?'🌿':'🌸';if(th) th.style.left=(t==='green')?'18px':'2px';}
-function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')||'green';applyTheme(c==='green'?'rose':'green');}
-window.addEventListener('DOMContentLoaded',function(){var s='green';try{s=localStorage.getItem('hb-theme')||'green';}catch(e){}applyTheme(s);});
+function applyTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  try{localStorage.setItem('hb-theme',t);}catch(e){}
+  var ic=document.getElementById('themeIcon');
+  var th=document.getElementById('themeThumb');
+  if(ic) ic.textContent=(t==='green')?'🌿':'🌸';
+  if(th) th.style.left=(t==='green')?'18px':'2px';
+}
+function toggleTheme(){
+  var c=document.documentElement.getAttribute('data-theme')||'green';
+  applyTheme(c==='green'?'rose':'green');
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var s='green';try{s=localStorage.getItem('hb-theme')||'green';}catch(e){}
+  applyTheme(s);
+});
 </script>
 
 <script>
