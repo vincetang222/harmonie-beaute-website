@@ -56,10 +56,10 @@ a{text-decoration:none;color:inherit}
 .hero-reviews-row{display:flex;gap:0;overflow:hidden}
 .hero-mini-review{flex:1;padding:0.7rem 1rem;position:relative;text-align:left}
 .hero-mini-review + .hero-mini-review::before{content:'';position:absolute;left:0;top:10%;height:80%;width:1px;background:rgba(201,169,110,0.15)}
-.hero-mini-quote{font-size:0.72rem;color:rgba(255,255,255,0.55);line-height:1.5;font-style:italic;font-weight:300;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0.4rem}
+.hero-mini-quote{font-size:0.62rem;color:rgba(255,255,255,0.55);line-height:1.45;font-style:italic;font-weight:300;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0.4rem}
 .hero-mini-name{font-size:0.58rem;color:rgba(201,169,110,0.7);font-weight:600;letter-spacing:0.06em;text-transform:uppercase}
 @media(max-width:600px){
-  .hero-mini-review:nth-child(3){display:none}
+  .hero-mini-review:nth-child(3){display:none}.hero-mini-review:nth-child(4){display:none}.hero-mini-review:nth-child(5){display:none}
   .hero-mini-review{padding:0.6rem 0.7rem}
   .hero-mini-quote{font-size:0.68rem;-webkit-line-clamp:2}
 }
@@ -476,8 +476,8 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
       <span class="en"><span style="white-space:nowrap">Expert care.</span><br><em>Your private space.</em></span>
     </h1>
     <p class="hero-desc">
-      <span class="vi">Harmonie Beauté — không gian riêng tư, yên tĩnh tuyệt đối, nơi bạn được chăm sóc trọn vẹn và tận tâm.</span>
-      <span class="en">Harmonie Beauté — a private sanctuary of silence, where every treatment is delivered with full attention and care.</span>
+      <span class="vi">Harmonie Beauté — <em style="font-style:italic;color:var(--gold)">nơi làn da được chữa lành, nơi tâm trí được nghỉ ngơi.</em></span>
+      <span class="en">Harmonie Beauté — <em style="font-style:italic;color:var(--gold)">where skin heals, and the mind rests.</em></span>
     </p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="document.getElementById('calendar').scrollIntoView({behavior:'smooth'})">
@@ -501,19 +501,29 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
       </div>
       <div class="hero-reviews-row">
         <div class="hero-mini-review">
-          <div class="hero-mini-quote vi">"Nhẹ nhàng, riêng tư, sạch sẽ đến từng chi tiết. Chưa tới 300k mà được nuông chiều quá trời!"</div>
-          <div class="hero-mini-quote en">"So gentle, private and spotless. Under 300k for all that? Absolutely unreal."</div>
-          <div class="hero-mini-name">Khoa Nguyễn</div>
+          <div class="hero-mini-quote vi">"Spa private 1:1, chị làm siêu kĩ và có tâm. Peel tảo xong da đẹp hẳn — đi nhiều chỗ rồi mà vẫn ưng chỗ này nhất!"</div>
+          <div class="hero-mini-quote en">"1-on-1 private spa, incredibly thorough. After the algae peel my skin looked amazing — best I've tried."</div>
+          <div class="hero-mini-name">Kiều Lan Nhi</div>
         </div>
         <div class="hero-mini-review">
-          <div class="hero-mini-quote vi">"Chị nặn mát tay, không bị sần đỏ như mấy chỗ trước. Chắc chắn sẽ quay lại!"</div>
-          <div class="hero-mini-quote en">"So gentle, no redness like other places. Definitely coming back!"</div>
-          <div class="hero-mini-name">Bạn Nga</div>
+          <div class="hero-mini-quote vi">"Mình sợ nặn mụn lắm mà ghé chị làm thấy nhẹ nhàng cực kỳ. Nặn xong da chỉ hơi đỏ nhẹ, không sưng. Trải nghiệm rất okela!"</div>
+          <div class="hero-mini-quote en">"I was terrified of extractions but it was incredibly gentle. Only slight redness after — no swelling at all."</div>
+          <div class="hero-mini-name">Ngọc Bùi</div>
         </div>
         <div class="hero-mini-review">
-          <div class="hero-mini-quote vi">"Uy tín, hiệu quả, giá phải chăng — xứng đáng được biết đến nhiều hơn!"</div>
-          <div class="hero-mini-quote en">"Trusted, effective, affordable — deserves to be way more well-known."</div>
-          <div class="hero-mini-name">Hường Nguyễn</div>
+          <div class="hero-mini-quote vi">"Nặn mụn đỉnh nóc kịch trần! Nặn lần 1 là thấy hiệu quả rồi, chị chủ tận tình dễ thương. Làm một lần là dính ở đây luôn!"</div>
+          <div class="hero-mini-quote en">"Results from the very first session. The owner is so caring and attentive. Once you try it, you won't go anywhere else."</div>
+          <div class="hero-mini-name">Ngọc Duyên</div>
+        </div>
+        <div class="hero-mini-review">
+          <div class="hero-mini-quote vi">"Vô tình thấy cmt trên TikTok, đi lần đầu nặn mụn trộm vía cực kỳ — giờ thành khách ruột, đi từ Q3 qua tới Q1 đó nha!"</div>
+          <div class="hero-mini-quote en">"Found it on TikTok, first session was amazing — now I'm a regular, coming all the way from District 3."</div>
+          <div class="hero-mini-name">Trần Thư</div>
+        </div>
+        <div class="hero-mini-review">
+          <div class="hero-mini-quote vi">"Peel mông chỉ 1 lần mà đỡ được 30-40%, mấy chỗ khác tốn tiền triệu mà không khỏi. Vô tình lướt Threads gặp được chân ái!"</div>
+          <div class="hero-mini-quote en">"One session improved my skin 30-40%. Other places cost millions with no results. Found my holy grail on Threads!"</div>
+          <div class="hero-mini-name">Hoài Anh Thái</div>
         </div>
       </div>
     </div>
@@ -854,6 +864,10 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
 
 <!-- ADDRESS -->
 <section class="address-section" id="address">
+  <blockquote style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--earth);text-align:center;margin:0 auto 1.8rem;max-width:480px;line-height:1.75;padding:0 1rem;border:none;">
+    <span class="vi">"Nơi làn da được chữa lành,<br>nơi tâm trí được nghỉ ngơi."</span>
+    <span class="en">"Where skin heals,<br>and the mind rests."</span>
+  </blockquote>
   <div class="map-embed">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.179!2d106.688217!3d10.792974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f37b15b6d77%3A0x7c2bb3e32c97b8a0!2zMzAg4bqmcGHMgCBU4bqldCwgVMOibiBQaMO6LCBRdeG6rW4gMSwgVGjDoG5oIHBobyBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2svn!4v1715000000000!5m2!1svi!2svn" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
