@@ -227,4 +227,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- ══ New articles May 2026 ══ -->
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/gia-peel-tao-decaar-harmonie.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/gia-peel-tao-decaar-harmonie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/gia-peel-tao-decaar-harmonie.html"/>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/da-sau-peel-bi-bong.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/da-sau-peel-bi-bong.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/da-sau-peel-bi-bong.html"/>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/nan-mun-lung-tphcm.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/nan-mun-lung-tphcm.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/nan-mun-lung-tphcm.html"/>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/chemical-peel-co-hai-khong.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/chemical-peel-co-hai-khong.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/chemical-peel-co-hai-khong.html"/>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/peel-body-an-toan-khong.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://harmonie-beaute-vietnam.com/peel-body-an-toan-khong.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://harmonie-beaute-vietnam.com/peel-body-an-toan-khong.html"/>
+  </url>
 </urlset>
