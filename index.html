@@ -489,8 +489,8 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
     </div>
     <div class="announce-pill">
       <span>🎉</span>
-      <span class="vi">Mừng địa điểm mới — Giảm <em>20%</em> từ <em>01/05 – 31/05</em></span>
-      <span class="en">New location — <em>20% off</em> from <em>May 1–31</em></span>
+      <span class="vi">🆕 Khai trương Triệt lông Diode 808 — Giảm <em>10%</em> giá lẻ trong <em>tháng 6</em></span>
+      <span class="en">🆕 Diode 808 hair removal — <em>10% off</em> single sessions in <em>June</em></span>
     </div>
     <div class="hero-reviews">
       <div class="hero-reviews-badge">
@@ -537,10 +537,13 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
   <div class="section-line"></div>
   <div class="tab-bar">
     <button class="tab-btn active" onclick="switchTab(this,'acne')"><span class="vi">Điều trị mụn</span><span class="en">Acne Treatment</span></button>
-    <button class="tab-btn" onclick="switchTab(this,'facial')"><span class="vi">Chăm sóc mặt</span><span class="en">Facial Treatment</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'facial')"><span class="vi">Massage mặt</span><span class="en">Facial Treatment</span></button>
     <button class="tab-btn" onclick="switchTab(this,'peel')">Chemical Peel</button>
-    <button class="tab-btn" onclick="switchTab(this,'packages')"><span class="vi">✦ Gói giá</span><span class="en">✦ Packages</span></button>
-    <button class="tab-btn" onclick="switchTab(this,'combo')"><span class="vi">✦ Dịch vụ kết hợp</span><span class="en">✦ Add-on services</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'packages')"><span class="vi">✦ Gói Peel</span><span class="en">✦ Peel Packages</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'triet')"><span class="vi">⚡ Triệt lông</span><span class="en">⚡ Hair removal</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'goi-triet')"><span class="vi">📦 Gói triệt lông</span><span class="en">📦 Removal packages</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'kethop')"><span class="vi">✦ Dịch vụ kết hợp</span><span class="en">✦ Combined services</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'combo')"><span class="vi">✦ Gội đầu & Massage</span><span class="en">✦ Wash & Massage</span></button>
     <button class="tab-btn" onclick="switchTab(this,'pmu')"><span class="vi">✦ Phun xăm PMU</span><span class="en">✦ PMU Services</span></button>
   </div>
 
@@ -683,7 +686,113 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
     </div>
   </div>
 
-  <!-- PMU TAB -->
+
+  <!-- TRIỆT LÔNG TAB -->
+  <div class="tab-content" id="tab-triet">
+    <div class="combo-note" style="background:rgba(61,90,71,0.06);border:0.5px solid rgba(61,90,71,0.2);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
+      <span class="vi">⚡ <strong>Triệt lông Diode 808</strong> — 808nm cao cấp, 6 buổi tương đương 10 buổi công nghệ thông thường. Phòng riêng tư. 🎉 <strong>Tháng 6: giảm 10% giá lẻ</strong></span>
+      <span class="en">⚡ <strong>Diode 808 hair removal</strong> — Premium 808nm. 6 sessions = 10 standard sessions. Private room. 🎉 <strong>June: 10% off all single sessions</strong></span>
+    </div>
+    <div class="two-col">
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">💜 <span class="vi">Giá lẻ / buổi</span><span class="en">Single session price</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nách</span><span class="en">Underarms</span></span></div><div class="svc-right"><span class="svc-price">120,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Nách')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Ria mép</span><span class="en">Upper lip</span></span></div><div class="svc-right"><span class="svc-price">120,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Ria mép')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mặt</span><span class="en">Face</span></span></div><div class="svc-right"><span class="svc-price">250,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Mặt')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Bụng</span><span class="en">Abdomen</span></span></div><div class="svc-right"><span class="svc-price">300,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Bụng')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Ngực</span><span class="en">Chest</span></span></div><div class="svc-right"><span class="svc-price">300,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Ngực')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Bikini</span><span class="en">Bikini</span></span></div><div class="svc-right"><span class="svc-price">380,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Bikini')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">½ Tay</span><span class="en">Half arms</span></span></div><div class="svc-right"><span class="svc-price">350,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông ½ Tay')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Tay</span><span class="en">Full arms</span></span></div><div class="svc-right"><span class="svc-price">500,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Tay')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">½ Chân</span><span class="en">Half legs</span></span></div><div class="svc-right"><span class="svc-price">400,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông ½ Chân')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Chân</span><span class="en">Full legs</span></span></div><div class="svc-right"><span class="svc-price">650,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Chân')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">½ Lưng</span><span class="en">Half back</span></span></div><div class="svc-right"><span class="svc-price">400,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông ½ Lưng')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Lưng</span><span class="en">Full back</span></span></div><div class="svc-right"><span class="svc-price">650,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Lưng')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">💡 <span class="vi">Tại sao Diode 808?</span><span class="en">Why Diode 808?</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Bước sóng 808nm — chuẩn vàng cho da Á Đông</span><span class="en">808nm wavelength — gold standard for Asian skin</span></span><span class="svc-desc"><span class="vi">Thâm nhập đúng độ sâu nang lông, hiệu quả cao hơn SHR/IPL</span><span class="en">Penetrates to exact follicle depth, more effective than SHR/IPL</span></span></div></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">6 buổi = kết quả 10 buổi công nghệ thông thường</span><span class="en">6 sessions = 10 sessions with standard tech</span></span><span class="svc-desc"><span class="vi">Tiết kiệm 4 lần đi lại, tổng chi phí tương đương</span><span class="en">Save 4 trips, comparable total cost</span></span></div></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Phòng riêng tư — 1 khách · 1 kỹ thuật viên</span><span class="en">Private room — 1 client · 1 therapist</span></span><span class="svc-desc"><span class="vi">Không gian riêng tư hoàn toàn như các dịch vụ Harmonie khác</span><span class="en">Fully private, same standard as all Harmonie services</span></span></div></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Lông rụng sau 7–10 ngày</span><span class="en">Hair sheds after 7–10 days</span></span><span class="svc-desc"><span class="vi">Giảm 20–30% sau buổi đầu, rụng dần qua các buổi tiếp theo</span><span class="en">20–30% reduction after first session, progressive shedding</span></span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GÓI TRIỆT LÔNG TAB -->
+  <div class="tab-content" id="tab-goi-triet">
+    <div class="combo-note" style="background:rgba(61,90,71,0.06);border:0.5px solid rgba(61,90,71,0.2);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
+      <span class="vi">📦 <strong>Gói triệt lông</strong> — Mua gói để tiết kiệm ~32% so với giá lẻ. Gói 15 buổi = 2× gói 6 buổi. Combo nhiều vùng tiết kiệm thêm.</span>
+      <span class="en">📦 <strong>Hair removal packages</strong> — Buy packages to save ~32% vs single sessions. 15-session = 2× 6-session. Multi-zone combos save more.</span>
+    </div>
+    <div class="two-col">
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">📦 <span class="vi">Gói 6 buổi (~32% off)</span><span class="en">6-session packages (~32% off)</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Nách — Gói 6 buổi</span><span class="en">Underarms — 6 sessions</span></span><span class="best-badge">⭐ Phổ biến</span></div><div class="svc-right"><span class="svc-price">500,000đ</span><span class="svc-price-usd">lẻ: 720k</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Nách - Gói 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Bikini — Gói 6 buổi</span><span class="en">Bikini — 6 sessions</span></span></div><div class="svc-right"><span class="svc-price">1,550,000đ</span><span class="svc-price-usd">lẻ: 2,280k</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Bikini - Gói 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Chân — Gói 6 buổi</span><span class="en">Full legs — 6 sessions</span></span></div><div class="svc-right"><span class="svc-price">2,650,000đ</span><span class="svc-price-usd">lẻ: 3,900k</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Chân - Gói 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Lưng — Gói 6 buổi</span><span class="en">Full back — 6 sessions</span></span></div><div class="svc-right"><span class="svc-price">2,650,000đ</span><span class="svc-price-usd">lẻ: 3,900k</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Lưng - Gói 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Tay — Gói 6 buổi</span><span class="en">Full arms — 6 sessions</span></span></div><div class="svc-right"><span class="svc-price">2,050,000đ</span><span class="svc-price-usd">lẻ: 3,000k</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Tay - Gói 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">½ Chân — Gói 6 buổi</span><span class="en">Half legs — 6 sessions</span></span></div><div class="svc-right"><span class="svc-price">1,650,000đ</span><span class="svc-price-usd">lẻ: 2,400k</span><button class="svc-book-btn" onclick="fillBook('Triệt lông ½ Chân - Gói 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">½ Lưng — Gói 6 buổi</span><span class="en">Half back — 6 sessions</span></span></div><div class="svc-right"><span class="svc-price">1,650,000đ</span><span class="svc-price-usd">lẻ: 2,400k</span><button class="svc-book-btn" onclick="fillBook('Triệt lông ½ Lưng - Gói 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+        <div class="sub-cat-title" style="margin-top:1.2rem">🔥 <span class="vi">Gói 15 buổi</span><span class="en">15-session packages</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nách — Gói 15 buổi</span><span class="en">Underarms — 15 sessions</span></span><span class="svc-desc"><span class="vi">= 2× gói 6 buổi · dùng lâu dài</span><span class="en">= 2× 6-session pack · long term</span></span></div><div class="svc-right"><span class="svc-price">1,000,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Nách - Gói 15 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Bikini — Gói 15 buổi</span><span class="en">Bikini — 15 sessions</span></span></div><div class="svc-right"><span class="svc-price">3,100,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Bikini - Gói 15 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Chân — Gói 15 buổi</span><span class="en">Full legs — 15 sessions</span></span></div><div class="svc-right"><span class="svc-price">5,300,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Chân - Gói 15 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Lưng — Gói 15 buổi</span><span class="en">Full back — 15 sessions</span></span></div><div class="svc-right"><span class="svc-price">5,300,000đ</span><button class="svc-book-btn" onclick="fillBook('Triệt lông Full Lưng - Gói 15 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">🤝 <span class="vi">Combo nhiều vùng (gói 6 buổi)</span><span class="en">Multi-zone combos (6 sessions each)</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Nách + Bikini</span><span class="en">Underarms + Bikini</span></span><span class="svc-desc"><span class="vi">Tiết kiệm 100k</span><span class="en">Save 100k</span></span><span class="best-badge">⭐ Gợi ý</span></div><div class="svc-right"><span class="svc-price">1,950,000đ</span><span class="svc-price-usd">vs 2,050k</span><button class="svc-book-btn" onclick="fillBook('Triệt Nách + Bikini Combo 6 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Nách + Bikini + ½ Chân</span><span class="en">Underarms + Bikini + Half legs</span></span><span class="svc-desc"><span class="vi">Tiết kiệm 250k</span><span class="en">Save 250k</span></span><span class="best-badge">☀️ Hè 2026</span></div><div class="svc-right"><span class="svc-price">3,450,000đ</span><span class="svc-price-usd">vs 3,700k</span><button class="svc-book-btn" onclick="fillBook('Triệt Nách + Bikini + ½ Chân Combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Full Body Nữ</span><span class="en">Full body female</span></span><span class="svc-desc"><span class="vi">Nách + Bikini + Full Chân + Full Tay · tiết kiệm 550k</span><span class="en">Underarms + Bikini + Full legs + Full arms · save 550k</span></span></div><div class="svc-right"><span class="svc-price">6,200,000đ</span><span class="svc-price-usd">vs 6,750k</span><button class="svc-book-btn" onclick="fillBook('Triệt Full Body Nữ Combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Lưng + Ngực + Bụng (Nam)</span><span class="en">Back + Chest + Abdomen (Male)</span></span><span class="svc-desc"><span class="vi">Tiết kiệm 350k</span><span class="en">Save 350k</span></span></div><div class="svc-right"><span class="svc-price">4,700,000đ</span><span class="svc-price-usd">vs 5,050k</span><button class="svc-book-btn" onclick="fillBook('Triệt Lưng + Ngực + Bụng Nam Combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Mặt full (Ria mép + Mặt)</span><span class="en">Full face (Upper lip + Face)</span></span><span class="svc-desc"><span class="vi">Tiết kiệm 100k</span><span class="en">Save 100k</span></span></div><div class="svc-right"><span class="svc-price">1,400,000đ</span><span class="svc-price-usd">vs 1,500k</span><button class="svc-book-btn" onclick="fillBook('Triệt Mặt full Combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Nách + ½ Lưng</span><span class="en">Underarms + Half back</span></span><span class="svc-desc"><span class="vi">Tiết kiệm 100k</span><span class="en">Save 100k</span></span></div><div class="svc-right"><span class="svc-price">2,050,000đ</span><span class="svc-price-usd">vs 2,150k</span><button class="svc-book-btn" onclick="fillBook('Triệt Nách + ½ Lưng Combo')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DỊCH VỤ KẾT HỢP TAB -->
+  <div class="tab-content" id="tab-kethop">
+    <div class="combo-note" style="background:rgba(61,90,71,0.06);border:0.5px solid rgba(61,90,71,0.2);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
+      <span class="vi">✦ <strong>Dịch vụ kết hợp</strong> — Triệt lông kết hợp dịch vụ Harmonie trong cùng 1 buổi. Mỗi dịch vụ thực hiện ở vùng khác nhau. Tiết kiệm thời gian đi lại.</span>
+      <span class="en">✦ <strong>Combined services</strong> — Hair removal combined with a Harmonie service in the same session. Each on a different zone. Save on travel time.</span>
+    </div>
+    <div class="two-col">
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">⚡ <span class="vi">Triệt + Nặn mụn</span><span class="en">Hair removal + Extraction</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt nách + Nặn mụn cơ bản</span><span class="en">Underarm + Basic extraction</span></span><span class="svc-desc"><span class="vi">Nặn mụn mặt · cùng buổi</span><span class="en">Face extraction · same session</span></span></div><div class="svc-right"><span class="svc-price">290,000đ</span><span class="svc-price-usd">tiết kiệm 50k</span><button class="svc-book-btn" onclick="fillBook('Triệt nách + Nặn mụn cơ bản')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt nách + Nặn mụn chuyên sâu</span><span class="en">Underarm + Deep extraction</span></span><span class="svc-desc"><span class="vi">Nặn mụn mặt chuyên sâu · cùng buổi</span><span class="en">Deep face extraction · same session</span></span></div><div class="svc-right"><span class="svc-price">400,000đ</span><span class="svc-price-usd">tiết kiệm 70k</span><button class="svc-book-btn" onclick="fillBook('Triệt nách + Nặn mụn chuyên sâu')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt full chân + Nặn mụn lưng</span><span class="en">Full leg + Back extraction</span></span><span class="svc-desc"><span class="vi">Nặn mụn full lưng · cùng buổi</span><span class="en">Full back extraction · same session</span></span></div><div class="svc-right"><span class="svc-price">1,150,000đ</span><span class="svc-price-usd">tiết kiệm 100k</span><button class="svc-book-btn" onclick="fillBook('Triệt full chân + Nặn mụn lưng')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt lưng + Nặn mụn mặt</span><span class="en">Back removal + Face extraction</span></span></div><div class="svc-right"><span class="svc-price">800,000đ</span><span class="svc-price-usd">tiết kiệm 70k</span><button class="svc-book-btn" onclick="fillBook('Triệt lưng + Nặn mụn mặt')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt bikini + Nặn mụn mặt</span><span class="en">Bikini + Face extraction</span></span></div><div class="svc-right"><span class="svc-price">530,000đ</span><span class="svc-price-usd">tiết kiệm 70k</span><button class="svc-book-btn" onclick="fillBook('Triệt bikini + Nặn mụn mặt')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+      <div class="svc-card-wrap">
+        <div class="sub-cat-title">✨ <span class="vi">Triệt + Peel</span><span class="en">Hair removal + Peel</span></div>
+        <div class="svc-card-body">
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt nách + Peel trị mụn mặt</span><span class="en">Underarm + Acne peel</span></span><span class="svc-desc"><span class="vi">Cùng buổi · khác vùng</span><span class="en">Same session · different zones</span></span></div><div class="svc-right"><span class="svc-price">540,000đ</span><span class="svc-price-usd">tiết kiệm 80k</span><button class="svc-book-btn" onclick="fillBook('Triệt nách + Peel trị mụn mặt')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row is-best"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt nách + Peel tảo Decaar mặt</span><span class="en">Underarm + Decaar algae peel</span></span><span class="svc-desc"><span class="vi">Cùng buổi · khác vùng</span><span class="en">Same session · different zones</span></span><span class="best-badge">⭐ Gợi ý</span></div><div class="svc-right"><span class="svc-price">1,070,000đ</span><span class="svc-price-usd">tiết kiệm 150k</span><button class="svc-book-btn" onclick="fillBook('Triệt nách + Peel tảo Decaar mặt')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt lưng + Peel trị mụn mặt</span><span class="en">Back removal + Acne peel</span></span><span class="svc-desc"><span class="vi">Cùng buổi · khác vùng</span><span class="en">Same session · different zones</span></span></div><div class="svc-right"><span class="svc-price">1,050,000đ</span><span class="svc-price-usd">tiết kiệm 100k</span><button class="svc-book-btn" onclick="fillBook('Triệt lưng + Peel trị mụn mặt')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+          <div class="svc-row"><div class="svc-left"><span class="svc-name"><span class="vi">Triệt nách + Peel tảo Decaar mặt (gói 3 buổi)</span><span class="en">Underarm (x3) + Decaar peel (x3)</span></span><span class="svc-desc"><span class="vi">3 buổi triệt nách + 3 buổi peel Decaar mặt</span><span class="en">3 underarm sessions + 3 Decaar face peel sessions</span></span></div><div class="svc-right"><span class="svc-price">3,000,000đ</span><span class="svc-price-usd">tiết kiệm 330k</span><button class="svc-book-btn" onclick="fillBook('Triệt nách + Peel Decaar x3 buổi')"><span class="vi">Đặt</span><span class="en">Book</span></button></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- PMU TAB -->
   <div class="tab-content" id="tab-pmu">
     <div class="combo-note" style="background:rgba(122,48,80,0.04);border:0.5px solid rgba(122,48,80,0.12);border-radius:12px;padding:0.85rem 1.2rem;margin-bottom:1.5rem;font-size:0.75rem;color:var(--charcoal);line-height:1.6">
       <div class="partner-badge">✦ Đối tác của Harmonie Beauté</div>
@@ -734,6 +843,7 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
   <h2 class="section-title"><span class="vi">Chương trình <em>dành cho bạn</em></span><span class="en">Loyalty <em>programs</em></span></h2>
   <div class="section-line"></div>
   <div class="promo-grid">
+    <div style="display:flex;flex-direction:column;gap:1rem">
     <div class="promo-card promo-card-combo">
       <div class="promo-card-head">
         <p class="promo-card-tag"><span class="vi">Combo nặn mụn</span><span class="en">Acne combo</span></p>
@@ -746,6 +856,20 @@ footer p{font-size:0.68rem;color:var(--earth)}.footer-lp-links{margin-top:0.4rem
         <p class="combo-note vi">Không áp dụng cho dịch vụ kết hợp của đối tác · Không hết hạn</p>
         <p class="combo-note en">Excludes partner add-on services · Points never expire</p>
       </div>
+    </div>
+    <div class="promo-card promo-card-combo">
+      <div class="promo-card-head">
+        <p class="promo-card-tag"><span class="vi">Combo Peel</span><span class="en">Peel combo</span></p>
+        <h3 class="promo-card-title"><span class="vi">Peel đều — <em style="font-style:italic;color:var(--gold)">da đẹp hơn</em></span><span class="en">More peels — <em style="font-style:italic;color:var(--gold)">better skin</em></span></h3>
+        <p class="promo-card-sub"><span class="vi">Áp dụng cho tất cả dịch vụ peel · Không cần thanh toán trước</span><span class="en">Applies to all peel services · No prepayment needed</span></p>
+      </div>
+      <div class="promo-card-body">
+        <div class="combo-tier"><div class="combo-tier-num">3</div><div class="combo-tier-text"><strong class="vi">Buổi cùng loại → Giảm 10% buổi thứ 3</strong><strong class="en">Same peel type → 10% off 3rd session</strong><span class="vi">Tự động áp dụng khi đủ buổi</span><span class="en">Automatically applied when eligible</span></div></div>
+        <div class="combo-tier"><div class="combo-tier-num">5</div><div class="combo-tier-text"><strong class="vi">Buổi cùng loại → Tặng 1 buổi miễn phí</strong><strong class="en">Same peel type → 1 free session</strong><span class="vi">Cùng dịch vụ peel đã chọn</span><span class="en">Same peel service of your choice</span></div></div>
+        <p class="combo-note vi">Không áp dụng cho dịch vụ kết hợp của đối tác · Không hết hạn</p>
+        <p class="combo-note en">Excludes partner add-on services · Never expires</p>
+      </div>
+    </div>
     </div>
     <div class="promo-card promo-card-points">
       <div class="promo-card-head">
