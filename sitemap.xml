@@ -327,4 +327,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- ══ Xoá nốt ruồi articles ══ -->
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/xoa-not-ruoi-o-dau-uy-tin-tphcm.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/xoa-not-ruoi-co-dau-khong.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/xoa-not-ruoi-bao-lau-thi-lanh.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
