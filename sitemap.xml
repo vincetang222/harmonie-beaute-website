@@ -307,4 +307,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- ══ New articles June 2026 ══ -->
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/triet-long-bikini-co-dau-khong.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/peel-da-co-nen-lam-khong.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://harmonie-beaute-vietnam.com/spa-private-la-gi-tphcm.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

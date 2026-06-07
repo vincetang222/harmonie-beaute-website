@@ -678,6 +678,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
 
+.tab-panel{display:none}.tab-panel.active{display:block}#panel-all{display:block}
 </style>
 </head>
 <body>
@@ -733,7 +734,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
 <div class="filter-bar" id="filterBar">
   <button class="filter-btn active" onclick="filterPosts(this,'all')"><span class="vi">Tất cả</span><span class="en">All</span></button>
   <button class="filter-btn" onclick="filterPosts(this,'triet')"><span class="vi">⚡ Triệt lông</span><span class="en">Hair Removal</span></button>
-  <button class="filter-btn" onclick="filterPosts(this,'triet')"><span class="vi">⚡ Triệt lông</span><span class="en">Hair Removal</span></button>
+  
   <button class="filter-btn" onclick="filterPosts(this,'acne')"><span class="vi">Điều trị mụn</span><span class="en">Acne</span></button>
   <button class="filter-btn" onclick="filterPosts(this,'peel')">Chemical Peel</button>
   <button class="filter-btn" onclick="filterPosts(this,'skincare')"><span class="vi">Chăm sóc da</span><span class="en">Skin care</span></button>
@@ -746,7 +747,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <!-- ═══════════════════════════════
        PANEL: ALL
        ═══════════════════════════════ -->
-  <div class="tab-panel" id="panel-all">
+  <div class="tab-panel active" id="panel-all">
 
     <!-- Big Featured -->
     <div class="featured-section">
@@ -849,13 +850,44 @@ footer p{font-size:0.68rem;color:var(--earth)}
     <!-- Regular article grid -->
     <div class="articles-section">
       <div class="articles-header">
-        <span class="articles-label vi">Tất cả bài viết (37)</span>
-        <span class="articles-label en">All articles (37)</span>
+        <span class="articles-label vi">Tất cả bài viết (40)</span>
+        <span class="articles-label en">All articles (40)</span>
       </div>
       <div class="art-grid-3">
 
         <!-- ACNE (5) -->
         
+        
+        <a class="art-card lazy-card" href="triet-long-bikini-co-dau-khong.html" data-cat="triet">
+          <div class="art-card-head">
+            <span class="art-card-cat vi">Triệt Lông</span><span class="art-card-cat en">Hair Removal</span>
+            <div class="art-card-title"><span class="vi">Triệt lông bikini có đau không? Mô tả thực tế — không tô hồng</span><span class="en">Does bikini laser removal hurt? An honest, unfiltered description</span></div>
+          </div>
+          <div class="art-card-body">
+            <div class="art-card-excerpt"><span class="vi">Vùng nhạy cảm nhất, cảm giác thực tế và cách Hana điều chỉnh cường độ để khách vượt qua được.</span><span class="en">The most sensitive zone, honest sensation description and how Hana adjusts intensity.</span></div>
+            <div class="art-card-foot"><span class="art-card-meta">Jun 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
+          </div>
+        </a>
+        <a class="art-card lazy-card" href="peel-da-co-nen-lam-khong.html" data-cat="peel">
+          <div class="art-card-head">
+            <span class="art-card-cat vi">Chemical Peel</span><span class="art-card-cat en">Chemical Peel</span>
+            <div class="art-card-title"><span class="vi">Peel da có nên làm không? Phân tích thực tế từ Harmonie Beauté</span><span class="en">Should you get a chemical peel? An honest, practical analysis</span></div>
+          </div>
+          <div class="art-card-body">
+            <div class="art-card-excerpt"><span class="vi">Khi nào phù hợp, khi nào không, cảm giác thực tế và kết quả thực sự ra sao.</span><span class="en">When suitable, when to avoid, what it feels like and what results look like.</span></div>
+            <div class="art-card-foot"><span class="art-card-meta">Jun 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
+          </div>
+        </a>
+        <a class="art-card lazy-card" href="spa-private-la-gi-tphcm.html" data-cat="skincare">
+          <div class="art-card-head">
+            <span class="art-card-cat vi">Skincare</span><span class="art-card-cat en">Skincare</span>
+            <div class="art-card-title"><span class="vi">Spa private là gì? Và tại sao điều đó quan trọng hơn bạn nghĩ</span><span class="en">What is a private spa? And why it matters more than you think</span></div>
+          </div>
+          <div class="art-card-body">
+            <div class="art-card-excerpt"><span class="vi">Spa private không chỉ là phòng riêng — giải thích khác biệt thực sự và tại sao nó ảnh hưởng đến kết quả.</span><span class="en">More than a separate room — the real difference and why it affects treatment results.</span></div>
+            <div class="art-card-foot"><span class="art-card-meta">Jun 2026 · 6 min</span><span class="art-card-arrow">→</span></div>
+          </div>
+        </a>
         <a class="art-card lazy-card" href="triet-long-diode-laser-co-dau-khong.html" data-cat="triet">
           <div class="art-card-head">
             <span class="art-card-cat vi">Triệt Lông</span><span class="art-card-cat en">Hair Removal</span>
@@ -1195,11 +1227,11 @@ footer p{font-size:0.68rem;color:var(--earth)}
   </div>
 
     <!-- ══ PANEL: TRIỆT LÔNG ══ -->
-  <div class="tab-panel" id="panel-triet" style="display:none">
+  <div class="tab-panel" id="panel-triet">
     <div class="articles-section">
       <div class="articles-header">
-        <span class="articles-label vi">⚡ Triệt lông Diode Laser (6)</span>
-        <span class="articles-label en">Hair Removal (6)</span>
+        <span class="articles-label vi">⚡ Triệt lông Diode Laser (7)</span>
+        <span class="articles-label en">Hair Removal (7)</span>
       </div>
       <div class="art-grid-3">
         <a class="art-card lazy-card" href="triet-long-diode-laser-co-dau-khong.html" data-cat="triet">
@@ -1262,6 +1294,16 @@ footer p{font-size:0.68rem;color:var(--earth)}
             <div class="art-card-foot"><span class="art-card-meta">Jun 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
           </div>
         </a>
+        <a class="art-card lazy-card" href="triet-long-bikini-co-dau-khong.html" data-cat="triet">
+          <div class="art-card-head">
+            <span class="art-card-cat vi">Triệt Lông</span><span class="art-card-cat en">Hair Removal</span>
+            <div class="art-card-title"><span class="vi">Triệt lông bikini có đau không? Mô tả thực tế — không tô hồng</span><span class="en">Does bikini laser removal hurt? An honest, unfiltered description</span></div>
+          </div>
+          <div class="art-card-body">
+            <div class="art-card-excerpt"><span class="vi">Vùng nhạy cảm nhất, cảm giác thực tế và cách Hana điều chỉnh cường độ để khách vượt qua được.</span><span class="en">The most sensitive zone, honest sensation description and how Hana adjusts intensity.</span></div>
+            <div class="art-card-foot"><span class="art-card-meta">Jun 2026 · 7 min</span><span class="art-card-arrow">→</span></div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -1273,7 +1315,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
         
       
         
-       id="panel-acne" style="display:none">
+       id="panel-acne">
     <div class="featured-section">
       <a class="featured-link" href="nan-mun-tan-dinh.html">
         <div class="featured-head">
@@ -1330,7 +1372,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
         
         
         
-       id="panel-peel" style="display:none">
+       id="panel-peel">
     <div class="featured-section">
       <a class="featured-link" href="chemical-peel-la-gi.html">
         <div class="featured-head">
@@ -1404,7 +1446,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <!-- ═══════════════════════════════
        PANEL: SKINCARE
        ═══════════════════════════════ -->
-  <div class="tab-panel" id="panel-skincare" style="display:none">
+  <div class="tab-panel" id="panel-skincare">
     <div class="featured-section">
       <a class="featured-link" href="bao-lau-nan-mun.html">
         <div class="featured-head">
@@ -1436,7 +1478,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
   <!-- ═══════════════════════════════
        PANEL: LIFESTYLE
        ═══════════════════════════════ -->
-  <div class="tab-panel" id="panel-lifestyle" style="display:none">
+  <div class="tab-panel" id="panel-lifestyle">
     <div class="featured-section">
       <a class="featured-link" href="5-thoi-quen-buoi-toi.html">
         <div class="featured-head">
@@ -1516,11 +1558,10 @@ document.addEventListener('click',e=>{
 function filterPosts(btn,tab){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.tab-panel').forEach(p=>p.style.display='none');
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   const panel=document.getElementById('panel-'+tab);
   if(panel){
-    panel.style.display='';
-    /* Re-trigger observer for newly visible cards */
+    panel.classList.add('active');
     setTimeout(()=>revealVisible(),50);
   }
 }
