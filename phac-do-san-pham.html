@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phác Đồ Sản Phẩm — Harmonie Beauté</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --moss:#3D5A47; --moss-light:#4E7260; --moss-pale:rgba(61,90,71,0.08);
+    --gold:#C9A96E; --gold-pale:rgba(201,169,110,0.12);
+    --charcoal:#2C2C2C; --earth:#7A6B55; --cream:#F9F7F4;
+    --white:#FFFFFF; --border:rgba(61,90,71,0.15);
+    --shadow:0 2px 16px rgba(44,44,44,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal);font-size:14px;line-height:1.6}
+
+  /* HEADER */
+  .hdr{background:var(--moss);padding:1.4rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+  .hdr-logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.3rem;letter-spacing:.04em}
+  .hdr-logo span{font-style:italic;color:var(--gold)}
+  .hdr-sub{color:rgba(255,255,255,.6);font-size:.73rem;letter-spacing:.12em;text-transform:uppercase;margin-top:.1rem}
+  .hdr-badge{background:var(--gold);color:var(--charcoal);font-size:.65rem;font-weight:600;padding:.25rem .6rem;border-radius:20px;letter-spacing:.06em;text-transform:uppercase}
+
+  /* TABS */
+  .tabs{background:var(--white);border-bottom:2px solid var(--border);padding:0 2rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;position:sticky;top:68px;z-index:90;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex-shrink:0;padding:.85rem 1.1rem;font-size:.78rem;font-weight:500;color:var(--earth);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s;white-space:nowrap;border-top:none;border-left:none;border-right:none;background:none;letter-spacing:.02em}
+  .tab:hover{color:var(--moss)}
+  .tab.active{color:var(--moss);border-bottom-color:var(--moss);font-weight:600}
+
+  /* MAIN */
+  .main{max-width:1200px;margin:0 auto;padding:2rem}
+  .panel{display:none}
+  .panel.active{display:block}
+
+  /* SKIN TYPE HEADER */
+  .skin-hero{background:var(--white);border-radius:14px;padding:1.8rem 2rem;margin-bottom:1.5rem;border-left:5px solid var(--moss);box-shadow:var(--shadow)}
+  .skin-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--moss);margin-bottom:.4rem}
+  .skin-title span{font-style:italic;color:var(--gold)}
+  .skin-desc{color:var(--earth);font-size:.85rem;line-height:1.7;max-width:800px}
+
+  /* STRATEGY */
+  .strategy{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem;margin-bottom:1.5rem}
+  .strat-item{background:var(--moss-pale);border-radius:10px;padding:.9rem 1.1rem;border-left:3px solid var(--moss)}
+  .strat-num{font-size:.65rem;font-weight:700;color:var(--moss);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem}
+  .strat-text{font-size:.82rem;color:var(--charcoal);line-height:1.6}
+
+  /* SECTION LABEL */
+  .sec-label{font-size:.65rem;font-weight:700;color:var(--earth);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+  .sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+  /* PRODUCT MATRIX TABLE */
+  .matrix-wrap{overflow-x:auto;margin-bottom:1.5rem;border-radius:12px;box-shadow:var(--shadow)}
+  table.matrix{width:100%;border-collapse:collapse;background:var(--white);min-width:600px}
+  table.matrix thead tr{background:var(--moss)}
+  table.matrix thead th{padding:.75rem 1rem;text-align:left;color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.06em}
+  table.matrix thead th:first-child{width:120px}
+  table.matrix tbody tr:nth-child(even){background:#F5F3F0}
+  table.matrix tbody tr:hover{background:var(--gold-pale)}
+  table.matrix tbody td{padding:.85rem 1rem;vertical-align:top;border-bottom:1px solid var(--border);font-size:.8rem}
+  table.matrix tbody td:first-child{font-weight:600;color:var(--moss);font-size:.75rem;white-space:nowrap;width:110px}
+  .prod-name{font-weight:600;color:var(--charcoal);margin-bottom:.2rem;font-size:.82rem}
+  .prod-desc{color:var(--earth);font-size:.76rem;line-height:1.55}
+  .tier-high .prod-name::before{content:'✦ ';color:var(--gold)}
+  .tier-mid .prod-name::before{content:'◆ ';color:var(--moss)}
+  .tier-low .prod-name::before{content:'• ';color:var(--earth)}
+
+  /* WARNINGS */
+  .warn-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.5rem}
+  .warn-box{background:var(--white);border-radius:10px;padding:1rem 1.2rem;box-shadow:var(--shadow)}
+  .warn-box.avoid{border-left:3px solid #C0392B}
+  .warn-box.tips{border-left:3px solid var(--gold)}
+  .warn-title{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem}
+  .warn-box.avoid .warn-title{color:#C0392B}
+  .warn-box.tips .warn-title{color:var(--gold)}
+  .warn-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+  .warn-list li{font-size:.78rem;color:var(--charcoal);padding-left:.9rem;position:relative;line-height:1.5}
+  .warn-list li::before{content:'—';position:absolute;left:0;color:var(--earth)}
+
+  /* SOCIAL CAPTION */
+  .caption-box{background:linear-gradient(135deg,var(--moss),var(--moss-light));border-radius:12px;padding:1.4rem 1.6rem;color:#fff;margin-bottom:1.5rem}
+  .caption-title{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.6rem}
+  .caption-text{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.92)}
+  .caption-slides{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem}
+  .slide-chip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:.25rem .7rem;font-size:.7rem;color:rgba(255,255,255,.85)}
+
+  /* NOTE BOX */
+  .note{background:var(--gold-pale);border:1px solid rgba(201,169,110,.3);border-radius:8px;padding:.7rem 1rem;font-size:.78rem;color:var(--charcoal);margin:.4rem 0;line-height:1.6}
+
+  @media(max-width:700px){
+    .hdr{padding:1rem 1.2rem}
+    .main{padding:1rem}
+    .warn-grid{grid-template-columns:1fr}
+    .strategy{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div>
+    <div class="hdr-logo">Harmonie <span>beauté</span></div>
+    <div class="hdr-sub">Cẩm Nang Phác Đồ Sản Phẩm · Nội Bộ</div>
+  </div>
+  <div class="hdr-badge">Tân Định · Q.1</div>
+</header>
+
+<nav class="tabs" id="tabNav">
+  <button class="tab active" onclick="switchPanel('kho')">💧 Da Khô</button>
+  <button class="tab" onclick="switchPanel('thuong')">✨ Da Thường</button>
+  <button class="tab" onclick="switchPanel('dau')">🫧 Da Dầu</button>
+  <button class="tab" onclick="switchPanel('mun')">🔴 Da Mụn</button>
+  <button class="tab" onclick="switchPanel('nhay-cam')">🌸 Da Nhạy Cảm</button>
+  <button class="tab" onclick="switchPanel('hon-hop-dau')">⚖️ Hỗn Hợp · Thiên Dầu</button>
+  <button class="tab" onclick="switchPanel('hon-hop-kho')">🍃 Hỗn Hợp · Thiên Khô</button>
+</nav>
+
+<main class="main">
+
+<!-- ══ DA KHÔ ══════════════════════════════════════════ -->
+<div class="panel active" id="panel-kho">
+  <div class="skin-hero">
+    <div class="skin-title">Da Khô <span>(Dry Skin)</span></div>
+    <div class="skin-desc">Bề mặt thô ráp, xuất hiện vảy khô hoặc bong tróc khi thời tiết thay đổi. Lỗ chân lông rất nhỏ, da thiếu độ bóng tự nhiên, thường xuyên có cảm giác căng rát sau khi rửa mặt. Tốc độ lão hóa nhanh nhất — dễ xuất hiện nếp nhăn li ti ở đuôi mắt và khóe miệng.</div>
+  </div>
+  <div class="sec-label">Chiến lược cốt lõi</div>
+  <div class="strategy">
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 1</div><div class="strat-text">Vá lành màng Lipid — bổ sung Acid béo, Ceramide, Cholesterol</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 2</div><div class="strat-text">Tránh tuyệt đối Sulfates và cồn khô (Alcohol Denat)</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 3</div><div class="strat-text">Ưu tiên kết cấu Rich Cream, Facial Oil, Balm để khóa ẩm</div></div>
+  </div>
+  <div class="sec-label">Ma trận sản phẩm</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr><th>Bước</th><th>⭐ High-End</th><th>◆ Tầm Trung</th><th>• Bình Dân</th></tr></thead>
+      <tbody>
+        <tr><td>Tẩy trang</td><td class="tier-high"><div class="prod-name">Shu Uemura Ultime8 Oil</div><div class="prod-desc">8 dầu thực vật quý, làm mềm biểu bì thô ráp ngay khi massage</div></td><td class="tier-mid"><div class="prod-name">Manyo Factory Pure Oil</div><div class="prod-desc">Làm sạch sâu mụn cám, mụn đầu đen mà không bào mòn lipid tự nhiên</div></td><td class="tier-low"><div class="prod-name">Klairs Gentle Black Oil</div><div class="prod-desc">Chiết xuất dầu đen tự nhiên, lành tính, giữ ẩm tốt sau khi nhũ hóa</div></td></tr>
+        <tr><td>Sữa rửa mặt</td><td class="tier-high"><div class="prod-name">Kiehl's Ultra Facial</div><div class="prod-desc">Squalane + Vitamin E, làm sạch mượt mà, không gây khô căng</div></td><td class="tier-mid"><div class="prod-name">SVR Topialyse Gel Lavant</div><div class="prod-desc">Omega 3-6-9 phục hồi màng lipid, xoa dịu da thô ráp bong vảy</div></td><td class="tier-low"><div class="prod-name">CeraVe Hydrating Cleanser</div><div class="prod-desc">3 loại Ceramide thiết yếu, bảo vệ hàng rào tự nhiên của da khô</div></td></tr>
+        <tr><td>Toner</td><td class="tier-high"><div class="prod-name">Laneige Cream Skin</div><div class="prod-desc">Hòa tan kem dưỡng vào toner, nạp đầy Cerapeptide tức thì</div></td><td class="tier-mid"><div class="prod-name">I'm From Rice Toner</div><div class="prod-desc">77.78% gạo Yeoju, dưỡng ẩm sâu, cải thiện da khô xỉn màu</div></td><td class="tier-low"><div class="prod-name">Hada Labo Adv. Nourish</div><div class="prod-desc">HA đa phân tử, cấp nước biểu bì dồi dào với giá bình dân</div></td></tr>
+        <tr><td>Serum</td><td class="tier-high"><div class="prod-name">Sulwhasoo First Care</div><div class="prod-desc">Tinh chất Đông y cao cấp, thúc đẩy tuần hoàn, da hồng hào căng mướt</div></td><td class="tier-mid"><div class="prod-name">Paula's Choice Omega+</div><div class="prod-desc">Acid béo từ hạt chia và hạt lanh, vá lành nứt nẻ biểu bì</div></td><td class="tier-low"><div class="prod-name">The Ordinary HA 2% + B5</div><div class="prod-desc">Cấp nước bề mặt nhanh, khóa giữ nước cơ bản tốt</div></td></tr>
+        <tr><td>Kem dưỡng</td><td class="tier-high"><div class="prod-name">Obagi Kinetin+ Cream</div><div class="prod-desc">Yếu tố tăng trưởng Kinetin chống lão hóa, sửa chữa cấu trúc da mỏng khô</div></td><td class="tier-mid"><div class="prod-name">Embryolisse Lait-Crème</div><div class="prod-desc">Siêu phẩm khóa ẩm Pháp, tạo màng mướt, ngăn mốc nền khi makeup</div></td><td class="tier-low"><div class="prod-name">Bioderma Atoderm Ultra</div><div class="prod-desc">Siêu cấp ẩm, làm dịu da khô nứt nẻ tổn thương sâu</div></td></tr>
+        <tr><td>Chống nắng</td><td class="tier-high"><div class="prod-name">Cell Fusion C Laser 100</div><div class="prod-desc">Collagen + Coenzyme Q10, bảo vệ toàn diện, nuôi dưỡng da suốt ngày</div></td><td class="tier-mid"><div class="prod-name">Skin Aqua Latte Beige</div><div class="prod-desc">Hiệu chỉnh sắc tố da khô xỉn, trông rạng rỡ bóng khỏe tự nhiên</div></td><td class="tier-low"><div class="prod-name">L'Oréal UV Defender Moist</div><div class="prod-desc">HA cấp ẩm dài lâu, ngăn UV gây lão hóa sớm và nếp nhăn li ti</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warn-grid">
+    <div class="warn-box avoid"><div class="warn-title">❌ Tuyệt đối tránh</div><ul class="warn-list"><li>Sulfates (SLS, SLES) — tẩy sạch cả lipid da</li><li>Alcohol Denat — bốc hơi ẩm ngay lập tức</li><li>Nước tẩy trang micellar không rửa lại thường xuyên</li><li>Scrub hạt thô — làm trầy xước vảy da</li><li>Retinol khi chưa build barrier đủ</li></ul></div>
+    <div class="warn-box tips"><div class="warn-title">💡 Mẹo chuyên gia</div><ul class="warn-list"><li>Thoa HA trên nền da ẩm để tránh hút ẩm ngược</li><li>Layering: Humectant → Emollient → Occlusive</li><li>Facial oil sau kem dưỡng buổi tối — khóa ẩm suốt đêm</li><li>Lotion mask vùng má khô 3 lần/tuần</li><li>Chờ 30-60s giữa các lớp sản phẩm</li></ul></div>
+  </div>
+</div>
+
+<!-- ══ DA THƯỜNG ════════════════════════════════════════ -->
+<div class="panel" id="panel-thuong">
+  <div class="skin-hero">
+    <div class="skin-title">Da Thường <span>(Normal Skin)</span></div>
+    <div class="skin-desc">Nền da lý tưởng nhất. Độ ẩm dầu và nước cân bằng hoàn hảo. Lỗ chân lông nhỏ, bề mặt da mịn màng, sắc tố đều màu, hồng hào, đàn hồi cao. Hiếm khi nổi mụn hoặc kích ứng. Nguy cơ chính: lão hóa sớm nếu không chống oxy hóa đúng cách.</div>
+  </div>
+  <div class="sec-label">Chiến lược cốt lõi</div>
+  <div class="strategy">
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 1</div><div class="strat-text">Duy trì cân bằng sinh lý ổn định — không can thiệp quá mức</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 2</div><div class="strat-text">Chống oxy hóa: Vitamin C (sáng) + Retinoids (tối) — bộ đôi anti-aging cốt lõi</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 3</div><div class="strat-text">Dưỡng ẩm vừa phải — kết cấu lỏng nhẹ, không cần Rich Cream</div></div>
+  </div>
+  <div class="sec-label">Ma trận sản phẩm</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr><th>Bước</th><th>⭐ High-End</th><th>◆ Tầm Trung</th><th>• Bình Dân</th></tr></thead>
+      <tbody>
+        <tr><td>Tẩy trang</td><td class="tier-high"><div class="prod-name">Chacott Cleansing Water</div><div class="prod-desc">Nước tẩy trang Nhật cao cấp, sạch sâu bụi mịn, để lại cảm giác mướt tự nhiên</div></td><td class="tier-mid"><div class="prod-name">Hanajirushi Lotion</div><div class="prod-desc">Làm sạch thông thoáng, giữ bề mặt da có độ bóng mọng nguyên bản</div></td><td class="tier-low"><div class="prod-name">L'Oréal Micellar Hồng</div><div class="prod-desc">Chiết xuất hoa hồng Pháp, dịu nhẹ, duy trì sự mềm mại ổn định</div></td></tr>
+        <tr><td>Sữa rửa mặt</td><td class="tier-high"><div class="prod-name">Fresh Soy Face Cleanser</div><div class="prod-desc">Đậu nành cao cấp, hương thanh khiết, để lại làn da mịn như lụa</div></td><td class="tier-mid"><div class="prod-name">Sulwhasoo Gentle Foam</div><div class="prod-desc">Bọt thảo mộc Đông y, dưỡng da thường sáng khỏe thông thoáng</div></td><td class="tier-low"><div class="prod-name">Cetaphil Gentle Skin</div><div class="prod-desc">Kinh điển, siêu nhẹ dịu, bảo toàn pH sinh lý lý tưởng</div></td></tr>
+        <tr><td>Toner</td><td class="tier-high"><div class="prod-name">Kiehl's Calendula Toner</div><div class="prod-desc">Cánh hoa cúc, chống stress oxy hóa bề mặt, duy trì trạng thái thư giãn</div></td><td class="tier-mid"><div class="prod-name">Thayers Witch Hazel</div><div class="prod-desc">Dưỡng nền da trong suốt, se mịn lỗ chân lông tự nhiên nhẹ nhàng</div></td><td class="tier-low"><div class="prod-name">Naturie Hatomugi Skin</div><div class="prod-desc">Ý dĩ Nhật Bản, làm mát da, tối ưu hóa các bước dưỡng sau</div></td></tr>
+        <tr><td>Serum</td><td class="tier-high"><div class="prod-name">Estée Lauder ANR</div><div class="prod-desc">Tinh chất huyền thoại phục hồi tế bào ban đêm, giữ vững độ đàn hồi</div></td><td class="tier-mid"><div class="prod-name">Kiehl's Clearly Corrective</div><div class="prod-desc">Activated Vitamin C làm đều màu da, duy trì độ trong suốt rạng rỡ</div></td><td class="tier-low"><div class="prod-name">Skin1004 Centella Ampoule</div><div class="prod-desc">100% rau má Madagascar tinh khiết, dưỡng da khỏe mạnh ổn định</div></td></tr>
+        <tr><td>Kem dưỡng</td><td class="tier-high"><div class="prod-name">Chanel Hydra Beauty Gel</div><div class="prod-desc">Hoa trà quý hiếm, cấp ẩm mọng mướt đẳng cấp, hương thơm sang trọng</div></td><td class="tier-mid"><div class="prod-name">Origins GinZing Gel</div><div class="prod-desc">Nhân sâm + cà phê nạp năng lượng tươi tắn, đẩy lùi xỉn màu mệt mỏi</div></td><td class="tier-low"><div class="prod-name">Torriden Dive-In Soothing</div><div class="prod-desc">Gel nước siêu lỏng nhẹ, thấm khóa ẩm vừa đủ, không nặng mặt</div></td></tr>
+        <tr><td>Chống nắng</td><td class="tier-high"><div class="prod-name">Clarins UV Plus 5P</div><div class="prod-desc">Bảo vệ trước 5 loại ô nhiễm, finish hồng hào sang xịn mịn</div></td><td class="tier-mid"><div class="prod-name">Shiseido Urban Environment</div><div class="prod-desc">Dạng sữa mỏng nhẹ như không, bảo vệ hoàn hảo dưới nắng đô thị</div></td><td class="tier-low"><div class="prod-name">Anessa Skincare Milk</div><div class="prod-desc">Bảo vệ mạnh khi gặp nhiệt độ-nước, finish mịn màng ráo mượt</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">📌 <strong>Lưu ý quan trọng:</strong> Da thường dễ bị bỏ qua vì "không có vấn đề rõ ràng". Nhưng 80% lão hóa da nhìn thấy được là do UV tích lũy (Rittié & Fisher, 2002). <strong>Vitamin C sáng + SPF + Retinol tối</strong> là bộ ba không thể thiếu từ tuổi 22–25.</div>
+</div>
+
+<!-- ══ DA DẦU ════════════════════════════════════════════ -->
+<div class="panel" id="panel-dau">
+  <div class="skin-hero">
+    <div class="skin-title">Da Dầu <span>(Oily Skin)</span></div>
+    <div class="skin-desc">Tuyến bã nhờn hoạt động quá mức, bề mặt da bóng loáng toàn mặt, đặc biệt vùng chữ T và gò má. Lỗ chân lông to rõ rệt. Da dày sừng, xỉn màu cuối ngày do bã nhờn bị oxy hóa. Tần suất mụn đầu đen, mụn cám và mụn viêm cao.</div>
+  </div>
+  <div class="sec-label">Chiến lược cốt lõi</div>
+  <div class="strategy">
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 1</div><div class="strat-text">Làm sạch sâu tận gốc lỗ chân lông bằng BHA (Salicylic Acid — tan trong dầu)</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 2</div><div class="strat-text">Kiểm soát dầu bằng Niacinamide, Zinc, Green Tea</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 3</div><div class="strat-text">Không bỏ dưỡng ẩm — chọn Water-based hoặc Gel ráo mịn hoàn toàn</div></div>
+  </div>
+  <div class="sec-label">Ma trận sản phẩm</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr><th>Bước</th><th>⭐ High-End</th><th>◆ Tầm Trung</th><th>• Bình Dân</th></tr></thead>
+      <tbody>
+        <tr><td>Tẩy trang</td><td class="tier-high"><div class="prod-name">Shu Uemura Blanc:chroma</div><div class="prod-desc">Dầu cao cấp, sạch bã nhờn đặc dính, hỗ trợ làm sáng da xỉn do dầu thừa</div></td><td class="tier-mid"><div class="prod-name">Bioderma Sébium H2O</div><div class="prod-desc">Kẽm gluconate + đồng sulfate kiềm dầu — nước tẩy trang quốc dân da dầu</div></td><td class="tier-low"><div class="prod-name">L'Oréal Micellar Xanh Nhạt</div><div class="prod-desc">Làm sạch nhanh bã nhờn, cảm giác mát lạnh ráo thoáng tức thì</div></td></tr>
+        <tr><td>Sữa rửa mặt</td><td class="tier-high"><div class="prod-name">LRP Effaclar Purifying Gel</div><div class="prod-desc">Làm sạch sâu bã nhờn, kiểm soát dầu ưu việt không gây khô căng</div></td><td class="tier-mid"><div class="prod-name">SVR Sebiaclear Gel</div><div class="prod-desc">Mattifying Agent + Gluconolactone bạt sừng dịu nhẹ, giảm bóng nhờn</div></td><td class="tier-low"><div class="prod-name">COSRX Low pH Gel</div><div class="prod-desc">Tinh dầu tràm trà kháng khuẩn, pH chuẩn không phá màng ẩm</div></td></tr>
+        <tr><td>Toner</td><td class="tier-high"><div class="prod-name">Obagi Clenziderm BHA 2%</div><div class="prod-desc">BHA 2% hoạt tính mạnh, thâm nhập sâu làm sạch cổ nang lông, giảm mụn đầu đen</div></td><td class="tier-mid"><div class="prod-name">Paula's Choice 2% BHA</div><div class="prod-desc">Tẩy da chết hóa học kinh điển, dọn dẹp bít tắc, se mịn lỗ chân lông</div></td><td class="tier-low"><div class="prod-name">The Lab Oligo HA Toner</div><div class="prod-desc">HA phân tử siêu nhỏ, hạ nhiệt biểu bì, giảm tiết dầu bù trừ</div></td></tr>
+        <tr><td>Serum</td><td class="tier-high"><div class="prod-name">SkinCeuticals Silymarin CF</div><div class="prod-desc">Vitamin C chuyên biệt da dầu mụn, Silymarin chống oxy hóa bã nhờn</div></td><td class="tier-mid"><div class="prod-name">The Ordinary Nia 10% + Zinc</div><div class="prod-desc">Combo nồng độ cao kiểm soát bã nhờn mạnh mẽ, giảm sưng viêm nhanh</div></td><td class="tier-low"><div class="prod-name">The Inkey List Niacinamide</div><div class="prod-desc">Kết cấu mỏng ráo, không vón cục khi xếp lớp chống nắng</div></td></tr>
+        <tr><td>Kem dưỡng</td><td class="tier-high"><div class="prod-name">La Roche-Posay Effaclar Mat</div><div class="prod-desc">Hút bã nhờn dư thừa, tạo hiệu ứng matte finish suốt 8 tiếng</div></td><td class="tier-mid"><div class="prod-name">Kiehl's Oil-Free Gel Cream</div><div class="prod-desc">Gel mọng nước tan nhanh, làm mát tức thì, không để lại màng bóng</div></td><td class="tier-low"><div class="prod-name">Iunik Centella Gel Cream</div><div class="prod-desc">70% nước rau má, cấp ẩm dạng nước, làm dịu mụn sưng viêm</div></td></tr>
+        <tr><td>Chống nắng</td><td class="tier-high"><div class="prod-name">LRP UVMune Oil Control</div><div class="prod-desc">Mexoryl 400 bảo vệ đỉnh cao, Airlicium kiểm soát bã nhờn tuyệt hảo</div></td><td class="tier-mid"><div class="prod-name">Heliocare 360° Oil-Free Gel</div><div class="prod-desc">Chuẩn treatment cao cấp, ráo mịn, bảo vệ cả tia hồng ngoại</div></td><td class="tier-low"><div class="prod-name">Vichy Ideal Soleil Fluid</div><div class="prod-desc">Finish khô ráo như màng phấn mỏng, kiểm soát dầu bền bỉ</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warn-grid">
+    <div class="warn-box avoid"><div class="warn-title">❌ Tuyệt đối tránh</div><ul class="warn-list"><li>Rich Cream, Facial Oil nặng — bít tắc thêm</li><li>Bỏ bước dưỡng ẩm — da tiết dầu bù nhiều hơn</li><li>Rửa mặt quá nhiều lần — kích thích tiết bã nhờn</li><li>Coconut Oil — comedogenic rating cao nhất</li><li>Chống nắng finish bóng — trông đổ dầu từ sáng sớm</li></ul></div>
+    <div class="warn-box tips"><div class="warn-title">💡 Mẹo chuyên gia</div><ul class="warn-list"><li>BHA dùng tối, sau toner, trước serum</li><li>Niacinamide 5–10% là sweet spot — trên 10% dễ đỏ</li><li>Sáng: Vitamin C → SPF Oil Control</li><li>Tối: BHA 1–2x/tuần (không dùng chung buổi với Retinol)</li><li>Không thoa gì trực tiếp lên mụn viêm đang hoạt động</li></ul></div>
+  </div>
+</div>
+
+<!-- ══ DA MỤN ════════════════════════════════════════════ -->
+<div class="panel" id="panel-mun">
+  <div class="skin-hero">
+    <div class="skin-title">Da Mụn <span>(Acne-Prone Skin)</span></div>
+    <div class="skin-desc">Chia 3 nhóm cần phân biệt: <strong>Da dầu mụn</strong> (bóng dầu + mụn viêm toàn mặt) · <strong>Da hỗn hợp mụn</strong> (vùng T mụn, má khô) · <strong>Da nhạy cảm mụn</strong> (mụn viêm đỏ + da dễ kích ứng). Dùng sai nhóm sản phẩm là nguyên nhân hàng đầu mụn không khỏi.</div>
+  </div>
+  <div class="sec-label">Chiến lược cốt lõi</div>
+  <div class="strategy">
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 1</div><div class="strat-text">BHA (Salicylic Acid) — tan trong dầu, thâm nhập nang lông, thông thoáng từ bên trong</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 2</div><div class="strat-text">Niacinamide 5–10% — kiềm dầu, kháng viêm, mờ thâm sau mụn</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 3</div><div class="strat-text">Dưỡng ẩm oil-free — da mụn vẫn cần ẩm để tránh tiết dầu bù kích thích mụn</div></div>
+  </div>
+  <div class="sec-label">Ma trận sản phẩm — Da dầu mụn (phổ biến nhất)</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr><th>Bước</th><th>⭐ High-End</th><th>◆ Tầm Trung</th><th>• Bình Dân</th></tr></thead>
+      <tbody>
+        <tr><td>Tẩy trang</td><td class="tier-high"><div class="prod-name">Bioderma Sébium H2O</div><div class="prod-desc">Kẽm gluconate điều tiết bã nhờn — nước tẩy trang số 1 cho da mụn dầu</div></td><td class="tier-mid"><div class="prod-name">DHC Deep Cleansing Oil</div><div class="prod-desc">Double cleanse buổi tối — hòa tan SPF + makeup mà micellar không làm được</div></td><td class="tier-low"><div class="prod-name">L'Oréal Micellar Xanh Nhạt</div><div class="prod-desc">Làm sạch nhanh bã nhờn bề mặt, ráo thoáng tức thì</div></td></tr>
+        <tr><td>Sữa rửa mặt</td><td class="tier-high"><div class="prod-name">SVR Sebiaclear Gel Moussant</div><div class="prod-desc">Gluconolactone (PHA) nhẹ nhàng hơn AHA, pH 5.5, kháng viêm nhẹ</div></td><td class="tier-mid"><div class="prod-name">LRP Effaclar Gel Moussant</div><div class="prod-desc">Zinc + Niacinamide ngay trong sữa rửa mặt, giảm dầu tức thì</div></td><td class="tier-low"><div class="prod-name">CeraVe Foaming Cleanser</div><div class="prod-desc">Ceramides giữ hàng rào, dạng gel tạo bọt vừa làm sạch vừa bảo vệ</div></td></tr>
+        <tr><td>Toner</td><td class="tier-high"><div class="prod-name">Paula's Choice Pore-Reducing</div><div class="prod-desc">Niacinamide điều tiết dầu vùng T + Ceramides cấp ẩm vùng má</div></td><td class="tier-mid"><div class="prod-name">Some By Mi AHA BHA PHA</div><div class="prod-desc">3 acid nhẹ — exfoliate nhẹ mỗi ngày, thu nhỏ lỗ chân lông</div></td><td class="tier-low"><div class="prod-name">Pyunkang Yul Calming Toner</div><div class="prod-desc">Không cồn, không hương liệu, làm dịu da mụn đang viêm</div></td></tr>
+        <tr><td>Serum</td><td class="tier-high"><div class="prod-name">Paula's Choice Niacinamide 10%</div><div class="prod-desc">Niacinamide 10% + Acetyl Glucosamine — mờ thâm sâu, kiềm dầu mạnh</div></td><td class="tier-mid"><div class="prod-name">The Ordinary Nia 10% + Zinc</div><div class="prod-desc">Combo Zinc + Niacinamide nồng độ cao, giá rất hợp lý</div></td><td class="tier-low"><div class="prod-name">COSRX Centella Blemish Cream</div><div class="prod-desc">Spot treatment — thoa trực tiếp lên từng nốt mụn viêm đang hoạt động</div></td></tr>
+        <tr><td>Kem dưỡng</td><td class="tier-high"><div class="prod-name">LRP Effaclar Mat</div><div class="prod-desc">Gel-cream kiềm dầu, Sebulyse, tạo finish matte, không bít tắc lỗ chân lông</div></td><td class="tier-mid"><div class="prod-name">Neutrogena Hydro Boost Gel</div><div class="prod-desc">HA đậm đặc, kết cấu gel nhẹ, oil-free, cấp nước mà không thêm dầu</div></td><td class="tier-low"><div class="prod-name">COSRX Oil-Free Moisturizer</div><div class="prod-desc">Non-comedogenic, nhẹ, phù hợp da mụn nhạy cảm</div></td></tr>
+        <tr><td>Chống nắng</td><td class="tier-high"><div class="prod-name">LRP Anthelios UVMune 400 OC</div><div class="prod-desc">MX400 bảo vệ UVA rộng nhất, Airlicium kiểm soát dầu 8h — chuẩn vàng da mụn</div></td><td class="tier-mid"><div class="prod-name">Round Lab Birch Juice Sun</div><div class="prod-desc">Nhẹ, dưỡng ẩm nhẹ, phù hợp da dầu mụn đang bị kích ứng</div></td><td class="tier-low"><div class="prod-name">Skin1004 Centella Air-Fit Sun</div><div class="prod-desc">Rau má kháng viêm + filter UV, kết cấu air-fit không nặng mặt</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warn-grid">
+    <div class="warn-box avoid"><div class="warn-title">❌ Tuyệt đối tránh</div><ul class="warn-list"><li>Thoa bất kỳ thứ gì lên mụn viêm đang đỏ sưng</li><li>SPF trực tiếp lên mụn viêm — làm nặng thêm</li><li>Tự nặn mụn viêm — nguyên nhân số 1 gây sẹo vĩnh viễn</li><li>Coconut Oil — comedogenic rating cao nhất</li><li>Fragrance, cồn biến tính — kích ứng viêm</li><li>Scrub vật lý hạt thô — làm lan vi khuẩn</li></ul></div>
+    <div class="warn-box tips"><div class="warn-title">💡 Mẹo từ Hana</div><ul class="warn-list"><li>Double cleanse buổi tối để chắc không còn cặn SPF</li><li>BHA tối 1–2x/tuần, không dùng chung buổi với Retinol</li><li>Spot treatment COSRX Centella chấm trực tiếp lên mụn</li><li>Mụn không đáp ứng OTC sau 8–12 tuần → nặn chuyên sâu tại Harmonie</li><li>Da nhạy cảm mụn: barrier repair 4–6 tuần trước khi dùng BHA</li></ul></div>
+  </div>
+</div>
+
+<!-- ══ DA NHẠY CẢM ═══════════════════════════════════════ -->
+<div class="panel" id="panel-nhay-cam">
+  <div class="skin-hero">
+    <div class="skin-title">Da Nhạy Cảm <span>(Sensitive Skin)</span></div>
+    <div class="skin-desc">Hàng rào bảo vệ da bị tổn thương sâu. Da mỏng, dễ lộ mao mạch (gân máu). Thường xuyên phản ứng châm chích, đỏ rát, ngứa ngáy khi tiếp xúc với thời tiết đột ngột, nguồn nước lạ hoặc mỹ phẩm có hương liệu. Hàng rào có thể phục hồi — đây là điểm quan trọng nhất.</div>
+  </div>
+  <div class="sec-label">Chiến lược cốt lõi</div>
+  <div class="strategy">
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 1</div><div class="strat-text">"Less is more" — tuyệt đối tối giản, mỗi sản phẩm thêm = thêm 10–100 thành phần tiếp xúc với da đang suy yếu</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 2</div><div class="strat-text">Không dùng Retinol, AHA/BHA nồng độ cao khi da đang kích ứng — Barrier First</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 3</div><div class="strat-text">Tập trung hoạt chất làm dịu: Panthenol (B5), Centella Asiatica, Calendula, Cicalfate</div></div>
+  </div>
+  <div class="sec-label">Ma trận sản phẩm</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr><th>Bước</th><th>⭐ High-End</th><th>◆ Tầm Trung</th><th>• Bình Dân</th></tr></thead>
+      <tbody>
+        <tr><td>Tẩy trang</td><td class="tier-high"><div class="prod-name">Bioderma Sensibio H2O</div><div class="prod-desc">Micellar với ester acid béo tương thích sinh học — dịu nhẹ nhất thế giới cho da nhạy cảm</div></td><td class="tier-mid"><div class="prod-name">Avène Micellar Lotion</div><div class="prod-desc">Nước khoáng Avène, xoa dịu đỏ rát ngay trong quá trình lau bông</div></td><td class="tier-low"><div class="prod-name">LRP Micellar Ultra Sensitive</div><div class="prod-desc">Tối giản, không paraben, không hương liệu, an toàn tuyệt đối</div></td></tr>
+        <tr><td>Sữa rửa mặt</td><td class="tier-high"><div class="prod-name">Cetaphil Gentle Skin</div><div class="prod-desc">Sữa không xà phòng, làm sạch êm dịu kể cả da tổn thương nặng do kem trộn</div></td><td class="tier-mid"><div class="prod-name">Bioderma Sensibio Gel</div><div class="prod-desc">Gel hồng dịu, phức hợp D.A.F nâng cao ngưỡng dung nạp của biểu bì</div></td><td class="tier-low"><div class="prod-name">Physiogel Hypoallergenic</div><div class="prod-desc">Làm sạch màng sừng mỏng yếu, không tước đoạt màng ẩm tự nhiên</div></td></tr>
+        <tr><td>Toner</td><td class="tier-high"><div class="prod-name">Anua Heartleaf 77%</div><div class="prod-desc">77% rau diếp cá, dập tắt mẩn đỏ kích ứng, hạ nhiệt da cháy nắng</div></td><td class="tier-mid"><div class="prod-name">Skin1004 Toning Toner</div><div class="prod-desc">Rau má đậm đặc kháng viêm, tái tạo cấu trúc biểu bì mỏng sần</div></td><td class="tier-low"><div class="prod-name">Klairs Unscented Toner</div><div class="prod-desc">Không mùi, không hương liệu, cấp ẩm sâu, xoa dịu da kích ứng</div></td></tr>
+        <tr><td>Serum</td><td class="tier-high"><div class="prod-name">SkinCeuticals Phyto Gel</div><div class="prod-desc">Thảo dược dưa leo + cỏ xạ hương dập tắt tức thì cơn kích ứng tại spa</div></td><td class="tier-mid"><div class="prod-name">LRP Hyalu B5 Serum</div><div class="prod-desc">B5 + Madecassoside kích thích tái tạo, làm dày nền da mỏng yếu</div></td><td class="tier-low"><div class="prod-name">The Ordinary Amino + B5</div><div class="prod-desc">Amino acid củng cố màng bảo vệ, kết cấu lỏng như nước lành tính</div></td></tr>
+        <tr><td>Kem dưỡng</td><td class="tier-high"><div class="prod-name">Avène Cicalfate+ Cream</div><div class="prod-desc">Hoạt chất [C+-Restore] + Đồng-Kẽm độc quyền — vá lành tế bào siêu tốc</div></td><td class="tier-mid"><div class="prod-name">LRP Cicaplast Baume B5+</div><div class="prod-desc">Kem phục hồi quốc dân, giảm ngứa, đỏ, tạo màng kháng khuẩn tối ưu</div></td><td class="tier-low"><div class="prod-name">Skin1004 Centella Soothing</div><div class="prod-desc">4 loại Ceramide thực vật, thấm nhanh, làm dịu sâu hàng rào nhạy cảm</div></td></tr>
+        <tr><td>Chống nắng</td><td class="tier-high"><div class="prod-name">d program Allerdefense SPF50+</div><div class="prod-desc">Công nghệ màng chắn độc quyền ngăn bụi mịn PM2.5 và dị ứng nguyên</div></td><td class="tier-mid"><div class="prod-name">Bioderma Photoderm Laser</div><div class="prod-desc">Dùng ngay sau peel/laser tại spa, ngăn tăng sắc tố tối ưu</div></td><td class="tier-low"><div class="prod-name">Cell Fusion C Derma Relief</div><div class="prod-desc">Zinc Oxide tinh khiết, dịu nhẹ, không cay mắt, an toàn da nhạy cảm</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">⚠️ <strong>Barrier Prep Protocol:</strong> Trước khi dùng bất kỳ active nào (BHA, AHA, Retinol), da nhạy cảm cần <strong>4–6 tuần chỉ dùng:</strong> Cleanser nhẹ + Ceramide moisturiser + SPF. Ngừng hoàn toàn mọi active trong thời gian này.</div>
+</div>
+
+<!-- ══ HỖN HỢP THIÊN DẦU ══════════════════════════════════ -->
+<div class="panel" id="panel-hon-hop-dau">
+  <div class="skin-hero">
+    <div class="skin-title">Da Hỗn Hợp Thiên Dầu <span>(Oily Combination)</span></div>
+    <div class="skin-desc">Vùng chữ T (trán, mũi, cằm) đổ dầu nhiều, lỗ chân lông to, mụn đầu đen. Vùng chữ U (má trong) bóng dầu nhẹ. Vùng má ngoài và xương hàm bình thường hoặc hơi khô nhẹ. Da rất dễ bị bít tắc nếu dùng sản phẩm quá dày.</div>
+  </div>
+  <div class="sec-label">Chiến lược cốt lõi — Skincare Phân Vùng</div>
+  <div class="strategy">
+    <div class="strat-item"><div class="strat-num">Vùng chữ T</div><div class="strat-text">Ưu tiên làm sạch sâu + kiểm soát dầu — Fluid, Lotion, Gel-cream lỏng nhẹ</div></div>
+    <div class="strat-item"><div class="strat-num">Vùng chữ U</div><div class="strat-text">Cấp ẩm vừa đủ — không kiềm dầu, không dùng sản phẩm quá mạnh</div></div>
+    <div class="strat-item"><div class="strat-num">Toàn mặt</div><div class="strat-text">PHA hoặc BHA nồng độ thấp để duy trì thông thoáng — không exfoliate quá mức</div></div>
+  </div>
+  <div class="sec-label">Ma trận sản phẩm</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr><th>Bước</th><th>⭐ High-End</th><th>◆ Tầm Trung</th><th>• Bình Dân</th></tr></thead>
+      <tbody>
+        <tr><td>Tẩy trang</td><td class="tier-high"><div class="prod-name">Bioderma Sébium H2O</div><div class="prod-desc">Làm sạch sâu vùng T mà không làm khô ráp vùng má ngoài</div></td><td class="tier-mid"><div class="prod-name">L'Oréal Bi-phase Deep Cleansing</div><div class="prod-desc">Nước-dầu hòa tan nhanh makeup + dầu đặc vùng cánh mũi</div></td><td class="tier-low"><div class="prod-name">Nivea Acne Care Micellar</div><div class="prod-desc">Làm sạch dịu, kháng khuẩn vùng chữ T, giá bình dân</div></td></tr>
+        <tr><td>Sữa rửa mặt</td><td class="tier-high"><div class="prod-name">SVR Sebiaclear Moussant</div><div class="prod-desc">Thông thoáng lỗ chân lông vùng T, giữ mướt vùng má nhờ gốc làm sạch êm</div></td><td class="tier-mid"><div class="prod-name">Vichy Normaderm Phytosolution</div><div class="prod-desc">Zinc + BHA + khoáng núi lửa ngừa mất nước vùng má</div></td><td class="tier-low"><div class="prod-name">Simple Purifying Gel Wash</div><div class="prod-desc">Cỏ xạ hương + kẽm, nhẹ nhàng, không kích ứng vùng má</div></td></tr>
+        <tr><td>Toner</td><td class="tier-high"><div class="prod-name">Paula's Choice Balancing Toner</div><div class="prod-desc">Niacinamide kiểm soát dầu T + Ceramides cấp ẩm U — 1 sản phẩm 2 nhiệm vụ</div></td><td class="tier-mid"><div class="prod-name">Labo Labo Keana Lotion</div><div class="prod-desc">Acid trái cây tự nhiên, lau kỹ vùng mũi để dọn mụn cám sần</div></td><td class="tier-low"><div class="prod-name">Mamonde Pore Clean Toner</div><div class="prod-desc">Rau diếp cá + bùn non West Coast hút sạch dầu thừa bóng loáng</div></td></tr>
+        <tr><td>Serum</td><td class="tier-high"><div class="prod-name">SkinCeuticals Discoloration</div><div class="prod-desc">Niacinamide điều tiết T + Tranexamic Acid làm sáng vùng má xỉn màu</div></td><td class="tier-mid"><div class="prod-name">The Ordinary Nia 10% + Zinc</div><div class="prod-desc">Giải quyết đổ dầu trán mũi, hỗ trợ se khít cổ nang lông giãn nở</div></td><td class="tier-low"><div class="prod-name">Nacific Phyto Niacin Essence</div><div class="prod-desc">5% Niacinamide, lỏng như nước, thấm siêu nhanh không bết dính</div></td></tr>
+        <tr><td>Kem dưỡng</td><td class="tier-high"><div class="prod-name">Kiehl's Ultra Oil-Free Gel</div><div class="prod-desc">Cấp nước cô đặc, tan nhanh, không bóng vùng T suốt ngày dài</div></td><td class="tier-mid"><div class="prod-name">LRP Effaclar Mat</div><div class="prod-desc">Ráo mịn toàn mặt, hút bã nhờn dư thừa, duy trì matte finish</div></td><td class="tier-low"><div class="prod-name">Garnier Yuzu Gel Cream</div><div class="prod-desc">Gel mát, cấp ẩm vừa đủ, làm sáng da nhẹ nhàng</div></td></tr>
+        <tr><td>Chống nắng</td><td class="tier-high"><div class="prod-name">LRP UVMune 400 Fluid</div><div class="prod-desc">Giữ vùng T không xuống tông hay bóng dầu loang lổ ban ngày</div></td><td class="tier-mid"><div class="prod-name">Skin1004 Hyalu-Cica Sun Serum</div><div class="prod-desc">Serum texture, ráo mịn tự nhiên, không làm khô vùng má</div></td><td class="tier-low"><div class="prod-name">Sunplay Super Block</div><div class="prod-desc">Kháng nước + mồ hôi tối ưu, cho da hỗn hợp hoạt động ngoài trời</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">💡 <strong>Mẹo Skincare Mapping:</strong> Thoa kem dưỡng vùng má trước (dày hơn), phần còn thừa trên tay mới vỗ nhẹ lên vùng T. BHA 2–3x/tuần chỉ vùng T. Chống nắng Oil-Control toàn mặt là đủ.</div>
+</div>
+
+<!-- ══ HỖN HỢP THIÊN KHÔ ══════════════════════════════════ -->
+<div class="panel" id="panel-hon-hop-kho">
+  <div class="skin-hero">
+    <div class="skin-title">Da Hỗn Hợp Thiên Khô <span>(Dry Combination)</span></div>
+    <div class="skin-desc">Phần lớn bề mặt da khô ráp — đặc biệt hai bên má, quanh mắt và xương hàm (vùng chữ U). Vùng má có thể tróc vảy nhỏ khi trời lạnh. Nhưng vùng chữ T (mũi, cằm) vẫn có đổ dầu nhẹ, mụn cám, lỗ chân lông hơi giãn.</div>
+  </div>
+  <div class="sec-label">Chiến lược cốt lõi</div>
+  <div class="strategy">
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 1</div><div class="strat-text">Cấp ẩm sâu toàn mặt như da khô — nhưng kết cấu không quá dày ở vùng mũi</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 2</div><div class="strat-text">HA đa phân tử — cân bằng ẩm đồng đều cho cả mặt không phân biệt vùng</div></div>
+    <div class="strat-item"><div class="strat-num">Nguyên tắc 3</div><div class="strat-text">Light Cream toàn mặt — bôi dày hơn ở vùng má khô, mỏng hơn ở vùng T</div></div>
+  </div>
+  <div class="sec-label">Ma trận sản phẩm</div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr><th>Bước</th><th>⭐ High-End</th><th>◆ Tầm Trung</th><th>• Bình Dân</th></tr></thead>
+      <tbody>
+        <tr><td>Tẩy trang</td><td class="tier-high"><div class="prod-name">Chacott Cleansing Water</div><div class="prod-desc">Sạch sâu toàn diện, bảo toàn độ ẩm tối đa cho hai má khô</div></td><td class="tier-mid"><div class="prod-name">Bioderma Hydrabio H2O</div><div class="prod-desc">Công nghệ Aquagenium™ kích hoạt cơ chế giữ ẩm tự nhiên của tế bào</div></td><td class="tier-low"><div class="prod-name">L'Oréal Micellar Nắp Hồng</div><div class="prod-desc">Làm sạch dịu, duy trì độ mềm mượt sau khi lau bông</div></td></tr>
+        <tr><td>Sữa rửa mặt</td><td class="tier-high"><div class="prod-name">Kiehl's Ultra Facial Cleanser</div><div class="prod-desc">Squalane giữ ẩm vùng má, vẫn làm sạch thông thoáng vùng mũi</div></td><td class="tier-mid"><div class="prod-name">CeraVe Hydrating Cleanser</div><div class="prod-desc">Ceramide thiết yếu, làm sạch dịu nhẹ, không gây căng rát</div></td><td class="tier-low"><div class="prod-name">Hada Labo Adv. Nourish Wash</div><div class="prod-desc">Bọt mịn như lụa, HA giữ nước cho vùng thô ráp</div></td></tr>
+        <tr><td>Toner</td><td class="tier-high"><div class="prod-name">Laneige Cream Skin</div><div class="prod-desc">Nạp ẩm dồi dào vùng má khô, vùng T chỉ vỗ nhẹ một màng siêu mỏng</div></td><td class="tier-mid"><div class="prod-name">Round Lab 1025 Dokdo</div><div class="prod-desc">Nước biển sâu Ulleungdo, làm dịu và làm mịn tế bào mờ sần bề mặt</div></td><td class="tier-low"><div class="prod-name">Naturie Hatomugi Skin</div><div class="prod-desc">Kinh tế, lý tưởng làm lotion mask phục hồi vùng má 3 lần/tuần</div></td></tr>
+        <tr><td>Serum</td><td class="tier-high"><div class="prod-name">Torriden Dive-In Serum</div><div class="prod-desc">HA siêu nhỏ thấm sâu, dập cơn khát nước vùng má, không bít vùng mũi</div></td><td class="tier-mid"><div class="prod-name">GoodnDoc Hydra B5 Serum</div><div class="prod-desc">HA + B5 làm dịu và khôi phục vùng má tróc vảy mỏng yếu</div></td><td class="tier-low"><div class="prod-name">The Ordinary HA 2% + B5</div><div class="prod-desc">Cấp nước khôi phục màng ẩm biểu bì cơ bản, chi phí hợp lý</div></td></tr>
+        <tr><td>Kem dưỡng</td><td class="tier-high"><div class="prod-name">Obagi Kinetin+ Cream</div><div class="prod-desc">Cấp ẩm xuất sắc vùng má mỏng yếu, không quá tải bã nhờn vùng T</div></td><td class="tier-mid"><div class="prod-name">Embryolisse Lait-Crème</div><div class="prod-desc">Khóa ẩm mượt vùng má, ngăn mốc nứt tế bào trong phòng điều hòa</div></td><td class="tier-low"><div class="prod-name">Neutrogena Hydro Boost Aqua Gel</div><div class="prod-desc">Gel-cream mỏng nhẹ, cấp nước tức thì, ráo nhanh cho ngày hè</div></td></tr>
+        <tr><td>Chống nắng</td><td class="tier-high"><div class="prod-name">Cell Fusion C Laser 100</div><div class="prod-desc">Bảo vệ chắc chắn, nuôi dưỡng vùng má khô căng mượt suốt ngày</div></td><td class="tier-mid"><div class="prod-name">Round Lab Birch Juice Sun</div><div class="prod-desc">Nhựa bạch dương cấp ẩm dồi dào, finish mướt mịn như kem dưỡng</div></td><td class="tier-low"><div class="prod-name">Anessa Moisture UV Mild Milk</div><div class="prod-desc">Sữa siêu dịu nhẹ cho da thiên khô, giữ ẩm và bảo vệ tối ưu</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">💡 <strong>So sánh nhanh Thiên Dầu vs Thiên Khô:</strong> Thiên dầu → vùng U bình thường/nhẹ, dùng Gel-Cream + Oil-Control SPF. Thiên khô → vùng U tróc vảy/căng rát, dùng Light Cream + Moisturizing SPF. BHA thiên dầu: 2–3x/tuần toàn T. BHA thiên khô: 1x/tuần chỉ vùng T.</div>
+</div>
+
+</main>
+
+<script>
+function switchPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
