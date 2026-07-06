@@ -42,6 +42,7 @@
   --earth:#8B6F5C;
   --shadow:rgba(122,48,80,0.10);
   --shadow-md:rgba(122,48,80,0.18);
+  --gold-light:#E3C39E;--gold-deep:#9A6640;--gold-bright:#E8BC7E;
 }
 body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.7;font-size:16px}
 a{text-decoration:none;color:inherit}
@@ -61,8 +62,8 @@ a{text-decoration:none;color:inherit}
 .nav-links a{font-size:0.78rem;color:var(--earth);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--moss)}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.btn-nav{background:var(--moss);color:#fff;padding:0.55rem 1.5rem;border:none;border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;transition:all 0.25s}
-.btn-nav:hover{background:#3A1828}
+.btn-nav{background:var(--moss);color:var(--gold-bright);padding:0.55rem 1.5rem;border:none;border-radius:50px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;transition:all 0.25s}
+.btn-nav:hover{background:var(--charcoal);transform:translateY(-1px)}
 
 /* ── HERO ── */
 .about-hero{background:linear-gradient(160deg,#5E2244 0%,#451A34 50%,#2E1024 100%);padding:5rem 6rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;min-height:85vh;position:relative;overflow:hidden}
@@ -152,7 +153,8 @@ a{text-decoration:none;color:inherit}
 .cta-strip h3{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:400;color:var(--cream);margin-bottom:0.2rem}
 .cta-strip p{font-size:0.88rem;color:rgba(255,255,255,0.55);font-weight:300}
 .cta-btns{display:flex;gap:0.8rem}
-.cta-btn-w{background:var(--cream);color:#1A0C14;border:none;padding:0.7rem 1.8rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600}
+.cta-btn-w{background:var(--cream);color:var(--gold-deep,#9A6640);border:none;padding:0.7rem 1.8rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,0.2);transition:all 0.3s ease}
+.cta-btn-w:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.26)}
 .cta-btn-o{background:transparent;color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.25);padding:0.7rem 1.8rem;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif}
 
 /* ── FOOTER ── */
@@ -232,6 +234,76 @@ footer p{font-size:0.68rem;color:var(--earth)}
 .theme-toggle-track{width:36px;height:20px;border-radius:50px;position:relative;transition:background 0.3s;border:1px solid rgba(0,0,0,0.08)}
 .theme-toggle-thumb{width:14px;height:14px;border-radius:50%;position:absolute;top:2px;left:2px;transition:all 0.3s;box-shadow:0 1px 4px rgba(0,0,0,0.2)}
 .theme-toggle-icon{font-size:12px;line-height:1;flex-shrink:0;user-select:none}
+
+/* ══════════ HERO — AMBIENT MOTION ══════════ */
+.about-hero{position:relative;overflow:hidden}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0;will-change:transform}
+.hero-glow-1{width:420px;height:420px;background:radial-gradient(circle,rgba(201,169,110,0.38),transparent 70%);top:-10%;left:-8%;animation:glowFloat1 22s ease-in-out infinite}
+.hero-glow-2{width:380px;height:380px;background:radial-gradient(circle,rgba(122,48,80,0.5),transparent 70%);bottom:-14%;right:-10%;animation:glowFloat2 26s ease-in-out infinite}
+@keyframes glowFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(45px,35px) scale(1.15)}}
+@keyframes glowFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,-28px) scale(1.1)}}
+
+.hero-cursor-glow{position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.14),transparent 70%);left:var(--mx,50%);top:var(--my,50%);transform:translate(-50%,-50%);pointer-events:none;z-index:0;opacity:0;transition:opacity 0.4s ease;filter:blur(20px)}
+.about-hero:hover .hero-cursor-glow{opacity:1}
+@media(hover:none),(pointer:coarse){.hero-cursor-glow{display:none}}
+
+.hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.hero-particles span{position:absolute;bottom:-10px;width:3px;height:3px;background:rgba(201,169,110,0.55);border-radius:50%;animation:particleRise linear infinite}
+.hero-particles span:nth-child(1){left:10%;animation-duration:15s;animation-delay:0s}
+.hero-particles span:nth-child(2){left:28%;width:4px;height:4px;animation-duration:19s;animation-delay:3s;background:rgba(255,255,255,0.3)}
+.hero-particles span:nth-child(3){left:50%;width:2px;height:2px;animation-duration:13s;animation-delay:6s}
+.hero-particles span:nth-child(4){left:70%;width:4px;height:4px;animation-duration:21s;animation-delay:1.5s;background:rgba(255,255,255,0.35)}
+.hero-particles span:nth-child(5){left:88%;animation-duration:16s;animation-delay:4.5s}
+@keyframes particleRise{0%{transform:translateY(0);opacity:0}12%{opacity:0.65}88%{opacity:0.3}100%{transform:translateY(-80vh);opacity:0}}
+
+.about-hero-left,.about-hero-right{position:relative;z-index:1}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero-overline{animation:heroFadeUp 0.7s cubic-bezier(0.16,1,0.3,1) both}
+.about-hero-name{animation:heroFadeUp 0.75s cubic-bezier(0.16,1,0.3,1) 0.08s both}
+.about-hero-role{animation:heroFadeUp 0.75s cubic-bezier(0.16,1,0.3,1) 0.14s both}
+.about-hero-tagline{animation:heroFadeUp 0.75s cubic-bezier(0.16,1,0.3,1) 0.2s both}
+.hero-stats-row{animation:heroFadeUp 0.75s cubic-bezier(0.16,1,0.3,1) 0.26s both}
+.about-hero-right{animation:heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.15s both}
+
+/* Avatar frame — subtle glow ring, ready for real photo */
+.avatar-ring{transition:box-shadow 0.4s ease,transform 0.4s cubic-bezier(0.16,1,0.3,1)}
+.avatar-wrap:hover .avatar-ring{transform:translateY(-4px);box-shadow:0 32px 72px rgba(0,0,0,0.5),0 0 0 1px rgba(201,169,110,0.3)}
+.avatar-badge{animation:softPulse 2.6s ease-in-out infinite}
+@keyframes softPulse{0%,100%{box-shadow:0 0 0 0 rgba(200,144,106,0.35)}50%{box-shadow:0 0 0 6px rgba(200,144,106,0)}}
+
+/* Stat number count-up target state */
+.hero-stat-num{transition:opacity 0.3s ease}
+
+/* ══════════ WAVE DIVIDERS — safe normal-flow (never overlaps content) ══════════ */
+.wave-divider-wrap{background:var(--charcoal);line-height:0;overflow:hidden}
+.wave-divider{width:100%;height:44px;display:block}
+@media(max-width:640px){.wave-divider{height:26px}}
+
+/* ══════════ SCROLL REVEAL ══════════ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.7s cubic-bezier(0.16,1,0.3,1),transform 0.7s cubic-bezier(0.16,1,0.3,1);transition-delay:var(--reveal-delay,0ms)}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+
+.value-card{transition:all 0.35s cubic-bezier(0.16,1,0.3,1)}
+.exp-item{transition:background 0.3s ease,padding-left 0.3s ease}
+.exp-item:hover{padding-left:1.9rem}
+
+/* ══════════ FLOATING QUICK-BOOK CTA ══════════ */
+.floating-cta{position:fixed;bottom:24px;right:24px;z-index:200;background:var(--moss);color:var(--gold-bright);padding:0.85rem 1.5rem;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;box-shadow:0 6px 24px rgba(0,0,0,0.25);display:flex;align-items:center;gap:0.5rem;cursor:pointer;border:none;opacity:0;transform:translateY(16px) scale(0.9);pointer-events:none;transition:opacity 0.35s cubic-bezier(0.16,1,0.3,1),transform 0.35s cubic-bezier(0.16,1,0.3,1),background 0.3s ease}
+.floating-cta.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.floating-cta:hover{background:var(--charcoal);transform:translateY(-2px) scale(1.03)}
+@media(max-width:640px){.floating-cta{bottom:calc(16px + env(safe-area-inset-bottom));right:16px;padding:0.7rem 1.2rem;font-size:0.7rem}}
+
+/* ══════════ NAVBAR polish ══════════ */
+.navbar{position:sticky}
+.navbar::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,144,106,0.35),transparent)}
+.nav-links a{position:relative;padding-bottom:4px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:1.5px;background:var(--gold);transition:width 0.3s cubic-bezier(0.16,1,0.3,1),left 0.3s cubic-bezier(0.16,1,0.3,1)}
+.nav-links a:hover::after{width:100%;left:0}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-glow,.hero-particles span,.hero-cursor-glow,.avatar-badge,.reveal,.hero-overline,.about-hero-name,.about-hero-role,.about-hero-tagline,.hero-stats-row,.about-hero-right{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -348,6 +420,12 @@ footer p{font-size:0.68rem;color:var(--earth)}
 
 <!-- HERO -->
 <section class="about-hero">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-cursor-glow" aria-hidden="true"></div>
+  <div class="hero-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
   <div class="about-hero-left">
     <p class="hero-overline">✦ <span class="vi">Kỹ thuật viên chính · Harmonie Beauté</span><span class="en">Lead Therapist · Harmonie Beauté</span></p>
     <h1 class="about-hero-name">Hana<em>.</em></h1>
@@ -383,6 +461,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
   </div>
 </section>
+<div class="wave-divider-wrap"><svg class="wave-divider" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C240,50 480,0 720,18 C960,36 1200,55 1440,22 L1440,50 L0,50 Z" fill="var(--white)"></path></svg></div>
 
 <!-- STORY -->
 <section class="story-section">
@@ -463,6 +542,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
   </div>
 </section>
+<div class="wave-divider-wrap" style="background:var(--white)"><svg class="wave-divider" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0,18 C240,0 480,50 720,28 C960,6 1200,38 1440,20 L1440,50 L0,50 Z" fill="var(--charcoal)"></path></svg></div>
 
 <!-- VALUES -->
 <section class="values-section">
@@ -502,6 +582,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
   </div>
 </section>
+<div class="wave-divider-wrap"><svg class="wave-divider" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0,22 C240,55 480,4 720,24 C960,44 1200,68 1440,30 L1440,50 L0,50 Z" fill="var(--cream)"></path></svg></div>
 
 <!-- EXPERTISE -->
 <section class="expertise-section">
@@ -538,6 +619,7 @@ footer p{font-size:0.68rem;color:var(--earth)}
     </div>
   </div>
 </section>
+<div class="wave-divider-wrap" style="background:var(--cream)"><svg class="wave-divider" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0,26 C240,4 480,50 720,30 C960,10 1200,44 1440,24 L1440,50 L0,50 Z" fill="var(--charcoal)"></path></svg></div>
 
 <!-- PROMISE QUOTE -->
 <section class="promise-section">
@@ -642,5 +724,96 @@ window.addEventListener('DOMContentLoaded',function(){
   applyTheme(s);
 });
 </script>
+<!-- FLOATING CTA -->
+<button class="floating-cta" id="floatingCta" onclick="window.location.href='index.html#calendar'">
+  <span>📅</span><span class="vi">Đặt lịch</span><span class="en">Book now</span>
+</button>
+
+<script>
+(function(){
+  /* Scroll-reveal with stagger */
+  var targets = document.querySelectorAll('.story-chapter, .value-card, .exp-item');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -30px 0px'});
+  var seen = new Map();
+  targets.forEach(function(el){
+    var parent = el.parentElement;
+    var idx = seen.get(parent) || 0;
+    seen.set(parent, idx + 1);
+    el.classList.add('reveal');
+    el.style.setProperty('--reveal-delay', Math.min(idx * 80, 320) + 'ms');
+    io.observe(el);
+  });
+
+  /* Navbar scroll shadow */
+  var navbar = document.querySelector('.navbar');
+  if(navbar){
+    window.addEventListener('scroll', function(){
+      navbar.style.boxShadow = window.scrollY > 12 ? '0 4px 24px rgba(122,48,80,0.14)' : '0 2px 16px rgba(61,90,71,0.07)';
+    }, {passive:true});
+  }
+
+  /* Floating quick-book CTA — appears after scrolling past hero */
+  var floatingCta = document.getElementById('floatingCta');
+  var heroEl = document.querySelector('.about-hero');
+  if(floatingCta && heroEl){
+    var heroHeight = heroEl.offsetHeight;
+    window.addEventListener('scroll', function(){
+      var ctaStripEl = document.querySelector('.cta-strip');
+      var pastHero = window.scrollY > heroHeight * 0.7;
+      var atCtaStrip = ctaStripEl && ctaStripEl.getBoundingClientRect().top < window.innerHeight;
+      if(pastHero && !atCtaStrip){ floatingCta.classList.add('visible'); }
+      else { floatingCta.classList.remove('visible'); }
+    }, {passive:true});
+  }
+
+  /* Hero cursor-follow glow (desktop pointer only) */
+  var heroGlowEl = document.querySelector('.hero-cursor-glow');
+  if(heroGlowEl && heroEl && window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    heroEl.addEventListener('mousemove', function(e){
+      var rect = heroEl.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+      var y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+      heroGlowEl.style.setProperty('--mx', x + '%');
+      heroGlowEl.style.setProperty('--my', y + '%');
+    }, {passive:true});
+  }
+
+  /* Hero stat count-up animation (7, 500+, 5★) */
+  var statEls = document.querySelectorAll('.hero-stat-num');
+  var statIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      statIo.unobserve(entry.target);
+      var el = entry.target;
+      var text = el.textContent.trim();
+      var match = text.match(/^(\\d+)(.*)$/);
+      if(!match || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var target = parseInt(match[1], 10);
+      var suffix = match[2];
+      var current = 0;
+      var duration = 900;
+      var startTime = null;
+      function step(ts){
+        if(!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        current = Math.floor(progress * target);
+        el.textContent = current + suffix;
+        if(progress < 1){ requestAnimationFrame(step); }
+        else { el.textContent = target + suffix; }
+      }
+      requestAnimationFrame(step);
+    });
+  }, {threshold:0.5});
+  statEls.forEach(function(el){ statIo.observe(el); });
+})();
+</script>
+
 </body>
 </html>
