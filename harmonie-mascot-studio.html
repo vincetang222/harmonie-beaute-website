@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="green">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmonie Beauté — Mascot Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --moss:#7A3050;--moss-light:#9A4A6A;--moss-pale:#D4A8BC;
+  --cream:#F7F2EC;--sand:#DDD4C0;--sand-dark:#C8BFB0;
+  --charcoal:#2C1820;--white:#FAF6F0;--dark:#2C1820;
+  --terra:#B5673B;--gold:#C8906A;--earth:#8B6F5C;
+  --gold-light:#E3C39E;--gold-deep:#9A6640;--gold-bright:#E8BC7E;--gold-wash:rgba(200,144,106,0.08);
+  --hero-grad:linear-gradient(160deg,#5E2244 0%,#451A34 50%,#2E1024 100%);
+  /* mascot hair — rose theme */
+  --hair-deep:#4A1830;--hair-main:#6E2442;--hair-mid:#5E2038;--hair-soft:#7A3050;--hair-sheen:#8E4260;
+}
+[data-theme="green"]{
+  --moss:#3D5A47;--moss-light:#6B8F71;--moss-pale:#D4E4D0;
+  --charcoal:#1E2F25;--dark:#1E2F25;
+  --hero-grad:linear-gradient(160deg,#1E3028 0%,#162620 50%,#0F1F18 100%);
+  --hair-deep:#2E4636;--hair-main:#3D5A47;--hair-mid:#3A5443;--hair-soft:#46654F;--hair-sheen:#4E6E58;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.7;font-size:16px}
+em{font-style:italic}
+::selection{background:var(--gold-light);color:var(--charcoal)}
+svg{display:block}
+
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:200;background:rgba(247,242,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--sand);display:flex;align-items:center;justify-content:space-between;padding:.85rem 2rem;gap:1rem}
+.topbar-logo{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--moss);white-space:nowrap}
+.topbar-logo em{color:var(--gold-deep)}
+.topbar-nav{display:flex;gap:1.1rem;flex-wrap:wrap}
+.topbar-nav a{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--earth);font-weight:500;text-decoration:none;white-space:nowrap}
+.topbar-nav a:hover{color:var(--moss)}
+.theme-switch{display:flex;align-items:center;gap:.5rem;border:1px solid var(--sand-dark);border-radius:50px;padding:.32rem .6rem;background:var(--white);cursor:pointer;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif}
+.theme-switch span{font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--earth);font-weight:600}
+.theme-switch .dot{width:15px;height:15px;border-radius:50%;background:var(--moss);transition:background .3s}
+@media(max-width:860px){.topbar-nav{display:none}}
+
+/* ── HERO ── */
+.hero{background:var(--hero-grad);min-height:88vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:4rem 2rem;transition:background .4s ease}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:980px;width:100%}
+@media(max-width:820px){.hero-inner{grid-template-columns:1fr;text-align:center;gap:2rem}.hero-copy{order:2}.hero-stage{order:1}}
+.hero-eyebrow{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-bright);opacity:.85;margin-bottom:1.2rem}
+.hero h1{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(2.2rem,4.6vw,3.6rem);color:#F2EBD9;line-height:1.12;margin-bottom:1.1rem}
+.hero h1 em{color:var(--gold-bright)}
+.hero p{color:rgba(255,255,255,.62);font-weight:300;font-size:.95rem;max-width:440px}
+@media(max-width:820px){.hero p{margin:0 auto}}
+.hero-hint{margin-top:1.8rem;font-size:.66rem;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em}
+.hero-stage{display:flex;align-items:center;justify-content:center;position:relative}
+.hero-halo{position:absolute;width:min(56vw,380px);height:min(56vw,380px);border-radius:50%;background:radial-gradient(circle,rgba(232,188,126,.16),transparent 68%);filter:blur(8px);animation:haloPulse 6s ease-in-out infinite}
+.hero-mascot{width:min(58vw,300px);position:relative;z-index:1;animation:mascotFloat 6s ease-in-out infinite;filter:drop-shadow(0 24px 40px rgba(0,0,0,.35))}
+@keyframes mascotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes haloPulse{0%,100%{opacity:.8;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0;will-change:transform}
+.hero-glow-1{width:400px;height:400px;background:radial-gradient(circle,rgba(201,169,110,0.34),transparent 70%);top:-12%;left:-8%;animation:glowFloat1 22s ease-in-out infinite}
+.hero-glow-2{width:360px;height:360px;background:radial-gradient(circle,rgba(122,48,80,0.45),transparent 70%);bottom:-16%;right:-10%;animation:glowFloat2 26s ease-in-out infinite}
+@keyframes glowFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(45px,35px) scale(1.12)}}
+@keyframes glowFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,-26px) scale(1.08)}}
+.hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.hero-particles span{position:absolute;bottom:-10px;width:3px;height:3px;background:rgba(232,188,126,.55);border-radius:50%;animation:particleRise linear infinite}
+.hero-particles span:nth-child(1){left:8%;animation-duration:15s}
+.hero-particles span:nth-child(2){left:22%;width:4px;height:4px;animation-duration:19s;animation-delay:3s;background:rgba(255,255,255,.3)}
+.hero-particles span:nth-child(3){left:40%;width:2px;height:2px;animation-duration:13s;animation-delay:6s}
+.hero-particles span:nth-child(4){left:58%;width:4px;height:4px;animation-duration:21s;animation-delay:1.5s;background:rgba(255,255,255,.32)}
+.hero-particles span:nth-child(5){left:74%;animation-duration:16s;animation-delay:4.5s}
+.hero-particles span:nth-child(6){left:90%;animation-duration:20s;animation-delay:8s;background:rgba(255,255,255,.26)}
+@keyframes particleRise{0%{transform:translateY(0) translateX(0);opacity:0}12%{opacity:.65}50%{transform:translateY(-46vh) translateX(14px)}88%{opacity:.3}100%{transform:translateY(-86vh) translateX(-12px);opacity:0}}
+.hero-cursor-glow{position:absolute;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,.15),transparent 70%);left:var(--mx,50%);top:var(--my,50%);transform:translate(-50%,-50%);pointer-events:none;z-index:0;opacity:0;transition:opacity .4s ease;filter:blur(20px)}
+.hero:hover .hero-cursor-glow{opacity:1}
+@media(hover:none),(pointer:coarse){.hero-cursor-glow{display:none}}
+@media(prefers-reduced-motion:reduce){
+  .hero-mascot,.hero-halo,.hero-glow,.hero-particles span{animation:none!important}
+  .hero-cursor-glow{display:none}
+}
+
+/* ── WAVE (normal-flow như quy tắc site) ── */
+.wave-wrap{background:var(--hero-grad);line-height:0;overflow:hidden;transition:background .4s ease}
+.wave-wrap svg{width:100%;height:44px;display:block}
+@media(max-width:640px){.wave-wrap svg{height:26px}}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1000px;margin:0 auto;padding:0 2rem}
+.g-section{padding:4.2rem 0;border-bottom:1px solid var(--sand)}
+.g-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;font-weight:700;background:var(--moss);padding:5px 16px;border-radius:50px;margin-bottom:1.1rem}
+.g-title{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:400;color:var(--charcoal);margin-bottom:.7rem;letter-spacing:-.01em}
+.g-title em{color:var(--gold-deep)}
+.g-line{width:44px;height:2.5px;background:var(--gold);margin-bottom:1.6rem;border-radius:2px}
+.g-lead{max-width:660px;color:var(--earth);font-size:.92rem;margin-bottom:2rem}
+.g-lead strong{color:var(--charcoal);font-weight:600}
+.sub-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss);font-weight:700;margin:2rem 0 .9rem}
+
+/* ── STORY / NAME ── */
+.story-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1.4rem;align-items:stretch}
+@media(max-width:760px){.story-grid{grid-template-columns:1fr}}
+.story-card{background:var(--white);border-radius:16px;padding:1.6rem 1.8rem;border:1px solid rgba(0,0,0,.06)}
+.story-card h3{font-family:'Playfair Display',serif;font-weight:400;font-size:1.25rem;color:var(--charcoal);margin-bottom:.7rem}
+.story-card h3 em{color:var(--gold-deep)}
+.story-card p{font-size:.85rem;color:var(--earth);margin-bottom:.7rem}
+.story-card p:last-child{margin-bottom:0}
+.name-opt{display:flex;align-items:baseline;gap:.7rem;padding:.6rem .8rem;border-radius:10px;border:1px solid var(--sand);margin-bottom:.55rem;background:var(--cream)}
+.name-opt.pick{border-color:var(--gold);background:var(--gold-wash)}
+.name-opt b{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--moss);font-style:italic}
+.name-opt span{font-size:.74rem;color:var(--earth)}
+
+/* ── VARIANT CARDS ── */
+.variant-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.4rem}
+.v-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.06);box-shadow:0 2px 14px rgba(0,0,0,.05);display:flex;flex-direction:column;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s}
+.v-card:hover{transform:translateY(-3px);box-shadow:0 8px 26px rgba(0,0,0,.1)}
+.v-stage{padding:1.4rem;display:flex;align-items:center;justify-content:center;min-height:210px}
+.v-stage.dark{background:var(--hero-grad);transition:background .4s ease}
+.v-stage.soft{background:var(--cream)}
+.v-stage svg{width:150px;height:auto}
+.v-meta{padding:.8rem 1rem .4rem;border-top:1px solid var(--sand)}
+.v-meta .v-name{font-size:.78rem;font-weight:600;color:var(--charcoal)}
+.v-meta .v-use{font-size:.66rem;color:var(--earth);margin-top:.1rem}
+.v-actions{display:flex;gap:.4rem;padding:.6rem 1rem .9rem;flex-wrap:wrap}
+.mini-btn{font-size:.62rem;border:1px solid rgba(0,0,0,.14);background:transparent;border-radius:50px;padding:.32rem .8rem;color:var(--charcoal);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;transition:all .2s}
+.mini-btn:hover{background:var(--moss);border-color:var(--moss);color:var(--gold-bright)}
+.mini-btn:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+
+/* ── STICKERS ── */
+.sticker-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.2rem}
+.sticker{background:var(--white);border-radius:16px;border:1px solid rgba(0,0,0,.06);padding:1rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.sticker:hover{transform:translateY(-3px) rotate(-1deg)}
+.sticker svg{width:110px;height:110px}
+.sticker .s-name{font-size:.7rem;font-weight:600;color:var(--charcoal)}
+.sticker .s-note{font-size:.6rem;color:var(--earth);text-align:center;line-height:1.4}
+
+/* ── AVATAR SHOWROOM ── */
+.avatar-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.4rem}
+.size-row{display:flex;align-items:flex-end;gap:1.6rem;margin-top:1.6rem;flex-wrap:wrap}
+.size-demo{text-align:center}
+.size-demo svg{border-radius:50%;box-shadow:0 3px 12px rgba(0,0,0,.12)}
+.size-demo .sz{font-size:.62rem;color:var(--earth);margin-top:.45rem;font-family:'SFMono-Regular',Consolas,monospace}
+
+/* ── FRAMES ── */
+.frames-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.6rem;align-items:start}
+.fr-card{border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.05)}
+.fr-label{background:var(--white);padding:.6rem .9rem;font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;color:var(--earth);display:flex;justify-content:space-between;border-bottom:1px solid var(--sand)}
+.fr-label em{color:var(--gold-deep);font-style:normal}
+.fr-sq{aspect-ratio:1;position:relative;overflow:hidden}
+.fr-story{aspect-ratio:9/16;position:relative;overflow:hidden}
+/* frame 1 — quote cream */
+.f-quote{background:var(--cream);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:11%;text-align:center}
+.f-quote .fq-mascot svg{width:56px;height:56px;margin:0 auto .8rem}
+.f-quote .fq-text{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(.72rem,2.6vw,.95rem);color:var(--charcoal);line-height:1.6;margin-bottom:.9rem}
+.f-quote .fq-author{font-size:clamp(.46rem,1.3vw,.58rem);text-transform:uppercase;letter-spacing:.18em;color:var(--gold-deep)}
+.f-quote .fq-brand{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);font-size:clamp(.4rem,1.1vw,.5rem);letter-spacing:.2em;text-transform:uppercase;color:var(--earth);white-space:nowrap}
+.f-quote .fq-corner{position:absolute;width:18px;height:18px;border:0 solid var(--gold)}
+.f-quote .tl{top:6%;left:6%;border-top-width:1.5px;border-left-width:1.5px}
+.f-quote .br{bottom:6%;right:6%;border-bottom-width:1.5px;border-right-width:1.5px}
+/* frame 2 — tip dark + line art watermark */
+.f-tip{background:var(--hero-grad);padding:9%;display:flex;flex-direction:column;justify-content:flex-end;transition:background .4s ease}
+.f-tip .ft-art{position:absolute;top:6%;right:-6%;width:52%;opacity:.5}
+.f-tip .ft-tag{font-size:clamp(.42rem,1.1vw,.55rem);text-transform:uppercase;letter-spacing:.2em;color:var(--gold-bright);margin-bottom:.8rem}
+.f-tip .ft-title{font-family:'Playfair Display',serif;font-size:clamp(.9rem,3.2vw,1.25rem);font-weight:400;color:#FAF6F0;line-height:1.3;margin-bottom:.6rem;max-width:78%}
+.f-tip .ft-line{width:30px;height:1.5px;background:var(--gold);margin-bottom:.6rem}
+.f-tip .ft-body{font-size:clamp(.52rem,1.4vw,.68rem);color:rgba(250,246,240,.62);line-height:1.75;font-weight:300;max-width:86%}
+.f-tip .ft-brand{margin-top:1.1rem;font-size:clamp(.4rem,1vw,.52rem);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);opacity:.75}
+/* frame 3 — story welcome */
+.f-story{background:var(--cream);padding:9% 8%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center}
+.f-story .fs-logo{font-family:'Playfair Display',serif;font-size:clamp(.7rem,2vw,.92rem);color:var(--moss)}
+.f-story .fs-logo em{color:var(--gold-deep)}
+.f-story .fs-mascot svg{width:58%;max-width:150px;margin:0 auto}
+.f-story .fs-title{font-family:'Playfair Display',serif;font-size:clamp(.95rem,3.4vw,1.3rem);color:var(--charcoal);line-height:1.3;margin-top:.9rem}
+.f-story .fs-title em{color:var(--gold-deep)}
+.f-story .fs-sub{font-size:clamp(.5rem,1.4vw,.66rem);color:var(--earth);font-weight:300;margin-top:.4rem}
+.f-story .fs-cta{background:var(--moss);color:var(--gold-bright);font-size:clamp(.5rem,1.3vw,.62rem);font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:.55rem 1.4rem;border-radius:50px;margin-top:.4rem}
+.f-story .fs-handle{font-size:clamp(.42rem,1.1vw,.54rem);color:var(--earth);opacity:.7;letter-spacing:.08em}
+
+/* ── DO / DONT ── */
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:640px){.dodont{grid-template-columns:1fr}}
+.dodont-col{border-radius:14px;padding:1.2rem 1.4rem}
+.dodont-col.do{background:rgba(122,48,80,.06);border:1px solid rgba(122,48,80,.18)}
+[data-theme="green"] .dodont-col.do{background:rgba(61,90,71,.07);border-color:rgba(61,90,71,.2)}
+.dodont-col.dont{background:rgba(181,103,59,.06);border:1px solid rgba(181,103,59,.18)}
+.dodont-col h4{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.7rem}
+.dodont-col.do h4{color:var(--moss)}
+.dodont-col.dont h4{color:var(--terra)}
+.dodont-col ul{list-style:none}
+.dodont-col li{font-size:.82rem;padding:.35rem 0 .35rem 1.3rem;position:relative;color:var(--charcoal)}
+.dodont-col.do li::before{content:'✓';position:absolute;left:0;color:var(--moss);font-weight:700}
+.dodont-col.dont li::before{content:'✕';position:absolute;left:0;color:var(--terra);font-weight:700}
+
+.callout{border-radius:14px;padding:1.1rem 1.4rem;margin:1.5rem 0;font-size:.82rem;line-height:1.6;background:var(--gold-wash);border:1px solid rgba(200,144,106,.25)}
+.callout strong{color:var(--gold-deep)}
+
+/* ── TOAST + FOOTER ── */
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--charcoal);color:#F2EBD9;padding:.65rem 1.3rem;border-radius:50px;font-size:.76rem;opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.g-footer{padding:3rem 2rem;text-align:center;color:var(--earth);font-size:.74rem}
+.g-footer .logo-mini{font-family:'Playfair Display',serif;color:var(--moss);margin-bottom:.4rem;font-size:.95rem}
+.g-footer .logo-mini em{color:var(--gold-deep)}
+
+@media(max-width:640px){
+  .g-section{padding:2.8rem 0}
+  .wrap{padding:0 1.2rem}
+  .g-title{font-size:1.55rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-logo">Harmonie <em>beauté</em> — mascot studio</div>
+  <nav class="topbar-nav">
+    <a href="#story">Câu chuyện</a>
+    <a href="#variants">Biến thể</a>
+    <a href="#stickers">Sticker</a>
+    <a href="#avatars">Avatar hồ sơ</a>
+    <a href="#frames">Khung bài</a>
+    <a href="#rules">Quy tắc</a>
+  </nav>
+  <button class="theme-switch" onclick="toggleGuideTheme()" aria-label="Đổi theme">
+    <span id="themeLabel">Xanh rêu</span>
+    <span class="dot"></span>
+  </button>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="heroSec">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-cursor-glow" id="cursorGlow"></div>
+  <div class="hero-particles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">✦ Nhân vật thương hiệu</div>
+      <h1>Gương mặt của<br><em>Harmonie Beauté</em></h1>
+      <p>Một cô gái đang thư giãn — mắt khép nhẹ, tóc chảy như sóng, ngôi sao vàng cài mái. Vẽ hoàn toàn bằng SVG nên tóc <strong style="color:#F2EBD9">tự đổi màu theo theme</strong> của website: xanh rêu hoặc hồng cổ điển.</p>
+      <div class="hero-hint">Bấm nút theme góc trên phải để xem cô ấy "thay màu tóc" ↗</div>
+    </div>
+    <div class="hero-stage">
+      <div class="hero-halo" aria-hidden="true"></div>
+      <div class="hero-mascot" data-m="bust" role="img" aria-label="Mascot Harmonie Beauté — cô gái mắt khép thư giãn, mặc áo choàng spa"></div>
+    </div>
+  </div>
+</section>
+<div class="wave-wrap"><svg viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C240,50 480,0 720,18 C960,36 1200,55 1440,22 L1440,50 L0,50 Z" fill="var(--cream)"></path></svg></div>
+
+<div class="wrap">
+
+<!-- ══════════ 01 STORY ══════════ -->
+<section class="g-section" id="story">
+  <div class="g-eyebrow">01 · Câu chuyện &amp; tên gọi</div>
+  <h2 class="g-title">Cô ấy là <em>ai?</em></h2>
+  <div class="g-line"></div>
+  <div class="story-grid">
+    <div class="story-card">
+      <h3>"Nơi tâm trí được <em>nghỉ ngơi</em>" — vẽ thành người</h3>
+      <p>Mascot lấy trực tiếp từ tagline của spa: <strong>mắt khép</strong> là khoảnh khắc buông lỏng trên giường trị liệu; <strong>tóc uốn sóng</strong> vẽ cùng ngôn ngữ wave-divider của website; <strong>ngôi sao ✦</strong> là motif đã có sẵn ở mọi section; <strong>áo choàng spa viền vàng</strong> nói ngay "đây là spa" mà không cần chữ nào.</p>
+      <p>Vì tóc tô bằng biến CSS <span style="font-family:monospace;font-size:.78rem">--hair-*</span>, cô ấy mặc định tóc <strong>xanh rêu</strong> theo theme chính, và tự chuyển <strong>hồng rượu vang</strong> khi khách bật theme hồng — một nhân vật, hai diện mạo, đúng tinh thần "2 theme" của thương hiệu.</p>
+    </div>
+    <div class="story-card">
+      <h3>Gợi ý <em>tên</em></h3>
+      <div class="name-opt pick"><b>Hami</b><span>HArmonie + MI — dễ đọc cả VI lẫn EN, không trùng nghĩa xấu</span></div>
+      <div class="name-opt"><b>Mộc</b><span>mộc mạc, tự nhiên — hợp theme xanh rêu (--moss)</span></div>
+      <div class="name-opt"><b>Sen</b><span>thanh khiết, spa Á Đông — ngắn gọn, khó quên</span></div>
+      <p style="font-size:.74rem;color:var(--earth);margin-top:.8rem">Bạn chốt tên nào, mình cập nhật xuyên suốt bộ nhận diện. Trang này tạm gọi cô ấy là <strong>Hami</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 02 VARIANTS ══════════ -->
+<section class="g-section" id="variants">
+  <div class="g-eyebrow">02 · Bốn biến thể chính</div>
+  <h2 class="g-title">Một nhân vật, <em>bốn vai trò</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Mỗi biến thể có nhiệm vụ riêng. Nút <strong>Copy SVG</strong> cho mã dán thẳng vào Figma/Canva/code; <strong>SVG</strong> tải file gốc vô hạn phóng to; <strong>PNG</strong> xuất 1024px dùng ngay. Màu xuất theo theme đang bật.</p>
+
+  <div class="variant-grid">
+    <div class="v-card">
+      <div class="v-stage soft"><div data-m="bust" role="img" aria-label="Biến thể chân dung"></div></div>
+      <div class="v-meta"><div class="v-name">Chân dung (bust)</div><div class="v-use">Hero web · ảnh giới thiệu · poster</div></div>
+      <div class="v-actions">
+        <button class="mini-btn" onclick="copySVG('bust')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlSVG('bust','hami-bust')">SVG</button>
+        <button class="mini-btn" onclick="dlPNG('bust','hami-bust',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="v-card">
+      <div class="v-stage soft"><div data-m="avatar" role="img" aria-label="Biến thể avatar tròn"></div></div>
+      <div class="v-meta"><div class="v-name">Avatar tròn</div><div class="v-use">Ảnh đại diện social · icon app</div></div>
+      <div class="v-actions">
+        <button class="mini-btn" onclick="copySVG('avatar')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlSVG('avatar','hami-avatar')">SVG</button>
+        <button class="mini-btn" onclick="dlPNG('avatar','hami-avatar',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="v-card">
+      <div class="v-stage dark"><div data-m="line" role="img" aria-label="Biến thể nét trắng"></div></div>
+      <div class="v-meta"><div class="v-name">Nét trắng (line art)</div><div class="v-use">Minh hoạ blog · watermark nền tối</div></div>
+      <div class="v-actions">
+        <button class="mini-btn" onclick="copySVG('line')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlSVG('line','hami-lineart')">SVG</button>
+        <button class="mini-btn" onclick="dlPNG('line','hami-lineart',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="v-card">
+      <div class="v-stage soft"><div data-m="mini" role="img" aria-label="Biến thể mini mark"></div></div>
+      <div class="v-meta"><div class="v-name">Mini mark</div><div class="v-use">Size nhỏ · sticker chat · chấm nhấn</div></div>
+      <div class="v-actions">
+        <button class="mini-btn" onclick="copySVG('mini')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlSVG('mini','hami-mini')">SVG</button>
+        <button class="mini-btn" onclick="dlPNG('mini','hami-mini',512)">PNG</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 03 STICKERS ══════════ -->
+<section class="g-section" id="stickers">
+  <div class="g-eyebrow">03 · Biểu cảm &amp; sticker</div>
+  <h2 class="g-title">Bốn <em>tâm trạng</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Cùng khuôn mặt, đổi mắt và miệng — dùng cho story, caption, reply comment. <strong>Thư giãn</strong> là mặc định của thương hiệu; các biểu cảm khác dùng có chừng mực.</p>
+  <div class="sticker-row">
+    <div class="sticker">
+      <div data-m="exp-serene" role="img" aria-label="Biểu cảm thư giãn"></div>
+      <div class="s-name">Thư giãn</div><div class="s-note">Mặc định · nội dung trị liệu, chăm da</div>
+      <button class="mini-btn" onclick="dlPNG('exp-serene','hami-serene',512)">PNG</button>
+    </div>
+    <div class="sticker">
+      <div data-m="exp-happy" role="img" aria-label="Biểu cảm vui"></div>
+      <div class="s-name">Vui</div><div class="s-note">Khuyến mãi · tin vui · cảm ơn khách</div>
+      <button class="mini-btn" onclick="dlPNG('exp-happy','hami-happy',512)">PNG</button>
+    </div>
+    <div class="sticker">
+      <div data-m="exp-wink" role="img" aria-label="Biểu cảm nháy mắt"></div>
+      <div class="s-name">Nháy mắt</div><div class="s-note">Mẹo hay · bí quyết · CTA thân mật</div>
+      <button class="mini-btn" onclick="dlPNG('exp-wink','hami-wink',512)">PNG</button>
+    </div>
+    <div class="sticker">
+      <div data-m="exp-spa" role="img" aria-label="Biểu cảm quấn khăn spa"></div>
+      <div class="s-name">Giờ spa</div><div class="s-note">Behind the scenes · nhắc lịch hẹn</div>
+      <button class="mini-btn" onclick="dlPNG('exp-spa','hami-spa',512)">PNG</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 04 AVATARS ══════════ -->
+<section class="g-section" id="avatars">
+  <div class="g-eyebrow">04 · Avatar hồ sơ</div>
+  <h2 class="g-title">Sẵn sàng cho <em>mọi nền tảng</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Bốn phông nền chuẩn cho ảnh đại diện. Nhân vật được vẽ <strong>chừa lề an toàn ~22%</strong> bên trong vòng tròn — không như logo hiện tại (tóc chạm sát viền), avatar này <strong>không bị cắt</strong> khi Android/iOS áp mask vuông bo góc, nên cũng có thể thay thế icon-512 maskable đang chờ xử lý.</p>
+
+  <div class="avatar-grid">
+    <div class="sticker"><div data-m="avatar" role="img" aria-label="Avatar nền moss"></div><div class="s-name">Tone-sur-tone</div><div class="s-note">Nền --moss · chính thức</div>
+      <button class="mini-btn" onclick="dlPNG('avatar','avatar-moss',1024)">PNG 1024</button></div>
+    <div class="sticker"><div data-m="avatar-grad" role="img" aria-label="Avatar nền gradient"></div><div class="s-name">Gradient hero</div><div class="s-note">Nổi bật trên feed</div>
+      <button class="mini-btn" onclick="dlPNG('avatar-grad','avatar-gradient',1024)">PNG 1024</button></div>
+    <div class="sticker"><div data-m="avatar-cream" role="img" aria-label="Avatar nền kem"></div><div class="s-name">Kem viền vàng</div><div class="s-note">Website · tài liệu in</div>
+      <button class="mini-btn" onclick="dlPNG('avatar-cream','avatar-cream',1024)">PNG 1024</button></div>
+    <div class="sticker"><div data-m="exp-spa" role="img" aria-label="Avatar khăn spa"></div><div class="s-name">Giờ spa</div><div class="s-note">Đổi theo mùa/chiến dịch</div>
+      <button class="mini-btn" onclick="dlPNG('exp-spa','avatar-spa',1024)">PNG 1024</button></div>
+  </div>
+
+  <div class="sub-title">Kiểm tra độ đọc ở size nhỏ</div>
+  <div class="size-row" id="sizeRow"></div>
+</section>
+
+<!-- ══════════ 05 FRAMES ══════════ -->
+<section class="g-section" id="frames">
+  <div class="g-eyebrow">05 · Ứng dụng vào khung bài</div>
+  <h2 class="g-title">Mascot trong <em>social frames</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Ba khung tiêu biểu đã redesign với mascot làm điểm nhấn — thay cho bộ khung "chỉ chữ" cũ. Dùng làm mẫu tham chiếu: tải SVG mascot ở mục 02, dựng lại bố cục trong Canva/Figma theo đúng vị trí dưới đây.</p>
+  <div class="frames-grid">
+
+    <div class="fr-card">
+      <div class="fr-label"><span>Quote — mascot đầu bài</span><em>1:1</em></div>
+      <div class="fr-sq f-quote">
+        <div class="fq-corner tl"></div><div class="fq-corner br"></div>
+        <div class="fq-mascot" data-m="mini" aria-hidden="true"></div>
+        <p class="fq-text">"Mỗi làn da đều có câu chuyện riêng. Việc của mình là lắng nghe."</p>
+        <span class="fq-author">Hana · Harmonie Beauté</span>
+        <span class="fq-brand">harmonie-beaute-vietnam.com</span>
+      </div>
+    </div>
+
+    <div class="fr-card">
+      <div class="fr-label"><span>Tip — line art watermark</span><em>1:1</em></div>
+      <div class="fr-sq f-tip">
+        <div class="ft-art" data-m="line-bare" aria-hidden="true"></div>
+        <span class="ft-tag">Skincare Tip · 01</span>
+        <h3 class="ft-title">Da dầu vẫn cần dưỡng ẩm mỗi ngày</h3>
+        <div class="ft-line"></div>
+        <p class="ft-body">Da tiết dầu nhiều thường là dấu hiệu thiếu nước. Bỏ qua kem dưỡng khiến da càng đổ dầu để bù.</p>
+        <span class="ft-brand">Harmonie Beauté · Tân Định</span>
+      </div>
+    </div>
+
+    <div class="fr-card">
+      <div class="fr-label"><span>Story — chào mừng</span><em>9:16</em></div>
+      <div class="fr-story f-story">
+        <span class="fs-logo">Harmonie <em>beauté</em></span>
+        <div>
+          <div class="fs-mascot" data-m="bust" aria-hidden="true"></div>
+          <h3 class="fs-title">Xin chào, mình là <em>Hami</em></h3>
+          <p class="fs-sub">Người bạn đồng hành mới của làn da bạn</p>
+        </div>
+        <span class="fs-cta">Đặt lịch ngay</span>
+        <span class="fs-handle">@harmonie_beautee</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="callout"><strong>Bộ khung đầy đủ 12 mẫu</strong> (quote, tip, before/after, story...) vẫn nằm trong file <span style="font-family:monospace;font-size:.78rem">harmonie-asset-frames.html</span> cũ — file này tập trung vào mascot. Nếu bạn muốn, bước tiếp theo mình dựng lại trọn bộ 12 khung với mascot tích hợp sẵn.</div>
+</section>
+
+<!-- ══════════ 06 RULES ══════════ -->
+<section class="g-section" id="rules" style="border-bottom:none">
+  <div class="g-eyebrow">06 · Quy tắc sử dụng</div>
+  <h2 class="g-title">Giữ cô ấy <em>nhất quán</em></h2>
+  <div class="g-line"></div>
+  <div class="dodont">
+    <div class="dodont-col do">
+      <h4>Nên</h4>
+      <ul>
+        <li>Tóc luôn theo màu theme (--hair-*) — xanh rêu hoặc hồng vang, không màu khác</li>
+        <li>Ngôi sao ✦ vàng luôn cài bên phải mái (trái theo hướng nhìn của cô ấy)</li>
+        <li>Biểu cảm mặc định là "Thư giãn" — mắt khép, cười nhẹ</li>
+        <li>Giữ lề an toàn quanh nhân vật ≥ 15% khi đặt cạnh chữ/logo</li>
+        <li>Trên nền tối dùng bản nét trắng hoặc thêm halo vàng nhẹ phía sau</li>
+      </ul>
+    </div>
+    <div class="dodont-col dont">
+      <h4>Tránh</h4>
+      <ul>
+        <li>Đổi màu da, kéo giãn lệch tỷ lệ, xoay nghiêng quá 10°</li>
+        <li>Thêm phụ kiện ngoài bộ đã định (star, khăn spa) khi chưa thống nhất</li>
+        <li>Vẽ mắt mở to tròn làm mất cảm giác "nghỉ ngơi" của thương hiệu</li>
+        <li>Đặt trên nền vàng/cam đậm — ngôi sao và viền vàng sẽ chìm</li>
+        <li>Dùng biểu cảm "Vui/Nháy mắt" cho nội dung y khoa nghiêm túc</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer class="g-footer">
+  <div class="logo-mini">Harmonie <em>beauté</em></div>
+  <div>Mascot Studio · SVG gốc 100% — tóc đổi màu theo theme website</div>
+</footer>
+
+<div class="toast" id="toast">Đã copy!</div>
+
+<script>
+/* ═══════════════ MASCOT BUILDERS ═══════════════ */
+const SKIN='#F3E3D3', FEAT='#5A3E44', MOUTH='#B5673B', BLUSH='rgba(181,103,59,0.20)';
+
+function faceFeatures(exp){
+  const brows=`<path d="M82 91 Q88.5 87 95 89.5" fill="none" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/>
+  <path d="M105 89.5 Q111.5 87 118 91" fill="none" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/>`;
+  const blush=`<ellipse cx="81" cy="113" rx="6.5" ry="3.8" fill="${BLUSH}"/><ellipse cx="119" cy="113" rx="6.5" ry="3.8" fill="${BLUSH}"/>`;
+  if(exp==='happy') return brows+`
+    <path d="M80 104 Q88 97 96 104" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M104 104 Q112 97 120 104" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>
+    ${blush}<path d="M91 118 Q100 130 109 118 Q100 122 91 118 Z" fill="#A8542F"/>`;
+  if(exp==='wink') return brows+`
+    <path d="M80 103 Q88 97 96 103" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="112" cy="102" r="4" fill="${FEAT}"/><circle cx="113.5" cy="100.5" r="1.3" fill="#FFFFFF"/>
+    <path d="M104 98 Q112 93 120 98" fill="none" stroke="${FEAT}" stroke-width="1.8" stroke-linecap="round"/>
+    ${blush}<path d="M93 121 Q102 127 108 119" fill="none" stroke="${MOUTH}" stroke-width="2.1" stroke-linecap="round"/>
+    <path d="M146 118 L148 123 L153 125 L148 127 L146 132 L144 127 L139 125 L144 123 Z" fill="var(--gold-bright)"/>`;
+  /* serene default */
+  return brows+`
+    <path d="M80 101 Q88 107.5 96 101" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M104 101 Q112 107.5 120 101" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M78.5 101 L75.5 98" stroke="${FEAT}" stroke-width="1.7" stroke-linecap="round"/>
+    <path d="M121.5 101 L124.5 98" stroke="${FEAT}" stroke-width="1.7" stroke-linecap="round"/>
+    ${blush}<path d="M93.5 120 Q100 125 106.5 120" fill="none" stroke="${MOUTH}" stroke-width="2.1" stroke-linecap="round"/>`;
+}
+
+const STAR200=`<path d="M128 57 L131 64.5 L138.5 67.5 L131 70.5 L128 78 L125 70.5 L117.5 67.5 L125 64.5 Z" fill="var(--gold-bright)"/>`;
+const BOB=`<path d="M100 28 C 58 28, 38 60, 42 102 C 44 126, 34 146, 48 162 C 58 172, 74 168, 78 156 C 84 166, 96 170, 100 170 C 104 170, 116 166, 122 156 C 126 168, 142 172, 152 162 C 166 146, 156 126, 158 102 C 162 60, 142 28, 100 28 Z" fill="var(--hair-deep)"/>`;
+const CURTAIN=`<path d="M100 48 C 71 48, 56 66, 59 94 C 56 118, 62 134, 58 150 C 56 158, 62 164, 69 162 C 76 160, 78 152, 77 144 C 75 122, 72 106, 74 92 C 76 76, 84 62, 100 60 C 116 62, 124 76, 126 92 C 128 106, 125 122, 123 144 C 122 152, 124 160, 131 162 C 138 164, 144 158, 142 150 C 138 134, 144 118, 141 94 C 144 66, 129 48, 100 48 Z" fill="var(--hair-mid)"/>`;
+const FRINGE=`<path d="M64 92 C 64 68, 80 52, 100 52 C 120 52, 136 68, 136 92 C 129 77, 119 71, 111 74 C 105 76.4, 102.4 81, 100 81 C 97.6 81, 95 76.4, 89 74 C 81 71, 71 77, 64 92 Z" fill="var(--hair-deep)"/>`;
+const STRANDS=`<path d="M62 104 C 59 126 63 142 58 154" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" opacity="0.8"/>
+<path d="M138 104 C 141 126 137 142 142 154" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" opacity="0.8"/>`;
+
+function headCore(exp){
+  return BOB+`<ellipse cx="100" cy="99" rx="36" ry="39" fill="${SKIN}"/>`+CURTAIN+FRINGE+STRANDS+STAR200+faceFeatures(exp||'serene');
+}
+
+function svgAvatar(bg, exp){
+  let bgm='';
+  if(bg==='moss') bgm=`<circle cx="100" cy="100" r="100" fill="var(--hair-soft)"/>`;
+  if(bg==='grad') bgm=`<defs><linearGradient id="agr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--hair-soft)"/><stop offset="1" stop-color="var(--hair-deep)"/></linearGradient></defs><circle cx="100" cy="100" r="100" fill="url(#agr)"/>`;
+  if(bg==='cream') bgm=`<circle cx="100" cy="100" r="100" fill="var(--cream)"/><circle cx="100" cy="100" r="96" fill="none" stroke="var(--gold)" stroke-width="2"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">${bgm}${headCore(exp)}</svg>`;
+}
+
+function svgSpa(){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="var(--hair-soft)"/>
+  <path d="M64 96 C 58 122 64 142 56 158 C 66 158 76 144 76 122 C 76 108 72 100 64 96 Z" fill="var(--hair-deep)"/>
+  <path d="M136 96 C 142 122 136 142 144 158 C 134 158 124 144 124 122 C 124 108 128 100 136 96 Z" fill="var(--hair-deep)"/>
+  <ellipse cx="100" cy="102" rx="36" ry="39" fill="${SKIN}"/>
+  <path d="M60 96 C 58 56, 78 34, 100 34 C 122 34, 142 56, 140 96 C 136 80, 122 72, 100 72 C 78 72, 64 80, 60 96 Z" fill="#FBF7F1" stroke="var(--sand)" stroke-width="1.5"/>
+  <path d="M66 84 C 76 74 92 69 100 69" fill="none" stroke="var(--sand)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M134 84 C 124 74 108 69 100 69" fill="none" stroke="var(--sand)" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="100" cy="36" rx="13" ry="9" fill="#FBF7F1" stroke="var(--sand)" stroke-width="1.5"/>
+  <path d="M90 33 Q100 40 110 33" fill="none" stroke="var(--sand)" stroke-width="1.3" stroke-linecap="round"/>
+  <path d="M56 62 L58 67 L63 69 L58 71 L56 76 L54 71 L49 69 L54 67 Z" fill="var(--gold-bright)"/>
+  <path d="M146 54 L147.5 58 L151.5 59.5 L147.5 61 L146 65 L144.5 61 L140.5 59.5 L144.5 58 Z" fill="var(--gold-bright)" opacity="0.85"/>
+  <g transform="translate(0,3)">${faceFeatures('serene')}</g>
+</svg>`;
+}
+
+function svgLine(bare){
+  const bg = bare ? '' : `<rect x="0" y="0" width="200" height="200" rx="18" fill="transparent"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">${bg}
+  <path d="M100 28 C 58 28, 38 60, 42 102 C 44 126, 34 146, 48 162 C 58 172, 74 168, 78 156 C 84 166, 96 170, 100 170 C 104 170, 116 166, 122 156 C 126 168, 142 172, 152 162 C 166 146, 156 126, 158 102 C 162 60, 142 28, 100 28 Z" fill="rgba(255,255,255,0.10)" stroke="#FAF6F0" stroke-width="2.2"/>
+  <path d="M64 99 C 64 122, 80 139, 100 139 C 120 139, 136 122, 136 99" fill="rgba(255,255,255,0.14)" stroke="#FAF6F0" stroke-width="2"/>
+  <path d="M64 92 C 71 77, 81 71, 89 74 C 95 76.4, 97.6 81, 100 81 C 102.4 81, 105 76.4, 111 74 C 119 71, 129 77, 136 92" fill="none" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M80 101 Q88 107.5 96 101" fill="none" stroke="#FAF6F0" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M104 101 Q112 107.5 120 101" fill="none" stroke="#FAF6F0" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M93.5 120 Q100 125 106.5 120" fill="none" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M128 57 L131 64.5 L138.5 67.5 L131 70.5 L128 78 L125 70.5 L117.5 67.5 L125 64.5 Z" fill="none" stroke="var(--gold-bright)" stroke-width="1.8" stroke-linejoin="round"/>
+</svg>`;
+}
+
+function svgMini(){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="90" fill="var(--hair-main)"/>
+  <ellipse cx="100" cy="103" rx="42" ry="45" fill="${SKIN}"/>
+  <path d="M56 100 C 56 62, 76 42, 100 42 C 124 42, 144 62, 144 100 C 136 80, 124 72, 114 76 C 106 79, 103 85, 100 85 C 97 85, 94 79, 86 76 C 76 72, 64 80, 56 100 Z" fill="var(--hair-deep)"/>
+  <path d="M77 106 Q86 113 95 106" fill="none" stroke="${FEAT}" stroke-width="3" stroke-linecap="round"/>
+  <path d="M105 106 Q114 113 123 106" fill="none" stroke="${FEAT}" stroke-width="3" stroke-linecap="round"/>
+  <path d="M92 126 Q100 132 108 126" fill="none" stroke="${MOUTH}" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M130 52 L133.4 60.6 L142 64 L133.4 67.4 L130 76 L126.6 67.4 L118 64 L126.6 60.6 Z" fill="var(--gold-bright)"/>
+</svg>`;
+}
+
+function svgBust(){
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 270">
+  <path d="M120 16 C 60 16, 30 62, 36 120 C 40 154, 22 182, 34 212 C 40 228, 60 234, 72 222 C 78 216, 80 208, 82 200 L 82 240 L 158 240 L 158 200 C 160 208, 162 216, 168 222 C 180 234, 200 228, 206 212 C 218 182, 200 154, 204 120 C 210 62, 180 16, 120 16 Z" fill="var(--hair-main)"/>
+  <path d="M56 90 C 48 130 58 164 46 198 C 60 190 68 158 66 126 C 65 110 62 98 56 90 Z" fill="var(--hair-sheen)" opacity="0.85"/>
+  <path d="M184 90 C 192 130 182 164 194 198 C 180 190 172 158 174 126 C 175 110 178 98 184 90 Z" fill="var(--hair-sheen)" opacity="0.85"/>
+  <path d="M106 128 L106 158 C106 167 134 167 134 158 L134 128 Z" fill="${SKIN}"/>
+  <ellipse cx="120" cy="133" rx="15" ry="7" fill="rgba(90,62,68,0.10)"/>
+  <ellipse cx="120" cy="95" rx="44" ry="47" fill="${SKIN}"/>
+  <path d="M56 262 C56 212 82 188 120 188 C158 188 184 212 184 262 Z" fill="#FBF7F1"/>
+  <path d="M117 187 C 98 196 87 218 83 262 L109 262 C110 228 113 206 123 194 Z" fill="#F1E6D8"/>
+  <path d="M123 187 C 142 196 153 218 157 262 L131 262 C130 228 127 206 117 194 Z" fill="#F6EDE1"/>
+  <path d="M120 191 C111 205 107 232 105 262" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+  <path d="M120 191 C129 205 133 232 135 262" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+  <path d="M120 40 C 84 40, 66 62, 70 96 C 66 130, 74 158, 64 186 C 60 198, 64 208, 74 210 C 84 212, 90 202, 90 190 C 90 160, 84 134, 88 106 C 90 88, 100 70, 120 68 C 140 70, 150 88, 152 106 C 156 134, 150 160, 150 190 C 150 202, 156 212, 166 210 C 176 208, 180 198, 176 186 C 166 158, 174 130, 170 96 C 174 62, 156 40, 120 40 Z" fill="var(--hair-soft)"/>
+  <path d="M76 92 C 76 64, 96 46, 120 46 C 144 46, 164 64, 164 92 C 156 74, 144 66, 134 70 C 127 73, 123 79, 120 79 C 117 79, 113 73, 106 70 C 96 66, 84 74, 76 92 Z" fill="var(--hair-main)"/>
+  <path d="M68 108 C 64 140 70 168 62 196" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M172 108 C 176 140 170 168 178 196" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <path d="M100 52 C 90 58 84 68 82 80" fill="none" stroke="var(--gold)" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+  <path d="M154 52 L157.5 61 L166 64.5 L157.5 68 L154 77 L150.5 68 L142 64.5 L150.5 61 Z" fill="var(--gold-bright)"/>
+  <path d="M98 86 Q106 81 114 84" fill="none" stroke="${FEAT}" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M126 84 Q134 81 142 86" fill="none" stroke="${FEAT}" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M96 98 Q106 106 116 98" fill="none" stroke="${FEAT}" stroke-width="3" stroke-linecap="round"/>
+  <path d="M124 98 Q134 106 144 98" fill="none" stroke="${FEAT}" stroke-width="3" stroke-linecap="round"/>
+  <path d="M94 98 L90 94" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/>
+  <path d="M146 98 L150 94" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="97" cy="113" rx="8" ry="4.5" fill="${BLUSH}"/>
+  <ellipse cx="143" cy="113" rx="8" ry="4.5" fill="${BLUSH}"/>
+  <path d="M112 122 Q120 128 128 122" fill="none" stroke="${MOUTH}" stroke-width="2.6" stroke-linecap="round"/>
+</svg>`;
+}
+
+const BUILDERS={
+  'bust': svgBust,
+  'avatar': ()=>svgAvatar('moss','serene'),
+  'avatar-grad': ()=>svgAvatar('grad','serene'),
+  'avatar-cream': ()=>svgAvatar('cream','serene'),
+  'line': ()=>svgLine(false),
+  'line-bare': ()=>svgLine(true),
+  'mini': svgMini,
+  'exp-serene': ()=>svgAvatar('cream','serene'),
+  'exp-happy': ()=>svgAvatar('cream','happy'),
+  'exp-wink': ()=>svgAvatar('cream','wink'),
+  'exp-spa': svgSpa
+};
+
+function inject(){
+  document.querySelectorAll('[data-m]').forEach(el=>{
+    const b=BUILDERS[el.getAttribute('data-m')];
+    if(b) el.innerHTML=b();
+  });
+  /* size test row */
+  const row=document.getElementById('sizeRow');
+  if(row){row.innerHTML='';[96,48,24].forEach(s=>{
+    const d=document.createElement('div');d.className='size-demo';
+    d.innerHTML=svgAvatar('moss','serene')+`<div class="sz">${s}px</div>`;
+    const sv=d.querySelector('svg');sv.setAttribute('width',s);sv.setAttribute('height',s);
+    row.appendChild(d);
+  });}
+}
+
+/* ═══════════════ EXPORT ═══════════════ */
+function resolveVars(svgStr){
+  const cs=getComputedStyle(document.documentElement);
+  return svgStr.replace(/var\((--[\w-]+)\)/g,(m,name)=>cs.getPropertyValue(name).trim()||'#000');
+}
+function getResolved(key){
+  const b=BUILDERS[key];if(!b)return null;
+  return resolveVars(b());
+}
+function showToast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  clearTimeout(window._tt);window._tt=setTimeout(()=>t.classList.remove('show'),1400);
+}
+function copySVG(key){
+  const s=getResolved(key);if(!s)return;
+  navigator.clipboard.writeText(s).then(()=>showToast('Đã copy SVG — dán vào Figma/Canva/code'));
+}
+function dlSVG(key,name){
+  const s=getResolved(key);if(!s)return;
+  const blob=new Blob([s],{type:'image/svg+xml'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name+'.svg';a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+  showToast('Đã tải '+name+'.svg');
+}
+function dlPNG(key,name,size){
+  const s=getResolved(key);if(!s)return;
+  const blob=new Blob([s],{type:'image/svg+xml'});
+  const url=URL.createObjectURL(blob);
+  const img=new Image();
+  img.onload=function(){
+    const vb=s.match(/viewBox="0 0 (\d+) (\d+)"/);
+    const w=vb?+vb[1]:200, h=vb?+vb[2]:200;
+    const scale=size/Math.max(w,h);
+    const c=document.createElement('canvas');c.width=Math.round(w*scale);c.height=Math.round(h*scale);
+    const ctx=c.getContext('2d');ctx.drawImage(img,0,0,c.width,c.height);
+    c.toBlob(function(pb){
+      const a=document.createElement('a');a.href=URL.createObjectURL(pb);a.download=name+'.png';a.click();
+      setTimeout(()=>URL.revokeObjectURL(a.href),2000);
+      URL.revokeObjectURL(url);
+      showToast('Đã tải '+name+'.png ('+c.width+'×'+c.height+')');
+    },'image/png');
+  };
+  img.onerror=function(){URL.revokeObjectURL(url);showToast('Xuất PNG lỗi — thử tải SVG');};
+  img.src=url;
+}
+
+/* ═══════════════ THEME + FX ═══════════════ */
+function toggleGuideTheme(){
+  const html=document.documentElement;
+  const cur=html.getAttribute('data-theme')==='green'?'green':'rose';
+  const next=cur==='green'?'rose':'green';
+  if(next==='rose'){html.removeAttribute('data-theme');}else{html.setAttribute('data-theme','green');}
+  document.getElementById('themeLabel').textContent=next==='green'?'Xanh rêu':'Hồng cổ điển';
+}
+document.getElementById('themeLabel').textContent='Xanh rêu';
+
+inject();
+
+(function(){
+  const hero=document.getElementById('heroSec'),glow=document.getElementById('cursorGlow');
+  if(hero&&glow&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    hero.addEventListener('mousemove',function(e){
+      const r=hero.getBoundingClientRect();
+      glow.style.setProperty('--mx',((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
+      glow.style.setProperty('--my',((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
+    },{passive:true});
+  }
+})();
+</script>
+
+</body>
+</html>
