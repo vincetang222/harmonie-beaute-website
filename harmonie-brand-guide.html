@@ -16,11 +16,13 @@
   --terra:#B5673B;--gold:#C8906A;--earth:#8B6F5C;
   --gold-light:#E3C39E;--gold-deep:#9A6640;--gold-bright:#E8BC7E;--gold-wash:rgba(200,144,106,0.08);
   --hero-grad:linear-gradient(160deg,#5E2244 0%,#451A34 50%,#2E1024 100%);
+  --hair-deep:#4A1830;--hair-main:#6E2442;--hair-mid:#5E2038;--hair-soft:#7A3050;--hair-sheen:#8E4260;
 }
 [data-theme="green"]{
   --moss:#3D5A47;--moss-light:#6B8F71;--moss-pale:#D4E4D0;
   --charcoal:#1E2F25;--dark:#1E2F25;
   --hero-grad:linear-gradient(160deg,#1E3028 0%,#162620 50%,#0F1F18 100%);
+  --hair-deep:#2E4636;--hair-main:#3D5A47;--hair-mid:#3A5443;--hair-soft:#46654F;--hair-sheen:#4E6E58;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.7;font-size:16px;transition:background .3s ease}
@@ -96,6 +98,38 @@ a{color:inherit}
 .type-light{font-size:.9rem;font-weight:300;color:var(--earth);font-style:italic}
 
 /* ── DO / DONT ── */
+/* ── HANA MASCOT SECTION ── */
+.hana-hero{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;background:var(--hero-grad);border-radius:20px;padding:2.4rem;position:relative;overflow:hidden;margin-bottom:2rem;transition:background .4s ease}
+.hana-hero-bg{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.hana-hero-bg .blob{position:absolute;border-radius:50%;filter:blur(50px)}
+.hana-hero-bg .blob-1{width:280px;height:280px;background:radial-gradient(circle,rgba(232,188,126,.28),transparent 68%);top:-14%;left:-6%}
+.hana-hero-bg .blob-2{width:240px;height:240px;background:radial-gradient(circle,rgba(200,144,106,.24),transparent 70%);bottom:-14%;right:-8%}
+.hana-hero-copy{position:relative;z-index:1}
+.hana-hero-eyebrow{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright);opacity:.9;margin-bottom:.9rem}
+.hana-hero h3{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(1.4rem,3vw,2rem);color:#F2EBD9;line-height:1.2;margin-bottom:.9rem}
+.hana-hero h3 em{color:var(--gold-bright)}
+.hana-hero p{color:rgba(255,255,255,.65);font-size:.86rem;font-weight:300}
+.hana-stage{display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.hana-stage svg{width:min(70%,220px);height:auto;filter:drop-shadow(0 16px 30px rgba(0,0,0,.35));animation:hanaFloat 6s ease-in-out infinite}
+@keyframes hanaFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:640px){.hana-hero{grid-template-columns:1fr;text-align:center;padding:2rem 1.4rem}}
+@media(prefers-reduced-motion:reduce){.hana-stage svg{animation:none}}
+
+.hana-variants{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-bottom:1.6rem}
+.hana-card{background:var(--white);border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.06);transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s}
+.hana-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.09)}
+.hana-card-stage{padding:1rem;display:flex;align-items:center;justify-content:center;min-height:150px}
+.hana-card-stage.dark{background:var(--hero-grad);transition:background .4s ease}
+.hana-card-stage.soft{background:var(--cream)}
+.hana-card-stage svg{width:110px;height:auto}
+.hana-card-meta{padding:.55rem .85rem .35rem;border-top:1px solid var(--sand)}
+.hana-card-name{font-size:.72rem;font-weight:600;color:var(--charcoal)}
+.hana-card-use{font-size:.62rem;color:var(--earth);margin-top:.15rem}
+.hana-card-actions{display:flex;gap:.35rem;padding:.4rem .85rem .7rem;flex-wrap:wrap}
+.mini-btn{font-size:.6rem;border:1px solid rgba(0,0,0,.13);background:transparent;border-radius:50px;padding:.28rem .7rem;color:var(--charcoal);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;transition:all .2s}
+.mini-btn:hover{background:var(--moss);border-color:var(--moss);color:var(--gold-bright)}
+.mini-btn:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+
 .dodont{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 @media(max-width:640px){.dodont{grid-template-columns:1fr}}
 .dodont-col{border-radius:14px;padding:1.2rem 1.4rem}
@@ -198,6 +232,7 @@ a{color:inherit}
     <a href="#logo">Logo</a>
     <a href="#mau">Màu</a>
     <a href="#type">Chữ</a>
+    <a href="#hana">Hana</a>
     <a href="#cta">Nút & CTA</a>
     <a href="#motion">Motion</a>
     <a href="#component">Thành phần</a>
@@ -347,9 +382,76 @@ a{color:inherit}
   <div class="callout callout-note"><strong>Quy tắc:</strong> tiêu đề luôn Playfair, thân bài luôn Be Vietnam Pro. Cụm cần nhấn trong câu → dùng <span style="font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-deep)">&lt;em&gt;</span> màu gold. Không dùng quá 2 bộ chữ, không dùng font mặc định (Arial, Times).</div>
 </section>
 
-<!-- 04 · CTA -->
+<!-- 04 · HANA MASCOT -->
+<section class="g-section" id="hana">
+  <div class="g-eyebrow">04 · Nhân vật Hana</div>
+  <h2 class="g-title">Gương mặt của <em>thương hiệu</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead"><strong>Hana</strong> là chuyên gia thật của spa — người bạn đang trò chuyện khi đọc "Về Hana", "Hana giải đáp", "Mẹo từ Hana". Nhân vật minh hoạ dưới đây là <strong>hình đại diện</strong> của cô ấy: mắt khép nhẹ (khoảnh khắc thư giãn trên giường trị liệu), tóc uốn sóng theo ngôn ngữ wave-divider, ngôi sao ✦ vàng cài mái, áo choàng spa viền vàng. Tóc tô bằng biến CSS nên tự đổi màu theo theme.</p>
+
+  <div class="hana-hero">
+    <div class="hana-hero-bg" aria-hidden="true"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+    <div class="hana-hero-copy">
+      <div class="hana-hero-eyebrow">✦ Meet Hana</div>
+      <h3>"Nơi tâm trí được <em>nghỉ ngơi</em>"</h3>
+      <p>Tagline của spa vẽ thành người. Khi khách nhìn thấy Hana, họ đã nhận ra Harmonie Beauté trước cả khi đọc chữ.</p>
+    </div>
+    <div class="hana-stage" id="hanaHeroStage" data-m="bust" aria-label="Hana — chân dung mascot"></div>
+  </div>
+
+  <div class="sub-title" style="font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss);font-weight:700;margin:1.6rem 0 .8rem">Bốn biến thể chính</div>
+  <div class="hana-variants">
+    <div class="hana-card">
+      <div class="hana-card-stage soft" data-m="bust"></div>
+      <div class="hana-card-meta"><div class="hana-card-name">Chân dung (bust)</div><div class="hana-card-use">Hero · ảnh giới thiệu</div></div>
+      <div class="hana-card-actions"><button class="mini-btn" onclick="copyHanaSVG('bust')">Copy SVG</button><button class="mini-btn" onclick="dlHanaPNG('bust','hana-bust',1024)">PNG</button></div>
+    </div>
+    <div class="hana-card">
+      <div class="hana-card-stage soft" data-m="avatar"></div>
+      <div class="hana-card-meta"><div class="hana-card-name">Avatar tròn</div><div class="hana-card-use">Ảnh đại diện · icon</div></div>
+      <div class="hana-card-actions"><button class="mini-btn" onclick="copyHanaSVG('avatar')">Copy SVG</button><button class="mini-btn" onclick="dlHanaPNG('avatar','hana-avatar',1024)">PNG</button></div>
+    </div>
+    <div class="hana-card">
+      <div class="hana-card-stage dark" data-m="line"></div>
+      <div class="hana-card-meta"><div class="hana-card-name">Nét trắng</div><div class="hana-card-use">Watermark nền tối · blog</div></div>
+      <div class="hana-card-actions"><button class="mini-btn" onclick="copyHanaSVG('line')">Copy SVG</button><button class="mini-btn" onclick="dlHanaPNG('line','hana-line',1024)">PNG</button></div>
+    </div>
+    <div class="hana-card">
+      <div class="hana-card-stage soft" data-m="mini"></div>
+      <div class="hana-card-meta"><div class="hana-card-name">Mini mark</div><div class="hana-card-use">Sticker · góc post nhỏ</div></div>
+      <div class="hana-card-actions"><button class="mini-btn" onclick="copyHanaSVG('mini')">Copy SVG</button><button class="mini-btn" onclick="dlHanaPNG('mini','hana-mini',512)">PNG</button></div>
+    </div>
+  </div>
+
+  <div class="callout callout-note">
+    <strong>Bộ đầy đủ</strong> gồm 4 biểu cảm (Thư giãn, Vui, Nháy mắt, Giờ spa) và 4 nền avatar nằm trong <span style="font-family:monospace;font-size:.78rem">harmonie-mascot-studio.html</span> — nơi có export PNG/SVG kích thước tuỳ ý và test độ đọc ở size 24/48/96px.
+  </div>
+
+  <div class="dodont">
+    <div class="dodont-col do">
+      <h4>Nên</h4>
+      <ul>
+        <li>Tóc luôn theo màu theme (--hair-*) — xanh rêu hoặc hồng vang, không màu khác</li>
+        <li>Ngôi sao ✦ vàng luôn cài bên phải mái</li>
+        <li>Biểu cảm mặc định "Thư giãn" — mắt khép, cười nhẹ</li>
+        <li>Trên nền tối dùng bản nét trắng hoặc thêm halo vàng nhẹ phía sau</li>
+      </ul>
+    </div>
+    <div class="dodont-col dont">
+      <h4>Tránh</h4>
+      <ul>
+        <li>Đổi màu da, kéo giãn lệch tỷ lệ, xoay nghiêng quá 10°</li>
+        <li>Dùng biểu cảm "Vui/Nháy mắt" cho nội dung y khoa nghiêm túc</li>
+        <li>Vẽ mắt mở to tròn — mất cảm giác "nghỉ ngơi" của thương hiệu</li>
+        <li>Đặt trên nền vàng/cam đậm — ngôi sao và viền vàng sẽ chìm</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · CTA -->
 <section class="g-section" id="cta">
-  <div class="g-eyebrow">04 · Nút &amp; CTA</div>
+  <div class="g-eyebrow">05 · Nút &amp; CTA</div>
   <h2 class="g-title">Quy tắc <em>nút bấm</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Đây là quy tắc đã <strong>chuẩn hoá toàn site</strong> sau khi sửa lỗi gradient lỗi thời ở 57 bài + index.html — quan trọng nhất trong bộ nhận diện này, đừng quay lại kiểu cũ.</p>
@@ -380,7 +482,7 @@ a{color:inherit}
 
 <!-- 05 · MOTION -->
 <section class="g-section" id="motion">
-  <div class="g-eyebrow">05 · Motion &amp; tương tác</div>
+  <div class="g-eyebrow">06 · Motion &amp; tương tác</div>
   <h2 class="g-title">Chuyển động <em>đã thiết lập</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Các pattern chuyển động dưới đây đã dùng xuyên suốt site — tái sử dụng khi làm trang mới thay vì tự sáng tạo pattern khác, để giữ cảm giác thương hiệu nhất quán.</p>
@@ -428,7 +530,7 @@ a{color:inherit}
 
 <!-- 06 · COMPONENTS -->
 <section class="g-section" id="component">
-  <div class="g-eyebrow">06 · Thành phần tái dùng</div>
+  <div class="g-eyebrow">07 · Thành phần tái dùng</div>
   <h2 class="g-title">UI <em>components</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Các khối dựng sẵn xuất hiện lặp lại trên toàn site — dùng nguyên khi thêm dịch vụ mới hoặc trang mới, không cần vẽ lại từ đầu.</p>
@@ -477,7 +579,7 @@ a{color:inherit}
 
 <!-- 07 · SOCIAL / FORMATS -->
 <section class="g-section" id="social">
-  <div class="g-eyebrow">07 · Định dạng ảnh &amp; social</div>
+  <div class="g-eyebrow">08 · Định dạng ảnh &amp; social</div>
   <h2 class="g-title">Khổ &amp; <em>kích thước</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Chưa có ảnh mẫu đã thiết kế cho social (khác với keo.social đã có kho ảnh OG) — đây là bảng kích thước chuẩn để dùng khi bắt đầu sản xuất ảnh/video cho Facebook, Instagram, TikTok, Threads.</p>
@@ -501,7 +603,7 @@ a{color:inherit}
 
 <!-- 08 · VOICE -->
 <section class="g-section" id="voice">
-  <div class="g-eyebrow">08 · Giọng &amp; nội dung</div>
+  <div class="g-eyebrow">09 · Giọng &amp; nội dung</div>
   <h2 class="g-title">Cách <em>viết</em> cho Harmonie</h2>
   <div class="g-line"></div>
   <p class="g-lead">Giọng thương hiệu: <strong>ấm áp, chuyên môn, riêng tư</strong> — như một chuyên gia 7 năm kinh nghiệm nói chuyện trực tiếp với khách, không phóng đại y khoa, luôn song ngữ VI/EN đầy đủ trên mọi trang public.</p>
@@ -532,7 +634,7 @@ a{color:inherit}
 
 <!-- 09 · QUICK SPECS -->
 <section class="g-section" id="specs" style="border-bottom:none">
-  <div class="g-eyebrow">09 · Thông số nhanh</div>
+  <div class="g-eyebrow">10 · Thông số nhanh</div>
   <h2 class="g-title">Tra cứu <em>nhanh</em></h2>
   <div class="g-line"></div>
 
@@ -630,6 +732,69 @@ updateHexLabels();
   },{threshold:0.2});
   io.observe(el);
 })();
+
+/* ═══════════ HANA MASCOT BUILDERS ═══════════ */
+var HANA_SKIN='#F3E3D3',HANA_FEAT='#5A3E44',HANA_MOUTH='#B5673B',HANA_BLUSH='rgba(181,103,59,0.20)';
+function hanaSerene(){return `<path d="M82 91 Q88.5 87 95 89.5" fill="none" stroke="${HANA_FEAT}" stroke-width="2" stroke-linecap="round"/><path d="M105 89.5 Q111.5 87 118 91" fill="none" stroke="${HANA_FEAT}" stroke-width="2" stroke-linecap="round"/><path d="M80 101 Q88 107.5 96 101" fill="none" stroke="${HANA_FEAT}" stroke-width="2.5" stroke-linecap="round"/><path d="M104 101 Q112 107.5 120 101" fill="none" stroke="${HANA_FEAT}" stroke-width="2.5" stroke-linecap="round"/><path d="M78.5 101 L75.5 98" stroke="${HANA_FEAT}" stroke-width="1.7" stroke-linecap="round"/><path d="M121.5 101 L124.5 98" stroke="${HANA_FEAT}" stroke-width="1.7" stroke-linecap="round"/><ellipse cx="81" cy="113" rx="6.5" ry="3.8" fill="${HANA_BLUSH}"/><ellipse cx="119" cy="113" rx="6.5" ry="3.8" fill="${HANA_BLUSH}"/><path d="M93.5 120 Q100 125 106.5 120" fill="none" stroke="${HANA_MOUTH}" stroke-width="2.1" stroke-linecap="round"/>`;}
+
+function hanaHead(){var BOB=`<path d="M100 28 C 58 28, 38 60, 42 102 C 44 126, 34 146, 48 162 C 58 172, 74 168, 78 156 C 84 166, 96 170, 100 170 C 104 170, 116 166, 122 156 C 126 168, 142 172, 152 162 C 166 146, 156 126, 158 102 C 162 60, 142 28, 100 28 Z" fill="var(--hair-deep)"/>`;
+var CURT=`<path d="M100 48 C 71 48, 56 66, 59 94 C 56 118, 62 134, 58 150 C 56 158, 62 164, 69 162 C 76 160, 78 152, 77 144 C 75 122, 72 106, 74 92 C 76 76, 84 62, 100 60 C 116 62, 124 76, 126 92 C 128 106, 125 122, 123 144 C 122 152, 124 160, 131 162 C 138 164, 144 158, 142 150 C 138 134, 144 118, 141 94 C 144 66, 129 48, 100 48 Z" fill="var(--hair-mid)"/>`;
+var FR=`<path d="M64 92 C 64 68, 80 52, 100 52 C 120 52, 136 68, 136 92 C 129 77, 119 71, 111 74 C 105 76.4, 102.4 81, 100 81 C 97.6 81, 95 76.4, 89 74 C 81 71, 71 77, 64 92 Z" fill="var(--hair-deep)"/>`;
+var STR=`<path d="M62 104 C 59 126 63 142 58 154" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" opacity="0.8"/><path d="M138 104 C 141 126 137 142 142 154" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" opacity="0.8"/>`;
+var STAR=`<path d="M128 57 L131 64.5 L138.5 67.5 L131 70.5 L128 78 L125 70.5 L117.5 67.5 L125 64.5 Z" fill="var(--gold-bright)"/>`;
+return BOB+`<ellipse cx="100" cy="99" rx="36" ry="39" fill="${HANA_SKIN}"/>`+CURT+FR+STR+STAR+hanaSerene();}
+
+function hanaAvatar(){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="var(--hair-soft)"/>${hanaHead()}</svg>`;}
+function hanaLine(){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<path d="M100 28 C 58 28, 38 60, 42 102 C 44 126, 34 146, 48 162 C 58 172, 74 168, 78 156 C 84 166, 96 170, 100 170 C 104 170, 116 166, 122 156 C 126 168, 142 172, 152 162 C 166 146, 156 126, 158 102 C 162 60, 142 28, 100 28 Z" fill="rgba(255,255,255,0.10)" stroke="#FAF6F0" stroke-width="2.2"/>
+<path d="M64 99 C 64 122, 80 139, 100 139 C 120 139, 136 122, 136 99" fill="rgba(255,255,255,0.14)" stroke="#FAF6F0" stroke-width="2"/>
+<path d="M64 92 C 71 77, 81 71, 89 74 C 95 76.4, 97.6 81, 100 81 C 102.4 81, 105 76.4, 111 74 C 119 71, 129 77, 136 92" fill="none" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round"/>
+<path d="M80 101 Q88 107.5 96 101" fill="none" stroke="#FAF6F0" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M104 101 Q112 107.5 120 101" fill="none" stroke="#FAF6F0" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M93.5 120 Q100 125 106.5 120" fill="none" stroke="#FAF6F0" stroke-width="2" stroke-linecap="round"/>
+<path d="M128 57 L131 64.5 L138.5 67.5 L131 70.5 L128 78 L125 70.5 L117.5 67.5 L125 64.5 Z" fill="none" stroke="var(--gold-bright)" stroke-width="1.8" stroke-linejoin="round"/></svg>`;}
+function hanaMini(){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<circle cx="100" cy="100" r="90" fill="var(--hair-main)"/>
+<ellipse cx="100" cy="103" rx="42" ry="45" fill="${HANA_SKIN}"/>
+<path d="M56 100 C 56 62, 76 42, 100 42 C 124 42, 144 62, 144 100 C 136 80, 124 72, 114 76 C 106 79, 103 85, 100 85 C 97 85, 94 79, 86 76 C 76 72, 64 80, 56 100 Z" fill="var(--hair-deep)"/>
+<path d="M77 106 Q86 113 95 106" fill="none" stroke="${HANA_FEAT}" stroke-width="3" stroke-linecap="round"/>
+<path d="M105 106 Q114 113 123 106" fill="none" stroke="${HANA_FEAT}" stroke-width="3" stroke-linecap="round"/>
+<path d="M92 126 Q100 132 108 126" fill="none" stroke="${HANA_MOUTH}" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M130 52 L133.4 60.6 L142 64 L133.4 67.4 L130 76 L126.6 67.4 L118 64 L126.6 60.6 Z" fill="var(--gold-bright)"/></svg>`;}
+function hanaBust(){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 270">
+<path d="M120 16 C 60 16, 30 62, 36 120 C 40 154, 22 182, 34 212 C 40 228, 60 234, 72 222 C 78 216, 80 208, 82 200 L 82 240 L 158 240 L 158 200 C 160 208, 162 216, 168 222 C 180 234, 200 228, 206 212 C 218 182, 200 154, 204 120 C 210 62, 180 16, 120 16 Z" fill="var(--hair-main)"/>
+<path d="M56 90 C 48 130 58 164 46 198 C 60 190 68 158 66 126 C 65 110 62 98 56 90 Z" fill="var(--hair-sheen)" opacity="0.85"/>
+<path d="M184 90 C 192 130 182 164 194 198 C 180 190 172 158 174 126 C 175 110 178 98 184 90 Z" fill="var(--hair-sheen)" opacity="0.85"/>
+<path d="M106 128 L106 158 C106 167 134 167 134 158 L134 128 Z" fill="${HANA_SKIN}"/>
+<ellipse cx="120" cy="133" rx="15" ry="7" fill="rgba(90,62,68,0.10)"/>
+<ellipse cx="120" cy="95" rx="44" ry="47" fill="${HANA_SKIN}"/>
+<path d="M56 262 C56 212 82 188 120 188 C158 188 184 212 184 262 Z" fill="#FBF7F1"/>
+<path d="M117 187 C 98 196 87 218 83 262 L109 262 C110 228 113 206 123 194 Z" fill="#F1E6D8"/>
+<path d="M123 187 C 142 196 153 218 157 262 L131 262 C130 228 127 206 117 194 Z" fill="#F6EDE1"/>
+<path d="M120 191 C111 205 107 232 105 262" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+<path d="M120 191 C129 205 133 232 135 262" fill="none" stroke="var(--gold)" stroke-width="2.4"/>
+<path d="M120 40 C 84 40, 66 62, 70 96 C 66 130, 74 158, 64 186 C 60 198, 64 208, 74 210 C 84 212, 90 202, 90 190 C 90 160, 84 134, 88 106 C 90 88, 100 70, 120 68 C 140 70, 150 88, 152 106 C 156 134, 150 160, 150 190 C 150 202, 156 212, 166 210 C 176 208, 180 198, 176 186 C 166 158, 174 130, 170 96 C 174 62, 156 40, 120 40 Z" fill="var(--hair-soft)"/>
+<path d="M76 92 C 76 64, 96 46, 120 46 C 144 46, 164 64, 164 92 C 156 74, 144 66, 134 70 C 127 73, 123 79, 120 79 C 117 79, 113 73, 106 70 C 96 66, 84 74, 76 92 Z" fill="var(--hair-main)"/>
+<path d="M68 108 C 64 140 70 168 62 196" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+<path d="M172 108 C 176 140 170 168 178 196" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+<path d="M154 52 L157.5 61 L166 64.5 L157.5 68 L154 77 L150.5 68 L142 64.5 L150.5 61 Z" fill="var(--gold-bright)"/>
+<path d="M98 86 Q106 81 114 84" fill="none" stroke="${HANA_FEAT}" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M126 84 Q134 81 142 86" fill="none" stroke="${HANA_FEAT}" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M96 98 Q106 106 116 98" fill="none" stroke="${HANA_FEAT}" stroke-width="3" stroke-linecap="round"/>
+<path d="M124 98 Q134 106 144 98" fill="none" stroke="${HANA_FEAT}" stroke-width="3" stroke-linecap="round"/>
+<path d="M94 98 L90 94" stroke="${HANA_FEAT}" stroke-width="2" stroke-linecap="round"/>
+<path d="M146 98 L150 94" stroke="${HANA_FEAT}" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="97" cy="113" rx="8" ry="4.5" fill="${HANA_BLUSH}"/>
+<ellipse cx="143" cy="113" rx="8" ry="4.5" fill="${HANA_BLUSH}"/>
+<path d="M112 122 Q120 128 128 122" fill="none" stroke="${HANA_MOUTH}" stroke-width="2.6" stroke-linecap="round"/></svg>`;}
+
+var HANA_B={bust:hanaBust,avatar:hanaAvatar,line:hanaLine,mini:hanaMini};
+function injectHana(){document.querySelectorAll('[data-m]').forEach(function(el){var b=HANA_B[el.getAttribute('data-m')];if(b)el.innerHTML=b();});}
+injectHana();
+
+function hanaResolve(s){var cs=getComputedStyle(document.documentElement);return s.replace(/var\((--[\w-]+)\)/g,function(m,n){return cs.getPropertyValue(n).trim()||'#000';});}
+function copyHanaSVG(k){var b=HANA_B[k];if(!b)return;navigator.clipboard.writeText(hanaResolve(b())).then(function(){showToast('Đã copy SVG Hana');});}
+function dlHanaPNG(k,name,size){var b=HANA_B[k];if(!b)return;var s=hanaResolve(b());var blob=new Blob([s],{type:'image/svg+xml'});var url=URL.createObjectURL(blob);var img=new Image();img.onload=function(){var vb=s.match(/viewBox="0 0 (\d+) (\d+)"/);var w=vb?+vb[1]:200,h=vb?+vb[2]:200;var scale=size/Math.max(w,h);var c=document.createElement('canvas');c.width=Math.round(w*scale);c.height=Math.round(h*scale);var ctx=c.getContext('2d');ctx.drawImage(img,0,0,c.width,c.height);c.toBlob(function(pb){var a=document.createElement('a');a.href=URL.createObjectURL(pb);a.download=name+'.png';a.click();setTimeout(function(){URL.revokeObjectURL(a.href);},2000);URL.revokeObjectURL(url);showToast('Đã tải '+name+'.png');},'image/png');};img.src=url;}
 </script>
 
 </body>
