@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harmonie Beauté — Marketing Playbook</title>
+<title>Harmonie Marketing — Tổng hợp</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,16 +31,18 @@ em{font-style:italic}
 svg{display:block}
 
 /* ── TOP BAR ── */
-.topbar{position:sticky;top:0;z-index:200;background:rgba(247,242,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--sand);display:flex;align-items:center;justify-content:space-between;padding:.85rem 2rem;gap:1rem}
+.topbar{position:sticky;top:0;z-index:200;background:rgba(247,242,236,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--sand);padding:.75rem 2rem 0}
+.topbar-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-bottom:.65rem}
 .topbar-logo{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--moss);white-space:nowrap}
 .topbar-logo em{color:var(--gold-deep)}
-.topbar-nav{display:flex;gap:1.1rem;flex-wrap:wrap}
-.topbar-nav a{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--earth);font-weight:500;text-decoration:none;white-space:nowrap}
-.topbar-nav a:hover{color:var(--moss)}
 .theme-switch{display:flex;align-items:center;gap:.5rem;border:1px solid var(--sand-dark);border-radius:50px;padding:.32rem .6rem;background:var(--white);cursor:pointer;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif}
 .theme-switch span{font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--earth);font-weight:600}
 .theme-switch .dot{width:15px;height:15px;border-radius:50%;background:var(--moss);transition:background .3s}
-@media(max-width:920px){.topbar-nav{display:none}}
+.maintab-bar{display:flex;gap:.4rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:.7rem}
+.maintab-bar::-webkit-scrollbar{display:none}
+.maintab-btn{flex-shrink:0;background:transparent;border:none;border-bottom:2.5px solid transparent;padding:.4rem .3rem .55rem;font-size:.76rem;font-weight:600;color:var(--earth);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;white-space:nowrap;transition:color .2s,border-color .2s;margin-right:.9rem}
+.maintab-btn:hover{color:var(--moss)}
+.maintab-btn.active{color:var(--moss);border-bottom-color:var(--gold)}
 
 /* ── HERO ── */
 .hero{background:var(--hero-grad);padding:5rem 2rem 4rem;position:relative;overflow:hidden;transition:background .4s ease}
@@ -76,6 +78,9 @@ svg{display:block}
 
 /* ── LAYOUT ── */
 .wrap{max-width:1080px;margin:0 auto;padding:0 2rem}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.tab-panel:first-child .g-section:first-child{padding-top:2.8rem}
 .g-section{padding:4.2rem 0;border-bottom:1px solid var(--sand)}
 .g-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;font-weight:700;background:var(--moss);padding:5px 16px;border-radius:50px;margin-bottom:1.1rem}
 .g-title{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:400;color:var(--charcoal);margin-bottom:.7rem;letter-spacing:-.01em}
@@ -429,6 +434,56 @@ svg{display:block}
 .g-table tr:nth-child(even) td{background:rgba(0,0,0,.015)}
 .g-table td.mono{font-family:'SFMono-Regular',Consolas,monospace;font-size:.76rem;color:var(--moss)}
 
+/* ── POSTING TRACKER ── */
+.trk-card{background:var(--white);border-radius:18px;padding:1.6rem;border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.trk-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.3rem}
+.trk-nav{display:flex;align-items:center;gap:.8rem}
+.trk-nav button{background:var(--cream);border:1px solid var(--sand);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:.9rem;color:var(--moss);display:flex;align-items:center;justify-content:center;font-family:inherit}
+.trk-nav button:hover{background:var(--moss);color:var(--gold-bright);border-color:var(--moss)}
+.trk-month{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--charcoal);min-width:150px;text-align:center}
+.trk-month em{color:var(--gold-deep);font-style:italic}
+.trk-stats{display:flex;gap:.6rem;flex-wrap:wrap}
+.trk-stat{font-size:.68rem;padding:.35rem .8rem;border-radius:50px;font-weight:600;white-space:nowrap}
+.trk-stat.posted{background:rgba(122,48,80,.08);color:var(--moss)}
+.trk-stat.scheduled{background:var(--gold-wash);color:var(--gold-deep)}
+.trk-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem}
+.trk-daylabel{font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;color:var(--earth);text-align:center;font-weight:700;padding-bottom:.3rem}
+.trk-day{aspect-ratio:1;border-radius:10px;border:1px solid var(--sand);background:var(--cream);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.35rem .2rem;transition:all .15s}
+.trk-day:hover{border-color:var(--gold);background:var(--gold-wash)}
+.trk-day.empty{visibility:hidden;pointer-events:none;border:none}
+.trk-day.today{border-color:var(--moss);border-width:2px}
+.trk-day.selected{background:var(--moss);border-color:var(--moss)}
+.trk-day.selected .trk-daynum{color:var(--gold-bright)}
+.trk-daynum{font-size:.76rem;font-weight:600;color:var(--charcoal)}
+.trk-dots{display:flex;gap:2px;margin-top:.3rem;flex-wrap:wrap;justify-content:center;min-height:6px}
+.trk-dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.trk-dot.posted{background:var(--moss)}
+.trk-day.selected .trk-dot.posted{background:var(--gold-bright)}
+.trk-legend{display:flex;gap:1.2rem;margin-top:1.1rem;font-size:.68rem;color:var(--earth);flex-wrap:wrap;align-items:center}
+.trk-legend span{display:inline-flex;align-items:center;gap:.35rem}
+.trk-legend .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.trk-panel{margin-top:1.6rem;background:var(--cream);border-radius:14px;padding:1.3rem 1.4rem;border:1px solid var(--sand)}
+.trk-panel-date{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--moss);margin-bottom:.9rem}
+.trk-panel-date em{color:var(--gold-deep);font-style:italic}
+.trk-post-list{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
+.trk-post{background:var(--white);border-radius:10px;padding:.6rem .8rem;display:flex;align-items:center;gap:.65rem;border-left:3px solid var(--gold)}
+.trk-post.is-posted{border-left-color:var(--moss)}
+.trk-post-check{width:20px;height:20px;border-radius:50%;border:2px solid var(--sand-dark);cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:transparent;transition:all .15s}
+.trk-post.is-posted .trk-post-check{background:var(--moss);border-color:var(--moss);color:var(--gold-bright)}
+.trk-post-body{flex:1;min-width:0}
+.trk-post-title{font-size:.82rem;color:var(--charcoal);font-weight:500;word-break:break-word}
+.trk-post.is-posted .trk-post-title{text-decoration:line-through;opacity:.55}
+.trk-post-pillar{font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-deep);margin-top:.15rem}
+.trk-post-del{background:none;border:none;color:var(--earth);cursor:pointer;font-size:.85rem;padding:.2rem .4rem;flex-shrink:0}
+.trk-post-del:hover{color:var(--terra)}
+.trk-empty-note{font-size:.76rem;color:var(--earth);font-style:italic;margin-bottom:1rem}
+.trk-form{display:flex;gap:.5rem;flex-wrap:wrap}
+.trk-form input[type=text]{flex:1;min-width:160px;border:1px solid var(--sand-dark);border-radius:8px;padding:.55rem .8rem;font-size:.8rem;font-family:'Be Vietnam Pro',sans-serif;background:var(--white);color:var(--charcoal)}
+.trk-form select{border:1px solid var(--sand-dark);border-radius:8px;padding:.55rem .6rem;font-size:.78rem;font-family:'Be Vietnam Pro',sans-serif;background:var(--white);color:var(--charcoal)}
+.trk-form button{background:var(--moss);color:var(--gold-bright);border:none;border-radius:8px;padding:.55rem 1.2rem;font-size:.78rem;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'Be Vietnam Pro',sans-serif}
+.trk-form button:hover{background:var(--moss-light)}
+@media(max-width:640px){.trk-grid{gap:.22rem}.trk-day{border-radius:7px;padding:.25rem .1rem}.trk-daynum{font-size:.64rem}.trk-form{flex-direction:column}.trk-form input,.trk-form select,.trk-form button{width:100%}}
+
 /* ── UTIL ── */
 .callout{border-radius:14px;padding:1.1rem 1.4rem;margin:1.4rem 0;font-size:.82rem;line-height:1.6;background:var(--gold-wash);border:1px solid rgba(200,144,106,.25)}
 .callout strong{color:var(--gold-deep)}
@@ -450,29 +505,20 @@ svg{display:block}
 <body>
 
 <div class="topbar">
-  <div class="topbar-logo">Harmonie <em>beauté</em> — marketing playbook</div>
-  <nav class="topbar-nav">
-    <a href="#position">Định vị</a>
-    <a href="#audience">Khách</a>
-    <a href="#pillars">Trụ cột</a>
-    <a href="#logo">Logo</a>
-    <a href="#mau">Màu</a>
-    <a href="#type">Chữ</a>
-    <a href="#hana">Harmonie</a>
-    <a href="#cta">CTA</a>
-    <a href="#motion">Motion</a>
-    <a href="#component">Thành phần</a>
-    <a href="#social">Social</a>
-    <a href="#voice">Giọng viết</a>
-    <a href="#templates">Templates</a>
-    <a href="#calendar">Lịch tuần</a>
-    <a href="#plan90">90 ngày</a>
-    <a href="#actions">Việc ngay</a>
+  <div class="topbar-top">
+    <div class="topbar-logo">Harmonie <em>marketing</em> — tổng hợp</div>
+    <button class="theme-switch" onclick="togglePlanTheme()" aria-label="Đổi theme">
+      <span id="themeLabel">Xanh rêu</span>
+      <span class="dot"></span>
+    </button>
+  </div>
+  <nav class="maintab-bar" role="tablist">
+    <button class="maintab-btn active" data-tab="chien-luoc" onclick="showTab('chien-luoc')">📍 Chiến lược</button>
+    <button class="maintab-btn" data-tab="nhan-dien" onclick="showTab('nhan-dien')">🎨 Bộ nhận diện</button>
+    <button class="maintab-btn" data-tab="template" onclick="showTab('template')">🖼️ Templates</button>
+    <button class="maintab-btn" data-tab="ke-hoach" onclick="showTab('ke-hoach')">🗓️ Kế hoạch</button>
+    <button class="maintab-btn" data-tab="theo-doi" onclick="showTab('theo-doi')">✅ Theo dõi đăng bài</button>
   </nav>
-  <button class="theme-switch" onclick="togglePlanTheme()" aria-label="Đổi theme">
-    <span id="themeLabel">Xanh rêu</span>
-    <span class="dot"></span>
-  </button>
 </div>
 
 <!-- ══════════ HERO ══════════ -->
@@ -496,6 +542,7 @@ svg{display:block}
 
 <div class="wrap">
 
+<div class="tab-panel active" id="tab-chien-luoc">
 <!-- ══════════ 01 · ĐỊNH VỊ ══════════ -->
 <section class="g-section" id="position">
   <div class="g-eyebrow">01 · Định vị thương hiệu</div>
@@ -615,6 +662,8 @@ svg{display:block}
   </div>
 </section>
 
+</div>
+<div class="tab-panel" id="tab-nhan-dien">
 <!-- ══════════ 04 · LOGO ══════════ -->
 <section class="g-section" id="logo">
   <div class="g-eyebrow">04 · Logo</div>
@@ -1083,6 +1132,8 @@ svg{display:block}
   </div>
 </section>
 
+</div>
+<div class="tab-panel" id="tab-template">
 <!-- ══════════ 13 · TEMPLATES ══════════ -->
 <section class="g-section" id="templates">
   <div class="g-eyebrow">13 · 10 templates có Harmonie</div>
@@ -1272,10 +1323,12 @@ svg{display:block}
 
   </div>
 
-  <div class="callout"><strong>Cách chuyển thành ảnh thật:</strong> template chạy trên browser. Chụp màn hình khung → mở Canva → tạo canvas đúng kích thước (1080×1080 · 1080×1350 · 1080×1920) → đặt ảnh nền + kéo mascot SVG từ <a href="#hana" style="color:var(--gold-deep);font-weight:600">mục 07 · Nhân vật Harmonie</a> vào → thay text. Hoặc export template thành PNG tại đây rồi vào Figma edit.</div>
+  <div class="callout"><strong>Cách chuyển thành ảnh thật:</strong> template chạy trên browser. Chụp màn hình khung → mở Canva → tạo canvas đúng kích thước (1080×1080 · 1080×1350 · 1080×1920) → đặt ảnh nền + kéo mascot SVG từ <a href="javascript:void(0)" onclick="showTab('nhan-dien');setTimeout(function(){var el=document.getElementById('hana');if(el)el.scrollIntoView({behavior:'smooth'});},60)" style="color:var(--gold-deep);font-weight:600">mục 07 · Nhân vật Harmonie</a> vào → thay text. Hoặc export template thành PNG tại đây rồi vào Figma edit.</div>
 </section>
 
-<!-- ══════════ 05 · LỊCH TUẦN ══════════ -->
+</div>
+<div class="tab-panel" id="tab-ke-hoach">
+<!-- ══════════ 14 · LỊCH TUẦN ══════════ -->
 <section class="g-section" id="calendar">
   <div class="g-eyebrow">14 · Lịch nội dung hàng tuần</div>
   <h2 class="g-title">7 ngày · <em>7 post</em></h2>
@@ -1296,7 +1349,7 @@ svg{display:block}
   <div class="callout"><strong>Ngoài lịch chính:</strong> mỗi tuần thêm 3–5 story ngẫu nhiên (behind the scenes, cảm ơn khách, video ngắn phòng spa) — không cần template, chỉ cần Harmonie avatar tròn ở góc + text.</div>
 </section>
 
-<!-- ══════════ 06 · 90 NGÀY ══════════ -->
+<!-- ══════════ 15 · 90 NGÀY ══════════ -->
 <section class="g-section" id="plan90">
   <div class="g-eyebrow">15 · Kế hoạch 90 ngày</div>
   <h2 class="g-title">Từ giờ đến <em>hết Q3</em></h2>
@@ -1342,7 +1395,7 @@ svg{display:block}
   <div class="callout"><strong>Đo lường:</strong> 3 chỉ số cuối tháng. (1) Follower IG mới — mục tiêu +200/tháng. (2) Lịch qua Calendly — bao nhiêu đến từ IG (dùng UTM). (3) Google review mới — 3–5 review 5★/tháng. Không quan trọng chỉ số khác.</div>
 </section>
 
-<!-- ══════════ 07 · VIỆC LÀM NGAY ══════════ -->
+<!-- ══════════ 16 · VIỆC LÀM NGAY ══════════ -->
 <section class="g-section" id="actions">
   <div class="g-eyebrow">16 · Việc làm ngay tuần này</div>
   <h2 class="g-title">5 việc <em>ưu tiên</em></h2>
@@ -1388,10 +1441,61 @@ svg{display:block}
 </section>
 
 </div>
+<div class="tab-panel" id="tab-theo-doi">
+<!-- ══════════ 17 · THEO DÕI ĐĂNG BÀI ══════════ -->
+<section class="g-section" id="tracker" style="border-bottom:none">
+  <div class="g-eyebrow">17 · Theo dõi đăng bài</div>
+  <h2 class="g-title">Lịch <em>đăng bài</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Bấm vào 1 ngày để thêm bài định đăng hoặc đánh dấu đã đăng. Dữ liệu lưu riêng cho bạn, tự động nhớ giữa các lần mở lại trang — không cần Excel hay note rời.</p>
+
+  <div class="trk-card">
+    <div class="trk-head">
+      <div class="trk-nav">
+        <button onclick="trkNav(-1)" aria-label="Tháng trước">←</button>
+        <div class="trk-month" id="trkMonthLabel">—</div>
+        <button onclick="trkNav(1)" aria-label="Tháng sau">→</button>
+      </div>
+      <div class="trk-stats">
+        <span class="trk-stat posted" id="trkStatPosted">🟢 0 đã đăng</span>
+        <span class="trk-stat scheduled" id="trkStatScheduled">🟡 0 lên lịch</span>
+      </div>
+    </div>
+
+    <div class="trk-grid" id="trkGrid">
+      <div class="trk-daylabel">T2</div><div class="trk-daylabel">T3</div><div class="trk-daylabel">T4</div><div class="trk-daylabel">T5</div><div class="trk-daylabel">T6</div><div class="trk-daylabel">T7</div><div class="trk-daylabel">CN</div>
+    </div>
+
+    <div class="trk-legend">
+      <span><span class="dot" style="background:var(--moss)"></span> Đã đăng</span>
+      <span><span class="dot" style="background:var(--gold)"></span> Lên lịch</span>
+      <span>· Bấm 1 ngày bất kỳ để xem / thêm bài</span>
+    </div>
+
+    <div class="trk-panel" id="trkPanel" style="display:none">
+      <div class="trk-panel-date" id="trkPanelDate">—</div>
+      <div class="trk-post-list" id="trkPostList"></div>
+      <div class="trk-form">
+        <input type="text" id="trkInputTitle" placeholder="Tên bài / nội dung đăng..." onkeydown="if(event.key==='Enter')trkAddPost()">
+        <select id="trkInputPillar">
+          <option value="educate">Giáo dục</option>
+          <option value="trust">Niềm tin</option>
+          <option value="convert">Chuyển đổi</option>
+        </select>
+        <button onclick="trkAddPost()">+ Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-note" style="margin-top:1.4rem"><strong>Lưu ở đâu?</strong> Mở trang trong Claude → dữ liệu lưu theo tài khoản Claude, mở lại bất kỳ lúc nào cũng còn. Mở trực tiếp trên trình duyệt (file tải về hoặc deploy lên site riêng) → dữ liệu lưu trong trình duyệt/máy đó, đổi máy hoặc đổi trình duyệt sẽ không thấy lại.</div>
+</section>
+</div>
+
+</div>
 
 <footer class="g-footer">
   <div class="logo-mini">Harmonie <em>beauté</em></div>
-  <div>Marketing Playbook · Q3 2026 · Mọi templates &amp; kế hoạch trích trực tiếp từ nội dung đã viết trên site</div>
+  <div>Marketing Tổng hợp · Q3 2026 · Chiến lược, bộ nhận diện, templates & lịch theo dõi trong 1 trang</div>
 </footer>
 
 <div class="toast" id="toast">Đã copy!</div>
@@ -1560,6 +1664,166 @@ updateHexLabels();
       glow.style.setProperty('--my', ((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
     });
   }
+})();
+</script>
+
+<script>
+/* ═══════════ TAB SWITCHING ═══════════ */
+function showTab(id){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  var target=document.getElementById('tab-'+id);
+  if(target) target.classList.add('active');
+  document.querySelectorAll('.maintab-btn').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-tab')===id);
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ═══════════ POSTING TRACKER — lưu qua window.storage (Claude), fallback localStorage khi mở ngoài ═══════════ */
+var Store={
+  get:function(key){
+    if(typeof window!=='undefined' && window.storage){
+      return window.storage.get(key,false).then(function(r){return r?r.value:null;}).catch(function(){return null;});
+    }
+    var v=null; try{v=localStorage.getItem(key);}catch(e){}
+    return Promise.resolve(v);
+  },
+  set:function(key,value){
+    if(typeof window!=='undefined' && window.storage){
+      return window.storage.set(key,value,false).then(function(){return true;}).catch(function(){return false;});
+    }
+    try{localStorage.setItem(key,value);}catch(e){}
+    return Promise.resolve(true);
+  }
+};
+
+var trk={year:0,month:0,posts:[],selected:null};
+var PILLAR_LABEL={educate:'Giáo dục',trust:'Niềm tin',convert:'Chuyển đổi'};
+var MONTH_NAMES=['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+function trkPad(n){return n<10?'0'+n:''+n;}
+function trkKey(y,m){return 'post-cal:'+y+'-'+trkPad(m+1);}
+function trkDateStr(y,m,d){return y+'-'+trkPad(m+1)+'-'+trkPad(d);}
+
+function trkLoadMonth(y,m){
+  trk.year=y; trk.month=m;
+  return Store.get(trkKey(y,m)).then(function(raw){
+    try{ trk.posts = raw ? JSON.parse(raw) : []; }catch(e){ trk.posts=[]; }
+    var today=new Date();
+    if(!trk.selected && today.getFullYear()===y && today.getMonth()===m){
+      trk.selected=trkDateStr(y,m,today.getDate());
+    }
+    trkRenderGrid();
+    trkRenderStats();
+    trkRenderPanel();
+  });
+}
+function trkSaveMonth(){ return Store.set(trkKey(trk.year,trk.month), JSON.stringify(trk.posts)); }
+function trkNav(delta){
+  var m=trk.month+delta, y=trk.year;
+  if(m<0){m=11;y--;} if(m>11){m=0;y++;}
+  trk.selected=null;
+  trkLoadMonth(y,m);
+}
+function trkRenderGrid(){
+  var grid=document.getElementById('trkGrid');
+  if(!grid) return;
+  var lbl=document.getElementById('trkMonthLabel');
+  if(lbl) lbl.innerHTML=MONTH_NAMES[trk.month]+', <em>'+trk.year+'</em>';
+  var old=grid.querySelectorAll('.trk-day');
+  old.forEach(function(c){c.remove();});
+  var first=new Date(trk.year,trk.month,1);
+  var startDow=(first.getDay()+6)%7;
+  var daysInMonth=new Date(trk.year,trk.month+1,0).getDate();
+  var now=new Date();
+  var todayStr=trkDateStr(now.getFullYear(),now.getMonth(),now.getDate());
+  var frag=document.createDocumentFragment();
+  for(var i=0;i<startDow;i++){
+    var blank=document.createElement('div'); blank.className='trk-day empty'; frag.appendChild(blank);
+  }
+  var _loop=function(d){
+    var dateStr=trkDateStr(trk.year,trk.month,d);
+    var cell=document.createElement('div');
+    cell.className='trk-day'+(dateStr===todayStr?' today':'')+(dateStr===trk.selected?' selected':'');
+    var dayPosts=trk.posts.filter(function(p){return p.date===dateStr;});
+    var dotsHtml='';
+    dayPosts.slice(0,5).forEach(function(p){ dotsHtml+='<span class="trk-dot '+(p.status==='posted'?'posted':'')+'"></span>'; });
+    cell.innerHTML='<span class="trk-daynum">'+d+'</span><span class="trk-dots">'+dotsHtml+'</span>';
+    cell.addEventListener('click', function(){ trk.selected=dateStr; trkRenderGrid(); trkRenderPanel(); });
+    frag.appendChild(cell);
+  };
+  for(var d=1; d<=daysInMonth; d++){ _loop(d); }
+  grid.appendChild(frag);
+}
+function trkRenderStats(){
+  var posted=trk.posts.filter(function(p){return p.status==='posted';}).length;
+  var scheduled=trk.posts.length-posted;
+  var pe=document.getElementById('trkStatPosted'), se=document.getElementById('trkStatScheduled');
+  if(pe) pe.textContent='🟢 '+posted+' đã đăng';
+  if(se) se.textContent='🟡 '+scheduled+' lên lịch';
+}
+function trkFmtDate(dateStr){
+  var parts=dateStr.split('-'); var y=+parts[0],m=+parts[1]-1,d=+parts[2];
+  var W=['Chủ nhật','Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
+  var dow=new Date(y,m,d).getDay();
+  return W[dow]+', <em>'+d+' '+MONTH_NAMES[m].toLowerCase()+'</em>';
+}
+function trkRenderPanel(){
+  var panel=document.getElementById('trkPanel');
+  if(!panel) return;
+  if(!trk.selected){ panel.style.display='none'; return; }
+  panel.style.display='block';
+  var pd=document.getElementById('trkPanelDate'); if(pd) pd.innerHTML=trkFmtDate(trk.selected);
+  var list=document.getElementById('trkPostList');
+  if(!list) return;
+  var dayPosts=trk.posts.filter(function(p){return p.date===trk.selected;});
+  list.innerHTML='';
+  if(dayPosts.length===0){
+    var empty=document.createElement('div'); empty.className='trk-empty-note'; empty.textContent='Chưa có bài nào cho ngày này.';
+    list.appendChild(empty);
+  }else{
+    dayPosts.forEach(function(p){
+      var row=document.createElement('div');
+      row.className='trk-post'+(p.status==='posted'?' is-posted':'');
+      var check=document.createElement('div'); check.className='trk-post-check'; check.textContent='✓';
+      check.onclick=function(){ trkToggleStatus(p.id); };
+      var body=document.createElement('div'); body.className='trk-post-body';
+      var t=document.createElement('div'); t.className='trk-post-title'; t.textContent=p.title;
+      var pl=document.createElement('div'); pl.className='trk-post-pillar'; pl.textContent=PILLAR_LABEL[p.pillar]||'';
+      body.appendChild(t); body.appendChild(pl);
+      var del=document.createElement('button'); del.className='trk-post-del'; del.textContent='✕';
+      del.onclick=function(){ trkDeletePost(p.id); };
+      row.appendChild(check); row.appendChild(body); row.appendChild(del);
+      list.appendChild(row);
+    });
+  }
+}
+function trkAddPost(){
+  var input=document.getElementById('trkInputTitle');
+  if(!trk.selected){ showToast('Chọn 1 ngày trước đã'); return; }
+  var title=input.value.trim();
+  if(!title) return;
+  var pillar=document.getElementById('trkInputPillar').value;
+  trk.posts.push({id:'p'+Date.now()+Math.floor(Math.random()*1000),date:trk.selected,title:title,pillar:pillar,status:'scheduled'});
+  input.value='';
+  trkSaveMonth();
+  trkRenderGrid(); trkRenderStats(); trkRenderPanel();
+  showToast('Đã thêm vào lịch');
+}
+function trkToggleStatus(id){
+  var p=trk.posts.find(function(x){return x.id===id;});
+  if(!p) return;
+  p.status = p.status==='posted' ? 'scheduled' : 'posted';
+  trkSaveMonth();
+  trkRenderGrid(); trkRenderStats(); trkRenderPanel();
+}
+function trkDeletePost(id){
+  trk.posts = trk.posts.filter(function(x){return x.id!==id;});
+  trkSaveMonth();
+  trkRenderGrid(); trkRenderStats(); trkRenderPanel();
+}
+(function(){
+  var now=new Date();
+  trkLoadMonth(now.getFullYear(), now.getMonth());
 })();
 </script>
 
