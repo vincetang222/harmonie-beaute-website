@@ -435,6 +435,9 @@ svg{display:block}
 .g-table td.mono{font-family:'SFMono-Regular',Consolas,monospace;font-size:.76rem;color:var(--moss)}
 
 /* ── POSTING TRACKER ── */
+.trk-json-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--cream);border:1px solid var(--sand);border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem}
+.trk-json-actions{display:flex;gap:.5rem;flex-shrink:0}
+@media(max-width:640px){.trk-json-row{flex-direction:column;align-items:stretch}.trk-json-actions{justify-content:flex-start}}
 .trk-card{background:var(--white);border-radius:18px;padding:1.6rem;border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 20px rgba(0,0,0,.05)}
 .trk-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.3rem}
 .trk-nav{display:flex;align-items:center;gap:.8rem}
@@ -1447,7 +1450,32 @@ svg{display:block}
   <div class="g-eyebrow">17 · Theo dõi đăng bài</div>
   <h2 class="g-title">Lịch <em>đăng bài</em></h2>
   <div class="g-line"></div>
-  <p class="g-lead">Bấm vào 1 ngày để thêm bài định đăng hoặc đánh dấu đã đăng. Dữ liệu lưu riêng cho bạn, tự động nhớ giữa các lần mở lại trang — không cần Excel hay note rời.</p>
+  <p class="g-lead">Bấm vào 1 ngày để thêm bài định đăng hoặc đánh dấu đã đăng. Dữ liệu lưu riêng cho bạn, tự động nhớ giữa các lần mở lại trang — không cần Excel hay note rời. Muốn lên cả lịch nhiều ngày cùng lúc? Dùng file JSON bên dưới.</p>
+
+  <div class="trk-json-row">
+    <div>
+      <div class="a-title" style="color:var(--charcoal);font-size:.95rem">Lên lịch hàng loạt bằng JSON</div>
+      <p style="font-size:.78rem;color:var(--earth);margin-top:.2rem">Nhờ mình soạn file JSON theo kế hoạch (mẫu tuần ở mục Kế hoạch, hoặc yêu cầu riêng), rồi nhập vào đây — lịch tự đồng bộ ngay. Nhập nhiều lần không trùng do đã tự lọc trùng theo ngày + tên bài.</p>
+    </div>
+    <div class="trk-json-actions">
+      <input type="file" id="trkFileInput" accept="application/json,.json" style="display:none" onchange="trkImportFile(this)">
+      <button class="mini-btn primary" onclick="document.getElementById('trkFileInput').click()">⬆ Nhập JSON</button>
+      <button class="mini-btn" onclick="trkExportAll()">⬇ Xuất JSON</button>
+    </div>
+  </div>
+
+  <div class="code-block" id="trkFormatBlock">
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <code>{
+  "posts": [
+    { "date": "2026-08-03", "title": "Mẹo skincare: da dầu vẫn cần dưỡng ẩm", "pillar": "educate", "status": "scheduled" },
+    { "date": "2026-08-05", "title": "Loại da của bạn: Da Mụn", "pillar": "educate", "status": "scheduled" },
+    { "date": "2026-08-09", "title": "Review khách: Kiều Lan Nhi", "pillar": "trust", "status": "posted" }
+  ]
+}
+// pillar: "educate" | "trust" | "convert" — status: "scheduled" | "posted"
+// thiếu pillar/status → mặc định "educate" / "scheduled"</code>
+  </div>
 
   <div class="trk-card">
     <div class="trk-head">
@@ -1820,6 +1848,105 @@ function trkDeletePost(id){
   trk.posts = trk.posts.filter(function(x){return x.id!==id;});
   trkSaveMonth();
   trkRenderGrid(); trkRenderStats(); trkRenderPanel();
+}
+
+/* ═══════════ IMPORT / EXPORT JSON ═══════════ */
+var PILLAR_VALID={educate:1,trust:1,convert:1};
+function trkImportFile(input){
+  var file = input.files && input.files[0];
+  if(!file) return;
+  var reader = new FileReader();
+  reader.onload = function(e){
+    var parsed;
+    try{ parsed = JSON.parse(e.target.result); }
+    catch(err){ showToast('File JSON không hợp lệ'); input.value=''; return; }
+    var list = Array.isArray(parsed) ? parsed : (parsed && Array.isArray(parsed.posts) ? parsed.posts : null);
+    if(!list){ showToast('Cần dạng {"posts":[...]} hoặc mảng bài đăng'); input.value=''; return; }
+    trkImportPosts(list);
+    input.value='';
+  };
+  reader.onerror = function(){ showToast('Không đọc được file'); input.value=''; };
+  reader.readAsText(file);
+}
+
+function trkImportPosts(list){
+  var dateRe=/^\d{4}-\d{2}-\d{2}$/;
+  var byMonth={}; // 'YYYY-MM' -> array of new post objects
+  var validCount=0, skipCount=0;
+
+  list.forEach(function(raw){
+    if(!raw || !raw.date || !dateRe.test(raw.date) || !raw.title || !String(raw.title).trim()){ skipCount++; return; }
+    var pillar = PILLAR_VALID[raw.pillar] ? raw.pillar : 'educate';
+    var status = raw.status==='posted' ? 'posted' : 'scheduled';
+    var mKey = raw.date.slice(0,7); // YYYY-MM
+    if(!byMonth[mKey]) byMonth[mKey]=[];
+    byMonth[mKey].push({id:'p'+Date.now()+Math.floor(Math.random()*100000), date:raw.date, title:String(raw.title).trim(), pillar:pillar, status:status});
+    validCount++;
+  });
+
+  var months = Object.keys(byMonth);
+  if(months.length===0){ showToast('Không có bài hợp lệ trong file (cần date dạng YYYY-MM-DD + title)'); return; }
+
+  var chain = Promise.resolve();
+  months.forEach(function(mKey){
+    var parts = mKey.split('-'); var y=+parts[0], m=+parts[1]-1;
+    var key = trkKey(y,m);
+    chain = chain.then(function(){
+      return Store.get(key).then(function(raw){
+        var existing=[]; try{ existing = raw?JSON.parse(raw):[]; }catch(e){ existing=[]; }
+        var added=byMonth[mKey];
+        added.forEach(function(np){
+          var dup = existing.some(function(ep){ return ep.date===np.date && ep.title.trim().toLowerCase()===np.title.trim().toLowerCase(); });
+          if(dup){ skipCount++; validCount--; }
+          else existing.push(np);
+        });
+        return Store.set(key, JSON.stringify(existing));
+      });
+    });
+  });
+
+  chain.then(function(){
+    showToast('Đã nhập '+validCount+' bài'+(skipCount>0?' · bỏ qua '+skipCount+' (trùng/thiếu dữ liệu)':''));
+    return trkLoadMonth(trk.year, trk.month);
+  });
+}
+
+function trkExportAll(){
+  var prefix='post-cal:';
+  function collectFromKeys(keys){
+    var chain=Promise.resolve();
+    var all=[];
+    keys.forEach(function(k){
+      chain = chain.then(function(){
+        return Store.get(k).then(function(raw){
+          try{ var arr=raw?JSON.parse(raw):[]; all=all.concat(arr); }catch(e){}
+        });
+      });
+    });
+    return chain.then(function(){ return all; });
+  }
+  function finish(all){
+    all.sort(function(a,b){ return a.date<b.date?-1:(a.date>b.date?1:0); });
+    var out = {posts: all.map(function(p){ return {date:p.date,title:p.title,pillar:p.pillar,status:p.status}; })};
+    var blob = new Blob([JSON.stringify(out,null,2)], {type:'application/json'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='harmonie-lich-dang-bai.json';
+    a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);},2000);
+    showToast('Đã xuất '+all.length+' bài ra JSON');
+  }
+
+  if(typeof window!=='undefined' && window.storage){
+    window.storage.list(prefix,false).then(function(r){
+      var keys = (r && r.keys) ? r.keys : [];
+      return collectFromKeys(keys);
+    }).then(finish).catch(function(){ showToast('Không xuất được — thử lại'); });
+  }else{
+    var keys=[];
+    try{ for(var i=0;i<localStorage.length;i++){ var k=localStorage.key(i); if(k && k.indexOf(prefix)===0) keys.push(k); } }catch(e){}
+    collectFromKeys(keys).then(finish);
+  }
 }
 (function(){
   var now=new Date();
