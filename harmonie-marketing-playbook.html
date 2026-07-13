@@ -176,7 +176,7 @@ svg{display:block}
 .t-tip .tt-body{font-size:clamp(.5rem,1.35vw,.66rem);color:rgba(250,246,240,.6);line-height:1.7;font-weight:300;max-width:82%}
 .t-tip .tt-brand{margin-top:.9rem;font-size:clamp(.4rem,1vw,.5rem);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bright);opacity:.72}
 
-/* ── T3: Q&A Hana giải đáp ── */
+/* ── T3: Q&A Harmonie giải đáp ── */
 .t-qa{background:var(--white);display:grid;grid-template-rows:1fr auto;position:relative}
 .t-qa .qa-body{padding:11% 9% 7%;display:flex;flex-direction:column;gap:.6rem}
 .t-qa .qa-tag{align-self:flex-start;background:var(--gold-wash);color:var(--gold-deep);font-size:clamp(.4rem,1.1vw,.5rem);text-transform:uppercase;letter-spacing:.16em;padding:3px 10px;border-radius:50px;font-weight:700}
@@ -306,6 +306,129 @@ svg{display:block}
 .act-body h4 em{color:var(--gold-deep)}
 .act-body p{font-size:.78rem;color:var(--earth)}
 
+/* ── ASSET LIBRARY ── */
+.asset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1.1rem;margin-top:1rem}
+.asset-card{background:var(--white);border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.06);box-shadow:0 2px 12px rgba(0,0,0,.05);display:flex;flex-direction:column;transition:transform .25s cubic-bezier(.16,1,.3,1),box-shadow .25s}
+.asset-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.09)}
+.asset-stage{padding:1.2rem;display:flex;align-items:center;justify-content:center;min-height:160px}
+.asset-stage.dark{background:var(--hero-grad);transition:background .4s ease}
+.asset-stage.soft{background:var(--cream)}
+.asset-stage svg{width:120px;height:auto}
+.asset-meta{padding:.6rem .85rem .3rem;border-top:1px solid var(--sand)}
+.asset-name{font-size:.76rem;font-weight:600;color:var(--charcoal)}
+.asset-use{font-size:.64rem;color:var(--earth);margin-top:.1rem}
+.asset-actions{display:flex;gap:.35rem;padding:.55rem .85rem .8rem;flex-wrap:wrap}
+.mini-btn{font-size:.6rem;border:1px solid rgba(0,0,0,.13);background:transparent;border-radius:50px;padding:.3rem .68rem;color:var(--charcoal);cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;transition:all .2s}
+.mini-btn:hover{background:var(--moss);border-color:var(--moss);color:var(--gold-bright)}
+.mini-btn:focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px}
+.mini-btn.primary{background:var(--moss);color:var(--gold-bright);border-color:var(--moss)}
+.mini-btn.primary:hover{background:var(--moss-light)}
+.asset-all-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;background:var(--charcoal);border-radius:16px;padding:1.3rem 1.6rem;margin-bottom:1.6rem}
+.asset-all-row p{color:rgba(255,255,255,.6);font-size:.8rem;max-width:480px}
+.asset-all-row .a-title{font-family:'Playfair Display',serif;color:#F2EBD9;font-size:1.1rem;margin-bottom:.3rem}
+.asset-all-row .a-title em{color:var(--gold-bright)}
+.btn-download-all{background:var(--cream);color:var(--gold-deep);border:none;padding:.75rem 1.6rem;border-radius:50px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;cursor:pointer;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.btn-download-all:hover{background:var(--gold-light)}
+
+/* ── (gộp từ brand guide) CALLOUT VARIANTS ── */
+.callout-warn{background:rgba(181,103,59,.08);border:1px solid rgba(181,103,59,.25)}
+.callout-warn strong{color:var(--terra)}
+.callout-note{background:var(--gold-wash);border:1px solid rgba(200,144,106,.25)}
+.callout-note strong{color:var(--gold-deep)}
+
+/* ── SWATCHES ── */
+.swatch-group-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss);font-weight:700;margin:1.6rem 0 .8rem}
+.swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:.9rem}
+.swatch{border-radius:12px;overflow:hidden;cursor:pointer;border:1px solid rgba(0,0,0,.08);background:var(--white);transition:transform .2s ease}
+.swatch:hover{transform:translateY(-2px)}
+.swatch-color{height:74px;position:relative}
+.swatch-color .copy-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.25);opacity:0;transition:opacity .2s}
+.swatch:hover .copy-hint{opacity:1}
+.swatch-info{padding:.55rem .7rem}
+.swatch-name{font-size:.71rem;font-weight:600;color:var(--charcoal)}
+.swatch-var{font-size:.62rem;font-family:'SFMono-Regular',Consolas,monospace;color:var(--moss);margin-top:1px}
+.swatch-hex{font-size:.64rem;color:var(--earth);font-family:'SFMono-Regular',Consolas,monospace;margin-top:2px}
+
+/* ── CODE BLOCK ── */
+.code-block{position:relative;background:var(--charcoal);color:#F2EBD9;border-radius:12px;padding:1.1rem 1.3rem;font-family:'SFMono-Regular',Consolas,monospace;font-size:.74rem;overflow-x:auto;line-height:1.65;margin:1rem 0}
+.code-block code{white-space:pre}
+.copy-btn{position:absolute;top:.6rem;right:.6rem;background:rgba(255,255,255,.1);color:#fff;border:none;padding:.32rem .75rem;border-radius:50px;font-size:.6rem;cursor:pointer;text-transform:uppercase;letter-spacing:.06em;font-family:'Be Vietnam Pro',sans-serif;font-weight:600}
+.copy-btn:hover{background:rgba(255,255,255,.22)}
+
+/* ── TYPE SAMPLES ── */
+.type-sample{background:var(--white);border-radius:14px;padding:1.6rem 1.8rem;margin-bottom:1rem;border:1px solid rgba(0,0,0,.06)}
+.type-sample .label{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss);font-weight:700;margin-bottom:.6rem}
+.type-h1{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:400;color:var(--charcoal);line-height:1.15}
+.type-h1 em{color:var(--gold-deep)}
+.type-accent{font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;font-weight:600;color:var(--gold-deep)}
+.type-body{font-size:.98rem;color:var(--charcoal);max-width:520px}
+.type-label{font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--moss)}
+.type-light{font-size:.9rem;font-weight:300;color:var(--earth);font-style:italic}
+
+/* ── CTA DEMO ── */
+.demo-dark{background:var(--hero-grad);padding:2rem;border-radius:16px;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:center;transition:background .4s ease}
+.demo-light{background:var(--cream);border:1px solid var(--sand);padding:1.4rem 1.6rem;border-radius:16px;display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.g-btn-primary{background:var(--cream);color:var(--gold-deep);border:none;padding:.85rem 2rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,.2)}
+.g-btn-ghost{background:transparent;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.3);padding:.85rem 1.6rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;cursor:pointer;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif}
+.g-btn-nav{background:var(--moss);color:var(--gold-bright);border:none;padding:.55rem 1.5rem;border-radius:50px;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:500;box-shadow:0 3px 12px rgba(0,0,0,.12)}
+
+/* ── MOTION DEMO (nội bộ mục Motion, khác hero thật của trang) ── */
+.hg-hero-demo{background:var(--hero-grad);border-radius:16px;height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin:1rem 0;transition:background .4s ease}
+.hg-hero-demo span.hg-label{position:relative;z-index:2;color:rgba(255,255,255,.55);font-size:.68rem;text-transform:uppercase;letter-spacing:.14em}
+.hg-glow{position:absolute;border-radius:50%;filter:blur(50px);pointer-events:none}
+.hg-glow-1{width:220px;height:220px;background:radial-gradient(circle,rgba(201,169,110,.4),transparent 70%);top:-15%;left:-6%;animation:hgFloat1 18s ease-in-out infinite}
+.hg-glow-2{width:200px;height:200px;background:radial-gradient(circle,rgba(122,48,80,.5),transparent 70%);bottom:-20%;right:-8%;animation:hgFloat2 22s ease-in-out infinite}
+@keyframes hgFloat1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,20px)}}
+@keyframes hgFloat2{0%,100%{transform:translate(0,0)}50%{transform:translate(-24px,-18px)}}
+.hg-cursor-glow{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,.18),transparent 70%);left:var(--mx,50%);top:var(--my,50%);transform:translate(-50%,-50%);pointer-events:none;opacity:0;transition:opacity .4s ease;filter:blur(16px)}
+.hg-hero-demo:hover .hg-cursor-glow{opacity:1}
+@media(prefers-reduced-motion:reduce){.hg-glow{animation:none!important}}
+
+/* ── WAVE DEMO ── */
+.wave-demo-block{background:var(--charcoal);border-radius:16px 16px 0 0;height:70px}
+.wave-demo-wrap2{background:var(--charcoal);line-height:0;overflow:hidden}
+.wave-demo-svg{width:100%;height:34px;display:block}
+.wave-demo-below{background:var(--white);border-radius:0 0 16px 16px;height:70px;display:flex;align-items:center;justify-content:center;color:var(--earth);font-size:.72rem}
+
+/* ── FLOATING CTA DEMO ── */
+.fcta-demo{position:relative;background:var(--sand);border-radius:16px;height:150px;overflow:hidden;margin:1rem 0}
+.fcta-demo-pill{position:absolute;bottom:16px;right:16px;background:var(--moss);color:var(--gold-bright);padding:.7rem 1.3rem;border-radius:50px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;box-shadow:0 6px 20px rgba(0,0,0,.2);display:flex;align-items:center;gap:.4rem}
+
+/* ── REVEAL DEMO ── */
+.reveal-demo{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal-demo.in-view{opacity:1;transform:translateY(0)}
+
+/* ── SERVICE ROW DEMO ── */
+.svc-demo-wrap{border-radius:14px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);border:.5px solid rgba(0,0,0,.06);margin:1rem 0}
+.svc-demo-tag{background:var(--moss);color:#fff;padding:.7rem 1.2rem;font-size:.58rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
+.svc-demo-body{background:var(--white)}
+.svc-demo-row{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 1.2rem;border-bottom:1px solid rgba(0,0,0,.05)}
+.svc-demo-row:last-child{border-bottom:none}
+.svc-demo-row.best{background:linear-gradient(90deg,rgba(200,144,106,.08),transparent);border-left:3px solid var(--gold);padding-left:1rem}
+.svc-demo-name{font-size:.86rem;color:var(--charcoal);font-weight:500}
+.svc-demo-desc{font-size:.68rem;color:var(--earth);margin-top:.15rem}
+.svc-demo-badge{display:inline-block;margin-top:.3rem;font-size:.52rem;background:var(--moss);color:var(--gold-bright);padding:2px 8px;border-radius:50px;font-weight:700}
+.svc-demo-price{font-family:'Playfair Display',serif;font-size:.92rem;color:var(--gold);text-align:right}
+
+/* ── TAB DEMO ── */
+.tab-demo-bar{display:flex;gap:.5rem;margin:1rem 0;flex-wrap:wrap}
+.tab-demo-btn{padding:.5rem 1.1rem;background:transparent;border:1px solid rgba(0,0,0,.15);border-radius:50px;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--charcoal);font-weight:500}
+.tab-demo-btn.active{background:var(--moss);border-color:var(--moss);color:var(--gold-bright)}
+
+/* ── REVIEW CARD DEMO ── */
+.review-demo-card{background:#fff;border-radius:16px;padding:1.3rem;max-width:300px;box-shadow:0 2px 16px rgba(0,0,0,.08);border-left:3px solid var(--gold)}
+.review-demo-stars{color:var(--gold);font-size:.9rem;letter-spacing:2px;margin-bottom:.5rem}
+.review-demo-text{font-size:.82rem;color:var(--charcoal);font-style:italic;line-height:1.65}
+.review-demo-author{display:flex;align-items:center;gap:.5rem;margin-top:.7rem;background:rgba(0,0,0,.04);border-radius:10px;padding:.5rem .7rem}
+.review-demo-avatar{width:28px;height:28px;border-radius:50%;background:var(--moss);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;color:#fff}
+
+/* ── SPEC TABLE ── */
+.g-table{width:100%;border-collapse:collapse;font-size:.82rem;margin:1rem 0}
+.g-table th{text-align:left;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--moss);padding:.6rem .8rem;border-bottom:2px solid var(--sand)}
+.g-table td{padding:.65rem .8rem;border-bottom:1px solid var(--sand);color:var(--charcoal)}
+.g-table tr:nth-child(even) td{background:rgba(0,0,0,.015)}
+.g-table td.mono{font-family:'SFMono-Regular',Consolas,monospace;font-size:.76rem;color:var(--moss)}
+
 /* ── UTIL ── */
 .callout{border-radius:14px;padding:1.1rem 1.4rem;margin:1.4rem 0;font-size:.82rem;line-height:1.6;background:var(--gold-wash);border:1px solid rgba(200,144,106,.25)}
 .callout strong{color:var(--gold-deep)}
@@ -332,6 +455,15 @@ svg{display:block}
     <a href="#position">Định vị</a>
     <a href="#audience">Khách</a>
     <a href="#pillars">Trụ cột</a>
+    <a href="#logo">Logo</a>
+    <a href="#mau">Màu</a>
+    <a href="#type">Chữ</a>
+    <a href="#hana">Harmonie</a>
+    <a href="#cta">CTA</a>
+    <a href="#motion">Motion</a>
+    <a href="#component">Thành phần</a>
+    <a href="#social">Social</a>
+    <a href="#voice">Giọng viết</a>
     <a href="#templates">Templates</a>
     <a href="#calendar">Lịch tuần</a>
     <a href="#plan90">90 ngày</a>
@@ -352,11 +484,11 @@ svg{display:block}
     <div class="hero-copy">
       <div class="hero-eyebrow">✦ Kế hoạch tăng nhận diện · Q3 2026</div>
       <h1>Từ nhận diện đến <em>câu chuyện</em></h1>
-      <p>Harmonie có nội dung thật (27 bài blog, 7 phác đồ da chi tiết) và một chuyên gia thật — <strong style="color:#F2EBD9">Hana</strong>. Việc còn lại là bảo đảm mỗi tấm hình đăng ra thị trường đều mang gương mặt cô ấy — để khách nhận ra thương hiệu trước cả khi đọc chữ.</p>
+      <p>Harmonie Beauté có nội dung thật (27 bài blog, 7 phác đồ da chi tiết) và giờ có thêm một gương mặt đại diện xuyên suốt — <strong style="color:#F2EBD9">Harmonie</strong>. Việc còn lại là bảo đảm mỗi tấm hình đăng ra thị trường đều mang gương mặt cô ấy — để khách nhận ra thương hiệu trước cả khi đọc chữ.</p>
     </div>
     <div class="hero-mascot-wrap">
       <div class="hero-halo" aria-hidden="true"></div>
-      <div data-m="bust" role="img" aria-label="Hana — mascot Harmonie Beauté"></div>
+      <div data-m="bust" role="img" aria-label="Harmonie — linh vật thương hiệu"></div>
     </div>
   </div>
 </section>
@@ -369,21 +501,21 @@ svg{display:block}
   <div class="g-eyebrow">01 · Định vị thương hiệu</div>
   <h2 class="g-title">Vì sao khách <em>chọn Harmonie</em>?</h2>
   <div class="g-line"></div>
-  <p class="g-lead">Một câu ngắn giữ trong đầu trước mỗi post: <strong>"Private spa 1:1 tại Tân Định — nơi Hana chăm da bằng chuyên môn 7 năm và không gian riêng tư tuyệt đối."</strong> Mỗi từ trong câu này đều là điểm bán hàng riêng, không thể bỏ qua khi làm content.</p>
+  <p class="g-lead">Một câu ngắn giữ trong đầu trước mỗi post: <strong>"Private spa 1:1 tại Tân Định — nơi Harmonie chăm da bằng chuyên môn 7 năm và không gian riêng tư tuyệt đối."</strong> Mỗi từ trong câu này đều là điểm bán hàng riêng, không thể bỏ qua khi làm content.</p>
 
   <div class="pillars">
     <div class="pillar">
       <span class="pillar-num">01</span>
       <div class="p-goal">Riêng tư 1:1</div>
       <h3>Một phòng · <em>một khách</em></h3>
-      <p>Khác biệt cốt lõi. Không share phòng, không nhân viên qua lại, không phải chờ. Một buổi Harmonie là 90 phút chỉ có bạn và Hana.</p>
+      <p>Khác biệt cốt lõi. Không share phòng, không nhân viên qua lại, không phải chờ. Một buổi tại Harmonie Beauté là 90 phút chỉ có bạn và Harmonie.</p>
       <div class="p-share">Đối lập với: <strong>spa chuỗi đông đúc</strong></div>
     </div>
     <div class="pillar">
       <span class="pillar-num">02</span>
       <div class="p-goal">Chuyên môn thật</div>
       <h3>7 năm với <em>500+ khách</em></h3>
-      <p>Không phải "spa mở gần đây". Hana đã làm 7 năm, có 5★ Google, chuyên sâu điều trị mụn và Chemical Peel — không phải "đủ mọi dịch vụ làm đẹp".</p>
+      <p>Không phải "spa mở gần đây". Harmonie đã làm 7 năm, có 5★ Google, chuyên sâu điều trị mụn và Chemical Peel — không phải "đủ mọi dịch vụ làm đẹp".</p>
       <div class="p-share">Đối lập với: <strong>tay ngang mới mở</strong></div>
     </div>
     <div class="pillar">
@@ -395,7 +527,7 @@ svg{display:block}
     </div>
   </div>
 
-  <div class="callout"><strong>Nguyên tắc vàng:</strong> mọi post đều phải nhắc ít nhất một trong ba trụ cột trên — dù là ẩn ý (ảnh phòng riêng), lời văn ("từ Hana"), hay meta info (địa chỉ Tân Định). Nếu một post không kể được điều gì trong ba điều này, đừng đăng.</div>
+  <div class="callout"><strong>Nguyên tắc vàng:</strong> mọi post đều phải nhắc ít nhất một trong ba trụ cột trên — dù là ẩn ý (ảnh phòng riêng), lời văn ("từ Harmonie"), hay meta info (địa chỉ Tân Định). Nếu một post không kể được điều gì trong ba điều này, đừng đăng.</div>
 </section>
 
 <!-- ══════════ 02 · KHÁCH HÀNG ══════════ -->
@@ -449,7 +581,7 @@ svg{display:block}
       <ul>
         <li>Tip skincare (từ blog "5 thói quen buổi tối", "Retinol", "Vit C")</li>
         <li>Series "Loại da của bạn" — 7 posts từ phác đồ</li>
-        <li>Q&amp;A "Hana giải đáp" (câu Hana được hỏi nhiều nhất)</li>
+        <li>Q&amp;A "Harmonie giải đáp" (câu Harmonie được hỏi nhiều nhất)</li>
         <li>Chống mê tín: peel tại nhà, tự nặn mụn</li>
       </ul>
       <div class="p-share">Format hay dùng: <strong>quote · tip carousel · reel</strong></div>
@@ -463,7 +595,7 @@ svg{display:block}
         <li>Before/After (đang chờ ảnh từ user — Canva AI)</li>
         <li>Review 5★ trích Google (đã có)</li>
         <li>Behind the scenes: phòng, dụng cụ, quy trình vệ sinh</li>
-        <li>Story kể về Hana: kinh nghiệm, học nghề, "vì sao mở spa"</li>
+        <li>Story kể về Harmonie: kinh nghiệm, học nghề, "vì sao mở spa"</li>
       </ul>
       <div class="p-share">Format hay dùng: <strong>ảnh thật · story · review card</strong></div>
     </div>
@@ -483,12 +615,480 @@ svg{display:block}
   </div>
 </section>
 
-<!-- ══════════ 04 · TEMPLATES ══════════ -->
+<!-- ══════════ 04 · LOGO ══════════ -->
+<section class="g-section" id="logo">
+  <div class="g-eyebrow">04 · Logo</div>
+  <h2 class="g-title">Dấu hiệu <em>nhận diện</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Logo hiện tại là <strong>wordmark chữ</strong> — không phải icon đồ hoạ. "Harmonie" đặt thường, chữ "beauté" in nghiêng màu vàng để tạo điểm nhấn. Toàn bộ 69 file trên site dùng đúng công thức này, không có biến thể khác.</p>
+
+  <div class="demo-dark">
+    <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#F2EBD9">Harmonie <em style="color:var(--gold-bright)">beauté</em></span>
+  </div>
+  <div class="demo-light" style="justify-content:center">
+    <span style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--moss)">Harmonie <em style="color:var(--gold)">beauté</em></span>
+  </div>
+
+  <div class="code-block">
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <code>.logo{font-family:'Playfair Display',serif;font-weight:500;color:var(--moss)}
+.logo em{font-style:italic;color:var(--gold)}
+&lt;!-- trên nền tối, đổi màu chữ Harmonie sang #F2EBD9 và em sang var(--gold-bright) --&gt;</code>
+  </div>
+
+  <div class="callout callout-note">
+    <strong>Ghi chú:</strong> có file logo đồ hoạ gốc (1074×1086px) do bạn cung cấp để dựng bộ favicon (16/32/48/64px, apple-touch-icon 180px, icon-192/512px cho PWA) — nếu muốn đưa ảnh logo vào bộ nhận diện này, upload lại để mình chèn vào.
+  </div>
+
+  <div class="dodont">
+    <div class="dodont-col do">
+      <h4>Nên</h4>
+      <ul>
+        <li>Luôn dùng Playfair Display cho cả "Harmonie" và "beauté"</li>
+        <li>"beauté" luôn in nghiêng + màu vàng (gold / gold-bright tuỳ nền)</li>
+        <li>Đặt trên nền cream, trắng, hoặc gradient tối của brand</li>
+      </ul>
+    </div>
+    <div class="dodont-col dont">
+      <h4>Tránh</h4>
+      <ul>
+        <li>Đổi "beauté" sang không nghiêng hoặc màu khác ngoài vàng</li>
+        <li>Thêm icon/biểu tượng vào cạnh chữ nếu chưa có logo đồ hoạ chính thức</li>
+        <li>Đặt trên nền có tông cam/vàng gần giống — chữ vàng sẽ chìm</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 05 · BẢNG MÀU ══════════ -->
+<section class="g-section" id="mau">
+  <div class="g-eyebrow">05 · Bảng màu</div>
+  <h2 class="g-title">Màu <em>sắc</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Site có <strong>2 theme đổi được</strong>: xanh rêu (mặc định hiện tại) và hồng cổ điển. Bấm nút đổi theme ở góc trên để xem toàn bộ trang này đổi màu theo thời gian thực — các ô màu bên dưới cũng đổi theo vì chúng lấy đúng biến CSS thật.</p>
+
+  <div class="swatch-group-title">Nền & chữ — đổi theo theme</div>
+  <div class="swatch-grid">
+    <div class="swatch" onclick="copySwatch('var(--moss)',this)"><div class="swatch-color" style="background:var(--moss)"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Moss</div><div class="swatch-var">--moss</div><div class="swatch-hex" id="hex-moss">—</div></div></div>
+    <div class="swatch" onclick="copySwatch('var(--moss-light)',this)"><div class="swatch-color" style="background:var(--moss-light)"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Moss Light</div><div class="swatch-var">--moss-light</div><div class="swatch-hex" id="hex-moss-light">—</div></div></div>
+    <div class="swatch" onclick="copySwatch('var(--moss-pale)',this)"><div class="swatch-color" style="background:var(--moss-pale)"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Moss Pale</div><div class="swatch-var">--moss-pale</div><div class="swatch-hex" id="hex-moss-pale">—</div></div></div>
+    <div class="swatch" onclick="copySwatch('var(--charcoal)',this)"><div class="swatch-color" style="background:var(--charcoal)"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Charcoal / Dark</div><div class="swatch-var">--charcoal · --dark</div><div class="swatch-hex" id="hex-charcoal">—</div></div></div>
+  </div>
+
+  <div class="swatch-group-title">Nền trung tính — giữ nguyên ở cả 2 theme</div>
+  <div class="swatch-grid">
+    <div class="swatch" onclick="copySwatch('#F7F2EC',this)"><div class="swatch-color" style="background:#F7F2EC"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Cream (nền chính)</div><div class="swatch-var">--cream</div><div class="swatch-hex">#F7F2EC</div></div></div>
+    <div class="swatch" onclick="copySwatch('#FAF6F0',this)"><div class="swatch-color" style="background:#FAF6F0"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">White (thẻ/card)</div><div class="swatch-var">--white</div><div class="swatch-hex">#FAF6F0</div></div></div>
+    <div class="swatch" onclick="copySwatch('#DDD4C0',this)"><div class="swatch-color" style="background:#DDD4C0"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Sand</div><div class="swatch-var">--sand</div><div class="swatch-hex">#DDD4C0</div></div></div>
+    <div class="swatch" onclick="copySwatch('#C8BFB0',this)"><div class="swatch-color" style="background:#C8BFB0"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Sand Dark</div><div class="swatch-var">--sand-dark</div><div class="swatch-hex">#C8BFB0</div></div></div>
+  </div>
+
+  <div class="swatch-group-title">Vàng & Terracotta — chữ ký thương hiệu, KHÔNG đổi theo theme</div>
+  <div class="swatch-grid">
+    <div class="swatch" onclick="copySwatch('#C8906A',this)"><div class="swatch-color" style="background:#C8906A"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Gold</div><div class="swatch-var">--gold</div><div class="swatch-hex">#C8906A</div></div></div>
+    <div class="swatch" onclick="copySwatch('#9A6640',this)"><div class="swatch-color" style="background:#9A6640"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Gold Deep</div><div class="swatch-var">--gold-deep</div><div class="swatch-hex">#9A6640</div></div></div>
+    <div class="swatch" onclick="copySwatch('#E8BC7E',this)"><div class="swatch-color" style="background:#E8BC7E"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Gold Bright</div><div class="swatch-var">--gold-bright</div><div class="swatch-hex">#E8BC7E</div></div></div>
+    <div class="swatch" onclick="copySwatch('#E3C39E',this)"><div class="swatch-color" style="background:#E3C39E"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Gold Light</div><div class="swatch-var">--gold-light</div><div class="swatch-hex">#E3C39E</div></div></div>
+    <div class="swatch" onclick="copySwatch('#B5673B',this)"><div class="swatch-color" style="background:#B5673B"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Terra</div><div class="swatch-var">--terra</div><div class="swatch-hex">#B5673B</div></div></div>
+    <div class="swatch" onclick="copySwatch('#8B6F5C',this)"><div class="swatch-color" style="background:#8B6F5C"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Earth</div><div class="swatch-var">--earth</div><div class="swatch-hex">#8B6F5C</div></div></div>
+  </div>
+
+  <div class="swatch-group-title">Gradient nền tối — hero / cta-strip / address-section</div>
+  <div class="swatch-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+    <div class="swatch" onclick="copySwatch('linear-gradient(160deg,#5E2244 0%,#451A34 50%,#2E1024 100%)',this)"><div class="swatch-color" style="background:linear-gradient(160deg,#5E2244 0%,#451A34 50%,#2E1024 100%)"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Hero gradient — Rose</div><div class="swatch-hex">#5E2244 → #451A34 → #2E1024</div></div></div>
+    <div class="swatch" onclick="copySwatch('linear-gradient(160deg,#1E3028 0%,#162620 50%,#0F1F18 100%)',this)"><div class="swatch-color" style="background:linear-gradient(160deg,#1E3028 0%,#162620 50%,#0F1F18 100%)"><span class="copy-hint">Copy</span></div><div class="swatch-info"><div class="swatch-name">Hero gradient — Green</div><div class="swatch-hex">#1E3028 → #162620 → #0F1F18</div></div></div>
+  </div>
+
+  <div class="callout callout-note">
+    <strong>Lưu ý quan trọng:</strong> gradient nền lớn (hero, cta-strip, dải chia section) là hợp lệ và đã dùng khắp site. Điều <em>không</em> được phép là gradient trên <strong>chữ hoặc nút CTA</strong> — xem mục 08 để hiểu rõ quy tắc này.
+  </div>
+</section>
+
+<!-- ══════════ 06 · KIỂU CHỮ ══════════ -->
+<section class="g-section" id="type">
+  <div class="g-eyebrow">06 · Kiểu chữ</div>
+  <h2 class="g-title">Typography</h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Hai bộ chữ, vai trò rõ ràng: <strong>Playfair Display</strong> (serif) cho tiêu đề — cảm giác spa cao cấp, tĩnh tại; <strong>Be Vietnam Pro</strong> (sans) cho nội dung — dễ đọc, hỗ trợ tiếng Việt tốt. Cả hai miễn phí trên Google Fonts.</p>
+
+  <div class="type-sample">
+    <div class="label">Playfair Display · Tiêu đề lớn · 400–500</div>
+    <div class="type-h1">Chăm sóc <em>chuyên sâu</em>.</div>
+  </div>
+  <div class="type-sample">
+    <div class="label">Playfair Display · Nhấn · italic 600, màu gold-deep</div>
+    <div class="type-accent">nơi làn da được chữa lành</div>
+  </div>
+  <div class="type-sample">
+    <div class="label">Be Vietnam Pro · Nội dung · 400</div>
+    <div class="type-body">Harmonie Beauté — private spa 1-1 tại Tân Định, Quận 1. 7 năm kinh nghiệm, hơn 500 khách, đánh giá 5 sao trên Google.</div>
+  </div>
+  <div class="type-sample">
+    <div class="label">Be Vietnam Pro · Nhãn / eyebrow · 600–700, uppercase, letter-spacing rộng</div>
+    <div class="type-label">✦ Private Spa · Tân Định</div>
+  </div>
+  <div class="type-sample">
+    <div class="label">Be Vietnam Pro · Chữ mảnh / mô tả phụ · 300, thường kèm italic</div>
+    <div class="type-light">Không gian riêng tư — nơi tâm trí được nghỉ ngơi.</div>
+  </div>
+
+  <div class="code-block">
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <code>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;</code>
+  </div>
+
+  <div class="callout callout-note"><strong>Quy tắc:</strong> tiêu đề luôn Playfair, thân bài luôn Be Vietnam Pro. Cụm cần nhấn trong câu → dùng <span style="font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-deep)">&lt;em&gt;</span> màu gold. Không dùng quá 2 bộ chữ, không dùng font mặc định (Arial, Times).</div>
+</section>
+
+<!-- ══════════ 07 · NHÂN VẬT HARMONIE ══════════ -->
+<section class="g-section" id="hana">
+  <div class="g-eyebrow">07 · Nhân vật Harmonie</div>
+  <h2 class="g-title">Gương mặt của <em>thương hiệu</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Nhân vật minh hoạ đại diện cho spa: mắt khép nhẹ (khoảnh khắc thư giãn trên giường trị liệu), tóc uốn sóng theo ngôn ngữ wave-divider, ngôi sao ✦ vàng cài mái, áo choàng spa viền vàng. Tóc tô bằng biến CSS nên tự đổi màu theo theme.</p>
+
+  <div class="hana-hero">
+    <div class="hana-hero-bg" aria-hidden="true"><div class="blob blob-1"></div><div class="blob blob-2"></div></div>
+    <div class="hana-hero-copy">
+      <div class="hana-hero-eyebrow">✦ Meet Harmonie</div>
+      <h3>"Nơi tâm trí được <em>nghỉ ngơi</em>"</h3>
+      <p>Tagline của spa vẽ thành người. Khi khách nhìn thấy Harmonie, họ đã nhận ra thương hiệu trước cả khi đọc chữ.</p>
+    </div>
+    <div class="hana-stage" data-m="bust" role="img" aria-label="Harmonie — linh vật thương hiệu"></div>
+  </div>
+
+  <div class="dodont">
+    <div class="dodont-col do">
+      <h4>Nên</h4>
+      <ul>
+        <li>Tóc luôn theo màu theme (--hair-*) — xanh rêu hoặc hồng vang, không màu khác</li>
+        <li>Ngôi sao ✦ vàng luôn cài bên phải mái</li>
+        <li>Biểu cảm mặc định "Thư giãn" — mắt khép, cười nhẹ</li>
+        <li>Trên nền tối dùng bản nét trắng hoặc thêm halo vàng nhẹ phía sau</li>
+      </ul>
+    </div>
+    <div class="dodont-col dont">
+      <h4>Tránh</h4>
+      <ul>
+        <li>Đổi màu da, kéo giãn lệch tỷ lệ, xoay nghiêng quá 10°</li>
+        <li>Dùng biểu cảm "Vui/Nháy mắt" cho nội dung y khoa nghiêm túc</li>
+        <li>Vẽ mắt mở to tròn — mất cảm giác "nghỉ ngơi" của thương hiệu</li>
+        <li>Đặt trên nền vàng/cam đậm — ngôi sao và viền vàng sẽ chìm</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="asset-all-row" style="margin-top:1.6rem">
+    <div>
+      <div class="a-title">Cần cả bộ cùng lúc?</div>
+      <p>Tải một lượt 10 file PNG (bust, 3 avatar, line art, mini, 4 biểu cảm) về máy — trình duyệt sẽ hỏi cho phép tải nhiều file, chọn "Allow" nếu được hỏi.</p>
+    </div>
+    <button class="btn-download-all" onclick="downloadAllMascot()">⬇ Tải tất cả PNG</button>
+  </div>
+
+  <div class="sub-title">Bốn biến thể chính</div>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="bust"></div>
+      <div class="asset-meta"><div class="asset-name">Chân dung (bust)</div><div class="asset-use">Hero · ảnh giới thiệu · poster</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('bust')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('bust','harmonie-bust')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('bust','harmonie-bust',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="avatar"></div>
+      <div class="asset-meta"><div class="asset-name">Avatar tròn — moss</div><div class="asset-use">Ảnh đại diện social · icon</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('avatar')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('avatar','harmonie-avatar-moss')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('avatar','harmonie-avatar-moss',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage dark" data-m="line"></div>
+      <div class="asset-meta"><div class="asset-name">Nét trắng (line art)</div><div class="asset-use">Watermark nền tối · blog</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('line')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('line','harmonie-lineart')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('line','harmonie-lineart',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="mini"></div>
+      <div class="asset-meta"><div class="asset-name">Mini mark</div><div class="asset-use">Sticker · góc post nhỏ</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('mini')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('mini','harmonie-mini')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('mini','harmonie-mini',512)">PNG</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title">Avatar theo nền</div>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="avatar-grad"></div>
+      <div class="asset-meta"><div class="asset-name">Avatar — gradient</div><div class="asset-use">Nổi bật trên feed</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('avatar-grad')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('avatar-grad','harmonie-avatar-gradient')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('avatar-grad','harmonie-avatar-gradient',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="avatar-cream"></div>
+      <div class="asset-meta"><div class="asset-name">Avatar — kem viền vàng</div><div class="asset-use">Website · tài liệu in</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('avatar-cream')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('avatar-cream','harmonie-avatar-cream')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('avatar-cream','harmonie-avatar-cream',1024)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="line-bare"></div>
+      <div class="asset-meta"><div class="asset-name">Nét trắng — trong suốt</div><div class="asset-use">Watermark chồng lên ảnh</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('line-bare')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('line-bare','harmonie-lineart-transparent')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('line-bare','harmonie-lineart-transparent',1024)">PNG</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title">Bốn biểu cảm sticker</div>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="exp-serene"></div>
+      <div class="asset-meta"><div class="asset-name">Thư giãn</div><div class="asset-use">Mặc định · trị liệu, chăm da</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('exp-serene')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('exp-serene','harmonie-exp-serene')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('exp-serene','harmonie-exp-serene',512)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="exp-happy"></div>
+      <div class="asset-meta"><div class="asset-name">Vui</div><div class="asset-use">Khuyến mãi · tin vui</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('exp-happy')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('exp-happy','harmonie-exp-happy')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('exp-happy','harmonie-exp-happy',512)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="exp-wink"></div>
+      <div class="asset-meta"><div class="asset-name">Nháy mắt</div><div class="asset-use">Mẹo hay · CTA thân mật</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('exp-wink')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('exp-wink','harmonie-exp-wink')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('exp-wink','harmonie-exp-wink',512)">PNG</button>
+      </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-stage soft" data-m="exp-spa"></div>
+      <div class="asset-meta"><div class="asset-name">Giờ spa</div><div class="asset-use">Behind the scenes</div></div>
+      <div class="asset-actions">
+        <button class="mini-btn" onclick="copyMascotSVG('exp-spa')">Copy SVG</button>
+        <button class="mini-btn" onclick="dlMascotSVG('exp-spa','harmonie-exp-spa')">SVG</button>
+        <button class="mini-btn primary" onclick="dlMascotPNG('exp-spa','harmonie-exp-spa',512)">PNG</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout"><strong>Mẹo:</strong> nút "Copy SVG" copy thẳng mã vào clipboard — dán trực tiếp vào Figma, Canva (dùng tính năng "paste as image" nếu Canva không nhận SVG text), hoặc file code. PNG xuất nền trong suốt, dùng được ngay trên mọi nền màu.</div>
+</section>
+
+<!-- ══════════ 08 · NÚT & CTA ══════════ -->
+<section class="g-section" id="cta">
+  <div class="g-eyebrow">08 · Nút &amp; CTA</div>
+  <h2 class="g-title">Quy tắc <em>nút bấm</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Đây là quy tắc đã <strong>chuẩn hoá toàn site</strong> sau khi sửa lỗi gradient lỗi thời ở 57 bài + index.html — quan trọng nhất trong bộ nhận diện này, đừng quay lại kiểu cũ.</p>
+
+  <div class="swatch-group-title">Nút trên nền TỐI (hero, cta-strip, contact call)</div>
+  <div class="demo-dark">
+    <button class="g-btn-primary">Đặt lịch ngay</button>
+    <button class="g-btn-ghost">Xem dịch vụ</button>
+  </div>
+  <div class="code-block">
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <code>.btn-primary{background:var(--cream);color:var(--gold-deep);border:none;border-radius:50px;box-shadow:0 4px 18px rgba(0,0,0,.2)}</code>
+  </div>
+
+  <div class="swatch-group-title">Nút trên nền SÁNG (navbar, floating CTA)</div>
+  <div class="demo-light">
+    <button class="g-btn-nav">📅 Đặt lịch</button>
+  </div>
+  <div class="code-block">
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <code>.btn-nav, .floating-cta{background:var(--moss);color:var(--gold-bright);border:none;border-radius:50px;box-shadow:0 3px 12px var(--shadow)}</code>
+  </div>
+
+  <div class="callout callout-warn">
+    <strong>Không dùng gradient cho nút hoặc chữ CTA.</strong> Nút CTA luôn dùng <em>màu đặc</em> — cream/gold-deep trên nền tối, moss/gold-bright trên nền sáng. Gradient chỉ được phép làm nền lớn hoặc dải trang trí (xem mục 05), không bao giờ trên nút hay chữ CTA.
+  </div>
+</section>
+
+<!-- ══════════ 09 · MOTION ══════════ -->
+<section class="g-section" id="motion">
+  <div class="g-eyebrow">09 · Motion &amp; tương tác</div>
+  <h2 class="g-title">Chuyển động <em>đã thiết lập</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Các pattern chuyển động dưới đây đã dùng xuyên suốt site — tái sử dụng khi làm trang mới thay vì tự sáng tạo pattern khác, để giữ cảm giác thương hiệu nhất quán.</p>
+
+  <div class="swatch-group-title">Hero glow + cursor-follow (di chuột vào khối bên dưới)</div>
+  <div class="hg-hero-demo" id="hgHeroDemo">
+    <div class="hg-glow hg-glow-1"></div>
+    <div class="hg-glow hg-glow-2"></div>
+    <div class="hg-cursor-glow" id="hgCursorGlow"></div>
+    <span class="hg-label">.hero-glow · .hero-particles · .hero-cursor-glow</span>
+  </div>
+
+  <div class="swatch-group-title">Wave divider — nối section sáng/tối</div>
+  <div class="wave-demo-block"></div>
+  <div class="wave-demo-wrap2">
+    <svg class="wave-demo-svg" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0,20 C240,50 480,0 720,18 C960,36 1200,55 1440,22 L1440,50 L0,50 Z" fill="var(--cream)"></path></svg>
+  </div>
+  <div class="wave-demo-below">.wave-divider-wrap (normal flow)</div>
+
+  <div class="callout callout-warn">
+    <strong>TUYỆT ĐỐI không dùng <span style="font-family:monospace">position:absolute</span> cho wave-divider.</strong> Luôn dùng normal-flow qua <span style="font-family:monospace">&lt;div class="wave-divider-wrap"&gt;</span>. Lỗi này từng đè mất nội dung nghiêm trọng trên site — đã xảy ra 1 lần, không lặp lại.
+  </div>
+
+  <div class="code-block">
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <code>&lt;div class="wave-divider-wrap"&gt;
+  &lt;svg class="wave-divider" viewBox="0 0 1440 50" preserveAspectRatio="none"&gt;
+    &lt;path d="M0,20 C240,50 480,0 720,18 C960,36 1200,55 1440,22 L1440,50 L0,50 Z" fill="var(--cream)"&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;</code>
+  </div>
+
+  <div class="swatch-group-title">Scroll-reveal so le (cuộn xuống 1 chút để xem khối bên dưới hiện ra)</div>
+  <div class="reveal-demo" id="revealDemo" style="background:var(--white);border-radius:14px;padding:1.4rem;box-shadow:0 4px 20px rgba(0,0,0,.08)">
+    <div class="type-label">.reveal + --reveal-delay set qua JS theo index trong parent</div>
+    <div style="font-size:.82rem;color:var(--earth);margin-top:.4rem">translateY(22px) → 0, opacity 0 → 1, cubic-bezier(0.16,1,0.3,1)</div>
+  </div>
+
+  <div class="swatch-group-title">Floating CTA — nổi khi cuộn qua hero</div>
+  <div class="fcta-demo">
+    <div class="fcta-demo-pill">📅 Đặt lịch</div>
+  </div>
+  <div class="callout callout-note">Tự ẩn khi gần khu vực <span style="font-family:monospace">#calendar</span> hoặc <span style="font-family:monospace">.cta-strip</span> để không trùng lặp CTA.</div>
+</section>
+
+<!-- ══════════ 10 · COMPONENTS ══════════ -->
+<section class="g-section" id="component">
+  <div class="g-eyebrow">10 · Thành phần tái dùng</div>
+  <h2 class="g-title">UI <em>components</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Các khối dựng sẵn xuất hiện lặp lại trên toàn site — dùng nguyên khi thêm dịch vụ mới hoặc trang mới, không cần vẽ lại từ đầu.</p>
+
+  <div class="swatch-group-title">Tab bar (chuyển danh mục dịch vụ)</div>
+  <div class="tab-demo-bar">
+    <button class="tab-demo-btn active">Facial</button>
+    <button class="tab-demo-btn">Massage &amp; V-Lift</button>
+    <button class="tab-demo-btn">Chemical Peel</button>
+    <button class="tab-demo-btn">Triệt lông</button>
+  </div>
+
+  <div class="swatch-group-title">Hàng dịch vụ (svc-row) — có badge Best Seller</div>
+  <div class="svc-demo-wrap">
+    <div class="svc-demo-tag">🌿 Facial</div>
+    <div class="svc-demo-body">
+      <div class="svc-demo-row">
+        <div><div class="svc-demo-name">Mụn cơ bản</div><div class="svc-demo-desc">Làm sạch & nặn mụn đầu đen, mụn cám</div></div>
+        <div class="svc-demo-price">220,000đ</div>
+      </div>
+      <div class="svc-demo-row best">
+        <div><div class="svc-demo-name">Mụn chuyên sâu</div><div class="svc-demo-desc">Nặn mụn viêm, mụn ẩn, điều trị từng nốt</div><span class="svc-demo-badge">⭐ Best Seller</span></div>
+        <div class="svc-demo-price">350,000đ</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swatch-group-title">Thẻ review</div>
+  <div class="review-demo-card">
+    <div class="review-demo-stars">★★★★★</div>
+    <div class="review-demo-text">"Spa private 1:1, chị làm siêu kĩ và có tâm."</div>
+    <div class="review-demo-author">
+      <div class="review-demo-avatar">KL</div>
+      <div style="font-size:.72rem;font-weight:600;color:var(--charcoal)">Kiều Lan Nhi</div>
+    </div>
+  </div>
+
+  <div class="code-block" style="margin-top:1.4rem">
+    <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
+    <code>.svc-row.is-best{background:linear-gradient(90deg,rgba(200,144,106,0.06),transparent);border-left:3px solid var(--gold);padding-left:1rem}
+.best-badge{background:var(--moss);color:var(--gold-bright);border-radius:50px;padding:2px 8px;font-weight:700}</code>
+  </div>
+
+  <div class="callout callout-note"><strong>Hàm JS cốt lõi</strong> phải luôn còn nguyên khi sửa file lớn: <span style="font-family:monospace">switchTab, toggleTheme, applyTheme, setLang, toggleFaq, fillBook, toggleMenu</span>. Verify bằng cách đếm số lần xuất hiện sau mỗi lần sửa.</div>
+</section>
+
+<!-- ══════════ 11 · SOCIAL FORMATS ══════════ -->
+<section class="g-section" id="social">
+  <div class="g-eyebrow">11 · Định dạng ảnh &amp; social</div>
+  <h2 class="g-title">Khổ &amp; <em>kích thước</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Bảng kích thước chuẩn dùng khi sản xuất ảnh/video cho Facebook, Instagram, TikTok, Threads — tham chiếu chéo với 10 template ở mục 13.</p>
+
+  <table class="g-table">
+    <thead><tr><th>Sản phẩm</th><th>Tỷ lệ</th><th>Kích thước</th><th>Nền tảng</th></tr></thead>
+    <tbody>
+      <tr><td>Story / Reels / TikTok</td><td>9:16</td><td class="mono">1080×1920</td><td>Instagram, TikTok, Threads</td></tr>
+      <tr><td>Post vuông</td><td>1:1</td><td class="mono">1080×1080</td><td>Instagram, Facebook, Threads</td></tr>
+      <tr><td>Post đứng (chiếm màn hình hơn)</td><td>4:5</td><td class="mono">1080×1350</td><td>Instagram feed</td></tr>
+      <tr><td>Ảnh bìa Facebook</td><td>~2.6:1</td><td class="mono">820×312</td><td>Facebook Cover</td></tr>
+      <tr><td>Ảnh chia sẻ link (OG)</td><td>1.91:1</td><td class="mono">1200×630</td><td>Khi share link website</td></tr>
+      <tr><td>Favicon</td><td>1:1</td><td class="mono">16 / 32 / 48 / 64px</td><td>Tab trình duyệt</td></tr>
+      <tr><td>Apple touch icon</td><td>1:1</td><td class="mono">180×180px</td><td>Màn hình chính iOS</td></tr>
+      <tr><td>PWA icon</td><td>1:1</td><td class="mono">192px / 512px</td><td>Add to Home Screen (Android)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-warn"><strong>Đang chờ xử lý:</strong> icon-512 hiện tóc trong logo chạm sát viền tròn — có thể bị cắt nhẹ khi Android dùng mask vuông/squircle. Cân nhắc làm bản icon-512 riêng có padding an toàn hơn (avatar Harmonie ở mục 07 đã chừa lề an toàn, có thể dùng thay).</div>
+</section>
+
+<!-- ══════════ 12 · VOICE ══════════ -->
+<section class="g-section" id="voice">
+  <div class="g-eyebrow">12 · Giọng &amp; nội dung</div>
+  <h2 class="g-title">Cách <em>viết</em> cho Harmonie</h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Giọng thương hiệu: <strong>ấm áp, chuyên môn, riêng tư</strong> — như một chuyên gia 7 năm kinh nghiệm nói chuyện trực tiếp với khách, không phóng đại y khoa, luôn song ngữ VI/EN đầy đủ trên mọi trang public.</p>
+
+  <div class="dodont">
+    <div class="dodont-col do">
+      <h4>Nên</h4>
+      <ul>
+        <li>Nêu số liệu cụ thể: 7 năm kinh nghiệm, 500+ khách, 5★ Google, bảo hành 45 ngày</li>
+        <li>Luôn viết song ngữ VI/EN đầy đủ, kể cả caption ngắn</li>
+        <li>Với tình trạng da bất thường → khuyên chuyển bác sĩ da liễu, không tự nhận chữa được</li>
+        <li>Nhấn "private 1:1", "phòng riêng tư" — đây là điểm khác biệt cốt lõi</li>
+        <li>Cụm cần nhấn → in nghiêng Playfair + tô gold, không viết hoa toàn bộ để nhấn</li>
+      </ul>
+    </div>
+    <div class="dodont-col dont">
+      <h4>Tránh</h4>
+      <ul>
+        <li>Cam kết y khoa tuyệt đối ("khỏi 100%", "hết hẳn vĩnh viễn")</li>
+        <li>Gọi tên công nghệ sai — luôn là "Diode Laser", không còn gọi "Diode 808"</li>
+        <li>Bỏ sót bản tiếng Anh ở bài viết dành cho khách nước ngoài</li>
+        <li>Thêm gói/ưu đãi đã bị xoá theo yêu cầu (gói duy trì V-Lift, 2 combo loyalty cũ)</li>
+        <li>Viết chung chung không có số — thương hiệu này bán sự chính xác, chi tiết</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 13 · TEMPLATES ══════════ -->
 <section class="g-section" id="templates">
-  <div class="g-eyebrow">04 · 10 templates có Hana</div>
+  <div class="g-eyebrow">13 · 10 templates có Harmonie</div>
   <h2 class="g-title">Mỗi tấm hình <em>đều có cô ấy</em></h2>
   <div class="g-line"></div>
-  <p class="g-lead">Yêu cầu của bạn: <strong>Hana xuất hiện trên mọi post</strong>. 10 template dưới đây phủ 3 tỷ lệ chính (1:1 post, 4:5 feed, 9:16 story) và cả 3 trụ cột. Mỗi template có ghi rõ dùng cho content nào từ blog/phác đồ của bạn — không phải khung trống, mà là <strong>ví dụ nội dung sẵn</strong> để bạn thay chữ.</p>
+  <p class="g-lead">Yêu cầu của bạn: <strong>Harmonie xuất hiện trên mọi post</strong>. 10 template dưới đây phủ 3 tỷ lệ chính (1:1 post, 4:5 feed, 9:16 story) và cả 3 trụ cột. Mỗi template có ghi rõ dùng cho content nào từ blog/phác đồ của bạn — không phải khung trống, mà là <strong>ví dụ nội dung sẵn</strong> để bạn thay chữ.</p>
 
   <div class="tpl-grid">
 
@@ -500,7 +1100,7 @@ svg{display:block}
         <div class="q-hana" data-m="mini"></div>
         <div class="q-line"></div>
         <p class="q-text">"Da nhạy cảm không phải là da <em>xấu</em> — chỉ là da cần được hiểu đúng hơn."</p>
-        <span class="q-author">Hana · Harmonie Beauté</span>
+        <span class="q-author">Harmonie Beauté</span>
         <span class="q-brand">harmonie-beaute-vietnam.com</span>
       </div></div>
       <div class="tpl-note"><b>Dùng cho:</b> câu văn hay từ blog. Kho câu: bài "Da nhạy cảm", "Retinol", "Tại sao mụn tái phát", "5 thói quen buổi tối". Thay text, giữ layout.</div>
@@ -526,16 +1126,16 @@ svg{display:block}
       <div class="tpl-head"><span class="tpl-num">03</span><span class="tpl-fmt">Q&amp;A · 1:1</span></div>
       <div class="tpl-canvas"><div class="f-11 t-qa">
         <div class="qa-body">
-          <span class="qa-tag">✦ Hana giải đáp</span>
+          <span class="qa-tag">✦ Harmonie giải đáp</span>
           <div class="qa-q"><span class="qa-icon">Q.</span><p>Bao lâu nên đi nặn mụn một lần?</p></div>
           <div class="qa-a"><span class="qa-icon">A.</span><p>Không có con số cố định — tuỳ loại da và giai đoạn điều trị. Da dầu mụn hoạt động: 3–4 tuần. Da bình thường bảo trì: 6–8 tuần.</p></div>
         </div>
         <div class="qa-hana">
-          <div class="qa-hana-icon"><div data-m="mini"></div><span class="qa-h-name">— Hana</span></div>
+          <div class="qa-hana-icon"><div data-m="mini"></div><span class="qa-h-name">— Harmonie</span></div>
           <span class="qa-brand">harmonie-beaute-vietnam.com</span>
         </div>
       </div></div>
-      <div class="tpl-note"><b>Dùng cho:</b> series "Hana giải đáp" — mỗi tuần 1 câu. Nguồn câu: các bài blog kết thúc "?" ("Chemical Peel có đau không?", "Peel body có an toàn không?"...).</div>
+      <div class="tpl-note"><b>Dùng cho:</b> series "Harmonie giải đáp" — mỗi tuần 1 câu. Nguồn câu: các bài blog kết thúc "?" ("Chemical Peel có đau không?", "Peel body có an toàn không?"...).</div>
     </div>
 
     <!-- T4: LOẠI DA 4:5 -->
@@ -586,7 +1186,7 @@ svg{display:block}
         </div>
         <div class="ba-bottom"><span class="ba-bottom-brand">harmonie-beaute-vietnam.com</span><span class="ba-bottom-cta">Đặt lịch →</span></div>
       </div></div>
-      <div class="tpl-note"><b>Chờ:</b> ảnh thật before/after bạn đang làm Canva AI. Khi có, thả vào 2 slot. Hana ở góc = "chứng nhận" từ chuyên gia.</div>
+      <div class="tpl-note"><b>Chờ:</b> ảnh thật before/after bạn đang làm Canva AI. Khi có, thả vào 2 slot. Harmonie ở góc = "chứng nhận" từ chuyên gia.</div>
     </div>
 
     <!-- T7: BOOK STORY 9:16 -->
@@ -602,7 +1202,7 @@ svg{display:block}
         <div class="bk-cta">Đặt lịch qua bio</div>
         <span class="bk-handle">@harmonie_beautee</span>
       </div></div>
-      <div class="tpl-note"><b>Dùng cho:</b> story cuối tuần nhắc lịch trống. 1 lần/tuần, tối T5 hoặc sáng T6. Hana bust lớn = "ai đón bạn".</div>
+      <div class="tpl-note"><b>Dùng cho:</b> story cuối tuần nhắc lịch trống. 1 lần/tuần, tối T5 hoặc sáng T6. Harmonie bust lớn = "ai đón bạn".</div>
     </div>
 
     <!-- T8: REVIEW 1:1 -->
@@ -618,7 +1218,7 @@ svg{display:block}
         </div>
         <span class="r-brand">Harmonie Beauté</span>
       </div></div>
-      <div class="tpl-note"><b>Dùng cho:</b> tuần 1 review. Nguồn: các review 5★ đã có trên Google. Hana góc trên = "được chăm bởi cô này".</div>
+      <div class="tpl-note"><b>Dùng cho:</b> tuần 1 review. Nguồn: các review 5★ đã có trên Google. Harmonie góc trên = "được chăm bởi cô này".</div>
     </div>
 
     <!-- T9: DO / DONT 4:5 -->
@@ -672,12 +1272,12 @@ svg{display:block}
 
   </div>
 
-  <div class="callout"><strong>Cách chuyển thành ảnh thật:</strong> template chạy trên browser. Chụp màn hình khung → mở Canva → tạo canvas đúng kích thước (1080×1080 · 1080×1350 · 1080×1920) → đặt ảnh nền + kéo mascot SVG từ Mascot Studio vào → thay text. Hoặc export template thành PNG tại đây rồi vào Figma edit.</div>
+  <div class="callout"><strong>Cách chuyển thành ảnh thật:</strong> template chạy trên browser. Chụp màn hình khung → mở Canva → tạo canvas đúng kích thước (1080×1080 · 1080×1350 · 1080×1920) → đặt ảnh nền + kéo mascot SVG từ <a href="#hana" style="color:var(--gold-deep);font-weight:600">mục 07 · Nhân vật Harmonie</a> vào → thay text. Hoặc export template thành PNG tại đây rồi vào Figma edit.</div>
 </section>
 
 <!-- ══════════ 05 · LỊCH TUẦN ══════════ -->
 <section class="g-section" id="calendar">
-  <div class="g-eyebrow">05 · Lịch nội dung hàng tuần</div>
+  <div class="g-eyebrow">14 · Lịch nội dung hàng tuần</div>
   <h2 class="g-title">7 ngày · <em>7 post</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Nhịp bền vững. Không tuần nào bị "hôm nay chưa biết đăng gì". Kèm nguồn nội dung cụ thể từ site hiện có, gồm cả template dùng cho từng slot.</p>
@@ -685,7 +1285,7 @@ svg{display:block}
   <div class="cal">
     <div class="cal-row head"><div>Ngày</div><div>Chủ đề &amp; nguồn</div><div>Format</div></div>
     <div class="cal-row"><div class="cal-day">T2</div><div class="cal-what"><b>Mẹo skincare</b> — mỗi tuần 1 mẹo<div class="cal-source">Nguồn: 35+ mẹo trong 7 phác đồ da</div></div><div class="cal-fmt">Template 02 · 1:1</div></div>
-    <div class="cal-row"><div class="cal-day">T3</div><div class="cal-what"><b>Hana giải đáp</b> — 1 câu Q&amp;A<div class="cal-source">Nguồn: câu Hana được hỏi nhiều nhất</div></div><div class="cal-fmt">Template 03 · 1:1</div></div>
+    <div class="cal-row"><div class="cal-day">T3</div><div class="cal-what"><b>Harmonie giải đáp</b> — 1 câu Q&amp;A<div class="cal-source">Nguồn: câu Harmonie được hỏi nhiều nhất</div></div><div class="cal-fmt">Template 03 · 1:1</div></div>
     <div class="cal-row"><div class="cal-day">T4</div><div class="cal-what"><b>Loại da của bạn</b> — series 7 tuần<div class="cal-source">Nguồn: trang phác đồ sản phẩm</div></div><div class="cal-fmt">Template 04 · 4:5</div></div>
     <div class="cal-row"><div class="cal-day">T5</div><div class="cal-what"><b>Nên · Tránh</b> — cặp đôi kèm nhau<div class="cal-source">Nguồn: 7 bảng "Tuyệt đối tránh"</div></div><div class="cal-fmt">Template 09 · 4:5</div></div>
     <div class="cal-row"><div class="cal-day">T6</div><div class="cal-what"><b>Nhắc lịch cuối tuần</b> — CTA duy nhất<div class="cal-source">Nguồn: bảng giá + lịch trống</div></div><div class="cal-fmt">Template 07 · 9:16 story</div></div>
@@ -693,12 +1293,12 @@ svg{display:block}
     <div class="cal-row"><div class="cal-day">CN</div><div class="cal-what"><b>Câu trích hay</b> — nhẹ nhàng, chill<div class="cal-source">Nguồn: dòng đắt trong 27 bài blog</div></div><div class="cal-fmt">Template 01 · 1:1</div></div>
   </div>
 
-  <div class="callout"><strong>Ngoài lịch chính:</strong> mỗi tuần thêm 3–5 story ngẫu nhiên (behind the scenes, cảm ơn khách, video ngắn phòng spa) — không cần template, chỉ cần Hana avatar tròn ở góc + text.</div>
+  <div class="callout"><strong>Ngoài lịch chính:</strong> mỗi tuần thêm 3–5 story ngẫu nhiên (behind the scenes, cảm ơn khách, video ngắn phòng spa) — không cần template, chỉ cần Harmonie avatar tròn ở góc + text.</div>
 </section>
 
 <!-- ══════════ 06 · 90 NGÀY ══════════ -->
 <section class="g-section" id="plan90">
-  <div class="g-eyebrow">06 · Kế hoạch 90 ngày</div>
+  <div class="g-eyebrow">15 · Kế hoạch 90 ngày</div>
   <h2 class="g-title">Từ giờ đến <em>hết Q3</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Không chia theo tuần vụn — chia theo tháng, mỗi tháng 1 chủ đề chính để dồn lực. Post hàng ngày vẫn theo lịch T2–CN, nhưng "series lớn" của tháng sẽ chi phối cover reel + bio.</p>
@@ -706,23 +1306,23 @@ svg{display:block}
   <div class="tl">
     <div class="tl-month">
       <div class="tl-tag">Tháng 1 · Xây kho tài sản</div>
-      <h3 class="tl-title">"Meet <em>Hana</em>"</h3>
-      <p class="tl-body">Giới thiệu Hana rộng khắp. Đây là tháng bạn có gương mặt mới cho thương hiệu — dùng nó khai trương lại kênh. Chưa đẩy dịch vụ nặng, tập trung follower.</p>
+      <h3 class="tl-title">"Meet <em>Harmonie</em>"</h3>
+      <p class="tl-body">Giới thiệu Harmonie rộng khắp. Đây là tháng bạn có gương mặt mới cho thương hiệu — dùng nó khai trương lại kênh. Chưa đẩy dịch vụ nặng, tập trung follower.</p>
       <div class="tl-list">
-        <div><b>Reel intro:</b> "Xin chào, mình là Hana" — 60s</div>
+        <div><b>Reel intro:</b> "Xin chào, mình là Harmonie" — 60s</div>
         <div><b>Series 7 loại da</b> — mỗi tuần 1 loại</div>
         <div><b>Update Bio</b> IG · FB · TikTok · Threads</div>
-        <div><b>Hana AMA</b> qua story — 1 buổi</div>
+        <div><b>Harmonie AMA</b> qua story — 1 buổi</div>
       </div>
     </div>
     <div class="tl-month">
       <div class="tl-tag">Tháng 2 · Chuyên môn</div>
-      <h3 class="tl-title">"Mẹo từ <em>Hana</em>"</h3>
-      <p class="tl-body">Đào sâu 35+ mẹo trong phác đồ. Đây là tháng chứng minh chuyên môn — Hana trở thành nguồn kiến thức đáng tin, không chỉ mặt logo.</p>
+      <h3 class="tl-title">"Mẹo từ <em>Harmonie</em>"</h3>
+      <p class="tl-body">Đào sâu 35+ mẹo trong phác đồ. Đây là tháng chứng minh chuyên môn — Harmonie trở thành nguồn kiến thức đáng tin, không chỉ mặt logo.</p>
       <div class="tl-list">
         <div><b>Mỗi ngày 1 mẹo</b> — 30 ngày · 30 posts</div>
         <div><b>Reel dài 3'</b> — Chemical Peel là gì</div>
-        <div><b>Q&amp;A "Hana giải đáp"</b> ×4</div>
+        <div><b>Q&amp;A "Harmonie giải đáp"</b> ×4</div>
         <div><b>Google review</b> — xin thêm 5 đánh giá mới</div>
       </div>
     </div>
@@ -743,8 +1343,8 @@ svg{display:block}
 </section>
 
 <!-- ══════════ 07 · VIỆC LÀM NGAY ══════════ -->
-<section class="g-section" id="actions" style="border-bottom:none">
-  <div class="g-eyebrow">07 · Việc làm ngay tuần này</div>
+<section class="g-section" id="actions">
+  <div class="g-eyebrow">16 · Việc làm ngay tuần này</div>
   <h2 class="g-title">5 việc <em>ưu tiên</em></h2>
   <div class="g-line"></div>
 
@@ -759,15 +1359,15 @@ svg{display:block}
     <div class="act">
       <div class="act-num">2</div>
       <div class="act-body">
-        <h4>Update avatar 3 kênh với Hana</h4>
-        <p>Vào Mascot Studio → tải Hana avatar tròn PNG 1024 → thay avatar IG, FB, TikTok, Threads. Một hành động, 4 nơi nhận diện đồng bộ.</p>
+        <h4>Update avatar 3 kênh với Harmonie</h4>
+        <p>Xuống mục <b>07 · Nhân vật Harmonie</b> bên trên → tải avatar tròn PNG 1024 → thay avatar IG, FB, TikTok, Threads. Một hành động, 4 nơi nhận diện đồng bộ.</p>
       </div>
     </div>
     <div class="act">
       <div class="act-num">3</div>
       <div class="act-body">
-        <h4>Đăng post đầu tiên có Hana</h4>
-        <p>Dùng Template 03 (Q&amp;A) — chọn 1 câu Hana hay được hỏi ("Bao lâu nên nặn mụn?"). Đây là post <em>"ra mắt"</em> Hana. Caption: giới thiệu ngắn cô là ai.</p>
+        <h4>Đăng post đầu tiên có Harmonie</h4>
+        <p>Dùng Template 03 (Q&amp;A) — chọn 1 câu Harmonie hay được hỏi ("Bao lâu nên nặn mụn?"). Đây là post <em>"ra mắt"</em> Harmonie. Caption: giới thiệu ngắn cô là ai.</p>
       </div>
     </div>
     <div class="act">
@@ -781,7 +1381,7 @@ svg{display:block}
       <div class="act-num">5</div>
       <div class="act-body">
         <h4>Mở Google Business Profile</h4>
-        <p>30 Đặng Tất là địa chỉ thật, có phòng thật. Chưa có GBP đồng nghĩa <em>không lên Google Maps</em> khi khách tìm "spa Tân Định". Đăng ký + verify + 5 ảnh Hana.</p>
+        <p>30 Đặng Tất là địa chỉ thật, có phòng thật. Chưa có GBP đồng nghĩa <em>không lên Google Maps</em> khi khách tìm "spa Tân Định". Đăng ký + verify + 5 ảnh Harmonie.</p>
       </div>
     </div>
   </div>
@@ -797,25 +1397,40 @@ svg{display:block}
 <div class="toast" id="toast">Đã copy!</div>
 
 <script>
-/* ═══════════ HANA BUILDERS ═══════════ */
+/* ═══════════ MASCOT BUILDERS (Harmonie) ═══════════ */
 var SKIN='#F3E3D3',FEAT='#5A3E44',MOUTH='#B5673B',BLUSH='rgba(181,103,59,0.20)';
-function serene(){return `<path d="M82 91 Q88.5 87 95 89.5" fill="none" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/>
-<path d="M105 89.5 Q111.5 87 118 91" fill="none" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/>
-<path d="M80 101 Q88 107.5 96 101" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M104 101 Q112 107.5 120 101" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M78.5 101 L75.5 98" stroke="${FEAT}" stroke-width="1.7" stroke-linecap="round"/>
-<path d="M121.5 101 L124.5 98" stroke="${FEAT}" stroke-width="1.7" stroke-linecap="round"/>
-<ellipse cx="81" cy="113" rx="6.5" ry="3.8" fill="${BLUSH}"/>
-<ellipse cx="119" cy="113" rx="6.5" ry="3.8" fill="${BLUSH}"/>
-<path d="M93.5 120 Q100 125 106.5 120" fill="none" stroke="${MOUTH}" stroke-width="2.1" stroke-linecap="round"/>`;}
-function head(){var BOB=`<path d="M100 28 C 58 28, 38 60, 42 102 C 44 126, 34 146, 48 162 C 58 172, 74 168, 78 156 C 84 166, 96 170, 100 170 C 104 170, 116 166, 122 156 C 126 168, 142 172, 152 162 C 166 146, 156 126, 158 102 C 162 60, 142 28, 100 28 Z" fill="var(--hair-deep)"/>`;
+function faceFeatures(exp){
+  var brows=`<path d="M82 91 Q88.5 87 95 89.5" fill="none" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/><path d="M105 89.5 Q111.5 87 118 91" fill="none" stroke="${FEAT}" stroke-width="2" stroke-linecap="round"/>`;
+  var blush=`<ellipse cx="81" cy="113" rx="6.5" ry="3.8" fill="${BLUSH}"/><ellipse cx="119" cy="113" rx="6.5" ry="3.8" fill="${BLUSH}"/>`;
+  if(exp==='happy') return brows+`<path d="M80 104 Q88 97 96 104" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/><path d="M104 104 Q112 97 120 104" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/>${blush}<path d="M91 118 Q100 130 109 118 Q100 122 91 118 Z" fill="#A8542F"/>`;
+  if(exp==='wink') return brows+`<path d="M80 103 Q88 97 96 103" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/><circle cx="112" cy="102" r="4" fill="${FEAT}"/><circle cx="113.5" cy="100.5" r="1.3" fill="#FFFFFF"/><path d="M104 98 Q112 93 120 98" fill="none" stroke="${FEAT}" stroke-width="1.8" stroke-linecap="round"/>${blush}<path d="M93 121 Q102 127 108 119" fill="none" stroke="${MOUTH}" stroke-width="2.1" stroke-linecap="round"/><path d="M146 118 L148 123 L153 125 L148 127 L146 132 L144 127 L139 125 L144 123 Z" fill="var(--gold-bright)"/>`;
+  return brows+`<path d="M80 101 Q88 107.5 96 101" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/><path d="M104 101 Q112 107.5 120 101" fill="none" stroke="${FEAT}" stroke-width="2.5" stroke-linecap="round"/><path d="M78.5 101 L75.5 98" stroke="${FEAT}" stroke-width="1.7" stroke-linecap="round"/><path d="M121.5 101 L124.5 98" stroke="${FEAT}" stroke-width="1.7" stroke-linecap="round"/>${blush}<path d="M93.5 120 Q100 125 106.5 120" fill="none" stroke="${MOUTH}" stroke-width="2.1" stroke-linecap="round"/>`;
+}
+function head(exp){var BOB=`<path d="M100 28 C 58 28, 38 60, 42 102 C 44 126, 34 146, 48 162 C 58 172, 74 168, 78 156 C 84 166, 96 170, 100 170 C 104 170, 116 166, 122 156 C 126 168, 142 172, 152 162 C 166 146, 156 126, 158 102 C 162 60, 142 28, 100 28 Z" fill="var(--hair-deep)"/>`;
 var C=`<path d="M100 48 C 71 48, 56 66, 59 94 C 56 118, 62 134, 58 150 C 56 158, 62 164, 69 162 C 76 160, 78 152, 77 144 C 75 122, 72 106, 74 92 C 76 76, 84 62, 100 60 C 116 62, 124 76, 126 92 C 128 106, 125 122, 123 144 C 122 152, 124 160, 131 162 C 138 164, 144 158, 142 150 C 138 134, 144 118, 141 94 C 144 66, 129 48, 100 48 Z" fill="var(--hair-mid)"/>`;
 var F=`<path d="M64 92 C 64 68, 80 52, 100 52 C 120 52, 136 68, 136 92 C 129 77, 119 71, 111 74 C 105 76.4, 102.4 81, 100 81 C 97.6 81, 95 76.4, 89 74 C 81 71, 71 77, 64 92 Z" fill="var(--hair-deep)"/>`;
 var S=`<path d="M62 104 C 59 126 63 142 58 154" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" opacity="0.8"/>
 <path d="M138 104 C 141 126 137 142 142 154" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" opacity="0.8"/>`;
 var ST=`<path d="M128 57 L131 64.5 L138.5 67.5 L131 70.5 L128 78 L125 70.5 L117.5 67.5 L125 64.5 Z" fill="var(--gold-bright)"/>`;
-return BOB+`<ellipse cx="100" cy="99" rx="36" ry="39" fill="${SKIN}"/>`+C+F+S+ST+serene();}
-function svgAvatar(){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="var(--hair-soft)"/>${head()}</svg>`;}
+return BOB+`<ellipse cx="100" cy="99" rx="36" ry="39" fill="${SKIN}"/>`+C+F+S+ST+faceFeatures(exp);}
+function svgAvatar(bg,exp){var bgm='';
+if(bg==='grad'){bgm=`<defs><linearGradient id="pbGr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--hair-soft)"/><stop offset="1" stop-color="var(--hair-deep)"/></linearGradient></defs><circle cx="100" cy="100" r="100" fill="url(#pbGr)"/>`;}
+else if(bg==='cream'){bgm=`<circle cx="100" cy="100" r="100" fill="var(--cream)"/><circle cx="100" cy="100" r="96" fill="none" stroke="var(--gold)" stroke-width="2"/>`;}
+else{bgm=`<circle cx="100" cy="100" r="100" fill="var(--hair-soft)"/>`;}
+return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">${bgm}${head(exp)}</svg>`;}
+function svgSpa(){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<circle cx="100" cy="100" r="100" fill="var(--hair-soft)"/>
+<path d="M64 96 C 58 122 64 142 56 158 C 66 158 76 144 76 122 C 76 108 72 100 64 96 Z" fill="var(--hair-deep)"/>
+<path d="M136 96 C 142 122 136 142 144 158 C 134 158 124 144 124 122 C 124 108 128 100 136 96 Z" fill="var(--hair-deep)"/>
+<ellipse cx="100" cy="102" rx="36" ry="39" fill="${SKIN}"/>
+<path d="M60 96 C 58 56, 78 34, 100 34 C 122 34, 142 56, 140 96 C 136 80, 122 72, 100 72 C 78 72, 64 80, 60 96 Z" fill="#FBF7F1" stroke="var(--sand)" stroke-width="1.5"/>
+<path d="M66 84 C 76 74 92 69 100 69" fill="none" stroke="var(--sand)" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M134 84 C 124 74 108 69 100 69" fill="none" stroke="var(--sand)" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="100" cy="36" rx="13" ry="9" fill="#FBF7F1" stroke="var(--sand)" stroke-width="1.5"/>
+<path d="M90 33 Q100 40 110 33" fill="none" stroke="var(--sand)" stroke-width="1.3" stroke-linecap="round"/>
+<path d="M56 62 L58 67 L63 69 L58 71 L56 76 L54 71 L49 69 L54 67 Z" fill="var(--gold-bright)"/>
+<path d="M146 54 L147.5 58 L151.5 59.5 L147.5 61 L146 65 L144.5 61 L140.5 59.5 L144.5 58 Z" fill="var(--gold-bright)" opacity="0.85"/>
+<g transform="translate(0,3)">${faceFeatures('serene')}</g></svg>`;}
 function svgLine(bare){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
 <path d="M100 28 C 58 28, 38 60, 42 102 C 44 126, 34 146, 48 162 C 58 172, 74 168, 78 156 C 84 166, 96 170, 100 170 C 104 170, 116 166, 122 156 C 126 168, 142 172, 152 162 C 166 146, 156 126, 158 102 C 162 60, 142 28, 100 28 Z" fill="rgba(255,255,255,0.10)" stroke="#FAF6F0" stroke-width="2.2"/>
 <path d="M64 99 C 64 122, 80 139, 100 139 C 120 139, 136 122, 136 99" fill="rgba(255,255,255,0.14)" stroke="#FAF6F0" stroke-width="2"/>
@@ -859,9 +1474,40 @@ function svgBust(){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 
 <ellipse cx="143" cy="113" rx="8" ry="4.5" fill="${BLUSH}"/>
 <path d="M112 122 Q120 128 128 122" fill="none" stroke="${MOUTH}" stroke-width="2.6" stroke-linecap="round"/></svg>`;}
 
-var B={bust:svgBust,avatar:svgAvatar,mini:svgMini,line:function(){return svgLine(false);},'line-bare':function(){return svgLine(true);}};
+var B={
+  bust:svgBust,
+  avatar:function(){return svgAvatar('moss','serene');},
+  'avatar-grad':function(){return svgAvatar('grad','serene');},
+  'avatar-cream':function(){return svgAvatar('cream','serene');},
+  mini:svgMini,
+  line:function(){return svgLine(false);},
+  'line-bare':function(){return svgLine(true);},
+  'exp-serene':function(){return svgAvatar('cream','serene');},
+  'exp-happy':function(){return svgAvatar('cream','happy');},
+  'exp-wink':function(){return svgAvatar('cream','wink');},
+  'exp-spa':svgSpa
+};
 function inject(){document.querySelectorAll('[data-m]').forEach(function(el){var b=B[el.getAttribute('data-m')];if(b)el.innerHTML=b();});}
 inject();
+
+/* ═══════════ EXPORT: copy / download SVG & PNG ═══════════ */
+function resolveVars(s){var cs=getComputedStyle(document.documentElement);return s.replace(/var\((--[\w-]+)\)/g,function(m,n){return cs.getPropertyValue(n).trim()||'#000';});}
+function getResolved(key){var b=B[key];if(!b)return null;return resolveVars(b());}
+function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(function(){t.classList.remove('show');},1400);}
+function copyMascotSVG(key){var s=getResolved(key);if(!s)return;navigator.clipboard.writeText(s).then(function(){showToast('Đã copy SVG — dán vào Figma/Canva/code');});}
+function dlMascotSVG(key,name){var s=getResolved(key);if(!s)return;var blob=new Blob([s],{type:'image/svg+xml'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name+'.svg';a.click();setTimeout(function(){URL.revokeObjectURL(a.href);},2000);showToast('Đã tải '+name+'.svg');}
+function dlMascotPNG(key,name,size){var s=getResolved(key);if(!s)return;var blob=new Blob([s],{type:'image/svg+xml'});var url=URL.createObjectURL(blob);var img=new Image();
+img.onload=function(){var vb=s.match(/viewBox="0 0 (\d+) (\d+)"/);var w=vb?+vb[1]:200,h=vb?+vb[2]:200;var scale=size/Math.max(w,h);var c=document.createElement('canvas');c.width=Math.round(w*scale);c.height=Math.round(h*scale);var ctx=c.getContext('2d');ctx.drawImage(img,0,0,c.width,c.height);
+c.toBlob(function(pb){var a=document.createElement('a');a.href=URL.createObjectURL(pb);a.download=name+'.png';a.click();setTimeout(function(){URL.revokeObjectURL(a.href);},2000);URL.revokeObjectURL(url);showToast('Đã tải '+name+'.png ('+c.width+'×'+c.height+')');},'image/png');};
+img.onerror=function(){URL.revokeObjectURL(url);showToast('Xuất PNG lỗi — thử tải SVG');};
+img.src=url;}
+
+function downloadAllMascot(){
+  var items=[['bust','harmonie-bust',1024],['avatar','harmonie-avatar-moss',1024],['avatar-grad','harmonie-avatar-gradient',1024],['avatar-cream','harmonie-avatar-cream',1024],['line','harmonie-lineart',1024],['mini','harmonie-mini',512],['exp-serene','harmonie-exp-serene',512],['exp-happy','harmonie-exp-happy',512],['exp-wink','harmonie-exp-wink',512],['exp-spa','harmonie-exp-spa',512]];
+  var i=0;
+  function next(){if(i>=items.length){showToast('Đã tải xong '+items.length+' file PNG');return;}var it=items[i];dlMascotPNG(it[0],it[1],it[2]);i++;setTimeout(next,350);}
+  next();
+}
 
 function togglePlanTheme(){
   var html=document.documentElement;
@@ -869,8 +1515,52 @@ function togglePlanTheme(){
   var next=cur==='green'?'rose':'green';
   if(next==='rose'){html.removeAttribute('data-theme');}else{html.setAttribute('data-theme','green');}
   document.getElementById('themeLabel').textContent=next==='green'?'Xanh rêu':'Hồng cổ điển';
+  updateHexLabels();
 }
 document.getElementById('themeLabel').textContent='Xanh rêu';
+
+/* ═══════════ (gộp từ brand guide) copy màu / copy code / cập nhật hex ═══════════ */
+function copySwatch(val,el){
+  var real=val;
+  if(val.indexOf('var(')===0){var name=val.slice(4,-1);real=getComputedStyle(document.documentElement).getPropertyValue(name).trim();}
+  navigator.clipboard.writeText(real).then(function(){showToast('Đã copy '+real);});
+}
+function copyBlock(btn){
+  var code=btn.nextElementSibling;
+  navigator.clipboard.writeText(code.innerText).then(function(){showToast('Đã copy mã');});
+}
+function updateHexLabels(){
+  var cs=getComputedStyle(document.documentElement);
+  ['moss','moss-light','moss-pale','charcoal'].forEach(function(name){
+    var el=document.getElementById('hex-'+name);
+    if(el) el.textContent=cs.getPropertyValue('--'+name).trim();
+  });
+}
+updateHexLabels();
+
+/* reveal demo (mục Motion) */
+(function(){
+  var el=document.getElementById('revealDemo');
+  if(!el) return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('in-view'); io.unobserve(entry.target); }
+    });
+  },{threshold:0.2});
+  io.observe(el);
+})();
+
+/* hero-glow demo (mục Motion) — cursor-follow riêng cho khối minh hoạ, khác hero thật của trang */
+(function(){
+  var box=document.getElementById('hgHeroDemo'), glow=document.getElementById('hgCursorGlow');
+  if(box && glow && window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    box.addEventListener('mousemove', function(e){
+      var r=box.getBoundingClientRect();
+      glow.style.setProperty('--mx', ((e.clientX-r.left)/r.width*100).toFixed(1)+'%');
+      glow.style.setProperty('--my', ((e.clientY-r.top)/r.height*100).toFixed(1)+'%');
+    });
+  }
+})();
 </script>
 
 </body>
