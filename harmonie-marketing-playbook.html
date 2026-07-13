@@ -439,53 +439,104 @@ svg{display:block}
 .trk-json-actions{display:flex;gap:.5rem;flex-shrink:0}
 @media(max-width:640px){.trk-json-row{flex-direction:column;align-items:stretch}.trk-json-actions{justify-content:flex-start}}
 .trk-card{background:var(--white);border-radius:18px;padding:1.6rem;border:1px solid rgba(0,0,0,.06);box-shadow:0 4px 20px rgba(0,0,0,.05)}
-.trk-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.3rem}
-.trk-nav{display:flex;align-items:center;gap:.8rem}
-.trk-nav button{background:var(--cream);border:1px solid var(--sand);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:.9rem;color:var(--moss);display:flex;align-items:center;justify-content:center;font-family:inherit}
+.trk-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:.9rem}
+.trk-nav{display:flex;align-items:center;gap:.7rem}
+.trk-nav button{background:var(--cream);border:1px solid var(--sand);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:.8rem;color:var(--moss);display:flex;align-items:center;justify-content:center;font-family:inherit}
 .trk-nav button:hover{background:var(--moss);color:var(--gold-bright);border-color:var(--moss)}
-.trk-month{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--charcoal);min-width:150px;text-align:center}
+.trk-month{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--charcoal);min-width:135px;text-align:center;background:none;border:none;cursor:pointer;padding:.2rem .5rem;border-radius:8px;transition:background .15s}
+.trk-month:hover{background:var(--gold-wash)}
 .trk-month em{color:var(--gold-deep);font-style:italic}
+.trk-month .hint{display:block;font-family:'Be Vietnam Pro',sans-serif;font-size:.55rem;color:var(--earth);text-transform:uppercase;letter-spacing:.06em;margin-top:1px}
 .trk-stats{display:flex;gap:.6rem;flex-wrap:wrap}
-.trk-stat{font-size:.68rem;padding:.35rem .8rem;border-radius:50px;font-weight:600;white-space:nowrap}
+.trk-stat{font-size:.66rem;padding:.32rem .75rem;border-radius:50px;font-weight:600;white-space:nowrap}
 .trk-stat.posted{background:rgba(122,48,80,.08);color:var(--moss)}
 .trk-stat.scheduled{background:var(--gold-wash);color:var(--gold-deep)}
-.trk-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem}
-.trk-daylabel{font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;color:var(--earth);text-align:center;font-weight:700;padding-bottom:.3rem}
-.trk-day{aspect-ratio:1;border-radius:10px;border:1px solid var(--sand);background:var(--cream);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:.35rem .2rem;transition:all .15s}
+
+/* platform legend */
+.trk-plat-legend{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:.8rem;font-size:.62rem;color:var(--earth)}
+.trk-plat-legend span{display:inline-flex;align-items:center;gap:.3rem}
+.trk-plat-legend .dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+
+/* compact grid — ô chỉ đủ chứa số ngày + chấm màu */
+.trk-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.trk-daylabel{font-size:.56rem;text-transform:uppercase;letter-spacing:.06em;color:var(--earth);text-align:center;font-weight:700;padding-bottom:.25rem}
+.trk-day{min-height:34px;border-radius:6px;border:1px solid var(--sand);background:var(--cream);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:.15rem;transition:all .12s}
 .trk-day:hover{border-color:var(--gold);background:var(--gold-wash)}
-.trk-day.empty{visibility:hidden;pointer-events:none;border:none}
-.trk-day.today{border-color:var(--moss);border-width:2px}
+.trk-day.empty{visibility:hidden;pointer-events:none;border:none;min-height:0}
+.trk-day.today{border-color:var(--moss);border-width:1.5px}
 .trk-day.selected{background:var(--moss);border-color:var(--moss)}
 .trk-day.selected .trk-daynum{color:var(--gold-bright)}
-.trk-daynum{font-size:.76rem;font-weight:600;color:var(--charcoal)}
-.trk-dots{display:flex;gap:2px;margin-top:.3rem;flex-wrap:wrap;justify-content:center;min-height:6px}
-.trk-dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
-.trk-dot.posted{background:var(--moss)}
-.trk-day.selected .trk-dot.posted{background:var(--gold-bright)}
-.trk-legend{display:flex;gap:1.2rem;margin-top:1.1rem;font-size:.68rem;color:var(--earth);flex-wrap:wrap;align-items:center}
+.trk-daynum{font-size:.64rem;font-weight:600;color:var(--charcoal);line-height:1}
+.trk-dots{display:flex;gap:2px;flex-wrap:wrap;justify-content:center;max-width:100%;min-height:5px}
+.trk-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.trk-dot.is-posted{box-shadow:0 0 0 1.3px var(--moss)}
+.trk-day.selected .trk-dot.is-posted{box-shadow:0 0 0 1.3px var(--gold-bright)}
+.trk-daymore{font-size:.46rem;color:var(--earth);line-height:1}
+@media(max-width:640px){.trk-grid{gap:2px}.trk-day{min-height:28px;border-radius:5px}.trk-daynum{font-size:.56rem}}
+
+.trk-legend{display:flex;gap:1.1rem;margin-top:.9rem;font-size:.66rem;color:var(--earth);flex-wrap:wrap;align-items:center}
 .trk-legend span{display:inline-flex;align-items:center;gap:.35rem}
-.trk-legend .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
-.trk-panel{margin-top:1.6rem;background:var(--cream);border-radius:14px;padding:1.3rem 1.4rem;border:1px solid var(--sand)}
-.trk-panel-date{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--moss);margin-bottom:.9rem}
+
+/* view toggle: theo ngày / tổng quan tháng */
+.trk-viewtabs{display:flex;gap:.4rem;margin-top:1.2rem;border-bottom:1px solid var(--sand)}
+.trk-viewtab{background:none;border:none;padding:.5rem .3rem;font-size:.74rem;font-weight:600;color:var(--earth);cursor:pointer;border-bottom:2px solid transparent;margin-right:.8rem;font-family:'Be Vietnam Pro',sans-serif}
+.trk-viewtab.active{color:var(--moss);border-bottom-color:var(--gold)}
+
+.trk-panel{margin-top:1.1rem;background:var(--cream);border-radius:14px;padding:1.2rem 1.3rem;border:1px solid var(--sand)}
+.trk-panel-date{font-family:'Playfair Display',serif;font-size:1rem;color:var(--moss);margin-bottom:.85rem}
 .trk-panel-date em{color:var(--gold-deep);font-style:italic}
 .trk-post-list{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1rem}
-.trk-post{background:var(--white);border-radius:10px;padding:.6rem .8rem;display:flex;align-items:center;gap:.65rem;border-left:3px solid var(--gold)}
-.trk-post.is-posted{border-left-color:var(--moss)}
-.trk-post-check{width:20px;height:20px;border-radius:50%;border:2px solid var(--sand-dark);cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.6rem;color:transparent;transition:all .15s}
-.trk-post.is-posted .trk-post-check{background:var(--moss);border-color:var(--moss);color:var(--gold-bright)}
+
+/* month overview: nhóm theo ngày */
+.trk-ov-group{margin-bottom:.9rem}
+.trk-ov-date{font-size:.68rem;font-weight:700;color:var(--moss);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.4rem;padding-left:.1rem}
+
+/* post row + expandable detail */
+.trk-post{background:var(--white);border-radius:10px;border-left:3px solid var(--gold);overflow:hidden}
+.trk-post-head{padding:.55rem .75rem;display:flex;align-items:center;gap:.6rem;cursor:pointer}
+.trk-post-plat-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
 .trk-post-body{flex:1;min-width:0}
-.trk-post-title{font-size:.82rem;color:var(--charcoal);font-weight:500;word-break:break-word}
-.trk-post.is-posted .trk-post-title{text-decoration:line-through;opacity:.55}
-.trk-post-pillar{font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-deep);margin-top:.15rem}
-.trk-post-del{background:none;border:none;color:var(--earth);cursor:pointer;font-size:.85rem;padding:.2rem .4rem;flex-shrink:0}
+.trk-post-title{font-size:.81rem;color:var(--charcoal);font-weight:500;word-break:break-word}
+.trk-post.is-posted .trk-post-title{opacity:.6}
+.trk-post-meta{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.2rem}
+.trk-tag{font-size:.56rem;text-transform:uppercase;letter-spacing:.05em;padding:1px 7px;border-radius:50px;font-weight:700;white-space:nowrap}
+.trk-tag.plat{background:var(--cream);color:var(--charcoal)}
+.trk-tag.pillar{background:var(--gold-wash);color:var(--gold-deep)}
+.trk-tag.fmt{background:rgba(0,0,0,.04);color:var(--earth)}
+.trk-post-status{border:1px solid var(--sand-dark);border-radius:50px;font-size:.6rem;padding:.2rem .5rem;background:var(--white);color:var(--charcoal);font-family:'Be Vietnam Pro',sans-serif;font-weight:600;flex-shrink:0}
+.trk-post-chevron{color:var(--earth);font-size:.7rem;flex-shrink:0;transition:transform .15s}
+.trk-post.expanded .trk-post-chevron{transform:rotate(90deg)}
+.trk-post-del{background:none;border:none;color:var(--earth);cursor:pointer;font-size:.8rem;padding:.2rem .3rem;flex-shrink:0}
 .trk-post-del:hover{color:var(--terra)}
+.trk-post-detail{display:none;padding:0 .75rem .8rem;border-top:1px solid var(--sand)}
+.trk-post.expanded .trk-post-detail{display:block;padding-top:.7rem}
+.trk-dfield{margin-bottom:.6rem}
+.trk-dfield label{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.06em;color:var(--earth);font-weight:700;margin-bottom:.3rem}
+.trk-dfield textarea,.trk-dfield input[type=text],.trk-dfield input[type=time]{width:100%;border:1px solid var(--sand-dark);border-radius:8px;padding:.5rem .65rem;font-size:.78rem;font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:var(--charcoal);resize:vertical}
+.trk-dfield textarea{min-height:52px}
+.trk-drow{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media(max-width:520px){.trk-drow{grid-template-columns:1fr}}
+.trk-detail-save{background:var(--moss);color:var(--gold-bright);border:none;border-radius:8px;padding:.5rem 1.1rem;font-size:.74rem;font-weight:600;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif}
+.trk-detail-save:hover{background:var(--moss-light)}
+
 .trk-empty-note{font-size:.76rem;color:var(--earth);font-style:italic;margin-bottom:1rem}
 .trk-form{display:flex;gap:.5rem;flex-wrap:wrap}
 .trk-form input[type=text]{flex:1;min-width:160px;border:1px solid var(--sand-dark);border-radius:8px;padding:.55rem .8rem;font-size:.8rem;font-family:'Be Vietnam Pro',sans-serif;background:var(--white);color:var(--charcoal)}
-.trk-form select{border:1px solid var(--sand-dark);border-radius:8px;padding:.55rem .6rem;font-size:.78rem;font-family:'Be Vietnam Pro',sans-serif;background:var(--white);color:var(--charcoal)}
+.trk-form select{border:1px solid var(--sand-dark);border-radius:8px;padding:.55rem .6rem;font-size:.76rem;font-family:'Be Vietnam Pro',sans-serif;background:var(--white);color:var(--charcoal)}
 .trk-form button{background:var(--moss);color:var(--gold-bright);border:none;border-radius:8px;padding:.55rem 1.2rem;font-size:.78rem;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'Be Vietnam Pro',sans-serif}
 .trk-form button:hover{background:var(--moss-light)}
-@media(max-width:640px){.trk-grid{gap:.22rem}.trk-day{border-radius:7px;padding:.25rem .1rem}.trk-daynum{font-size:.64rem}.trk-form{flex-direction:column}.trk-form input,.trk-form select,.trk-form button{width:100%}}
+@media(max-width:640px){.trk-form{flex-direction:column}.trk-form input,.trk-form select,.trk-form button{width:100%}}
+
+/* ── VIDEO SCRIPT BLOCKS ── */
+.vscript-block{border-radius:8px;padding:.6rem .8rem;margin-bottom:.5rem;font-size:.74rem;line-height:1.55;color:var(--charcoal)}
+.vscript-block:last-child{margin-bottom:0}
+.vscript-block .vs-label{font-size:.56rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.25rem;display:block}
+.vscript-block.hook{background:var(--gold-wash);border-left:3px solid var(--gold)}
+.vscript-block.hook .vs-label{color:var(--gold-deep)}
+.vscript-block.body{background:var(--cream);border-left:3px solid var(--sand-dark)}
+.vscript-block.body .vs-label{color:var(--earth)}
+.vscript-block.cta{background:rgba(122,48,80,.06);border-left:3px solid var(--moss)}
+.vscript-block.cta .vs-label{color:var(--moss)}
 
 /* ── UTIL ── */
 .callout{border-radius:14px;padding:1.1rem 1.4rem;margin:1.4rem 0;font-size:.82rem;line-height:1.6;background:var(--gold-wash);border:1px solid rgba(200,144,106,.25)}
@@ -519,6 +570,7 @@ svg{display:block}
     <button class="maintab-btn active" data-tab="chien-luoc" onclick="showTab('chien-luoc')">📍 Chiến lược</button>
     <button class="maintab-btn" data-tab="nhan-dien" onclick="showTab('nhan-dien')">🎨 Bộ nhận diện</button>
     <button class="maintab-btn" data-tab="template" onclick="showTab('template')">🖼️ Templates</button>
+    <button class="maintab-btn" data-tab="video" onclick="showTab('video')">🎬 Video</button>
     <button class="maintab-btn" data-tab="ke-hoach" onclick="showTab('ke-hoach')">🗓️ Kế hoạch</button>
     <button class="maintab-btn" data-tab="theo-doi" onclick="showTab('theo-doi')">✅ Theo dõi đăng bài</button>
   </nav>
@@ -1330,10 +1382,198 @@ svg{display:block}
 </section>
 
 </div>
+<div class="tab-panel" id="tab-video">
+<!-- ══════════ 14 · VIDEO-FIRST ══════════ -->
+<section class="g-section" id="video-why">
+  <div class="g-eyebrow">14 · Video-first</div>
+  <h2 class="g-title">Ảnh tĩnh <em>không còn đủ</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Toàn bộ 10 template ở mục Templates đều là ảnh — hợp lý cho tốc độ sản xuất, nhưng thuật toán Instagram, TikTok, YouTube hiện ưu tiên phân phối video rõ rệt hơn ảnh tĩnh. Với spa, video còn có lợi thế riêng: <strong>quy trình, kết cấu da, không khí phòng trị liệu</strong> — những thứ một tấm ảnh không kể được — chính là nội dung video kể tốt nhất.</p>
+
+  <div class="swatch-group-title">Định dạng theo nền tảng</div>
+  <table class="g-table">
+    <thead><tr><th>Định dạng</th><th>Thời lượng</th><th>Tỷ lệ</th><th>Nền tảng chính</th></tr></thead>
+    <tbody>
+      <tr><td>Reel</td><td class="mono">15–30s</td><td>9:16</td><td>Instagram, Facebook</td></tr>
+      <tr><td>TikTok</td><td class="mono">15–60s</td><td>9:16</td><td>TikTok</td></tr>
+      <tr><td>YouTube Shorts</td><td class="mono">&lt;60s</td><td>9:16</td><td>YouTube</td></tr>
+      <tr><td>Video dài giáo dục</td><td class="mono">3–10 phút</td><td>16:9</td><td>YouTube</td></tr>
+      <tr><td>Phim hoạt hình (series)</td><td class="mono">2–4 phút/tập</td><td>16:9</td><td>YouTube</td></tr>
+    </tbody>
+  </table>
+
+  <div class="swatch-group-title">3 trụ cột — bản video</div>
+  <div class="pillars">
+    <div class="pillar">
+      <span class="pillar-num">01</span>
+      <div class="p-goal">Educate · video</div>
+      <h3>Mẹo <em>quay nhanh</em></h3>
+      <p>Cùng nội dung mẹo skincare/Q&A đã có ở mục Templates, nhưng Harmonie nói trực tiếp vào camera thay vì chữ trên ảnh — tăng độ tin, tăng thời gian xem.</p>
+      <div class="p-share">Định dạng: <strong>Reel · TikTok · Shorts</strong></div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">02</span>
+      <div class="p-goal">Trust · video</div>
+      <h3>Behind <em>the scenes</em></h3>
+      <p>Quay cảnh phòng riêng tư, dụng cụ tiệt trùng, tay nghề thật khi thao tác — đúng thứ khách "sợ nặn mụn" cần thấy trước khi tin tưởng đặt lịch.</p>
+      <div class="p-share">Định dạng: <strong>Reel · Video dài</strong></div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">03</span>
+      <div class="p-goal">Convert · video</div>
+      <h3>Nhắc lịch <em>có hình ảnh</em></h3>
+      <p>15 giây quay phòng trống + Harmonie vẫy tay mời — CTA hiệu quả hơn nhiều so với text CTA tĩnh trên story.</p>
+      <div class="p-share">Định dạng: <strong>Story · Reel ngắn</strong></div>
+    </div>
+  </div>
+
+  <div class="sub-title" style="font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss);font-weight:700;margin:2rem 0 .9rem">4 khung kịch bản video</div>
+  <div class="tpl-grid">
+    <div class="tpl-card">
+      <div class="tpl-head"><span class="tpl-num">V1</span><span class="tpl-fmt">Reel/TikTok · 15–30s</span></div>
+      <div class="tpl-canvas" style="padding:1.1rem">
+        <div class="vscript-block hook"><span class="vs-label">Hook · 0–3s</span>Câu hỏi hoặc cảnh gây tò mò ngay khung hình đầu: "3 điều bạn đang làm sai khi trị mụn"</div>
+        <div class="vscript-block body"><span class="vs-label">Nội dung · 3–22s</span>2–3 điểm chính, cắt cảnh nhanh mỗi 2-3s, chữ phụ đề lớn dễ đọc khi tắt tiếng</div>
+        <div class="vscript-block cta"><span class="vs-label">CTA · cuối</span>"Lưu lại để đọc lại" hoặc "Comment loại da của bạn"</div>
+      </div>
+      <div class="tpl-note"><b>Dùng cho:</b> mẹo skincare, Q&A — chuyển thẳng nội dung Template 02/03 (ảnh) sang video.</div>
+    </div>
+    <div class="tpl-card">
+      <div class="tpl-head"><span class="tpl-num">V2</span><span class="tpl-fmt">YouTube Shorts · &lt;60s</span></div>
+      <div class="tpl-canvas" style="padding:1.1rem">
+        <div class="vscript-block hook"><span class="vs-label">Hook · 0–3s</span>Kết quả trước — cho xem before/after ngay đầu, giải thích sau (pattern giữ chân hiệu quả nhất trên Shorts)</div>
+        <div class="vscript-block body"><span class="vs-label">Nội dung · 3–50s</span>Kể lại hành trình điều trị — vấn đề, quy trình, khoảnh khắc thay đổi</div>
+        <div class="vscript-block cta"><span class="vs-label">CTA · cuối</span>"Xem thêm case study khác → link kênh" + nhắc đặt lịch nhẹ nhàng</div>
+      </div>
+      <div class="tpl-note"><b>Dùng cho:</b> case study before/after — bản video của Template 06.</div>
+    </div>
+    <div class="tpl-card">
+      <div class="tpl-head"><span class="tpl-num">V3</span><span class="tpl-fmt">Video dài · 3–10 phút</span></div>
+      <div class="tpl-canvas" style="padding:1.1rem">
+        <div class="vscript-block hook"><span class="vs-label">Cold open · 0–15s</span>Câu hỏi lớn khán giả đang thắc mắc: "Chemical Peel có thật sự đau không?"</div>
+        <div class="vscript-block body"><span class="vs-label">Thân bài · phần giữa</span>Giải thích cơ chế, demo thực tế tại phòng, trả lời hiểu lầm phổ biến — có chương mục (chapters) để giữ chân người xem</div>
+        <div class="vscript-block cta"><span class="vs-label">CTA · cuối</span>Tóm tắt 3 ý chính + mời đặt lịch tư vấn miễn phí</div>
+      </div>
+      <div class="tpl-note"><b>Dùng cho:</b> mở rộng các bài blog dài đã có thành video giải thích sâu, SEO tốt trên YouTube.</div>
+    </div>
+    <div class="tpl-card">
+      <div class="tpl-head"><span class="tpl-num">V4</span><span class="tpl-fmt">Phim hoạt hình · 2–4 phút</span></div>
+      <div class="tpl-canvas" style="padding:1.1rem">
+        <div class="vscript-block hook"><span class="vs-label">Cold open</span>Harmonie đang giữa một tình huống đời thường — không nhắc gì đến spa</div>
+        <div class="vscript-block body"><span class="vs-label">Câu chuyện</span>Tình huống xã hội nhỏ (áp lực ngoại hình, ngày tệ, so sánh bản thân...) — Harmonie đối diện theo cách nhẹ nhàng, tử tế</div>
+        <div class="vscript-block cta"><span class="vs-label">Chốt tập</span>Khoảnh khắc "tự chăm sóc bản thân" ngắn, kết bằng câu quote thương hiệu — không bán hàng trực tiếp</div>
+      </div>
+      <div class="tpl-note"><b>Dùng cho:</b> series dài hạn — xem lộ trình chi tiết bên dưới.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 15 · PHIM HOẠT HÌNH HARMONIE ══════════ -->
+<section class="g-section" id="animseries" style="border-bottom:none">
+  <div class="g-eyebrow">15 · Dự án phim hoạt hình</div>
+  <h2 class="g-title">Harmonie <em>Series</em></h2>
+  <div class="g-line"></div>
+  <p class="g-lead">Ý tưởng lớn: Harmonie không chỉ là mascot minh hoạ mà trở thành <strong>nhân vật kể chuyện</strong> — mỗi tập là một lát cắt đời thường/xã hội nhỏ, kết lại bằng một khoảnh khắc tự chăm sóc bản thân. Không quảng cáo trực tiếp — xây nhân vật được yêu mến trước, thương hiệu đứng phía sau. Đăng dài hạn trên YouTube.</p>
+
+  <div class="callout callout-note"><strong>Về bài toán ngân sách:</strong> bạn nói chưa đủ kinh phí mua công cụ AI dựng nhân vật hoạt hình — tin tốt là <strong>không cần</strong> để bắt đầu. Harmonie đã có sẵn dạng SVG tách lớp (đầu, tóc, tay, biểu cảm) từ mục Bộ nhận diện — đủ để làm bước đầu tiên với chi phí gần như bằng 0. Lộ trình dưới đây đi từ rẻ nhất đến khi đáng đầu tư hơn.</div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <span class="pillar-num">00</span>
+      <div class="p-goal">Chi phí ~0đ</div>
+      <h3>Bắt đầu <em>ngay</em></h3>
+      <p>Dùng chính SVG Harmonie đã có, animate bằng CSS (nhấp nháy mắt, gật đầu nhẹ — đã có sẵn hiệu ứng float trong trang này). Quay màn hình thành clip teaser 5-10s.</p>
+      <ul>
+        <li>Đăng thử 2-3 teaser xem phản ứng</li>
+        <li>Test xem concept "Harmonie kể chuyện" có ai quan tâm không</li>
+        <li>Không tốn tiền — chỉ tốn thời gian dựng</li>
+      </ul>
+      <div class="p-share">Trước khi đầu tư: <strong>xác nhận có nhu cầu</strong></div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">01</span>
+      <div class="p-goal">Chi phí thấp · ~0–30$/tháng</div>
+      <h3>Con rối <em>2D</em></h3>
+      <p>Tách các phần SVG (đầu/tóc/tay/miệng) làm "con rối" 2D, ráp chuyển động bằng công cụ animation giá rẻ/miễn phí — không cần vẽ tay từng khung hình.</p>
+      <ul>
+        <li>Canva Video, CapCut, hoặc Renderforest (có gói free)</li>
+        <li>Lồng tiếng: giọng thật của bạn hoặc TTS miễn phí</li>
+        <li>1 tập ngắn 60-90s để thử nghiệm quy trình</li>
+      </ul>
+      <div class="p-share">Kết quả: <strong>tập thử nghiệm đầu tiên</strong></div>
+    </div>
+    <div class="pillar">
+      <span class="pillar-num">02</span>
+      <div class="p-goal">Khi có ngân sách</div>
+      <h3>Nâng <em>chất lượng</em></h3>
+      <p>Khi series đã có người xem ổn định, đầu tư công cụ AI hoạt hình chuyên dụng, hoặc thuê animator freelance (Fiverr/Upwork) để nâng chất lượng hình ảnh + chuyển động mượt hơn.</p>
+      <ul>
+        <li>Ngân sách rõ ràng hơn vì đã có dữ liệu người xem thật</li>
+        <li>Animator freelance: có thể bắt đầu từ vài triệu/tập</li>
+        <li>Giữ nguyên "series bible" bên dưới để đồng bộ dù đổi công cụ</li>
+      </ul>
+      <div class="p-share">Chỉ làm khi: <strong>giai đoạn 0–1 đã chứng minh hiệu quả</strong></div>
+    </div>
+  </div>
+
+  <div class="sub-title" style="font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss);font-weight:700;margin:2rem 0 .9rem">Gợi ý 6 tập đầu tiên</div>
+  <div class="act-list">
+    <div class="act">
+      <div class="act-num">1</div>
+      <div class="act-body"><h4>Ngày <em>không muốn soi gương</em></h4><p>Harmonie có một buổi sáng tự ti — câu chuyện ai cũng từng trải, kết bằng cách cô ấy tự nói chuyện tử tế với chính mình.</p></div>
+    </div>
+    <div class="act">
+      <div class="act-num">2</div>
+      <div class="act-body"><h4>So sánh trên <em>mạng xã hội</em></h4><p>Harmonie lướt điện thoại thấy ai cũng "đẹp hơn" — tập về việc buông bỏ so sánh, nhẹ nhàng không giáo điều.</p></div>
+    </div>
+    <div class="act">
+      <div class="act-num">3</div>
+      <div class="act-body"><h4>Một ngày <em>dài</em></h4><p>Ngày làm việc mệt mỏi — Harmonie học cách dừng lại 10 phút cho riêng mình giữa lịch trình dày đặc.</p></div>
+    </div>
+    <div class="act">
+      <div class="act-num">4</div>
+      <div class="act-body"><h4>Lời khen <em>khó nhận</em></h4><p>Ai đó khen Harmonie, cô ấy không biết phản ứng sao — câu chuyện về việc học nhận lời tốt đẹp cho bản thân.</p></div>
+    </div>
+    <div class="act">
+      <div class="act-num">5</div>
+      <div class="act-body"><h4>Bạn <em>cũ</em></h4><p>Gặp lại người bạn lâu ngày không gặp — nhắc nhở về việc thời gian trôi và tự chăm sóc bản thân không phải là ích kỷ.</p></div>
+    </div>
+    <div class="act">
+      <div class="act-num">6</div>
+      <div class="act-body"><h4>Đêm <em>mất ngủ</em></h4><p>Harmonie trằn trọc vì lo nghĩ — tập nhẹ về thói quen thư giãn buổi tối, khép lại bằng câu quote thương hiệu.</p></div>
+    </div>
+  </div>
+
+  <div class="sub-title" style="font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--moss);font-weight:700;margin:2rem 0 .9rem">Series bible — giữ nhất quán dù ai sản xuất</div>
+  <div class="dodont">
+    <div class="dodont-col do">
+      <h4>Nên</h4>
+      <ul>
+        <li>Mỗi tập kết bằng khoảnh khắc "tự chăm sóc bản thân" nhẹ nhàng, không kịch tính hoá</li>
+        <li>Câu chuyện đời thường ai cũng thấy mình trong đó — giữ tính phổ quát</li>
+        <li>Nhắc thương hiệu tối đa 1 lần/tập, thật tinh tế (logo góc màn hình, hoặc câu quote quen thuộc)</li>
+        <li>Giữ đúng tính cách Harmonie đã định: ấm áp, điềm tĩnh, không phán xét</li>
+      </ul>
+    </div>
+    <div class="dodont-col dont">
+      <h4>Tránh</h4>
+      <ul>
+        <li>Nhắc dịch vụ/giá cụ thể trong tập — series là xây thương hiệu, không phải quảng cáo</li>
+        <li>Giải quyết vấn đề quá nhanh/dễ dàng — mất tính thật</li>
+        <li>Đổi tính cách Harmonie giữa các tập vì đổi người sản xuất</li>
+        <li>Tập nào cũng "dạy đời" — đôi khi chỉ cần đồng cảm, không cần bài học</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:1.4rem"><strong>Bước tiếp theo:</strong> khi bạn sẵn sàng thử giai đoạn 0, mình có thể giúp dựng vài đoạn animation CSS ngắn từ SVG Harmonie sẵn có ngay trong Claude — đủ để quay thử làm teaser đầu tiên, không tốn thêm chi phí gì cả.</div>
+</section>
+</div>
+
 <div class="tab-panel" id="tab-ke-hoach">
-<!-- ══════════ 14 · LỊCH TUẦN ══════════ -->
+<!-- ══════════ 16 · LỊCH TUẦN ══════════ -->
 <section class="g-section" id="calendar">
-  <div class="g-eyebrow">14 · Lịch nội dung hàng tuần</div>
+  <div class="g-eyebrow">16 · Lịch nội dung hàng tuần</div>
   <h2 class="g-title">7 ngày · <em>7 post</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Nhịp bền vững. Không tuần nào bị "hôm nay chưa biết đăng gì". Kèm nguồn nội dung cụ thể từ site hiện có, gồm cả template dùng cho từng slot.</p>
@@ -1352,9 +1592,9 @@ svg{display:block}
   <div class="callout"><strong>Ngoài lịch chính:</strong> mỗi tuần thêm 3–5 story ngẫu nhiên (behind the scenes, cảm ơn khách, video ngắn phòng spa) — không cần template, chỉ cần Harmonie avatar tròn ở góc + text.</div>
 </section>
 
-<!-- ══════════ 15 · 90 NGÀY ══════════ -->
+<!-- ══════════ 17 · 90 NGÀY ══════════ -->
 <section class="g-section" id="plan90">
-  <div class="g-eyebrow">15 · Kế hoạch 90 ngày</div>
+  <div class="g-eyebrow">17 · Kế hoạch 90 ngày</div>
   <h2 class="g-title">Từ giờ đến <em>hết Q3</em></h2>
   <div class="g-line"></div>
   <p class="g-lead">Không chia theo tuần vụn — chia theo tháng, mỗi tháng 1 chủ đề chính để dồn lực. Post hàng ngày vẫn theo lịch T2–CN, nhưng "series lớn" của tháng sẽ chi phối cover reel + bio.</p>
@@ -1398,9 +1638,9 @@ svg{display:block}
   <div class="callout"><strong>Đo lường:</strong> 3 chỉ số cuối tháng. (1) Follower IG mới — mục tiêu +200/tháng. (2) Lịch qua Calendly — bao nhiêu đến từ IG (dùng UTM). (3) Google review mới — 3–5 review 5★/tháng. Không quan trọng chỉ số khác.</div>
 </section>
 
-<!-- ══════════ 16 · VIỆC LÀM NGAY ══════════ -->
+<!-- ══════════ 18 · VIỆC LÀM NGAY ══════════ -->
 <section class="g-section" id="actions">
-  <div class="g-eyebrow">16 · Việc làm ngay tuần này</div>
+  <div class="g-eyebrow">18 · Việc làm ngay tuần này</div>
   <h2 class="g-title">5 việc <em>ưu tiên</em></h2>
   <div class="g-line"></div>
 
@@ -1445,17 +1685,17 @@ svg{display:block}
 
 </div>
 <div class="tab-panel" id="tab-theo-doi">
-<!-- ══════════ 17 · THEO DÕI ĐĂNG BÀI ══════════ -->
+<!-- ══════════ 19 · THEO DÕI ĐĂNG BÀI ══════════ -->
 <section class="g-section" id="tracker" style="border-bottom:none">
-  <div class="g-eyebrow">17 · Theo dõi đăng bài</div>
+  <div class="g-eyebrow">19 · Theo dõi đăng bài</div>
   <h2 class="g-title">Lịch <em>đăng bài</em></h2>
   <div class="g-line"></div>
-  <p class="g-lead">Bấm vào 1 ngày để thêm bài định đăng hoặc đánh dấu đã đăng. Dữ liệu lưu riêng cho bạn, tự động nhớ giữa các lần mở lại trang — không cần Excel hay note rời. Muốn lên cả lịch nhiều ngày cùng lúc? Dùng file JSON bên dưới.</p>
+  <p class="g-lead">Bấm 1 ngày để thêm bài, bấm tên bài để mở chi tiết đầy đủ. Bấm <strong>tên tháng</strong> để xem toàn bộ nội dung cần đăng trong tháng — bức tranh tổng quan, không phải xem từng ngày. Dữ liệu tự lưu, không cần Excel.</p>
 
   <div class="trk-json-row">
     <div>
       <div class="a-title" style="color:var(--charcoal);font-size:.95rem">Lên lịch hàng loạt bằng JSON</div>
-      <p style="font-size:.78rem;color:var(--earth);margin-top:.2rem">Nhờ mình soạn file JSON theo kế hoạch (mẫu tuần ở mục Kế hoạch, hoặc yêu cầu riêng), rồi nhập vào đây — lịch tự đồng bộ ngay. Nhập nhiều lần không trùng do đã tự lọc trùng theo ngày + tên bài.</p>
+      <p style="font-size:.78rem;color:var(--earth);margin-top:.2rem">Nhờ mình soạn file JSON theo kế hoạch, rồi nhập vào đây — lịch tự đồng bộ ngay. Nhập nhiều lần không trùng do đã tự lọc trùng theo ngày + tên bài.</p>
     </div>
     <div class="trk-json-actions">
       <input type="file" id="trkFileInput" accept="application/json,.json" style="display:none" onchange="trkImportFile(this)">
@@ -1468,36 +1708,47 @@ svg{display:block}
     <button class="copy-btn" onclick="copyBlock(this)">Copy</button>
     <code>{
   "posts": [
-    { "date": "2026-08-03", "title": "Mẹo skincare: da dầu vẫn cần dưỡng ẩm", "pillar": "educate", "status": "scheduled" },
-    { "date": "2026-08-05", "title": "Loại da của bạn: Da Mụn", "pillar": "educate", "status": "scheduled" },
-    { "date": "2026-08-09", "title": "Review khách: Kiều Lan Nhi", "pillar": "trust", "status": "posted" }
+    { "date": "2026-08-03", "title": "Mẹo skincare: da dầu vẫn cần dưỡng ẩm",
+      "platform": "instagram", "format": "reel", "pillar": "educate", "status": "ready",
+      "caption": "Da dầu vẫn cần dưỡng ẩm — đây là lý do...", "hashtags": "#harmoniebeaute #skincare",
+      "cta": "Lưu bài để đọc lại", "templateRef": "Template 02", "time": "19:00", "notes": "Quay thêm cảnh cận mặt" }
   ]
 }
-// pillar: "educate" | "trust" | "convert" — status: "scheduled" | "posted"
-// thiếu pillar/status → mặc định "educate" / "scheduled"</code>
+// platform: instagram | facebook | tiktok | youtube | threads | website
+// format: reel | story | post | carousel | video-dai | blog
+// pillar: educate | trust | convert
+// status: idea | preparing | ready | posted
+// chỉ "date" + "title" là bắt buộc — còn lại thiếu gì tự bỏ trống/mặc định</code>
   </div>
 
   <div class="trk-card">
     <div class="trk-head">
       <div class="trk-nav">
         <button onclick="trkNav(-1)" aria-label="Tháng trước">←</button>
-        <div class="trk-month" id="trkMonthLabel">—</div>
+        <button class="trk-month" id="trkMonthLabel" onclick="trkToggleView('month')" title="Bấm để xem tổng quan cả tháng">—</button>
         <button onclick="trkNav(1)" aria-label="Tháng sau">→</button>
       </div>
       <div class="trk-stats">
         <span class="trk-stat posted" id="trkStatPosted">🟢 0 đã đăng</span>
-        <span class="trk-stat scheduled" id="trkStatScheduled">🟡 0 lên lịch</span>
+        <span class="trk-stat scheduled" id="trkStatScheduled">🟡 0 chưa đăng</span>
       </div>
     </div>
+
+    <div class="trk-plat-legend" id="trkPlatLegend"></div>
 
     <div class="trk-grid" id="trkGrid">
       <div class="trk-daylabel">T2</div><div class="trk-daylabel">T3</div><div class="trk-daylabel">T4</div><div class="trk-daylabel">T5</div><div class="trk-daylabel">T6</div><div class="trk-daylabel">T7</div><div class="trk-daylabel">CN</div>
     </div>
 
     <div class="trk-legend">
-      <span><span class="dot" style="background:var(--moss)"></span> Đã đăng</span>
-      <span><span class="dot" style="background:var(--gold)"></span> Lên lịch</span>
-      <span>· Bấm 1 ngày bất kỳ để xem / thêm bài</span>
+      <span>✓ viền quanh chấm = đã đăng</span>
+      <span>· Bấm 1 ngày để xem / thêm bài</span>
+      <span>· Bấm tên tháng để xem tổng quan</span>
+    </div>
+
+    <div class="trk-viewtabs">
+      <button class="trk-viewtab active" id="trkTabDay" onclick="trkToggleView('day')">📅 Theo ngày</button>
+      <button class="trk-viewtab" id="trkTabMonth" onclick="trkToggleView('month')">📋 Tổng quan tháng</button>
     </div>
 
     <div class="trk-panel" id="trkPanel" style="display:none">
@@ -1505,6 +1756,8 @@ svg{display:block}
       <div class="trk-post-list" id="trkPostList"></div>
       <div class="trk-form">
         <input type="text" id="trkInputTitle" placeholder="Tên bài / nội dung đăng..." onkeydown="if(event.key==='Enter')trkAddPost()">
+        <select id="trkInputPlatform"></select>
+        <select id="trkInputFormat"></select>
         <select id="trkInputPillar">
           <option value="educate">Giáo dục</option>
           <option value="trust">Niềm tin</option>
@@ -1512,6 +1765,11 @@ svg{display:block}
         </select>
         <button onclick="trkAddPost()">+ Thêm</button>
       </div>
+    </div>
+
+    <div class="trk-panel" id="trkOverview" style="display:none">
+      <div class="trk-panel-date" id="trkOverviewTitle">—</div>
+      <div id="trkOverviewList"></div>
     </div>
   </div>
 
@@ -1724,33 +1982,121 @@ var Store={
   }
 };
 
-var trk={year:0,month:0,posts:[],selected:null};
+var trk={year:0,month:0,posts:[],selected:null,expanded:null,view:'day'};
 var PILLAR_LABEL={educate:'Giáo dục',trust:'Niềm tin',convert:'Chuyển đổi'};
+var PILLAR_VALID={educate:1,trust:1,convert:1};
+
+var PLATFORM_META={
+  instagram:{label:'Instagram',color:'#D6295E'},
+  facebook:{label:'Facebook',color:'#1877F2'},
+  tiktok:{label:'TikTok',color:'#1C1C1E'},
+  youtube:{label:'YouTube',color:'#FF0000'},
+  threads:{label:'Threads',color:'#5B5B5B'},
+  website:{label:'Website/Blog',color:'#8B6F5C'}
+};
+var PLATFORM_ORDER=['instagram','facebook','tiktok','youtube','threads','website'];
+
+var FORMAT_META={
+  reel:'Reel / Video ngắn',
+  story:'Story',
+  post:'Post / Ảnh tĩnh',
+  carousel:'Carousel',
+  'video-dai':'Video dài',
+  blog:'Bài blog'
+};
+var FORMAT_ORDER=['reel','story','post','carousel','video-dai','blog'];
+
+var STATUS_META={
+  idea:{label:'Ý tưởng'},
+  preparing:{label:'Đang chuẩn bị'},
+  ready:{label:'Sẵn sàng'},
+  posted:{label:'Đã đăng'}
+};
+var STATUS_ORDER=['idea','preparing','ready','posted'];
+
 var MONTH_NAMES=['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
 function trkPad(n){return n<10?'0'+n:''+n;}
 function trkKey(y,m){return 'post-cal:'+y+'-'+trkPad(m+1);}
 function trkDateStr(y,m,d){return y+'-'+trkPad(m+1)+'-'+trkPad(d);}
+function trkEsc(s){ return (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function trkEscAttr(s){ return (s||'').replace(/"/g,'&quot;'); }
+
+function trkNormalize(p){
+  if(!p.platform || !PLATFORM_META[p.platform]) p.platform='website';
+  if(!p.format || !FORMAT_META[p.format]) p.format='post';
+  if(!p.pillar || !PILLAR_VALID[p.pillar]) p.pillar='educate';
+  if(!p.status || STATUS_ORDER.indexOf(p.status)===-1){
+    p.status = (p.status==='scheduled') ? 'ready' : (p.status==='posted' ? 'posted' : 'idea');
+  }
+  if(p.caption===undefined) p.caption='';
+  if(p.hashtags===undefined) p.hashtags='';
+  if(p.cta===undefined) p.cta='';
+  if(p.templateRef===undefined) p.templateRef='';
+  if(p.time===undefined) p.time='';
+  if(p.notes===undefined) p.notes='';
+  return p;
+}
+
+function trkPopulateSelects(){
+  var platSel=document.getElementById('trkInputPlatform');
+  if(platSel && !platSel.dataset.filled){
+    PLATFORM_ORDER.forEach(function(k){ var o=document.createElement('option'); o.value=k; o.textContent=PLATFORM_META[k].label; platSel.appendChild(o); });
+    platSel.dataset.filled='1';
+  }
+  var fmtSel=document.getElementById('trkInputFormat');
+  if(fmtSel && !fmtSel.dataset.filled){
+    FORMAT_ORDER.forEach(function(k){ var o=document.createElement('option'); o.value=k; o.textContent=FORMAT_META[k]; fmtSel.appendChild(o); });
+    fmtSel.dataset.filled='1';
+  }
+  var legend=document.getElementById('trkPlatLegend');
+  if(legend && !legend.dataset.filled){
+    legend.innerHTML='';
+    PLATFORM_ORDER.forEach(function(k){
+      var span=document.createElement('span');
+      span.innerHTML='<span class="dot" style="background:'+PLATFORM_META[k].color+'"></span>'+PLATFORM_META[k].label;
+      legend.appendChild(span);
+    });
+    legend.dataset.filled='1';
+  }
+}
 
 function trkLoadMonth(y,m){
   trk.year=y; trk.month=m;
+  trkPopulateSelects();
   return Store.get(trkKey(y,m)).then(function(raw){
     try{ trk.posts = raw ? JSON.parse(raw) : []; }catch(e){ trk.posts=[]; }
+    trk.posts.forEach(trkNormalize);
     var today=new Date();
     if(!trk.selected && today.getFullYear()===y && today.getMonth()===m){
       trk.selected=trkDateStr(y,m,today.getDate());
     }
     trkRenderGrid();
     trkRenderStats();
-    trkRenderPanel();
+    trkRenderCurrentView();
   });
 }
 function trkSaveMonth(){ return Store.set(trkKey(trk.year,trk.month), JSON.stringify(trk.posts)); }
+
 function trkNav(delta){
   var m=trk.month+delta, y=trk.year;
   if(m<0){m=11;y--;} if(m>11){m=0;y++;}
-  trk.selected=null;
+  trk.selected=null; trk.expanded=null;
   trkLoadMonth(y,m);
 }
+
+function trkToggleView(mode){
+  trk.view=mode;
+  var tabDay=document.getElementById('trkTabDay'), tabMonth=document.getElementById('trkTabMonth');
+  if(tabDay) tabDay.classList.toggle('active', mode==='day');
+  if(tabMonth) tabMonth.classList.toggle('active', mode==='month');
+  var panel=document.getElementById('trkPanel'), ov=document.getElementById('trkOverview');
+  if(panel) panel.style.display = mode==='day' ? 'block':'none';
+  if(ov) ov.style.display = mode==='month' ? 'block':'none';
+  trkRenderCurrentView();
+  trkRenderGrid();
+}
+function trkRenderCurrentView(){ if(trk.view==='day') trkRenderPanel(); else trkRenderOverview(); }
+
 function trkRenderGrid(){
   var grid=document.getElementById('trkGrid');
   if(!grid) return;
@@ -1770,37 +2116,130 @@ function trkRenderGrid(){
   var _loop=function(d){
     var dateStr=trkDateStr(trk.year,trk.month,d);
     var cell=document.createElement('div');
-    cell.className='trk-day'+(dateStr===todayStr?' today':'')+(dateStr===trk.selected?' selected':'');
+    cell.className='trk-day'+(dateStr===todayStr?' today':'')+(dateStr===trk.selected && trk.view==='day'?' selected':'');
     var dayPosts=trk.posts.filter(function(p){return p.date===dateStr;});
     var dotsHtml='';
-    dayPosts.slice(0,5).forEach(function(p){ dotsHtml+='<span class="trk-dot '+(p.status==='posted'?'posted':'')+'"></span>'; });
-    cell.innerHTML='<span class="trk-daynum">'+d+'</span><span class="trk-dots">'+dotsHtml+'</span>';
-    cell.addEventListener('click', function(){ trk.selected=dateStr; trkRenderGrid(); trkRenderPanel(); });
+    dayPosts.slice(0,6).forEach(function(p){
+      var color=(PLATFORM_META[p.platform]||PLATFORM_META.website).color;
+      dotsHtml+='<span class="trk-dot'+(p.status==='posted'?' is-posted':'')+'" style="background:'+color+'"></span>';
+    });
+    var moreHtml = dayPosts.length>6 ? '<span class="trk-daymore">+'+(dayPosts.length-6)+'</span>' : '';
+    cell.innerHTML='<span class="trk-daynum">'+d+'</span><span class="trk-dots">'+dotsHtml+'</span>'+moreHtml;
+    cell.addEventListener('click', function(){ trk.selected=dateStr; trk.expanded=null; trk.view='day'; trkToggleView('day'); trkRenderGrid(); });
     frag.appendChild(cell);
   };
   for(var d=1; d<=daysInMonth; d++){ _loop(d); }
   grid.appendChild(frag);
 }
+
 function trkRenderStats(){
   var posted=trk.posts.filter(function(p){return p.status==='posted';}).length;
-  var scheduled=trk.posts.length-posted;
+  var notPosted=trk.posts.length-posted;
   var pe=document.getElementById('trkStatPosted'), se=document.getElementById('trkStatScheduled');
   if(pe) pe.textContent='🟢 '+posted+' đã đăng';
-  if(se) se.textContent='🟡 '+scheduled+' lên lịch';
+  if(se) se.textContent='🟡 '+notPosted+' chưa đăng';
 }
+
 function trkFmtDate(dateStr){
   var parts=dateStr.split('-'); var y=+parts[0],m=+parts[1]-1,d=+parts[2];
   var W=['Chủ nhật','Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
   var dow=new Date(y,m,d).getDay();
   return W[dow]+', <em>'+d+' '+MONTH_NAMES[m].toLowerCase()+'</em>';
 }
+
+function trkPlatformDot(p){
+  var color=(PLATFORM_META[p.platform]||PLATFORM_META.website).color;
+  return '<span class="trk-post-plat-dot" style="background:'+color+'"></span>';
+}
+
+function trkBuildPostRow(p, showDate){
+  var row=document.createElement('div');
+  row.className='trk-post'+(p.status==='posted'?' is-posted':'')+(trk.expanded===p.id?' expanded':'');
+
+  var head=document.createElement('div'); head.className='trk-post-head';
+  var body=document.createElement('div'); body.className='trk-post-body';
+  var titleEl=document.createElement('div'); titleEl.className='trk-post-title';
+  titleEl.textContent=(showDate ? (p.date.slice(8,10)+'/'+p.date.slice(5,7)+' — ') : '') + p.title;
+  var metaEl=document.createElement('div'); metaEl.className='trk-post-meta';
+  metaEl.innerHTML =
+    '<span class="trk-tag plat">'+(PLATFORM_META[p.platform]||PLATFORM_META.website).label+'</span>'+
+    '<span class="trk-tag fmt">'+(FORMAT_META[p.format]||FORMAT_META.post)+'</span>'+
+    '<span class="trk-tag pillar">'+(PILLAR_LABEL[p.pillar]||'')+'</span>';
+  body.appendChild(titleEl); body.appendChild(metaEl);
+
+  var dotWrap=document.createElement('span'); dotWrap.innerHTML=trkPlatformDot(p);
+  head.appendChild(dotWrap.firstChild);
+  head.appendChild(body);
+
+  var statusSel=document.createElement('select'); statusSel.className='trk-post-status';
+  STATUS_ORDER.forEach(function(sk){
+    var o=document.createElement('option'); o.value=sk; o.textContent=STATUS_META[sk].label;
+    if(sk===p.status) o.selected=true;
+    statusSel.appendChild(o);
+  });
+  statusSel.addEventListener('click', function(e){ e.stopPropagation(); });
+  statusSel.addEventListener('change', function(){
+    p.status=statusSel.value;
+    trkSaveMonth();
+    trkRenderGrid(); trkRenderStats();
+    row.classList.toggle('is-posted', p.status==='posted');
+  });
+  head.appendChild(statusSel);
+
+  var chevron=document.createElement('span'); chevron.className='trk-post-chevron'; chevron.textContent='›';
+  head.appendChild(chevron);
+
+  var del=document.createElement('button'); del.className='trk-post-del'; del.textContent='✕';
+  del.addEventListener('click', function(e){ e.stopPropagation(); trkDeletePost(p.id); });
+  head.appendChild(del);
+
+  head.addEventListener('click', function(){
+    trk.expanded = (trk.expanded===p.id) ? null : p.id;
+    trkRenderCurrentView();
+  });
+  row.appendChild(head);
+
+  var detail=document.createElement('div'); detail.className='trk-post-detail';
+  detail.innerHTML =
+    '<div class="trk-dfield"><label>Caption / nội dung</label><textarea id="d-cap-'+p.id+'" placeholder="Nội dung chi tiết...">'+trkEsc(p.caption)+'</textarea></div>'+
+    '<div class="trk-drow">'+
+      '<div class="trk-dfield"><label>Hashtag</label><input type="text" id="d-hash-'+p.id+'" value="'+trkEscAttr(p.hashtags)+'" placeholder="#harmoniebeaute ..."></div>'+
+      '<div class="trk-dfield"><label>CTA</label><input type="text" id="d-cta-'+p.id+'" value="'+trkEscAttr(p.cta)+'" placeholder="Đặt lịch ngay..."></div>'+
+    '</div>'+
+    '<div class="trk-drow">'+
+      '<div class="trk-dfield"><label>Template tham chiếu</label><input type="text" id="d-tpl-'+p.id+'" value="'+trkEscAttr(p.templateRef)+'" placeholder="vd: Template 03"></div>'+
+      '<div class="trk-dfield"><label>Giờ đăng</label><input type="time" id="d-time-'+p.id+'" value="'+trkEscAttr(p.time)+'"></div>'+
+    '</div>'+
+    '<div class="trk-dfield"><label>Ghi chú</label><textarea id="d-notes-'+p.id+'" placeholder="Ghi chú thêm...">'+trkEsc(p.notes)+'</textarea></div>'+
+    '<button class="trk-detail-save" type="button">💾 Lưu chi tiết</button>';
+  var saveBtn=detail.querySelector('.trk-detail-save');
+  saveBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    p.caption=document.getElementById('d-cap-'+p.id).value;
+    p.hashtags=document.getElementById('d-hash-'+p.id).value;
+    p.cta=document.getElementById('d-cta-'+p.id).value;
+    p.templateRef=document.getElementById('d-tpl-'+p.id).value;
+    p.time=document.getElementById('d-time-'+p.id).value;
+    p.notes=document.getElementById('d-notes-'+p.id).value;
+    trkSaveMonth();
+    showToast('Đã lưu chi tiết');
+  });
+  detail.addEventListener('click', function(e){ e.stopPropagation(); });
+  row.appendChild(detail);
+  return row;
+}
+
 function trkRenderPanel(){
   var panel=document.getElementById('trkPanel');
   if(!panel) return;
-  if(!trk.selected){ panel.style.display='none'; return; }
-  panel.style.display='block';
-  var pd=document.getElementById('trkPanelDate'); if(pd) pd.innerHTML=trkFmtDate(trk.selected);
+  var pd=document.getElementById('trkPanelDate');
   var list=document.getElementById('trkPostList');
+  if(!trk.selected){
+    if(pd) pd.textContent='Chọn 1 ngày trên lịch';
+    if(list) list.innerHTML='';
+    return;
+  }
+  if(pd) pd.innerHTML=trkFmtDate(trk.selected);
   if(!list) return;
   var dayPosts=trk.posts.filter(function(p){return p.date===trk.selected;});
   list.innerHTML='';
@@ -1808,49 +2247,65 @@ function trkRenderPanel(){
     var empty=document.createElement('div'); empty.className='trk-empty-note'; empty.textContent='Chưa có bài nào cho ngày này.';
     list.appendChild(empty);
   }else{
-    dayPosts.forEach(function(p){
-      var row=document.createElement('div');
-      row.className='trk-post'+(p.status==='posted'?' is-posted':'');
-      var check=document.createElement('div'); check.className='trk-post-check'; check.textContent='✓';
-      check.onclick=function(){ trkToggleStatus(p.id); };
-      var body=document.createElement('div'); body.className='trk-post-body';
-      var t=document.createElement('div'); t.className='trk-post-title'; t.textContent=p.title;
-      var pl=document.createElement('div'); pl.className='trk-post-pillar'; pl.textContent=PILLAR_LABEL[p.pillar]||'';
-      body.appendChild(t); body.appendChild(pl);
-      var del=document.createElement('button'); del.className='trk-post-del'; del.textContent='✕';
-      del.onclick=function(){ trkDeletePost(p.id); };
-      row.appendChild(check); row.appendChild(body); row.appendChild(del);
-      list.appendChild(row);
-    });
+    dayPosts.forEach(function(p){ list.appendChild(trkBuildPostRow(p,false)); });
   }
 }
+
+function trkRenderOverview(){
+  var ov=document.getElementById('trkOverview');
+  if(!ov) return;
+  var title=document.getElementById('trkOverviewTitle');
+  if(title) title.innerHTML='Tổng quan '+MONTH_NAMES[trk.month].toLowerCase()+', <em>'+trk.year+'</em> — '+trk.posts.length+' bài';
+  var list=document.getElementById('trkOverviewList');
+  if(!list) return;
+  list.innerHTML='';
+  if(trk.posts.length===0){
+    var empty=document.createElement('div'); empty.className='trk-empty-note'; empty.textContent='Chưa có bài nào trong tháng này. Thêm qua từng ngày hoặc nhập JSON.';
+    list.appendChild(empty);
+    return;
+  }
+  var sorted=trk.posts.slice().sort(function(a,b){ return a.date<b.date?-1:(a.date>b.date?1:0); });
+  var byDate={}, order=[];
+  sorted.forEach(function(p){ if(!byDate[p.date]){byDate[p.date]=[]; order.push(p.date);} byDate[p.date].push(p); });
+  order.forEach(function(dateStr){
+    var group=document.createElement('div'); group.className='trk-ov-group';
+    var head=document.createElement('div'); head.className='trk-ov-date'; head.innerHTML=trkFmtDate(dateStr);
+    group.appendChild(head);
+    var listWrap=document.createElement('div'); listWrap.className='trk-post-list';
+    byDate[dateStr].forEach(function(p){ listWrap.appendChild(trkBuildPostRow(p,false)); });
+    group.appendChild(listWrap);
+    list.appendChild(group);
+  });
+}
+
 function trkAddPost(){
   var input=document.getElementById('trkInputTitle');
   if(!trk.selected){ showToast('Chọn 1 ngày trước đã'); return; }
   var title=input.value.trim();
   if(!title) return;
+  var platform=document.getElementById('trkInputPlatform').value || 'website';
+  var format=document.getElementById('trkInputFormat').value || 'post';
   var pillar=document.getElementById('trkInputPillar').value;
-  trk.posts.push({id:'p'+Date.now()+Math.floor(Math.random()*1000),date:trk.selected,title:title,pillar:pillar,status:'scheduled'});
+  var post={
+    id:'p'+Date.now()+Math.floor(Math.random()*1000),
+    date:trk.selected, title:title, platform:platform, format:format, pillar:pillar, status:'idea',
+    caption:'', hashtags:'', cta:'', templateRef:'', time:'', notes:''
+  };
+  trk.posts.push(post);
   input.value='';
   trkSaveMonth();
-  trkRenderGrid(); trkRenderStats(); trkRenderPanel();
+  trkRenderGrid(); trkRenderStats(); trkRenderCurrentView();
   showToast('Đã thêm vào lịch');
 }
-function trkToggleStatus(id){
-  var p=trk.posts.find(function(x){return x.id===id;});
-  if(!p) return;
-  p.status = p.status==='posted' ? 'scheduled' : 'posted';
-  trkSaveMonth();
-  trkRenderGrid(); trkRenderStats(); trkRenderPanel();
-}
+
 function trkDeletePost(id){
   trk.posts = trk.posts.filter(function(x){return x.id!==id;});
+  if(trk.expanded===id) trk.expanded=null;
   trkSaveMonth();
-  trkRenderGrid(); trkRenderStats(); trkRenderPanel();
+  trkRenderGrid(); trkRenderStats(); trkRenderCurrentView();
 }
 
-/* ═══════════ IMPORT / EXPORT JSON ═══════════ */
-var PILLAR_VALID={educate:1,trust:1,convert:1};
+/* ═══════════ IMPORT / EXPORT JSON (đủ trường mới) ═══════════ */
 function trkImportFile(input){
   var file = input.files && input.files[0];
   if(!file) return;
@@ -1870,16 +2325,28 @@ function trkImportFile(input){
 
 function trkImportPosts(list){
   var dateRe=/^\d{4}-\d{2}-\d{2}$/;
-  var byMonth={}; // 'YYYY-MM' -> array of new post objects
+  var byMonth={};
   var validCount=0, skipCount=0;
 
   list.forEach(function(raw){
     if(!raw || !raw.date || !dateRe.test(raw.date) || !raw.title || !String(raw.title).trim()){ skipCount++; return; }
+    var platform = PLATFORM_META[raw.platform] ? raw.platform : 'website';
+    var format = FORMAT_META[raw.format] ? raw.format : 'post';
     var pillar = PILLAR_VALID[raw.pillar] ? raw.pillar : 'educate';
-    var status = raw.status==='posted' ? 'posted' : 'scheduled';
-    var mKey = raw.date.slice(0,7); // YYYY-MM
+    var status = STATUS_ORDER.indexOf(raw.status)!==-1 ? raw.status : (raw.status==='scheduled' ? 'ready' : (raw.status==='posted' ? 'posted' : 'idea'));
+    var mKey = raw.date.slice(0,7);
     if(!byMonth[mKey]) byMonth[mKey]=[];
-    byMonth[mKey].push({id:'p'+Date.now()+Math.floor(Math.random()*100000), date:raw.date, title:String(raw.title).trim(), pillar:pillar, status:status});
+    byMonth[mKey].push({
+      id:'p'+Date.now()+Math.floor(Math.random()*100000),
+      date:raw.date, title:String(raw.title).trim(),
+      platform:platform, format:format, pillar:pillar, status:status,
+      caption: raw.caption!==undefined ? String(raw.caption) : '',
+      hashtags: raw.hashtags!==undefined ? String(raw.hashtags) : '',
+      cta: raw.cta!==undefined ? String(raw.cta) : '',
+      templateRef: raw.templateRef!==undefined ? String(raw.templateRef) : '',
+      time: raw.time!==undefined ? String(raw.time) : '',
+      notes: raw.notes!==undefined ? String(raw.notes) : ''
+    });
     validCount++;
   });
 
@@ -1894,6 +2361,7 @@ function trkImportPosts(list){
     chain = chain.then(function(){
       return Store.get(key).then(function(raw){
         var existing=[]; try{ existing = raw?JSON.parse(raw):[]; }catch(e){ existing=[]; }
+        existing.forEach(trkNormalize);
         var added=byMonth[mKey];
         added.forEach(function(np){
           var dup = existing.some(function(ep){ return ep.date===np.date && ep.title.trim().toLowerCase()===np.title.trim().toLowerCase(); });
@@ -1916,7 +2384,6 @@ function trkImportPosts(list){
     }else{
       showToast('Đã nhập '+validCount+' bài'+(skipCount>0?' · bỏ qua '+skipCount+' (trùng/thiếu dữ liệu)':''));
     }
-    // nhảy thẳng tới tháng đầu tiên vừa nhập để thấy kết quả ngay, không cần tự bấm mũi tên
     var firstOk = months.filter(function(mk){ return failedMonths.indexOf(mk)===-1; })[0];
     if(firstOk){
       var p = firstOk.split('-');
@@ -1935,7 +2402,7 @@ function trkExportAll(){
     keys.forEach(function(k){
       chain = chain.then(function(){
         return Store.get(k).then(function(raw){
-          try{ var arr=raw?JSON.parse(raw):[]; all=all.concat(arr); }catch(e){}
+          try{ var arr=raw?JSON.parse(raw):[]; arr.forEach(trkNormalize); all=all.concat(arr); }catch(e){}
         });
       });
     });
@@ -1943,7 +2410,10 @@ function trkExportAll(){
   }
   function finish(all){
     all.sort(function(a,b){ return a.date<b.date?-1:(a.date>b.date?1:0); });
-    var out = {posts: all.map(function(p){ return {date:p.date,title:p.title,pillar:p.pillar,status:p.status}; })};
+    var out = {posts: all.map(function(p){
+      return {date:p.date,title:p.title,platform:p.platform,format:p.format,pillar:p.pillar,status:p.status,
+        caption:p.caption,hashtags:p.hashtags,cta:p.cta,templateRef:p.templateRef,time:p.time,notes:p.notes};
+    })};
     var blob = new Blob([JSON.stringify(out,null,2)], {type:'application/json'});
     var a=document.createElement('a');
     a.href=URL.createObjectURL(blob);
