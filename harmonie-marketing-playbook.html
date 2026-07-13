@@ -1711,17 +1711,16 @@ function showTab(id){
 var Store={
   get:function(key){
     if(typeof window!=='undefined' && window.storage){
-      return window.storage.get(key,false).then(function(r){return r?r.value:null;}).catch(function(){return null;});
+      return window.storage.get(key,false).then(function(r){return r?r.value:null;}).catch(function(err){ return null; });
     }
-    var v=null; try{v=localStorage.getItem(key);}catch(e){}
+    var v=null; try{v=localStorage.getItem(key);}catch(e){ console.error('[tracker] localStorage.getItem lỗi',e); }
     return Promise.resolve(v);
   },
   set:function(key,value){
     if(typeof window!=='undefined' && window.storage){
-      return window.storage.set(key,value,false).then(function(){return true;}).catch(function(){return false;});
+      return window.storage.set(key,value,false).then(function(){return true;}).catch(function(err){ console.error('[tracker] window.storage.set lỗi',key,err); return false; });
     }
-    try{localStorage.setItem(key,value);}catch(e){}
-    return Promise.resolve(true);
+    try{localStorage.setItem(key,value); return Promise.resolve(true);}catch(e){ console.error('[tracker] localStorage.setItem lỗi',e); return Promise.resolve(false); }
   }
 };
 
@@ -1884,9 +1883,10 @@ function trkImportPosts(list){
     validCount++;
   });
 
-  var months = Object.keys(byMonth);
+  var months = Object.keys(byMonth).sort();
   if(months.length===0){ showToast('Không có bài hợp lệ trong file (cần date dạng YYYY-MM-DD + title)'); return; }
 
+  var failedMonths=[];
   var chain = Promise.resolve();
   months.forEach(function(mKey){
     var parts = mKey.split('-'); var y=+parts[0], m=+parts[1]-1;
@@ -1900,13 +1900,29 @@ function trkImportPosts(list){
           if(dup){ skipCount++; validCount--; }
           else existing.push(np);
         });
-        return Store.set(key, JSON.stringify(existing));
+        return Store.set(key, JSON.stringify(existing)).then(function(ok){
+          if(!ok){ failedMonths.push(mKey); console.error('[tracker] lưu thất bại cho tháng', mKey); }
+        });
+      }).catch(function(err){
+        failedMonths.push(mKey);
+        console.error('[tracker] lỗi khi xử lý tháng', mKey, err);
       });
     });
   });
 
   chain.then(function(){
-    showToast('Đã nhập '+validCount+' bài'+(skipCount>0?' · bỏ qua '+skipCount+' (trùng/thiếu dữ liệu)':''));
+    if(failedMonths.length>0){
+      showToast('⚠️ Lưu thất bại cho '+failedMonths.length+' tháng ('+failedMonths.join(', ')+') — thử lại hoặc tải lại trang');
+    }else{
+      showToast('Đã nhập '+validCount+' bài'+(skipCount>0?' · bỏ qua '+skipCount+' (trùng/thiếu dữ liệu)':''));
+    }
+    // nhảy thẳng tới tháng đầu tiên vừa nhập để thấy kết quả ngay, không cần tự bấm mũi tên
+    var firstOk = months.filter(function(mk){ return failedMonths.indexOf(mk)===-1; })[0];
+    if(firstOk){
+      var p = firstOk.split('-');
+      trk.selected=null;
+      return trkLoadMonth(+p[0], +p[1]-1);
+    }
     return trkLoadMonth(trk.year, trk.month);
   });
 }
